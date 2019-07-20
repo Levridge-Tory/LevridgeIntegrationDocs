@@ -86,8 +86,18 @@
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../Deploying-Integration-Framework/">Deployment</a>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Deployment <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../Deploying-Integration-Framework/">Deploying the Integration Framework</a>
+</li>
+                                    
+<li >
+    <a href="../DeployingCDS/">Deploying CDS</a>
+</li>
+                                </ul>
                             </li>
                             <li >
                                 <a href="../about/">About</a>
@@ -121,15 +131,17 @@ Each build has two folders, "Integration Framework Main" and "Levridge Main". Th
 integration framework is in the "drop" sub-folder of "Integration Framework Main".</p>
 <p>The entire integration framework is contained in the Levridge.Integration.Host.zip file.
 <img alt="Integration Framework Drop Folder" src="../assets/images/integration-framework-drop-folder.png" title="Integration Framework Drop Folder" /></p>
-<p>To deploy the build:
- 1. Open a browser and navigate to <code>https://&lt;App Service Name&gt;.scm.azurewebsites.net/ZipDeployUI</code>
-    example: https://levdevag.scm.azurewebsites.net/ZipDeployUI 
- 2. From the "Integration Main\drop" folder drag the Levridge.Integration.Host.zip and drop it on the file explorer area on the web page.
-<img alt="Drag and Drop Zip File" src="../assets/images/drag-and-drop-zip-file.png" title="Drage and Drop Deployment Package" />
- 3. When deployment is in progress, an icon in the top right corner shows you the progress 
+<p>To deploy the build:</p>
+<ol>
+<li>Open a browser and navigate to <code>https://&lt;App Service Name&gt;.scm.azurewebsites.net/ZipDeployUI</code>
+    example: https://levdevag.scm.azurewebsites.net/ZipDeployUI </li>
+<li>From the "Integration Main\drop" folder drag the Levridge.Integration.Host.zip and drop it on the file explorer area on the web page.
+<img alt="Drag and Drop Zip File" src="../assets/images/drag-and-drop-zip-file.png" title="Drage and Drop Deployment Package" /></li>
+<li>When deployment is in progress, an icon in the top right corner shows you the progress 
  in percentage. The page also shows verbose messages for the operation below the explorer area. When it is finished, 
- the last deployment message should say "Deployment successful".
- 4. Because this will overwrite the appsettings.json you will need to updated the settings to your desired configuration.</p>
+ the last deployment message should say "Deployment successful".</li>
+<li>Because this will overwrite the appsettings.json you will need to updated the settings to your desired configuration.</li>
+</ol>
 <h3 id="resources">Resources</h3>
 <p><a href="https://docs.microsoft.com/en-us/azure/app-service/deploy-zip">Microsoft documentation</a></p></div>
         </div>
