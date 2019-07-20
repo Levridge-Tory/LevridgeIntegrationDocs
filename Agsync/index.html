@@ -82,12 +82,15 @@
 </li>
                                     
 <li >
-    <a href="../Field%20Reveal.md">Field Reveal</a>
+    <a href="../Field Reveal/">Field Reveal</a>
 </li>
                                 </ul>
                             </li>
                             <li >
-                                <a href="../about.md">About</a>
+                                <a href="../Deploying Integration Framework/">Deployment</a>
+                            </li>
+                            <li >
+                                <a href="../about/">About</a>
                             </li>
                         </ul>
 
@@ -116,11 +119,45 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#agsync">Agsync</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#configuration">Configuration</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="agsync">Agsync</h2></div>
+<h2 id="agsync">Agsync</h2>
+<p>The Agsync integration is a bidirectional integration that consists of a Topic for
+Master Data that goes from D365 F&amp;O to Agsync and Service Calls for Work Orders that go from 
+Agsync to D365 F&amp;O. Because the Work Orders utilize a direct service call to F&amp;O there is no
+need for two integration instances.</p>
+<p>One aspect of the Agsync integration that is different from other integrations is the 
+service call to D365 F&amp;O for work orders.</p>
+<p>Another aspect that is different is that we are using CDS to provide lookup services for 
+mapping entity identifiers between systems.</p>
+<p>We also need to filter the customers that are sent from F&amp;O to Agsync. This will require configuring
+a filter on the event in F&amp;O. </p>
+<h3 id="setup">Setup</h3>
+<p>To integrate from D365 F&amp;O to Agsync you will need to:</p>
+<ul>
+<li><a href="./Configuring%20Levridge%20Entity%20Event%20Endpoint.md">Configure Event Endpoint in F&amp;O</a></li>
+<li><a href="./Configuring%20Levridge%20Entity%20Events.md">configure Levridge Entity Events</a></li>
+<li>Create Filter on Entity Event to only send agronomy customers 
+   <!-- TODO: Document how to create filter --></li>
+<li>Get Client ID and CLient password from Agsync</li>
+<li>Get Customer Specific Integration ID from Agsync</li>
+<li>Client Redirect URL is [Azure Webapp base URL]/api/AgsyncAuth</li>
+<li>
+<p>Setup Azure Keyvault </p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Create an application ID</a> for the integration framework to authenticate to D365 CRM</p>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-">Create an application user in D365 CRM</a> and assign the proper role(s)</li>
+<li>Create an Azure Service bus topic</li>
+<li>Create a subscription on the topic above</li>
+</ul>
+<h3 id="configuration">Configuration</h3>
+<p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p></div>
         </div>
 
         <footer class="col-md-12">
