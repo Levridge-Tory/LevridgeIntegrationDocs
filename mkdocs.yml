@@ -1,0 +1,14 @@
+site_name: Levridge Integration Framework Docs
+nav:
+    - Home: readme.md
+    - Integrations: 
+        - 'D365 CRM to D365 F&O' : 'D365-CRM-to-D365-F&O.md'
+        - 'D365 F&O to D365 CRM' : 'D365-F&O-to-D365-CRM.md'
+        - 'Levridge Scale House' : 'scale.md'
+        - 'Agsync' : 'Agsync.md'
+        - 'Kahler' : 'Kahler.md'
+        - 'Surety' : 'Surety.md'
+        - 'oneWeigh' : 'oneWeigh.md'
+        - 'Field Reveal' : 'Field%20Reveal.md'
+    - About: about.md
+
