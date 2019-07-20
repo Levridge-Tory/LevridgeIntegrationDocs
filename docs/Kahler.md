@@ -15,7 +15,9 @@ the branch property on the message.
 
 ### Setup
 To integrate to and from Kahler and D365 F&O you will need to:
- - [Configure Levridge Entity Events]("./Configuring%20Levridge%20Entity%20Events.md")
+ 
+ - [Configure Event Endpoint in F&O](./Configuring-Levridge-Entity-Event-Endpoint.md)
+ - [Configure Levridge Entity Events]("./Configuring-Levridge-Entity-Events.md")
    - You will need to be sure to provide properties on the event to allow filtering by Branch
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 F&O
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
@@ -24,10 +26,12 @@ To integrate to and from Kahler and D365 F&O you will need to:
  - Create a subscription on the Dispensing Work Order topic for each Branch that has a Kahler mixer
  - Create a filter on the subscription for each Branch
  - Create a subscription on the Dispensing Work Record topic for integration back to F&O
- - [Deploy the Levridge Integration Framework as a service](./Deploy%20Integration%20As%20A%20Service.md) at each Branch that has a Kahler mixer
+ - [Deploy the Levridge Integration Framework as a service](./Deploy-Integration-As-A-Service.md) at each Branch that has a Kahler mixer
 
 ### Configuration for Kahler on Premise
-This configuration will need to be on premise with the Kahler mixer.
+This configuration will need to be on premise with the Kahler mixer. The on-premise instance
+will handle the Dispensing Work Order from D365 F&O to Kahler  and the Webhook that receives
+Dispensing Work Records from Kahler.
 
 In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
@@ -52,7 +56,7 @@ In the appsettings.json you will need to define the [SourceConfig](./SourceConfi
         "ActiveDirectoryResource": [URL to D365 F&O],
         "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
         "ActiveDirectoryClientAppId": [Application ID used to register the application in AD],
-        "ActiveDirectoryClientAppSecret": [Client Secret genrated for the Application ID in AD],
+        "ActiveDirectoryClientAppSecret": [Client Secret generated for the Application ID in AD],
         "ODataEntityPath": "[URL to D365 F&O]/data/"
     },
     "Kahler End Point": {
@@ -73,7 +77,7 @@ In the appsettings.json you will need to define the [SourceConfig](./SourceConfi
 
 #### Controllers
 This section contains a list of controllers that will be loaded by the current instance. In addition to the default 
-controller that we alwasy want to load, we want the system to load the Kahler controller. The names (on the left) are not
+controller that we always want to load, we want the system to load the Kahler controller. The names (on the left) are not
 significant and are used only for debugging. The values (on the right) are significant. It must be the name of the assembly
 that should be loaded for the controller.
 
@@ -93,7 +97,8 @@ This section is used by the Kahler controller to be able to send messages to the
 framework and written to D365 F&O
 
 ### Configuration for Kahler in Azure
-This instance can be a single instance runing in the cloud.
+This instance can be a single instance running in the cloud. This instance will handle 
+the Dispensing Work Record from Kahler to D365 F&O
 
 In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
@@ -112,7 +117,7 @@ In the appsettings.json you will need to define the [SourceConfig](./SourceConfi
         "ActiveDirectoryResource": [URL to D365 F&O],
         "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
         "ActiveDirectoryClientAppId": [Application ID used to register the application in AD],
-        "ActiveDirectoryClientAppSecret": [Client Secret genrated for the Application ID in AD],
+        "ActiveDirectoryClientAppSecret": [Client Secret generated for the Application ID in AD],
         "ODataEntityPath": "[URL to D365 F&O]/data/"
     },
     "Dispensing Work Record": {

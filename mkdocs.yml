@@ -9,6 +9,9 @@ nav:
         - 'Kahler' : 'Kahler.md'
         - 'Surety' : 'Surety.md'
         - 'oneWeigh' : 'oneWeigh.md'
-        - 'Field Reveal' : 'Field%20Reveal.md'
+        - 'Field Reveal' : 'Field-Reveal.md'
+    - Deployment: 
+        - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
+        - 'Deploying CDS' : 'DeployingCDS.md'
     - About: about.md
 

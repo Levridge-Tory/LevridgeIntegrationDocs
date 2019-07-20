@@ -25,7 +25,7 @@ attributes:
 The ServiceBusConfigName attribute contains a string that specifies the configuration node (section)
 that holds the service bus configuration used by the Source of the Integration Interaction.
 
-This must point to a node that is a [ServiceBusConfig](ServiceBusConfig.md) json object
+This must point to a node that is a [ServiceBusConfig](ServiceBusConfiguration) json object
 
 
 ### ODataConfigName

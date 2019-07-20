@@ -17,7 +17,7 @@ All integrations that use the framework follow the same pattern:
   5. The integration framework transforms the message it if needed
   6. The integration framework sends the message to the target data source
 
-![General Entity Integartion Pattern.](./assets/images/GeneralSynchronizationIntegrations.jpg "General Entity Integartion Pattern")
+![General Entity Integration Pattern.](./assets/images/GeneralSynchronizationIntegrations.jpg "General Entity Integartion Pattern")
 
 
 # Integrations
@@ -31,4 +31,5 @@ Currently we support the following integrations:
  - [Kahler](./Kahler.md)
  - [Surety](./Surety.md)
  - [oneWeigh](./oneWeigh.md)
- - [Field Reveal](./Field%20Reveal.md)
+ - [Field Reveal](./Field-Reveal.md)
+ - [Levridge CRM Remote Printing Service](./Levridge-CRM-Remote-Printing-Service.md)
