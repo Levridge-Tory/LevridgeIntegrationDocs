@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Introduction - Levridge Integration Framework Docs</title>
+        <title>Deploy Integration Framework as Zip File - Levridge Integration Framework Docs</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -82,12 +82,12 @@
 </li>
                                     
 <li >
-    <a href="../Field Reveal/">Field Reveal</a>
+    <a href="../Field-Reveal/">Field Reveal</a>
 </li>
                                 </ul>
                             </li>
                             <li >
-                                <a href="../Deploying Integration Framework/">Deployment</a>
+                                <a href="../Deploying-Integration-Framework/">Deployment</a>
                             </li>
                             <li >
                                 <a href="../about/">About</a>
@@ -108,20 +108,30 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#introduction">Introduction</a></li>
-        <li class="main "><a href="#overview">Overview</a></li>
-        <li class="main "><a href="#main-point-1">Main Point 1</a></li>
-            <li><a href="#sub-point-11">Sub Point 1.1</a></li>
+        <li class="main active"><a href="#deploy-integration-framework-as-a-zip-file">Deploy Integration Framework as a Zip File</a></li>
+            <li><a href="#resources">Resources</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="introduction">Introduction</h1>
-<p>Brief introduction of the module, component or feature being documented.</p>
-<p>This document explains ...</p>
-<h1 id="overview">Overview</h1>
-<h1 id="main-point-1">Main Point 1</h1>
-<h2 id="sub-point-11">Sub Point 1.1</h2></div>
+<h2 id="deploy-integration-framework-as-a-zip-file">Deploy Integration Framework as a Zip File</h2>
+<p>At Levridge we build the Integration Framework every night. The output of the build
+is stored at <a href="file://devvmhost/releases/Levridge-Main/">\\devvmhost\releases</a>. 
+Each build has two folders, "Integration Framework Main" and "Levridge Main". The
+integration framework is in the "drop" sub-folder of "Integration Framework Main".</p>
+<p>The entire integration framework is contained in the Levridge.Integration.Host.zip file.
+<img alt="Integration Framework Drop Folder" src="../assets/images/integration-framework-drop-folder.png" title="Integration Framework Drop Folder" /></p>
+<p>To deploy the build:
+ 1. Open a browser and navigate to <code>https://&lt;App Service Name&gt;.scm.azurewebsites.net/ZipDeployUI</code>
+    example: https://levdevag.scm.azurewebsites.net/ZipDeployUI 
+ 2. From the "Integration Main\drop" folder drag the Levridge.Integration.Host.zip and drop it on the file explorer area on the web page.
+<img alt="Drag and Drop Zip File" src="../assets/images/drag-and-drop-zip-file.png" title="Drage and Drop Deployment Package" />
+ 3. When deployment is in progress, an icon in the top right corner shows you the progress 
+ in percentage. The page also shows verbose messages for the operation below the explorer area. When it is finished, 
+ the last deployment message should say "Deployment successful".
+ 4. Because this will overwrite the appsettings.json you will need to updated the settings to your desired configuration.</p>
+<h3 id="resources">Resources</h3>
+<p><a href="https://docs.microsoft.com/en-us/azure/app-service/deploy-zip">Microsoft documentation</a></p></div>
         </div>
 
         <footer class="col-md-12">

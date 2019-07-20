@@ -82,12 +82,12 @@
 </li>
                                     
 <li >
-    <a href="../Field Reveal/">Field Reveal</a>
+    <a href="../Field-Reveal/">Field Reveal</a>
 </li>
                                 </ul>
                             </li>
                             <li >
-                                <a href="../Deploying Integration Framework/">Deployment</a>
+                                <a href="../Deploying-Integration-Framework/">Deployment</a>
                             </li>
                             <li >
                                 <a href="../about/">About</a>
@@ -152,7 +152,7 @@ It provides a means to synchronize data at an entity level between multiple data
 <h2 id="d365-fo-to-d365-crm">D365 F&amp;O to D365 CRM</h2>
 <h3 id="setup">Setup</h3>
 <p>To integrate from D365 F&amp;O to D365 CRM you will need to:
- - <a href="./Configuring-Levridge-Entity-Events.md">configure Levridge Entity Events</a>
+ - <a href="../Configuring-Levridge-Entity-Events/">configure Levridge Entity Events</a>
  - <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Create an application ID</a> for the integration framework to authenticate to D365 CRM
  - <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-">Create an application user in D365 CRM</a> and assign the proper role(s)
  - Create an Azure Service bus topic
@@ -219,7 +219,7 @@ the branch property on the message.</p>
  - Create a subscription on the Dispensing Work Order topic for each Branch that has a Kahler mixer
  - Create a filter on the subscription for each Branch
  - Create a subscription on the Dispensing Work Record topic for integration back to F&amp;O
- - <a href="./Deploy-Integration-As-A-Service.md">Deploy the Levridge Integration Framework as a service</a> at each Branch that has a Kahler mixer</p>
+ - <a href="../Deploy-Integration-As-A-Service/">Deploy the Levridge Integration Framework as a service</a> at each Branch that has a Kahler mixer</p>
 <h3 id="configuration-for-kahler-on-premise">Configuration for Kahler on Premise</h3>
 <p>This configuration will need to be on premise with the Kahler mixer.</p>
 <p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
