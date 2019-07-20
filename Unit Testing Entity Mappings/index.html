@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Introduction - Levridge Integration Framework Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Levridge Integration Framework Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../readme/">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../D365-CRM-to-D365-F&O/">D365 CRM to D365 F&O</a>
+</li>
+                                    
+<li >
+    <a href="../D365-F&O-to-D365-CRM/">D365 F&O to D365 CRM</a>
+</li>
+                                    
+<li >
+    <a href="../scale/">Levridge Scale House</a>
+</li>
+                                    
+<li >
+    <a href="../Agsync/">Agsync</a>
+</li>
+                                    
+<li >
+    <a href="../Kahler/">Kahler</a>
+</li>
+                                    
+<li >
+    <a href="../Surety/">Surety</a>
+</li>
+                                    
+<li >
+    <a href="../oneWeigh/">oneWeigh</a>
+</li>
+                                    
+<li >
+    <a href="../Field%20Reveal.md">Field Reveal</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../about.md">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#introduction">Introduction</a></li>
+            <li><a href="#mapping-unit-test-helper-classes">Mapping Unit Test Helper Classes</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="introduction">Introduction</h1>
+<p>This library provides the base classes and utility classes to help you bild unit tests for the integration framework.
+It contains classes in the following categories:
+<em> Mapping Unit Test Helper Classes
+</em> Service Bus Helper and Mock classes
+* Integration Test Helper Classes</p>
+<h2 id="mapping-unit-test-helper-classes">Mapping Unit Test Helper Classes</h2>
+<h3 id="entitymapbuilderextensionstesthelper">EntityMapBuilderExtensionsTestHelper</h3>
+<p>The EntityMapBuilderExtensionsTestHelper class contains static methods you can use to obtain an EntityMapProvider&lt;&gt; for a particular scenario
+and methods to execute A2B and B2A synchronization using the EntityMapProvider&lt;&gt;
+obtained.</p>
+<p>To create a unit test that can test a mapping scenario, reference this library
+in your test project. Then create a unit test using the following steps:</p>
+<ol>
+<li>
+<p>Call GetEntityMapProvider<TSource, TTarget>(Type entityMapBuilderType, string methodName) passing
+the source target template parameter types as defined on the mapping method along with the class that contains
+the mapping method and the name of the mapping method that you want to test.</p>
+<p>For example, to test the mapping for AxEntities.ScaleTicketGradeFactor and ScaleHouseEntities.ScaleTicketGradeFactor
+make the following call: </p>
+<p><code>var mapProvider = EntityMapBuilderExtensionsTestHelper.GetEntityMapProvider&lt;AxEntities.ScaleTicketGradeFactor, ScaleHouseEntities.ScaleTicketGradeFactor&gt;(typeof(AxToScaleEntityMapBuilderExtensions), "MapAXScaleTicketGradeFactor_ScaleHouseScaleTicketGradeFactor");</code></p>
+</li>
+<li>
+<p>Instantiate and populate the entities you want to use for mapping. I prefer to use the <code>[MemberData]</code> attribute to provide multiple
+instances for testing. See <a href="https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/">this article</a> for example on providing data for unit tests.</p>
+</li>
+<li>
+<p>Use the EntityMapProvider&lt;&gt; to perform the mapping by calling one of the transform methods on
+The EntityMapBuilderExtensionsTestHelper class. For example, to test the B2A mapping for the previous example use the following code:</p>
+<p><code>AXentity = EntityMapBuilderExtensionsTestHelper.TransformB2A(mapProvider, ScaleEntity, AXentity);</code></p>
+</li>
+<li>
+<p>Assert - check the mapped values</p>
+<p>In order to test the expected values you should have an instance of the target object
+with the expected values and then get the transformed object from the target entity and compare
+the two. You can pass in an object with the expected values using the MemberData method.</p>
+<p>Example:</p>
+</li>
+</ol>
+<pre><code class="C#">    // Get target object
+    var targetObject = AXentity.GetEntityAsDotNetType&lt;AxEntities.ScaleTicketGradeFactor&gt;();
+
+    // Assert
+    Assert.NotNull(targetObject);
+    Assert.Equal(expectedResult.GradeFactorId, targetObject.GradeFactorId);
+    Assert.Equal(expectedResult.GradeFactorValue, targetObject.GradeFactorValue);
+    Assert.Equal(expectedResult.TicketNumber, targetObject.TicketNumber);
+    Assert.Equal(expectedResult.LineNumber, targetObject.LineNumber);
+</code></pre>
+
+<h3 id="using-memberdata-to-provide-unit-test-data">Using MemberData to Provide Unit Test Data</h3>
+<p>If you want to use the MemberData method for building data to use in your unit tests
+(you can refer to <a href="https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/">this article</a> for an over view) here are some ideas.</p>
+<h4 id="1-create-methods-to-instantiate-and-populate-the-source-and-expected-target-objects">1. Create Methods to Instantiate and Populate the Source and Expected Target Objects</h4>
+<p>I would recommend creating a private static method on your test class that recieves parameters that can be used
+to initialize the class with the desired values. If you need several parameters you can put them in an object array 
+or Key Value pair or even a dictionary.</p>
+<p>Example:</p>
+<pre><code class="C#">        private static AxEntities.ScaleTicketGradeFactor GetAxTicketGradeFactorObject(int line, string id, string value, string ticketNumber)
+        {
+            return new AxEntities.ScaleTicketGradeFactor()
+            {
+                LineNumber = line,
+                GradeFactorId = id,
+                GradeFactorValue = decimal.Parse(value),
+                TicketNumber = ticketNumber
+            };
+        }
+</code></pre>
+
+<h4 id="2-create-methods-to-instantiate-and-populate-the-source-and-target-entities">2. Create Methods to Instantiate and Populate the Source and Target Entities</h4>
+<p>Once you have a populated source object you can use it to instantiate and initialize a source Entity.</p>
+<p>Example:</p>
+<pre><code class="C#">        private static Entity GetAxTicketGradeFactorEntity(AxEntities.ScaleTicketGradeFactor scaleTicketGradeFactor = null)
+        {
+            var axScaleTicketGradeFactor = scaleTicketGradeFactor ?? new AxEntities.ScaleTicketGradeFactor();
+            Entity entity = DynamicsAxEntities.Instance.GetScaleTicketGradeFactorEntity();
+            entity.CreateAndPopulateEntityFields(typeof(JSONField&lt;&gt;), axScaleTicketGradeFactor);
+            return entity;
+        }
+</code></pre>
+
+<p>As you can see, if an object is provided, it is used to initialize the Entity. Otherwise a default object is used.</p>
+<h4 id="3-implement-the-memberdata-method">3. Implement the MemberData Method</h4>
+<p>As described in <a href="https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/">this article</a> for an over view) the MemberData
+method must return <code>IEnumerable&lt;object[]&gt;</code>. You can craete a method that uses the methods described in the previous steps
+to create source &amp; target entities along with a target expected object. Then you can define that method using the <code>[MemberData]</code> attribute.</p>
+<p>Here is an example MemberData method:</p>
+<pre><code class="C#">        public static IEnumerable&lt;object[]&gt; GetSynchronizeA2BGradeFactorData()
+        {
+            return new List&lt;object[]&gt;
+            {
+                new object[]
+                {
+                    GetAxTicketGradeFactorEntity(GetAxTicketGradeFactorObject(1, &quot;A&quot;, &quot;8&quot;, &quot;0000169&quot;)),
+                    GetScaleHouseGradeFactorEntity(),
+                    GetScaleHouseTicketGradeFactorObject(1, &quot;A&quot;, &quot;8&quot;, &quot;0000169&quot;)
+                },
+                new object[]
+                {
+                    GetAxTicketGradeFactorEntity(GetAxTicketGradeFactorObject(2, &quot;AB&quot;, &quot;0.3&quot;, &quot;0000169&quot;)),
+                    GetScaleHouseGradeFactorEntity(),
+                    GetScaleHouseTicketGradeFactorObject(2, &quot;AB&quot;, &quot;0.3&quot;, &quot;0000169&quot;)
+                },
+                new object[]
+                {
+                    GetAxTicketGradeFactorEntity(GetAxTicketGradeFactorObject(3, &quot;AS&quot;, &quot;31.3&quot;, &quot;0000169&quot;)),
+                    GetScaleHouseGradeFactorEntity(),
+                    GetScaleHouseTicketGradeFactorObject(3, &quot;AS&quot;, &quot;31.3&quot;, &quot;0000169&quot;)
+                }
+            };
+        }
+</code></pre>
+
+<h3 id="example-unit-test">Example Unit Test</h3>
+<p>Here is an example unit test that tests Ticket Grade Factor entities from the ScaleHouse application to F&amp;O.</p>
+<pre><code class="C#">        [Theory]
+        [MemberData(nameof(GetSynchronizeB2AGradeFactorData))]
+        public void MapScaleTicketGradeFactor_SynchronizeB2AGradeFactor_CorrectMapping(
+            Entity AXentity, // AX ticket grade factor
+            Entity ScaleEntity, // Scale house ticket grade factor
+            AxEntities.ScaleTicketGradeFactor expectedResult)
+        {
+            // Arrange
+            var mapProvider = EntityMapBuilderExtensionsTestHelper.GetEntityMapProvider&lt;AxEntities.ScaleTicketGradeFactor, ScaleHouseEntities.ScaleTicketGradeFactor&gt;
+                (typeof(AxToScaleEntityMapBuilderExtensions), &quot;MapAXScaleTicketGradeFactor_ScaleHouseScaleTicketGradeFactor&quot;);
+
+            //Act
+
+            // Transform
+            AXentity = EntityMapBuilderExtensionsTestHelper.TransformB2A(mapProvider, ScaleEntity, AXentity);
+
+            // Get target object
+            var targetObject = AXentity.GetEntityAsDotNetType&lt;AxEntities.ScaleTicketGradeFactor&gt;();
+
+            // Assert
+            Assert.NotNull(targetObject);
+            Assert.Equal(expectedResult.GradeFactorId, targetObject.GradeFactorId);
+            Assert.Equal(expectedResult.GradeFactorValue, targetObject.GradeFactorValue);
+            Assert.Equal(expectedResult.TicketNumber, targetObject.TicketNumber);
+            Assert.Equal(expectedResult.LineNumber, targetObject.LineNumber);
+
+        }
+
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

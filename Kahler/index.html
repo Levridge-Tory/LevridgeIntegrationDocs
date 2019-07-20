@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Kahler - Levridge Integration Framework Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Levridge Integration Framework Docs</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../readme/">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../D365-CRM-to-D365-F&O/">D365 CRM to D365 F&O</a>
+</li>
+                                    
+<li >
+    <a href="../D365-F&O-to-D365-CRM/">D365 F&O to D365 CRM</a>
+</li>
+                                    
+<li >
+    <a href="../scale/">Levridge Scale House</a>
+</li>
+                                    
+<li >
+    <a href="../Agsync/">Agsync</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Kahler</a>
+</li>
+                                    
+<li >
+    <a href="../Surety/">Surety</a>
+</li>
+                                    
+<li >
+    <a href="../oneWeigh/">oneWeigh</a>
+</li>
+                                    
+<li >
+    <a href="../Field%20Reveal.md">Field Reveal</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../about.md">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Agsync/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../Surety/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#kahler">Kahler</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#configuration-for-kahler-on-premise">Configuration for Kahler on Premise</a></li>
+            <li><a href="#configuration-for-kahler-in-azure">Configuration for Kahler in Azure</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="kahler">Kahler</h2>
+<p>The Kahler integration is a bidirectional integration that consists of a Topic for
+Dispensing Work Orders that go from D365 F&amp;O to Kahler and Dispensing Work Records that go from 
+Kahler to D365 F&amp;O. This means there are two instances of the integration running
+to handle the entire integration.</p>
+<p>One aspect of Kahler that is different from other integrations is the D365 F&amp;O to Kahler
+instance must run on premise because the Kahler system runs behind the firewall. This
+should be deployed as a service.</p>
+<p>Another aspect that is different is that each location should only get the messages from the 
+topic that apply to that location. This is done with a filter on the service bus topic subscription.
+In order for the filter to work the Levridge Entity Event must be configured to expose
+the branch property on the message.</p>
+<h3 id="setup">Setup</h3>
+<p>To integrate to and from Kahler and D365 F&amp;O you will need to:
+ - <a href="" title="./Configuring%20Levridge%20Entity%20Events.md">Configure Levridge Entity Events</a>
+   - You will need to be sure to provide properties on the event to allow filtering by Branch
+ - <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Create an application ID</a> for the integration framework to authenticate to D365 F&amp;O
+ - <a href="https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication">Create an Azure Active Directory Application in D365 F&amp;O</a>
+ - Create an Azure Service bus topic for Dispensing Work Orders (D365 F&amp;O to Kahler)
+ - Create an Azure Service bus topic for Dispensing Work Records (Kahler to D365 F&amp;O)
+ - Create a subscription on the Dispensing Work Order topic for each Branch that has a Kahler mixer
+ - Create a filter on the subscription for each Branch
+ - Create a subscription on the Dispensing Work Record topic for integration back to F&amp;O
+ - <a href="./Deploy%20Integration%20As%20A%20Service.md">Deploy the Levridge Integration Framework as a service</a> at each Branch that has a Kahler mixer</p>
+<h3 id="configuration-for-kahler-on-premise">Configuration for Kahler on Premise</h3>
+<p>This configuration will need to be on premise with the Kahler mixer.</p>
+<p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
+<pre><code>"Controllers": {
+    "HostController": "Levridge.Integration.Host.DefaultController",
+    "KahlerConroller": "Levridge.Integration.Host.KahlerController"
+},
+"SourceConfig": {
+    "ServiceBusConfigName": "Dispensing Work Order", //[section name with Dispensing Work Order service bus topic]
+    "ODataConfigName": "DynamicsAX", //[section name with F&amp;O data configuration]
+    "SystemName": "DynamicsAX",
+    "Direction": "Source"
+},
+"TargetConfig": {
+    "ODataConfigName": "Kahler End Point", //[section name with Kahler data configuration],
+    "CDSConfigName": [section name with CDS data configuration],
+    "SystemName": "Kahler",
+    "Direction": "Target"
+},
+"DynamicsAX": {
+    "UriString": [URL to D365 F&amp;O],
+    "ActiveDirectoryResource": [URL to D365 F&amp;O],
+    "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+    "ActiveDirectoryClientAppId": [Application ID used to register the application in AD],
+    "ActiveDirectoryClientAppSecret": [Client Secret genrated for the Application ID in AD],
+    "ODataEntityPath": "[URL to D365 F&amp;O]/data/"
+},
+"Kahler End Point": {
+    "UriString": [URL to Local Kahler]
+},
+"Dispensing Work Order": {
+    "ConnectionString": [connection string to Dispensing Work Order Topic],
+    "TopicName": [Dispensing Work Order Topic Name],
+    "SubscriptionName": [Subscription Name for the Branch],
+    "RequiresSession": true
+},
+"Levridge.Integration.Host.KahlerController": {
+    "ConnectionString": [connection string to Dispensing Work Record Topic],
+    "TopicName": [Dispensing Work Record Topic Name],
+    "RequiresSession": true
+}
+</code></pre>
+<h4 id="controllers">Controllers</h4>
+<p>This section contains a list of controllers that will be loaded by the current instance. In addition to the default 
+controller that we alwasy want to load, we want the system to load the Kahler controller. The names (on the left) are not
+significant and are used only for debugging. The values (on the right) are significant. It must be the name of the assembly
+that should be loaded for the controller.</p>
+<h4 id="sourceconfig"><a href="../SourceConfig/">SourceConfig</a></h4>
+<p>The source config will represent the data being send from D365 F&amp;O. Currently, the Dispensing Work Order is the only entity
+sent from F&amp;O. In the future the topic may also include master data that is sent to Kahler.</p>
+<p>The ODataConfigName is not currently being used but is a required value. So point it to the section that contains the connection
+information to D365 F&amp;O.</p>
+<h4 id="targetconfig"><a href="../TargetConfig/">TargetConfig</a></h4>
+<p>The target config will represent the data endpoint for the local Kahler mixer. The "ODataConfigName" should point to a section
+that contains the Kahler REST endpoint.</p>
+<h4 id="levridgeintegrationhostkahlercontroller">Levridge.Integration.Host.KahlerController</h4>
+<p>This section is used by the Kahler controller to be able to send messages to the proper topic to be handled by the integration
+framework and written to D365 F&amp;O</p>
+<h3 id="configuration-for-kahler-in-azure">Configuration for Kahler in Azure</h3>
+<p>This instance can be a single instance runing in the cloud.</p>
+<p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
+<pre><code>"SourceConfig": {
+    "ServiceBusConfigName": "Dispensing Work Record", //[section name with Dispensing Work Record service bus topic]
+    "SystemName": "Kahler",
+    "Direction": "Source"
+},
+"TargetConfig": {
+    "ODataConfigName": "DynamicsAX", //[section name with F&amp;O data configuration]
+    "SystemName": "DynamicsAX",
+    "Direction": "Target"
+},
+"DynamicsAX": {
+    "UriString": [URL to D365 F&amp;O],
+    "ActiveDirectoryResource": [URL to D365 F&amp;O],
+    "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+    "ActiveDirectoryClientAppId": [Application ID used to register the application in AD],
+    "ActiveDirectoryClientAppSecret": [Client Secret genrated for the Application ID in AD],
+    "ODataEntityPath": "[URL to D365 F&amp;O]/data/"
+},
+"Dispensing Work Record": {
+    "ConnectionString": [connection string to Dispensing Work Record Topic],
+    "TopicName": [Dispensing Work Record Topic Name],
+    "SubscriptionName": [Subscription Name for Integration to D365 F&amp;O],
+    "RequiresSession": true
+}
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
