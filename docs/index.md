@@ -22,7 +22,8 @@ All integrations that use the framework follow the same pattern:
 
 # Integrations
 
-Currently we support the following integrations:
+Currently we support the following integrations:  
+
  - [D365 F&O to D365 CRM](./D365-F&O-to-D365-CRM.md)
  - [D365 CRM to D365 F&O](./D365-CRM-to-D365-F&O.md)
  - [Levridge Scale House](./scale.md)

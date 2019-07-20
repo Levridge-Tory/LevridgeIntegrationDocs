@@ -1,6 +1,6 @@
 site_name: Levridge Integration Framework Docs
 nav:
-    - Home: readme.md
+    - Home: index.md
     - Integrations: 
         - 'D365 CRM to D365 F&O' : 'D365-CRM-to-D365-F&O.md'
         - 'D365 F&O to D365 CRM' : 'D365-F&O-to-D365-CRM.md'
