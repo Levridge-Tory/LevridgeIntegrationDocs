@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Deploy Integration As A Service - Levridge Integration Framework Docs</title>
+        <title>Introduction - Levridge Integration Framework Docs</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -118,11 +118,53 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#introduction">Introduction</a></li>
+            <li><a href="#run-as-a-service">Run as a service</a></li>
+            <li><a href="#command-line-parameters">Command line parameters</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="introduction">Introduction</h1>
+<p>This webhost application can be run in three modes:
+<em> As a web application (in Azure or IIS)
+</em> As a console application
+* As a service</p>
+<h2 id="run-as-a-service">Run as a service</h2>
+<p>To run as a service it must be installed. To install as a service place the code 
+in the folder from which you want the service to run. Deployed with the code should be
+three powershell scripts:
+<em> InstallService.ps1 - this script will install the service
+</em> InstallEventSource.ps1 - this script will install an event source on the Application EventLog on the local machine
+* RemoveService.ps1 - this script will uninstall / remove the service</p>
+<h3 id="installserviceps1">InstallService.ps1</h3>
+<p>This script installs a service and sets it to automatically run on startup. 
+It accepts the following command line parameters:
+- PublishPath - the path to the folder from which you want the service to run
+- ServiceUser - user account under which the service will run (default = $env:computername+"\IntegrationHost")
+- ServiceName - the name of the service (default = "Levridge.Integration.Host")
+- ServiceDescription - the description for the service (default = "Levridge Integration Host Service")
+- ServiceDisplayName - the display name for the service (default = "Levridge Integration Host")
+- SourceName - the source name under which EventLog entries should be logged (default = $ServiceName)</p>
+<p>This script will also execute the InstallEventSource.ps1 </p>
+<h3 id="installeventsourceps1">InstallEventSource.ps1</h3>
+<p>This script will install the specified EventLog source. It accepts the following 
+command line parameter:
+- SourceName - the source name under which EventLog entries should be logged (default = "Levridge.Integration.Host")</p>
+<h3 id="removeserviceps1">RemoveService.ps1</h3>
+<p>This script will remove the specified service. It accepts the following command line
+parameter:
+- ServiceName</p>
+<h2 id="command-line-parameters">Command line parameters</h2>
+<p>This application can be run with the following command line parameters:
+- debug (-d) - This will cause the application to wait for a debugger to be 
+  attached before it continues. This can be helpful to debug startup issues for
+  services or web applications.
+- service (-s) - This will cause the application to run as a service 
+  (if the debugger is not attached). 
+- SourceName (sn) - This will cause the application to use the specified source name 
+  for the application EventLog Source Name. If no source name is specified, the default
+  application source name is use.</p></div>
         </div>
 
         <footer class="col-md-12">
