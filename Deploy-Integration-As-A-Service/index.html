@@ -126,45 +126,60 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="introduction">Introduction</h1>
-<p>This webhost application can be run in three modes:
-<em> As a web application (in Azure or IIS)
-</em> As a console application
-* As a service</p>
+<p>This webhost application can be run in three modes:</p>
+<ul>
+<li>As a web application (in Azure or IIS)</li>
+<li>As a console application</li>
+<li>As a service</li>
+</ul>
 <h2 id="run-as-a-service">Run as a service</h2>
-<p>To run as a service it must be installed. To install as a service place the code 
-in the folder from which you want the service to run. Deployed with the code should be
-three powershell scripts:
-<em> InstallService.ps1 - this script will install the service
-</em> InstallEventSource.ps1 - this script will install an event source on the Application EventLog on the local machine
-* RemoveService.ps1 - this script will uninstall / remove the service</p>
+<p>To run as a service it must be installed. To install as a service you must get the code
+and place it in the folder from which you want the service to run. The simplest way
+to get the code is to get the zip file from the latest build. <a href="../Deploy-Integration-Framework-as-Zip-File/">Here are some instructsion
+for getting the latest code.</a>
+Get the zip file and unzip it into the folder from which you want the service to run.</p>
+<p>Deployed with the code should bethree powershell scripts:</p>
+<ul>
+<li>InstallService.ps1 - this script will install the service</li>
+<li>InstallEventSource.ps1 - this script will install an event source on the Application EventLog on the local machine</li>
+<li>RemoveService.ps1 - this script will uninstall / remove the service</li>
+</ul>
 <h3 id="installserviceps1">InstallService.ps1</h3>
 <p>This script installs a service and sets it to automatically run on startup. 
-It accepts the following command line parameters:
-- PublishPath - the path to the folder from which you want the service to run
-- ServiceUser - user account under which the service will run (default = $env:computername+"\IntegrationHost")
-- ServiceName - the name of the service (default = "Levridge.Integration.Host")
-- ServiceDescription - the description for the service (default = "Levridge Integration Host Service")
-- ServiceDisplayName - the display name for the service (default = "Levridge Integration Host")
-- SourceName - the source name under which EventLog entries should be logged (default = $ServiceName)</p>
+It accepts the following command line parameters:</p>
+<ul>
+<li>PublishPath - the path to the folder from which you want the service to run</li>
+<li>ServiceUser - user account under which the service will run (default = $env:computername+"\IntegrationHost")</li>
+<li>ServiceName - the name of the service (default = "Levridge.Integration.Host")</li>
+<li>ServiceDescription - the description for the service (default = "Levridge Integration Host Service")</li>
+<li>ServiceDisplayName - the display name for the service (default = "Levridge Integration Host")</li>
+<li>SourceName - the source name under which EventLog entries should be logged (default = $ServiceName)</li>
+</ul>
 <p>This script will also execute the InstallEventSource.ps1 </p>
 <h3 id="installeventsourceps1">InstallEventSource.ps1</h3>
 <p>This script will install the specified EventLog source. It accepts the following 
-command line parameter:
-- SourceName - the source name under which EventLog entries should be logged (default = "Levridge.Integration.Host")</p>
+command line parameter:</p>
+<ul>
+<li>SourceName - the source name under which EventLog entries should be logged (default = "Levridge.Integration.Host")</li>
+</ul>
 <h3 id="removeserviceps1">RemoveService.ps1</h3>
 <p>This script will remove the specified service. It accepts the following command line
-parameter:
-- ServiceName</p>
+parameter:</p>
+<ul>
+<li>ServiceName</li>
+</ul>
 <h2 id="command-line-parameters">Command line parameters</h2>
-<p>This application can be run with the following command line parameters:
-- debug (-d) - This will cause the application to wait for a debugger to be 
+<p>This application can be run with the following command line parameters:</p>
+<ul>
+<li>debug (-d) - This will cause the application to wait for a debugger to be 
   attached before it continues. This can be helpful to debug startup issues for
-  services or web applications.
-- service (-s) - This will cause the application to run as a service 
-  (if the debugger is not attached). 
-- SourceName (sn) - This will cause the application to use the specified source name 
+  services or web applications.</li>
+<li>service (-s) - This will cause the application to run as a service 
+  (if the debugger is not attached). </li>
+<li>SourceName (sn) - This will cause the application to use the specified source name 
   for the application EventLog Source Name. If no source name is specified, the default
-  application source name is use.</p></div>
+  application source name is use.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
