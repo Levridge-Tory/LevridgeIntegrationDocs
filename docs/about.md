@@ -99,6 +99,7 @@ Steps will also need to be created on plugins which require the pricing service.
      "password": "plaintextpassword"
    }
 ```
+
 Setup the data through integrations, create it in CRM, or import data packets.
 
 ![2.1](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/2.1.png)
