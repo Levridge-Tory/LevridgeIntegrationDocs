@@ -5,7 +5,7 @@ In Visual Studio, the print service is checked-in at "$/Levridge/CRM/Main/PrintS
 
 Double click this and map it to a path on your machine.
 
-![print configuration 1.1](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.1.png)
+![1.1](./assets/images/1.1.png)
 
 In Visual Studio click Build > Build Solution.
 Activate the service as detailed below in PowerShell:
@@ -24,15 +24,15 @@ the Print Service application will use to print:
 1. Go to control panel and locate the setting titled "Devices and Printers"
 (Note: Not all setting are in this screenshot. This view is set to "Small icons")
 
-     ![Print Configuration 1.2](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.2.png)
+     ![1.2](./assets/images/1.2.png)
 
 2. Navigate to the list of print options on your computer and select the device of your choice.
 
-     ![Print Configuration 1.3](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.3.png)
+     ![1.3](./assets/images/1.3.png)
 
 3. The full network name that is required for the code is listed once you select the printer. (Highlighted in yellow below)
 
-     ![Print Configuration 1.4](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.4.png)
+     ![1.4](./assets/images/1.4.png)
 
 
 ### Using Print Service Application
@@ -48,7 +48,7 @@ Following the first setup, you can enter the following command into PowerShell i
 
 Use Windows+R to select "services.msc" to open Services Management Console. Right click on PrintService and select "start"
 
-![Print Configuration 1.5](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.5.png)
+![1.5](./assets/images/1.5.png)
 
 ### Setting Up a New Printer
 
@@ -65,11 +65,11 @@ These are the printer name and the SiteID.
 These two need to be changed for the printer that is being printed to.
 The Site ID is the customer site code from CRM.
 
-![Print Configuration 1.6](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.6.png)
+![1.6](./assets/images/1.6.png)
 
 For debuggin the Service, we can use the Windows Event Viewer. Go to Administrative tools in the Control Panel and Open Event Viewer.
 
-![Print Configuration 1.7](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/Print%20Configuration%201.7.png)
+![1.7](./assets/images/1.7.png)
 
 ### Additional Information and Documentation
 
