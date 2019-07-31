@@ -14,7 +14,7 @@ Activate the service as detailed below in PowerShell:
 
 - Enter the following command once Be sure to substitute the local path!
     
-      New-Service-Name"PrintService"-"{Your Local path to project}\PrintService\bin\Debug\PrintService.exe-k netsvcs"
+>     New-Service-Name"PrintService"-"{Your Local path to project}\PrintService\bin\Debug\PrintService.exe-k netsvcs"
  
 ### Locating Printer Network Name
 If a printer is a network device, its name will be more difficult to locate.
@@ -42,7 +42,7 @@ After initial setup, use one of the following two options to start the Applicati
 
 Following the first setup, you can enter the following command into PowerShell instead.
     
-    Start-Service-Name"PrintService"
+>    Start-Service-Name"PrintService"
 
 **Services App.**
 
