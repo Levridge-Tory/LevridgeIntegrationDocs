@@ -14,4 +14,5 @@ nav:
         - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
         - 'Deploying CDS' : 'DeployingCDS.md'
     - About: about.md
-
+		- 'Print Configuration' : 'Print Configuration.md'
+		- 'Configuration Setup CRM' : 'Configuration Setup CRM.md'

@@ -24,15 +24,15 @@ the Print Service application will use to print:
 1. Go to control panel and locate the setting titled "Devices and Printers"
 (Note: Not all setting are in this screenshot. This view is set to "Small icons")
 
-![Print Configuration 1.2](./assets/images/Print-Configuration-1.2.png "Print Configuration 1.2")
+     ![Print Configuration 1.2](./assets/images/Print-Configuration-1.2.png "Print Configuration 1.2")
 
 2. Navigate to the list of print options on your computer and select the device of your choice.
 
-![Print Configuration 1.3](./assets/images/Print-Configuration-1.3 "Print Configuration 1.3")
+     ![Print Configuration 1.3](./assets/images/Print-Configuration-1.3 "Print Configuration 1.3")
 
 3. The full network name that is required for the code is listed once you select the printer. (Highlighted in yellow below)
 
-![Print Configuration 1.4](./assets/images/Print-Configuration-1.4.png "Print Configuartion 1.4")
+     ![Print Configuration 1.4](./assets/images/Print-Configuration-1.4.png "Print Configuartion 1.4")
 
 
 ### Using Print Service Application
@@ -42,7 +42,7 @@ After initial setup, use one of the following two options to start the Applicati
 
 Following the first setup, you can enter the following command into PowerShell instead.
     
->    Start-Service-Name"PrintService"
+>     Start-Service-Name"PrintService"
 
 **Services App.**
 
