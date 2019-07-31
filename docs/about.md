@@ -73,7 +73,7 @@ For debugging the Service, we can use the Windows Event Viewer. Go to Administra
 
 ### Additional Information and Documentation
 
-In CRM on the sales odered details header, there is an Auto Print Field. Set to Yes and click save. The sales order will then print. 
+In CRM on the sales ordered details header, there is an Auto Print Field. Set to Yes and click save. The sales order will then print. 
  
 
 # Configuration Setup CRM
@@ -83,7 +83,7 @@ Agronomy Solution.
 Migrate the ESG Configuration data using the Configuration Migration Tool
    - This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget
 
-Ensure an Application User has been created with admin secuirty roles assigned.
+Ensure an Application User has been created with admin security roles assigned.
 
 If integrating records from CRM to AX, you will need to create steps on the service endpoint using the Plugin Registration tool.
 
@@ -119,7 +119,7 @@ Entities in Green will integrate from Agsync
 Once item categories have been either created or imported in, the filtered xmls on the Plans and Batch Plans will need to be updated to reflect the item category GUIDs within 
 your environment
    
-  - The Proposal OOB Propposal line Subgrids will also require filter updates to reflect the Item Category's in your environemnt.
+  - The Proposal OOB Proposal line Subgrids will also require filter updates to reflect the Item Category's in your environment.
 
 
 
