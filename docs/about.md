@@ -12,7 +12,7 @@ Activate the service as detailed below in PowerShell:
 
 - Right click on the windows icon and select "Windows PowerShell (Admin)"
 
-- Enter the following command once Be sure to substitute the local path!
+- Enter the following command once. Be sure to substitute the local path!
     
 >     New-Service-Name"PrintService"-"{Your Local path to project}\PrintService\bin\Debug\PrintService.exe-k netsvcs"
  
@@ -67,7 +67,7 @@ The Site ID is the customer site code from CRM.
 
 ![1.6](./assets/images/1.6.png)
 
-For debuggin the Service, we can use the Windows Event Viewer. Go to Administrative tools in the Control Panel and Open Event Viewer.
+For debugging the Service, we can use the Windows Event Viewer. Go to Administrative tools in the Control Panel and Open Event Viewer.
 
 ![1.7](./assets/images/1.7.png)
 
