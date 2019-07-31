@@ -105,7 +105,9 @@ Setup the data through integrations, create it in CRM, or import data packets.
 ![2.1](./assets/images/2.1.png)
 
 Entities in pink must be set up in CRM
+
 Entities in yellow will integrate over from FinOps
+
 Entities in Green will integrate from Agsync
 
 ![2.2](./assets/images/2.2.png)
