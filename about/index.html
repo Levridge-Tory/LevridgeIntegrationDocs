@@ -140,18 +140,26 @@
 <p>To first install print service application open Visual Studio.
 In Visual Studio, the print service is checked-in at "$/Levridge/CRM/Main/PrintService".</p>
 <p>Double click this and map it to a path on your machine.</p>
+<p><img alt="General Entity Integration Pattern." src="../assets/images/GeneralSynchronizationIntegrations.jpg" title="General Entity Integartion Pattern" /></p>
 <p>In Visual Studio click Build &gt; Build Solution.
-Activate the service as detailed below in PowerShell:
-- Right click on the windows icon and select "Windows PowerShell (Admin)"
-- Enter the following command once Be sure to substitute the local path!</p>
-<pre><code>  New-Service-Name "PrintService"-"{Your Local path to project}\PrintService\bin\Debug\PrintService.exe-k netsvcs"
-</code></pre>
+Activate the service as detailed below in PowerShell:</p>
+<ul>
+<li>
+<p>Right click on the windows icon and select "Windows PowerShell (Admin)"</p>
+</li>
+<li>
+<p>Enter the following command once Be sure to substitute the local path!</p>
+<p>New-Service-Name "PrintService"-"{Your Local path to project}\PrintService\bin\Debug\PrintService.exe-k netsvcs"</p>
+</li>
+</ul>
 <h3 id="locating-printer-network-name">Locating Printer Network Name</h3>
 <p>If a printer is a network device, its name will be more difficult to locate.
 Use these steps to find the name that
-the Print Service application will use to print:
-1. Go to control panel and locate the setting titled "Devices and Printers"
-(Note: Not all setting are in this screenshot. This view is set to "Small icons")</p></div>
+the Print Service application will use to print:</p>
+<ol>
+<li>Go to control panel and locate the setting titled "Devices and Printers"
+(Note: Not all setting are in this screenshot. This view is set to "Small icons")</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
