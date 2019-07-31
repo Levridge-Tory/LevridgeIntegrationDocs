@@ -102,17 +102,17 @@ Steps will also need to be created on plugins which require the pricing service.
 
 Setup the data through integrations, create it in CRM, or import data packets.
 
-![2.1](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/2.1.png)
+![2.1](./assets/images/2.1.png)
 
 Entities in pink must be set up in CRM
 Entities in yellow will integrate over from FinOps
 Entities in Green will integrate from Agsync
 
-![2.2](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/2.2.png)
+![2.2](./assets/images/2.2.png)
 
-![2.3](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/2.3.png)
+![2.3](./assets/images/2.3.png)
 
-![2.4](file:///C:/Users/emilys/Source/Repos/LevridgeIntegrationDocs/docs/assets/images/2.4.png)
+![2.4](./assets/images/2.4.png)
 
 Once item categories have been either created or imported in, the filtered xmls on the Plans and Batch Plans will need to be updated to reflect the item category GUIDs within 
 your environment
