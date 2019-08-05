@@ -214,17 +214,18 @@ Agronomy Solution.</p>
    - This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget</p>
 <p>Ensure an Application User has been created with admin security roles assigned.</p>
 <p>If integrating records from CRM to AX, you will need to create steps on the service endpoint using the Plugin Registration tool.</p>
-<p>Steps will also need to be created on plugins which require the pricing service. The configuration will look like this:
-<code>&lt;language&gt;
-   {
-     "clientappid": "da7c3de3-5555-49ab-8465-d01e8cd22e58",
-     "clientappsecret": "dradgg38ddszLzgqbcZ3/8sG2FbC/BSWxnCtXzJsWP8=",
-     "tenant": "https://login.microsoftonline.com/5555a5b1-fbt8-465b-ad9d-21e21129e610/oauth2/token",
-     "uristring": "https://environment22c2251c662a7e541devaos.cloudax.dynamics.com/api/services/LevPricingServices/PricingService/getPricing",
-     "resource": "https:// environment22c2251c662a7e541devaos.cloudax.dynamics.com",
-     "username": "John.smith@email.com",
-     "password": "plaintextpassword"
-   }</code></p>
+<p>Steps will also need to be created on plugins which require the pricing service. The configuration will look like this:</p>
+<pre><code>   {
+     &quot;clientappid&quot;: &quot;da7c3de3-5555-49ab-8465-d01e8cd22e58&quot;,
+     &quot;clientappsecret&quot;: &quot;dradgg38ddszLzgqbcZ3/8sG2FbC/BSWxnCtXzJsWP8=&quot;,
+     &quot;tenant&quot;: &quot;https://login.microsoftonline.com/5555a5b1-fbt8-465b-ad9d-21e21129e610/oauth2/token&quot;,
+     &quot;uristring&quot;: &quot;https://environment22c2251c662a7e541devaos.cloudax.dynamics.com/api/services/LevPricingServices/PricingService/getPricing&quot;,
+     &quot;resource&quot;: &quot;https:// environment22c2251c662a7e541devaos.cloudax.dynamics.com&quot;,
+     &quot;username&quot;: &quot;John.smith@email.com&quot;,
+     &quot;password&quot;: &quot;plaintextpassword&quot;
+   }
+</code></pre>
+
 <p>Setup the data through integrations, create it in CRM, or import data packets.</p>
 <p><img alt="2.1" src="../assets/images/2.1.png" /></p>
 <p>Entities in pink must be set up in CRM</p>
