@@ -118,9 +118,5 @@ Entities in green will integrate from Agsync
 
 Once item categories have been either created or imported in, the filtered xmls on the Plans and Batch Plans will need to be updated to reflect the item category GUIDs within 
 your environment.
-   
-  - The Proposal OOB Proposal line Subgrids will also require filter updates to reflect the Item Category's in your environment.
-
-
-
  
+- The Proposal OOB Proposal line Subgrids will also require filter updates to reflect the Item Category's in your environment.
