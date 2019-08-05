@@ -88,7 +88,7 @@ Ensure an Application User has been created with admin security roles assigned.
 If integrating records from CRM to AX, you will need to create steps on the service endpoint using the Plugin Registration tool.
 
 Steps will also need to be created on plugins which require the pricing service. The configuration will look like this:
-```<language>
+```
    {
      "clientappid": "da7c3de3-5555-49ab-8465-d01e8cd22e58",
      "clientappsecret": "dradgg38ddszLzgqbcZ3/8sG2FbC/BSWxnCtXzJsWP8=",
