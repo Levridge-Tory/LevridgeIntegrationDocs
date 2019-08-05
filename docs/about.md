@@ -1,6 +1,6 @@
 # Print Configuration Notes
 ### Installing Print Service Application
-To first install print service application open Visual Studio.
+To first install print service application, open Visual Studio.
 In Visual Studio, the print service is checked-in at "$/Levridge/CRM/Main/PrintService".
 
 Double click this and map it to a path on your machine.
@@ -117,7 +117,7 @@ Entities in Green will integrate from Agsync
 ![2.4](./assets/images/2.4.png)
 
 Once item categories have been either created or imported in, the filtered xmls on the Plans and Batch Plans will need to be updated to reflect the item category GUIDs within 
-your environment
+your environment.
    
   - The Proposal OOB Proposal line Subgrids will also require filter updates to reflect the Item Category's in your environment.
 
