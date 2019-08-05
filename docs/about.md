@@ -61,7 +61,6 @@ To set up a new printer, new parameters will need to be setup. To add the parame
 - SiteID
 
 Two parameters will also need to be updated.
-These are the printer name and the Site ID.
 These two need to be changed for the printer that is being printed to.
 The Site ID is the customer site code from CRM.
 
@@ -104,11 +103,11 @@ Setup the data through integrations, create it in CRM, or import data packets.
 
 ![2.1](./assets/images/2.1.png)
 
-Entities in pink must be set up in CRM
+Entities in pink must be set up in CRM.
 
-Entities in yellow will integrate over from FinOps
+Entities in yellow will integrate over from FinOps. 
 
-Entities in green will integrate from Agsync
+Entities in green will integrate from Agsync.
 
 ![2.2](./assets/images/2.2.png)
 
