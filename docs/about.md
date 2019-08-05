@@ -17,7 +17,8 @@ Activate the service as detailed below in PowerShell:
 >     New-Service-Name"PrintService"-"{Your Local path to project}\PrintService\bin\Debug\PrintService.exe-k netsvcs"
  
 ### Locating Printer Network Name
-If a printer is a network device, its name will be more difficult to locate.
+If a printer is a network device, its name will be 
+more difficult to locate.
 Use these steps to find the name that
 the Print Service application will use to print:
 
@@ -36,23 +37,30 @@ the Print Service application will use to print:
 
 
 ### Using Print Service Application
-After initial setup, use one of the following two options to start the Application.
+After initial setup, use one of the following two options
+ to start the Application.
 
 **PowerShell**
 
-Following the first setup, you can enter the following command into PowerShell instead.
+Following the first setup, you can enter the following 
+command into PowerShell instead.
     
 >     Start-Service-Name"PrintService"
 
 **Services App.**
 
-Use Windows+R to select "services.msc" to open Services Management Console. Right click on PrintService and select "start"
+Use Windows+R to select "services.msc" to open Services 
+Management Console. Right click on PrintService and 
+select "start"
 
 ![1.5](./assets/images/1.5.png)
 
 ### Setting Up a New Printer
 
-To set up a new printer, new parameters will need to be setup. To add the parameters, open the app.config file in the project and add the following:
+To set up a new printer, new parameters will 
+need to be setup. To add the parameters, 
+open the app.config file in the project and 
+add the following:
 
 - ServiceBusConnectionString
 - ServiceBusTopicSubscription
@@ -61,32 +69,43 @@ To set up a new printer, new parameters will need to be setup. To add the parame
 - SiteID
 
 Two parameters will also need to be updated.
-These two need to be changed for the printer that is being printed to.
-The Site ID is the customer site code from CRM.
+These two need to be changed for the printer
+that is being printed to.
+The Site ID is the customer site code from CRM. 
 
 ![1.6](./assets/images/1.6.png)
 
-For debugging the Service, we can use the Windows Event Viewer. Go to Administrative tools in the Control Panel and Open Event Viewer.
+For debugging the Service, we can use the Windows 
+Event Viewer. Go to Administrative tools in the 
+Control Panel and Open Event Viewer.
 
 ![1.7](./assets/images/1.7.png)
 
 ### Additional Information and Documentation
 
-In CRM on the sales ordered details header, there is an Auto Print Field. Set to Yes and click save. The sales order will then print. 
+In CRM on the sales ordered details header, there is 
+an Auto Print Field. Set to Yes and click save. 
+The sales order will then print. 
  
 
 # Configuration Setup CRM
-To begin configuration setup in CRM, first import LevCore Solution followed by importing
+To begin configuration setup in CRM, first 
+import LevCore Solution followed by importing
 Agronomy Solution.
 
 Migrate the ESG Configuration data using the Configuration Migration Tool.
    - This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget
 
-Ensure an Application User has been created with admin security roles assigned.
+Ensure an Application User has been created with admin 
+security roles assigned.
 
-If integrating records from CRM to AX, you will need to create steps on the service endpoint using the Plugin Registration tool.
+If integrating records from CRM to AX, you will need to 
+create steps on the service endpoint using the Plugin
+ Registration tool.
 
-Steps will also need to be created on plugins which require the pricing service. The configuration will look like this:
+Steps will also need to be created on plugins which 
+require the pricing service. The configuration will 
+look like this:
 ```
    {
      "clientappid": "da7c3de3-5555-49ab-8465-d01e8cd22e58",
@@ -99,7 +118,8 @@ Steps will also need to be created on plugins which require the pricing service.
    }
 ```
 
-Setup the data through integrations, create it in CRM, or import data packets.
+Setup the data through integrations, create it in CRM, 
+or import data packets.
 
 ![2.1](./assets/images/2.1.png)
 
@@ -115,7 +135,9 @@ Entities in green will integrate from Agsync.
 
 ![2.4](./assets/images/2.4.png)
 
-Once item categories have been either created or imported in, the filtered xmls on the Plans and Batch Plans will need to be updated to reflect the item category GUIDs within 
-your environment.
+Once item categories have been either created or 
+imported in, the filtered xmls on the Plans and 
+Batch Plans will need to be updated to reflect the 
+item category GUIDs within your environment.
  
 - The Proposal OOB Proposal line Subgrids will also require filter updates to reflect the Item Category's in your environment.
