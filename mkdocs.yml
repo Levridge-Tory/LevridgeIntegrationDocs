@@ -25,6 +25,6 @@ nav:
         - Levridge Feed: 'Feed.md'
         - Levridge Equity Accounting: 'Equity.md'
         - Levridge Scale : 
-			- Overview : 'scale-overview.md'
+			- Overview : 'scale-Overview.md'
 			- Installation : 'scale.md'
     - About: about.md
