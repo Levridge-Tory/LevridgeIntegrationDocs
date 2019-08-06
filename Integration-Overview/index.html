@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Deploy Integration Framework as Zip File - Levridge Documentation</title>
+        <title>Overview - Levridge Documentation</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,7 +49,7 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -61,8 +61,8 @@
     <a href="#">Integration Framework</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../Integration-Overview/">Overview</a>
+<li class="active">
+    <a href="./">Overview</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -167,6 +167,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../D365-CRM-to-D365-F&O/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -175,32 +185,42 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#deploy-integration-framework-as-a-zip-file">Deploy Integration Framework as a Zip File</a></li>
-            <li><a href="#resources">Resources</a></li>
+        <li class="main active"><a href="#introduction">Introduction</a></li>
+        <li class="main "><a href="#overview">Overview</a></li>
+        <li class="main "><a href="#integrations">Integrations</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="deploy-integration-framework-as-a-zip-file">Deploy Integration Framework as a Zip File</h2>
-<p>At Levridge we build the Integration Framework every night. The output of the build
-is stored at <a href="file://devvmhost/releases/Levridge-Main/">\\devvmhost\releases</a>. 
-Each build has two folders, "Integration Framework Main" and "Levridge Main". The
-integration framework is in the "drop" sub-folder of "Integration Framework Main".</p>
-<p>The entire integration framework is contained in the Levridge.Integration.Host.zip file.
-<img alt="Integration Framework Drop Folder" src="../assets/images/integration-framework-drop-folder.png" title="Integration Framework Drop Folder" /></p>
-<p>To deploy the build:</p>
-<ol>
-<li>Open a browser and navigate to <code>https://&lt;App Service Name&gt;.scm.azurewebsites.net/ZipDeployUI</code>
-    example: https://levdevag.scm.azurewebsites.net/ZipDeployUI </li>
-<li>From the "Integration Main\drop" folder drag the Levridge.Integration.Host.zip and drop it on the file explorer area on the web page.
-<img alt="Drag and Drop Zip File" src="../assets/images/drag-and-drop-zip-file.png" title="Drage and Drop Deployment Package" /></li>
-<li>When deployment is in progress, an icon in the top right corner shows you the progress 
- in percentage. The page also shows verbose messages for the operation below the explorer area. When it is finished, 
- the last deployment message should say "Deployment successful".</li>
-<li>Because this will overwrite the appsettings.json you will need to updated the settings to your desired configuration.</li>
-</ol>
-<h3 id="resources">Resources</h3>
-<p><a href="https://docs.microsoft.com/en-us/azure/app-service/deploy-zip">Microsoft documentation</a></p></div>
+<h1 id="introduction">Introduction</h1>
+<p>The Levridge integration framework provides integration between Dynamics365 Finance and Operations
+and Dynamics 365 Customer Engagement and 3rd party applications.</p>
+<p>This document provides and overview of the integration framework and links to the document
+that exists for the framework.</p>
+<h1 id="overview">Overview</h1>
+<p>The Levridge Integration Framework is an entity syncronization framework. 
+It provides a means to synchronize data at an entity level between multiple data sources.</p>
+<p>All integrations that use the framework follow the same pattern:
+  1. A data source has an integration event
+  2. The data source responds to the integration event by sending one or more entities to the service bus.
+  3. The service bus publishes the message(s) to each subscription
+  4. An instance of the integration framework receives the message(s) from a subscription
+  5. The integration framework transforms the message it if needed
+  6. The integration framework sends the message to the target data source</p>
+<p><img alt="General Entity Integration Pattern." src="../assets/images/GeneralSynchronizationIntegrations.jpg" title="General Entity Integartion Pattern" /></p>
+<h1 id="integrations">Integrations</h1>
+<p>Currently we support the following integrations:  </p>
+<ul>
+<li><a href="../D365-F&amp;O-to-D365-CRM/">D365 F&amp;O to D365 CRM</a></li>
+<li><a href="../D365-CRM-to-D365-F&amp;O/">D365 CRM to D365 F&amp;O</a></li>
+<li><a href="../scale/">Levridge Scale House</a></li>
+<li><a href="../Agsync/">Agsync</a></li>
+<li><a href="../Kahler/">Kahler</a></li>
+<li><a href="../Surety/">Surety</a></li>
+<li><a href="../oneWeigh/">oneWeigh</a></li>
+<li><a href="../Field-Reveal/">Field Reveal</a></li>
+<li><a href="../Levridge-CRM-Remote-Printing-Service/">Levridge CRM Remote Printing Service</a></li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
