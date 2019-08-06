@@ -213,12 +213,12 @@
  - Create a subscription on the topic above</p>
 <p>Note: Because CRM does not support sending messages to topics with 
 subscriptions that require sessions, it is important to make sure that 
-the subscription is created <strong>without</strong> enabling sessions.
-<img alt="subscription creation" src="../assets/images/ASBSubscriptionEnableSessions.png" /></p>
+the subscription is created <strong>without</strong> enabling sessions.</p>
+<p><img alt="subscription creation" src="../assets/images/ASBSubscriptionEnableSessions.png" /></p>
 <p>In order to support message ordering without the use of sessions
 the <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.servicebus.management.topicdescription.supportordering?view=azure-dotnet">TopicDescription.SupportOrdering</a> property
-must be set to true on the topic. You will need to use the service bus explorer to set this.
-<img alt="Azure Service Bus Explorer Support Ordering" src="../assets/images/ServiceBusExplorerEnforceOrdering.PNG" /></p>
+must be set to true on the topic. You will need to use the service bus explorer to set this.</p>
+<p><img alt="Azure Service Bus Explorer Support Ordering" src="../assets/images/ServiceBusExplorerEnforceOrdering.PNG" /></p>
 <h3 id="configuration">Configuration</h3>
 <p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
 <pre><code>"SourceConfig": {
