@@ -7,6 +7,16 @@ To integrate from D365 CRM to D365 F&O you will need to:
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
  - Create an Azure Service bus topic
  - Create a subscription on the topic above
+ 
+Note: Because CRM does not support sending messages to topics with 
+subscriptions that require sessions, it is important to make sure that 
+the subscription is created **without** enabling sessions.
+![subscription creation](assets/images/ASBSubscriptionEnableSessions.png)
+
+In order to support message ordering without the use of sessions
+the [TopicDescription.SupportOrdering](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.servicebus.management.topicdescription.supportordering?view=azure-dotnet) property
+must be set to true on the topic. You will need to use the service bus explorer to set this.
+![Azure Service Bus Explorer Support Ordering](assets/images/ServiceBusExplorerEnforceOrdering.PNG)
 
 ### Configuration
 In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
