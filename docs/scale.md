@@ -35,13 +35,12 @@ Install-module-name SqlServer
 [Y]
 ```
 After this, you should be seeing Windows IIS features being enabled.
-INSERT PHOTO
+![Windows-IIS-Features-Enabled](./assets/images/Windows-IIS-Features-Enabled.png)
 
 Once this has been completed, search IIS in Windows Search. Three sites should show:
-INSERT PHOTO
+![IIS-Default-Web-Site](./assets/images/IIS-Default-Web-Site.png)
 
 Right click the Default Web Site. Select manage web site and stop web site.
-INSERT PHOTO
 
 The installations should enable two window services.
 
