@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Levridge Scale - Levridge Documentation</title>
+        <title>Scale Installation - Levridge Documentation</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -151,9 +151,19 @@
     <a href="../Equity/">Levridge Equity Accounting</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Levridge Scale</a>
+  <li class="dropdown-submenu">
+    <a href="#">Levridge Scale</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Scale-Overview/">Scale Overview</a>
 </li>
+            
+<li class="active">
+    <a href="./">Scale Installation</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                             <li >
@@ -168,7 +178,7 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../Equity/">
+                                <a rel="next" href="../Scale-Overview/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -185,20 +195,64 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#introduction">Introduction</a></li>
-        <li class="main "><a href="#overview">Overview</a></li>
-        <li class="main "><a href="#main-point-1">Main Point 1</a></li>
-            <li><a href="#sub-point-11">Sub Point 1.1</a></li>
+        <li class="main active"><a href="#levridge-scale-installation">Levridge Scale Installation</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="introduction">Introduction</h1>
-<p>Brief introduction of the module, component or feature being documented.</p>
-<p>This document explains ...</p>
-<h1 id="overview">Overview</h1>
-<h1 id="main-point-1">Main Point 1</h1>
-<h2 id="sub-point-11">Sub Point 1.1</h2></div>
+<h2 id="levridge-scale-installation">Levridge Scale Installation</h2>
+<p>Copy the folder name 'LevridgeScaleHouse' from its current location. </p>
+<ul>
+<li>Copy it to your computers C:Drive</li>
+<li>This will take around 15 to 30 minutes to complete.</li>
+</ul>
+<p>Once copied, open PowerShell as an administrator.</p>
+<ul>
+<li>Run command:</li>
+</ul>
+<pre><code>   Cd C:\LevridgeScaleHouse\
+</code></pre>
+
+<ul>
+<li>Next run command:</li>
+</ul>
+<pre><code>     .\ScaleHouseAppInstall.ps1 -installFullPackage $true
+</code></pre>
+
+<ul>
+<li>If presented with an error stating 'cannot be loaded because running scripts is disabled on this system' then run command:</li>
+</ul>
+<pre><code>Set-ExecutionPolicy Unrestricted
+[Y] for Yes
+</code></pre>
+
+<p>For the next step, run command:</p>
+<pre><code>.\ScaleHouseAppInstall.ps1 -installFullPackage $true
+</code></pre>
+
+<p>You will see a few errors depending on your system settings.</p>
+<p>It should then bring you to a Microsoft SQL Server Installer.</p>
+<ul>
+<li>If installation should stop during SQL Server Installation. Run command:</li>
+</ul>
+<pre><code>Install-module-name SqlServer
+[Y]
+</code></pre>
+
+<p>After this, you should be seeing Windows IIS features being enabled.
+INSERT PHOTO</p>
+<p>Once this has been completed, search IIS in Windows Search. Three sites should show:
+INSERT PHOTO</p>
+<p>Right click the Default Web Site. Select manage web site and stop web site.
+INSERT PHOTO</p>
+<p>The installations should enable two window services.</p>
+<ul>
+<li>Hardware</li>
+<li>LevScale Printer</li>
+<li>Eventually some integration service</li>
+</ul>
+<p>The installation will turn on IIS, .Net, and SQL windows features.
+The installation will also create App Pools along with websites to run the website server. You will need to setup websites to address them. </p></div>
         </div>
 
         <footer class="col-md-12">

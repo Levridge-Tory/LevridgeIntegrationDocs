@@ -151,9 +151,19 @@
     <a href="../Equity/">Levridge Equity Accounting</a>
 </li>
                                     
+  <li class="dropdown-submenu">
+    <a href="#">Levridge Scale</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../scale/">Levridge Scale</a>
+    <a href="../Scale-Overview/">Scale Overview</a>
 </li>
+            
+<li >
+    <a href="../scale/">Scale Installation</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                             <li >
@@ -185,12 +195,35 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#levridge-scale-house">Levridge Scale House</a></li>
+        <li class="main active"><a href="#levridge-scale-house-integration">Levridge Scale House Integration</a></li>
+            <li><a href="#azure-service-bus-explorer-for-integration">Azure service bus explorer for integration</a></li>
+            <li><a href="#integration-fo-to-scale">Integration F&amp;O to scale</a></li>
+            <li><a href="#integration-scale-to-fo">Integration scale to F&amp;O</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="levridge-scale-house">Levridge Scale House</h2></div>
+<h1 id="levridge-scale-house-integration">Levridge Scale House Integration</h1>
+<h4 id="azure-service-bus-explorer-for-integration">Azure service bus explorer for integration</h4>
+<ol>
+<li>Down - F&amp;O to scale, </li>
+<li>Up - Scale to F&amp;O</li>
+<li>Appsettings.json - configuration file, edit file to switch between up and down</li>
+</ol>
+<h4 id="integration-fo-to-scale">Integration F&amp;O to scale</h4>
+<p>The link below contains the integration list that has the entities needed when integrating F&amp;O to scale through System administration &gt; Setup &gt; Event Framework &gt; Event framework events.
+https://teams.microsoft.com/_#/xlsx/viewer/teams/https:~2F~2Fstoneridgesoft.sharepoint.com~2Fsites~2Flevridge~2FShared%20Documents~2FGeneral~2FDevelopment~2FIntegration~2FIntegration%20Event%20Ordered%20Entity%20List.xlsx?threadId=19:7aa3b4752ccd44c38b06dca038958883@thread.skype&amp;baseUrl=https:~2F~2Fstoneridgesoft.sharepoint.com~2Fsites~2Flevridge&amp;fileId=8AEC9593-E967-4418-8201-6E6158C18F3E&amp;ctx=files&amp;viewerAction=edit</p>
+<ol>
+<li>System administration &gt; Setup &gt; Event framework &gt; Event framework events</li>
+<li>Run azure service bus Down</li>
+<li>Run IntegrationConsole.cmd</li>
+</ol>
+<h4 id="integration-scale-to-fo">Integration scale to F&amp;O</h4>
+<ol>
+<li>Run azure service bus Up</li>
+<li>Run IntegrationConsole.cmd</li>
+<li>When Print is clicked on the scale app, the ticket will then sync to F&amp;O.</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">
