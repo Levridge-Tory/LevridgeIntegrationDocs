@@ -210,7 +210,7 @@
 <p>To first install print service application, open Visual Studio.
 In Visual Studio, the print service is checked-in at "$/Levridge/CRM/Main/PrintService".</p>
 <p>Double click this and map it to a path on your machine. </p>
-<p><img alt="1.1" src="../assets/images/1.1.png" /></p>
+<p><img alt="PrintServiceFolderLocation" src="../assets/images/PrintServiceFolderLocation.png" /></p>
 <p>In Visual Studio, click Build &gt; Build Solution. 
 Activate the service as detailed below in PowerShell:</p>
 <ul>
@@ -234,15 +234,15 @@ the Print Service application will use to print:</p>
 <li>
 <p>Go to control panel and locate the setting titled "Devices and Printers"
 (Note: Not all setting are in this screenshot. This view is set to "Small icons")</p>
-<p><img alt="1.2" src="../assets/images/1.2.png" /></p>
+<p><img alt="ControlPanelDevicesPrinters" src="../assets/images/ControlPanelDevicesPrinters.png" /></p>
 </li>
 <li>
 <p>Navigate to the list of print options on your computer and select the device of your choice.</p>
-<p><img alt="1.3" src="../assets/images/1.3.png" /></p>
+<p><img alt="Printers" src="../assets/images/Printers.png" /></p>
 </li>
 <li>
 <p>The full network name that is required for the code is listed once you select the printer. (Highlighted in yellow below)</p>
-<p><img alt="1.4" src="../assets/images/1.4.png" /></p>
+<p><img alt="PrinterNetworkName" src="../assets/images/PrinterNetworkName.png" /></p>
 </li>
 </ol>
 <h3 id="using-print-service-application">Using Print Service Application</h3>
@@ -259,7 +259,7 @@ command into PowerShell instead.</p>
 <p>Use Windows+R to select "services.msc" to open Services 
 Management Console. Right click on PrintService and 
 select "start"</p>
-<p><img alt="1.5" src="../assets/images/1.5.png" /></p>
+<p><img alt="ServiceManagementPrintService" src="../assets/images/ServiceManagementPrintService.png" /></p>
 <h3 id="setting-up-a-new-printer">Setting Up a New Printer</h3>
 <p>To set up a new printer, new parameters will 
 need to be setup. To add the parameters, 
@@ -276,11 +276,11 @@ add the following:</p>
 These two need to be changed for the printer
 that is being printed to.
 The Site ID is the customer site code from CRM. </p>
-<p><img alt="1.6" src="../assets/images/1.6.png" /></p>
+<p><img alt="SiteIDCustomerSiteCode" src="../assets/images/SiteIDCustomerSiteCode.png" /></p>
 <p>For debugging the Service, we can use the Windows 
 Event Viewer. Go to Administrative tools in the 
 Control Panel and Open Event Viewer.</p>
-<p><img alt="1.7" src="../assets/images/1.7.png" /></p>
+<p><img alt="DebuggingPrintService" src="../assets/images/DebuggingPrintService.png" /></p>
 <h3 id="additional-information-and-documentation">Additional Information and Documentation</h3>
 <p>In CRM on the sales ordered details header, there is 
 an Auto Print Field. Set to Yes and click save. 
