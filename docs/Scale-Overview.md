@@ -1,7 +1,9 @@
 ﻿# Overview
 
-This is a list of miscellaneous information for the Scale App.
-    
+The purpose of Levridge Scale is to receive all the data measured at the scales at ag retailer locations and incorporate it into a scale ticket
+which can be printed out and given to the grower, while also bringing the scale ticket into the Dynamics 365 ERP system. 
+Within the accounting technology solution, the contents of the scale ticket can be accounted for and posted against contracts the grower has with the ag retailer. 
+
   - [Levridge Scale House Installation](scale.md)
   - [Levridge Scale House Integration](scale-integration.md) 
 
