@@ -5,7 +5,8 @@ import LevCore Solution followed by importing
 Agronomy Solution.
 
 Migrate the ESG Configuration data using the Configuration Migration Tool.
-   - This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget
+
+- This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget
 
 Ensure an Application User has been created with admin 
 security roles assigned. 
