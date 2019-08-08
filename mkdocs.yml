@@ -24,7 +24,7 @@ nav:
         - Levridge Commodities: 'Commodities.md'
         - Levridge Feed: 'Feed.md'
         - Levridge Equity Accounting: 'Equity.md'
-        - Levridge Scale :
+        - Levridge Scale : 
             - Scale Overview : 'Scale-Overview.md'
             - Scale Installation : 'scale.md'
     - About: about.md

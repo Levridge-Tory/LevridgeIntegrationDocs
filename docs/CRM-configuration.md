@@ -5,7 +5,8 @@ import LevCore Solution followed by importing
 Agronomy Solution.
 
 Migrate the ESG Configuration data using the Configuration Migration Tool.
-   - This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget
+
+- This tool can be downloaded at https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget
 
 Ensure an Application User has been created with admin 
 security roles assigned. 
@@ -32,7 +33,7 @@ look like this:
 Setup the data through integrations, create it in CRM, 
 or import data packets.
 
-![2.1](./assets/images/2.1.png)
+![ColorLabelsCRMConfig](./assets/images/ColorLabelsCRMConfig.png)
 
 Entities in pink must be set up in CRM.
 
@@ -40,11 +41,11 @@ Entities in yellow will integrate over from FinOps.
 
 Entities in green will integrate from Agsync.
 
-![2.2](./assets/images/2.2.png)
+![SandboxFinOpsIntegration](./assets/images/SandboxFinOpsIntegration.png)
 
-![2.3](./assets/images/2.3.png)
+![SandboxIntegrationsCRM](./assets/images/SandboxIntegrationsCRM.png)
 
-![2.4](./assets/images/2.4.png)
+![SandboxIntegrationsCRM2](./assets/images/SandboxIntegrationsCRM2.png)
 
 Once item categories have been either created or 
 imported in, the filtered xmls on the Plans and 

@@ -5,7 +5,7 @@ In Visual Studio, the print service is checked-in at "$/Levridge/CRM/Main/PrintS
 
 Double click this and map it to a path on your machine. 
 
-![1.1](./assets/images/1.1.png)
+![PrintServiceFolderLocation](./assets/images/PrintServiceFolderLocation.png)
 
 In Visual Studio, click Build > Build Solution. 
 Activate the service as detailed below in PowerShell:
@@ -25,15 +25,15 @@ the Print Service application will use to print:
 1. Go to control panel and locate the setting titled "Devices and Printers"
 (Note: Not all setting are in this screenshot. This view is set to "Small icons")
 
-     ![1.2](./assets/images/1.2.png)
+     ![ControlPanelDevicesPrinters](./assets/images/ControlPanelDevicesPrinters.png)
 
 2. Navigate to the list of print options on your computer and select the device of your choice.
 
-     ![1.3](./assets/images/1.3.png)
+     ![Printers](./assets/images/Printers.png)
 
 3. The full network name that is required for the code is listed once you select the printer. (Highlighted in yellow below)
 
-     ![1.4](./assets/images/1.4.png)
+     ![PrinterNetworkName](./assets/images/PrinterNetworkName.png)
 
 
 ### Using Print Service Application
@@ -53,7 +53,7 @@ Use Windows+R to select "services.msc" to open Services
 Management Console. Right click on PrintService and 
 select "start"
 
-![1.5](./assets/images/1.5.png)
+![ServiceManagementPrintService](./assets/images/ServiceManagementPrintService.png)
 
 ### Setting Up a New Printer
 
@@ -73,13 +73,13 @@ These two need to be changed for the printer
 that is being printed to.
 The Site ID is the customer site code from CRM. 
 
-![1.6](./assets/images/1.6.png)
+![SiteIDCustomerSiteCode](./assets/images/SiteIDCustomerSiteCode.png)
 
 For debugging the Service, we can use the Windows 
 Event Viewer. Go to Administrative tools in the 
 Control Panel and Open Event Viewer.
 
-![1.7](./assets/images/1.7.png)
+![DebuggingPrintService](./assets/images/DebuggingPrintService.png)
 
 ### Additional Information and Documentation
 
