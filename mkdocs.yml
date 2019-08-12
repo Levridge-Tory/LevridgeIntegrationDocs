@@ -28,19 +28,18 @@ nav:
             - Scale Overview : 'Scale-Overview.md'
             - Scale Installation : 'scale.md'
     - About: about.md
-    - User Documentation: 
-        - Inventory Value and Costing:
+    - User Documentation:
+        - Inventory Value and Costing :
             - Upload Standard Cost Pricing: 'UploadStandardCostPricing.md'
             - Adjust FIFO Inventory Value: 'AdjustFIFOInventoryValue.md'
             - Setup Cost Variances: 'SetupCostVariances.md'
             - Close Inventory: 'CloseInventory.md'
             - Setup a Standard Cost: 'SetupStandardCost.md'
-        - Procurement Hierarchy:
-            - Create a Purchase Requisition and Consolidation: 'CreatePurhcaseRequistionAndConsolidation.md'
+        - Procurement Hierarchy :
+            - Create a Purchase Requisition and Consolidation: 'CreatePurchaseRequistionAndConsolidation.md'
             - Purchasing Policy Assignment: 'PurchasingPolicyAssignment.md'
             - Publish Catalog: 'PublishCatalog.md'
             - Create a Procurement Category: 'CreateProcurementCategory.md'
             - Create a Procurement Hierarchy: 'CreateProcurementHierarchy.md'
             - Assign Item to a Procurement Category: 'AssignItemToProcumentCategory.md'
             - Assign Posting Profile to Procuremnet Category: 'AssignPostpingProfiletoProcuremnetCategory.md'
-        - Vendor Customer Pricing: 
