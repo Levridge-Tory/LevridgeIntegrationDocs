@@ -24,9 +24,9 @@ This document explains ...
 ![AssignPostingProfile10](./assets/images/AssignPostingProfile/AssignPostingProfile10.png)
 11. In the list, find and select the desired record.
 ![AssignPostingProfile11](./assets/images/AssignPostingProfile/AssignPostingProfile11.png)
-12. In the Category realtion field, enter or select a value.
+12. In the Category relation field, enter or select a value.
 ![AssignPostingProfile15](./assets/images/AssignPostingProfile/AssignPostingProfile15.png)
-13. In the tree, select 'Lanuds (New Category)\Animal Nutrition (Animal Nutrition)'.
+13. In the tree, select 'Landus (New Category)\Animal Nutrition (Animal Nutrition)'.
 ![AssignPostingProfile16](./assets/images/AssignPostingProfile/AssignPostingProfile16.png)
 14. Click OK.
 ![AssignPostingProfile17](./assets/images/AssignPostingProfile/AssignPostingProfile17.png)

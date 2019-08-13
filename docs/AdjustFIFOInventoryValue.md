@@ -48,38 +48,28 @@ This document explains ...
  ![AdjustFIFOInventoryValue22](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue22.png)
 23. Click Details.
 ![AdjustFIFOInventoryValue23](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue23.png)
-24. Click Details.
-![AdjustFIFOInventoryValue24](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue24.png)
-25. Click Settlements.
+24. Click Settlements.
 ![AdjustFIFOInventoryValue25](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue25.png)
-26. Click to follow the link in the Item number field.
+25. Click to follow the link in the Item number field.
 ![AdjustFIFOInventoryValue26](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue26.png)
-27. Click to follow the link in the Item number field.
+26. Click to follow the link in the Item number field.
 ![AdjustFIFOInventoryValue27](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue27.png)
-28. On the Action pane, click Manage Inventory.
+27. On the Action pane, click Manage Inventory.
 ![AdjustFIFOInventoryValue28](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue28.png)
-29. Click On-hand inventory.
+28. Click On-hand inventory.
 ![AdjustFIFOInventoryValue29](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue29.png)
-30. Refresh the page.
+29. Refresh the page.
 ![AdjustFIFOInventoryValue30](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue30.png)
-31. Click Transactions.
+30. Click Transactions.
 ![AdjustFIFOInventoryValue31](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue31.png)
-32. Close the page.
+31. Close the page.
 ![AdjustFIFOInventoryValue32](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue32.png)
-33. Close the page.
-![AdjustFIFOInventoryValue33](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue33.png)
-34. Close the page.
-![AdjustFIFOInventoryValue34](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue34.png)
-35. Close the page.
-![AdjustFIFOInventoryValue35](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue35.png)
-36. Close the page.
-![AdjustFIFOInventoryValue36](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue36.png)
-37. Go to Inventory management > Inquiries and reports > On-hand list.
-38. Apply the following filters: Enter a filter value of "" on the "Item number" field using the "begins with" filter operator; Enter a filter value of "" on the "Site" field using the "begins with" filter operator; Enter a filter value of "" on the "Warehouse" field using the "begins with" filter operator; Enter a filter value of "" on the "Serial number" field using the "begins with" filter operator; Enter a filter value of "" on the "Batch number" field using the "begins with" filter operator; Enter a filter value of "" on the "Search name" field using the "begins with" filter operator
+32. Go to Inventory management > Inquiries and reports > On-hand list.
+33. Apply the following filters: Enter a filter value of "" on the "Item number" field using the "begins with" filter operator; Enter a filter value of "" on the "Site" field using the "begins with" filter operator; Enter a filter value of "" on the "Warehouse" field using the "begins with" filter operator; Enter a filter value of "" on the "Serial number" field using the "begins with" filter operator; Enter a filter value of "" on the "Batch number" field using the "begins with" filter operator; Enter a filter value of "" on the "Search name" field using the "begins with" filter operator
 ![AdjustFIFOInventoryValue38](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue38.png)
-39. Click Intercompany on-hand.
+34. Click Intercompany on-hand.
 ![AdjustFIFOInventoryValue39](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue39.png)
-40. Click the On-hand tab.
+35. Click the On-hand tab.
 ![AdjustFIFOInventoryValue40](./assets/images/AdjustFIFOInventoryValue/AdjustFIFOInventoryValue40.png)
 
 

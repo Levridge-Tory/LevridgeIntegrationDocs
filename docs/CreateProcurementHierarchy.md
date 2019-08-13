@@ -5,7 +5,7 @@ This document explains ...
 
 ## How to Create Procurement Hierarchy
 
-1. Go to Product Information Management > SEtup > Categories and Attributes > Category Hierarchies.
+1. Go to Product Information Management > Setup > Categories and Attributes > Category Hierarchies.
 2. Click New.
 ![ProcurementHierarchy2](./assets/images/ProcurementHierarchy/ProcurementHierarchy2.png)
 3. In the Name field, type a value.
@@ -68,7 +68,7 @@ This document explains ...
 ![ProcurementHierarchy38](./assets/images/ProcurementHierarchy/ProcurementHierarchy38.png)
 39. In the list, find and select the desired record.
 ![ProcurementHierarchy39](./assets/images/ProcurementHierarchy/ProcurementHierarchy39.png)
-40. Click add.
+40. Click Add.
 ![ProcurementHierarchy40](./assets/images/ProcurementHierarchy/ProcurementHierarchy40.png)
 41. Click OK.
 ![ProcurementHierarchy41](./assets/images/ProcurementHierarchy/ProcurementHierarchy41.png)

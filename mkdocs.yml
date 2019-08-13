@@ -48,3 +48,5 @@ nav:
             - Basic Vendor Price with Price Update : 'BasicVendorPriceWithPriceUpdate.md'
             - Basic Vendor Purchase Price : 'BasicVendorPurchasePrice.md'
             - Basic Customer Price Setup : 'BasicCustomerPriceSetup.md'
+        - RFQ : 'RFQ.md'
+        - Commissions : 'Commissions.md'

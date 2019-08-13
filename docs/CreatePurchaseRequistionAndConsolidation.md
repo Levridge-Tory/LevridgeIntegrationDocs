@@ -99,5 +99,5 @@ This document explains ...
 ![PurchaseRequisitionandConsolidation27.2](./assets/images/PurchaseRequisitionandConsolidation/PurchaseRequisitionandConsolidation27.2.png)
 28. In the list, mark or unmark all rows.
 ![PurchaseRequisitionandConsolidation28.2](./assets/images/PurchaseRequisitionandConsolidation/PurchaseRequisitionandConsolidation28.2.png)
-29. Click Create purchase order.
+29. Click Create Purchase Order.
 ![PurchaseRequisitionandConsolidation29.2](./assets/images/PurchaseRequisitionandConsolidation/PurchaseRequisitionandConsolidation29.2.png)

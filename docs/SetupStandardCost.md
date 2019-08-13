@@ -26,19 +26,15 @@ This document explains ...
 ![SetupStandardCost11](./assets/images/SetupStandardCost/SetupStandardCost11.png)
 12. Click the Pending prices tab.
 ![SetupStandardCost12](./assets/images/SetupStandardCost/SetupStandardCost12.png)
-13. Click the Active prices tab.
-![SetupStandardCost13](./assets/images/SetupStandardCost/SetupStandardCost13.png)
-14. Click the Pending prices tab.
-![SetupStandardCost14](./assets/images/SetupStandardCost/SetupStandardCost14.png)
-15. On the Action Pane, click Options.
+13. On the Action Pane, click Options.
 ![SetupStandardCost15](./assets/images/SetupStandardCost/SetupStandardCost15.png)
-16. Close the page.
+14. Close the page.
 ![SetupStandardCost16](./assets/images/SetupStandardCost/SetupStandardCost16.png)
-17. Refresh the page.
+15. Refresh the page.
 ![SetupStandardCost17](./assets/images/SetupStandardCost/SetupStandardCost17.png)
-18. Click Item price.
+16. Click Item price.
 ![SetupStandardCost18](./assets/images/SetupStandardCost/SetupStandardCost18.png)
-19. Click Activate pending price(s).
+17. Click Activate pending price(s).
 ![SetupStandardCost19](./assets/images/SetupStandardCost/SetupStandardCost19.png)
-20. Click the Active prices tab.
+18. Click the Active prices tab.
 ![SetupStandardCost20](./assets/images/SetupStandardCost/SetupStandardCost20.png)
