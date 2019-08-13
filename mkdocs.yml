@@ -42,4 +42,9 @@ nav:
             - Create a Procurement Category: 'CreateProcurementCategory.md'
             - Create a Procurement Hierarchy: 'CreateProcurementHierarchy.md'
             - Assign Item to a Procurement Category: 'AssignItemToProcurementCategory.md'
-            - Assign Posting Profile to Procuremnet Category: 'AssignPostpingProfiletoProcuremnetCategory.md'
+            - Assign Posting Profile to Procuremnet Category: 'AssignPostingProfiletoProcurementCategory.md'
+        - Vendor Customer Pricing :
+            - Trade Agreements Price Group : 'TradeAgreementsPriceGroup.md'
+            - Basic Vendor Price with Price Update : 'BasicVendorPriceWithPriceUpdate.md'
+            - Basic Vendor Purchase Price : 'BasicVendorPurchasePrice.md'
+            - Basic Customer Price Setup : 'BasicCustomerPriceSetup.md'
