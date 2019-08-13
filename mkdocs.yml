@@ -41,5 +41,5 @@ nav:
             - Publish Catalog: 'PublishCatalog.md'
             - Create a Procurement Category: 'CreateProcurementCategory.md'
             - Create a Procurement Hierarchy: 'CreateProcurementHierarchy.md'
-            - Assign Item to a Procurement Category: 'AssignItemToProcumentCategory.md'
+            - Assign Item to a Procurement Category: 'AssignItemToProcurementCategory.md'
             - Assign Posting Profile to Procuremnet Category: 'AssignPostpingProfiletoProcuremnetCategory.md'
