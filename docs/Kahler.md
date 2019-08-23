@@ -35,45 +35,90 @@ Dispensing Work Records from Kahler.
 
 In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
-    "Controllers": {
-        "HostController": "Levridge.Integration.Host.DefaultController",
-        "KahlerConroller": "Levridge.Integration.Host.KahlerController"
-    },
-    "SourceConfig": {
-        "ServiceBusConfigName": "Dispensing Work Order", //[section name with Dispensing Work Order service bus topic]
-        "ODataConfigName": "DynamicsAX", //[section name with F&O data configuration]
-        "SystemName": "DynamicsAX",
-        "Direction": "Source"
-    },
-    "TargetConfig": {
-        "ODataConfigName": "Kahler End Point", //[section name with Kahler data configuration],
-        "CDSConfigName": [section name with CDS data configuration],
-        "SystemName": "Kahler",
-        "Direction": "Target"
-    },
-    "DynamicsAX": {
-        "UriString": [URL to D365 F&O],
-        "ActiveDirectoryResource": [URL to D365 F&O],
-        "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
-        "ActiveDirectoryClientAppId": [Application ID used to register the application in AD],
-        "ActiveDirectoryClientAppSecret": [Client Secret generated for the Application ID in AD],
-        "ODataEntityPath": "[URL to D365 F&O]/data/"
-    },
-    "Kahler End Point": {
-        "UriString": [URL to Local Kahler]
-    },
-    "Dispensing Work Order": {
-        "ConnectionString": [connection string to Dispensing Work Order Topic],
-        "TopicName": [Dispensing Work Order Topic Name],
-        "SubscriptionName": [Subscription Name for the Branch],
-        "RequiresSession": true
-    },
-    "Levridge.Integration.Host.KahlerController": {
-        "ConnectionString": [connection string to Dispensing Work Record Topic],
-        "TopicName": [Dispensing Work Record Topic Name],
-        "RequiresSession": true
-    }
+        "SourceConfig": {
+            "ServiceBusConfigName": "[section name with Dispensing Work Order service bus topic]",
+            "ODataConfigName": "[section name with F&O data configuration]",
+            "SystemName": "DynamicsAX",
+            "Direction": "Source"
+        },
+        "TargetConfig": {
+            "ODataConfigName": "[section name with Kahler data configuration]",
+            "CDSConfigName": "[section name with CDS data configuration]",
+            "SystemName": "Kahler",
+            "Direction": "Target"
+        }
 
+Here is a sample template for the entire appsettings.json file used for the on-premise deployemnt
+of the integration from FinOps to Kahler:
+
+    {
+        "Controllers": {
+            "HostController": "Levridge.Integration.Host.DefaultController",
+            "KahlerConroller": "Levridge.Integration.Host.KahlerController"
+        },
+        "Logging": {
+            "Debug": {
+                "LogLevel": {
+                    "Default": "Information"
+                }
+            },
+            "Console": {
+                "IncludeScopes": true,
+                "LogLevel": {
+                    "Default": "Information"
+                }
+            },
+            "LogLevel": {
+                "Default": "Information"
+            }
+        },
+        "AllowedHosts": "*",
+        "SourceConfig": {
+            "ServiceBusConfigName": "Dispensing Work Order", //[section name with Dispensing Work Order service bus topic]
+            "ODataConfigName": "DynamicsAX", //[section name with F&O data configuration]
+            "SystemName": "DynamicsAX",
+            "Direction": "Source"
+        },
+        "TargetConfig": {
+            "ODataConfigName": "Kahler End Point", //[section name with Kahler data configuration],
+            "CDSConfigName": "[section name with CDS data configuration]",
+            "SystemName": "Kahler",
+            "Direction": "Target"
+        },
+        "DynamicsAX": {
+            "UriString": "[URL to D365 F&O]",
+            "ActiveDirectoryResource": "[URL to D365 F&O]",
+            "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+            "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+            "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+            "ODataEntityPath": "[URL to D365 F&O]/data/"
+        },
+        "Kahler End Point": {
+            "UriString": "[URL to Local Kahler]"
+        },
+        "Dispensing Work Order": {
+            "ConnectionString": "[connection string to Dispensing Work Order Topic]",
+            "TopicName": "[Dispensing Work Order Topic Name]",
+            "SubscriptionName": "[Subscription Name for the Branch]",
+            "RequiresSession": true
+        },
+        "CDS": {
+            "UriString": "[URL to CDS or Localhost]",
+            "ActiveDirectoryResource": "[URL to CDS]",
+            "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+            "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+            "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+            "ODataEntityPath": "[URL to CDS]/api/data/v9.0/",
+            "AssemblyName": "Levridge.ODataDataSources.CDS",
+            "ClientClassesNameSpace": "Levridge.ODataDataSources.CDS",
+            "MetadataResource": "CDSMetadata.xml"
+        },
+        "Levridge.Integration.Host.KahlerController": {
+            "ConnectionString": "[connection string to Dispensing Work Record Topic]",
+            "TopicName": "[Dispensing Work Record Topic Name]",
+            "RequiresSession": true
+        }
+    }
 
 #### Controllers
 This section contains a list of controllers that will be loaded by the current instance. In addition to the default 
@@ -102,27 +147,66 @@ the Dispensing Work Record from Kahler to D365 F&O
 
 In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
-    "SourceConfig": {
-        "ServiceBusConfigName": "Dispensing Work Record", //[section name with Dispensing Work Record service bus topic]
-        "SystemName": "Kahler",
-        "Direction": "Source"
-    },
-    "TargetConfig": {
-        "ODataConfigName": "DynamicsAX", //[section name with F&O data configuration]
-        "SystemName": "DynamicsAX",
-        "Direction": "Target"
-    },
-    "DynamicsAX": {
-        "UriString": [URL to D365 F&O],
-        "ActiveDirectoryResource": [URL to D365 F&O],
-        "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
-        "ActiveDirectoryClientAppId": [Application ID used to register the application in AD],
-        "ActiveDirectoryClientAppSecret": [Client Secret generated for the Application ID in AD],
-        "ODataEntityPath": "[URL to D365 F&O]/data/"
-    },
-    "Dispensing Work Record": {
-        "ConnectionString": [connection string to Dispensing Work Record Topic],
-        "TopicName": [Dispensing Work Record Topic Name],
-        "SubscriptionName": [Subscription Name for Integration to D365 F&O],
-        "RequiresSession": true
+        "SourceConfig": {
+            "ServiceBusConfigName": "[section name with Dispensing Work Record service bus topic]"
+            "ODataConfigName": "",
+            "SystemName": "Kahler",
+            "Direction": "Source"
+        },
+        "TargetConfig": {
+            "ODataConfigName": "[section name with F&O data configuration]",
+            "CDSConfigName": "[section name with CDS configuration]",
+            "SystemName": "DynamicsAX",
+            "Direction": "Target"
+        }
+
+Here is a template of the full appsettings.json file used for the Kahler integration from the Webhook to FinOps:
+
+    {
+        "Controllers": {
+            "HostController": "Levridge.Integration.Host.DefaultController"
+        },
+        "Logging": {
+            "Debug": {
+                "LogLevel": {
+                    "Default": "Information"
+                }
+            },
+            "Console": {
+                "IncludeScopes": true,
+                "LogLevel": {
+                    "Default": "Information"
+                }
+            },
+            "LogLevel": {
+                "Default": "Information"
+            }
+        },
+        "AllowedHosts": "*",
+        "SourceConfig": {
+            "ServiceBusConfigName": "Dispensing Work Record", //[section name with Dispensing Work Record service bus topic]
+            "ODataConfigName": "",
+            "SystemName": "Kahler",
+            "Direction": "Source"
+        },
+        "TargetConfig": {
+            "ODataConfigName": "DynamicsAX", //[section name with F&O data configuration]
+            "CDSConfigName": "CDS",
+            "SystemName": "DynamicsAX",
+            "Direction": "Target"
+        },
+        "DynamicsAX": {
+            "UriString": "[URL to D365 F&O]",
+            "ActiveDirectoryResource": "[URL to D365 F&O]",
+            "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+            "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+            "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+            "ODataEntityPath": "[URL to D365 F&O]/data/"
+        },
+        "Dispensing Work Record": {
+            "ConnectionString": "[connection string to Dispensing Work Record Topic]",
+            "TopicName": "[Dispensing Work Record Topic Name]",
+            "SubscriptionName": "[Subscription Name for Integration to D365 F&O]",
+            "RequiresSession": true
+        }
     }
