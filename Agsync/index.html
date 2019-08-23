@@ -347,7 +347,112 @@ a filter on the event in F&amp;O. </p>
 <li>Create a subscription on the topic above</li>
 </ul>
 <h3 id="configuration">Configuration</h3>
-<p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p></div>
+<p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
+<pre><code>  "SourceConfig": {
+    "ServiceBusConfigName": "[section name with service bus topic and subscription for Agsync Master Data]",
+    "ODataConfigName": "[section name with F&amp;O data configuration]",
+    "SystemName": "DynamicsAx",
+    "Direction": "Source"
+  },
+  "TargetConfig": {
+    "ODataConfigName": "[section name with Agsync endpoint configuration]",
+    "CDSConfigName": "[section name with CDS data configuration]",
+    "SystemName": "AgSync",
+    "Direction": "Target",
+  }
+</code></pre>
+<p>You will also have to include the controller entry to have the controller loaded:</p>
+<pre><code>"Controllers": {
+    "HostController": "Levridge.Integration.Host.DefaultController",
+    "AgSyncConroller": "Levridge.Integration.Host.AgSyncController"
+}
+</code></pre>
+<p>Here is a sample template for the entire appsettings.json file used for the integration
+from FinOps to Agsync:</p>
+<pre><code>{
+    "Controllers": {
+        "HostController": "Levridge.Integration.Host.DefaultController",
+        "AgSyncConroller": "Levridge.Integration.Host.AgSyncController"
+    },
+    "Logging": {
+        "Debug": {
+            "LogLevel": {
+                "Default": "Information"
+            }
+        },
+        "Console": {
+            "IncludeScopes": true,
+            "LogLevel": {
+                "Default": "Information"
+            }
+        },
+        "LogLevel": {
+            "Default": "Information"
+        }
+    },
+    "AllowedHosts": "*",
+    "SourceConfig": {
+        "ServiceBusConfigName": "AgsyncMasterDataServiceBus",
+        "ODataConfigName": "DynamicsAX",
+        "SystemName": "DynamicsAx",
+        "Direction": "Source"
+    },
+    "TargetConfig": {
+        "ODataConfigName": "AgSyncEndpoint",
+        "SystemName": "AgSync",
+        "Direction": "Target",
+        "CDSConfigName": "CDS"
+    },
+    "DynamicsAX": {
+        "UriString": "[URL to D365 F&amp;O]",
+        "ActiveDirectoryResource": "[URL to D365 F&amp;O]",
+        "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+        "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+        "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+        "ODataEntityPath": "[URL to D365 F&amp;O]/data/"
+    },
+    "CDS": {
+        "UriString": "[URL to CDS or Localhost]",
+        "ActiveDirectoryResource": "[URL to CDS]",
+        "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+        "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+        "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+        "ODataEntityPath": "[URL to CDS]/api/data/v9.0/",
+        "AssemblyName": "Levridge.ODataDataSources.CDS",
+        "ClientClassesNameSpace": "Levridge.ODataDataSources.CDS",
+        "MetadataResource": "CDSMetadata.xml"
+    },
+    "AgSyncEndpoint": {
+        "baseUri": "https://fields.agsync.com/api/",
+        "tokenUrl": "https://auth.agsync.com/core/connect/token",
+        "ClientId": "[client ID assigned by Agsync]", // customer specific
+        "ClientPass": "[Client Secret assigned by Agsync]", // customer specific
+        "ValutURL": "[URL to customer Azure Key Vault]",
+        "AgSyncTokenKey": "AgsyncAccessToken",
+        "RedirectUri": "[URL to AgsyncAuth controller]", // customer specific
+        "IntegrationId": "CustomerIntegrationID" // customer specific
+    },
+    "agsync": { // used by Webhook
+        "ConnectionString": "[connection string to Agsync master data topic]",
+        "TopicName": "[Agsync master data topic]",
+        "RequiresSession": true,
+        "RedirectUri": "[URL to AgsyncAuth controller]",
+        "TokenUrl": "https://auth.agsync.com/core/connect/token",
+        "AuthorizeUrl": "https://auth.agsync.com/core/connect/authorize",
+        "baseUri": "https://fields.agsync.com/api/",
+        "ClientId": "[client ID assigned by Agsync]",
+        "ClientPass": "[Client Secret assigned by Agsync]",
+        "ValutURL": "[URL to customer Azure Key Vault]",
+        "AgSyncTokenKey": "AgsyncAccessToken"
+    },
+    "AgsyncMasterDataServiceBus": {
+        "ConnectionString": "[connection string to Agsync master data topic]",
+        "TopicName": "[Agsync master data topic]",
+        "SubscriptionName": "[Agsync master data subscription name]",
+        "RequiresSession": true
+    }
+}
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
