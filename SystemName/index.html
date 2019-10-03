@@ -298,11 +298,29 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#systemname">SystemName</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h2 id="systemname">SystemName</h2>
+<p>SystemName is an enumerated value that is used in the 
+<a href="../SourceConfig/">Source</a> and <a href="../TargetConfig/">Target</a> configurations 
+to configure which integrations get loaded into the current 
+integration framework instance.</p>
+<p>The valid values are:</p>
+<ul>
+<li><strong>None</strong>: No integrations will be loaded</li>
+<li><strong>DynamicsAX</strong>: The integrations for Dynamics 365 Finance and Operations will be loaded as either the Source or the Target depending on which config node it appears.</li>
+<li><strong>DynamicsCRM</strong>: The integrations for Dynamics 365 Customer Engagement will be loaded as either the Source or the Target depending on which config node it appears.</li>
+<li><strong>ScaleHouse</strong>: The integrations for the Levridge Scale Application will be loaded as either the Source or the Target depending on which config node it appears.</li>
+<li><strong>OneWeigh</strong>: The integrations for OneWeigh will be loaded as either the Source or the Target depending on which config node it appears.</li>
+<li><strong>AgSync</strong>: The integrations for Agsync will be loaded as either the Source or the Target depending on which config node it appears.</li>
+<li><strong>Recommendation</strong>: The integrations for Recommendations will be loaded as the Source. This is not a valid value for the Target configuration.</li>
+<li><strong>Field</strong>: The integrations for Fields will be loaded as the Source. This is not a valid value for the Target configuration.</li>
+<li><strong>Surety</strong>: The integrations for Surety will be loaded as the Source. This is not a valid value for the Target configuration.</li>
+<li><strong>Kahler</strong>: The integrations for Kahler will be loaded as either the Source or the Target depending on which config node it appears.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
