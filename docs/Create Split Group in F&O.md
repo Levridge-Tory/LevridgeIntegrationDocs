@@ -1,4 +1,4 @@
-﻿# Create a New Split Group - Accounts Receivable Setup - D365F&O
+﻿# Create a New Split Group
 
 # Overview
 There should be some text here.
