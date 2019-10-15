@@ -15,6 +15,7 @@ nav:
                     - 'oneWeigh' : 'oneWeigh.md'
                     - 'Field Reveal' : 'Field-Reveal.md'
                 - Deployment: 
+                    - 'Application Settings Configuration' : 'AppSettingsApplicationConfiguration.md'
                     - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
                     - 'Deploying CDS' : 'DeployingCDS.md'
             - Print Service: 'print-service.md'
@@ -27,8 +28,9 @@ nav:
         - Levridge Scale : 
             - Scale Overview : 'Scale-Overview.md'
             - Scale Installation : 'scale.md'
-    - About: about.md
     - User Documentation:
+        - Examples :
+            - 'Create a New Split Group - Accounts Receivable Setup - D365F&O': 'Create Split Group in F&O.md'
         - Inventory Value and Costing :
             - Upload Standard Cost Pricing: 'UploadStandardCostPricing.md'
             - Adjust FIFO Inventory Value: 'AdjustFIFOInventoryValue.md'
@@ -54,3 +56,4 @@ nav:
             - Add Address for Delivery and Invoice : 'AddAddressForDeliveryAndInvoice.md'
             - Customer Template : 'CustomerTemplate.md'
             - Customer Creation Organization : 'CustomerCreationOrganization.md'
+    - About: about.md

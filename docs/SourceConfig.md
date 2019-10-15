@@ -1,4 +1,4 @@
-# Introduction
+# SourceConfig Settings
 SourceConfig is an object in the appsettings.json file used by the Levridge Integration Framework
 to define the configuration for the Source of an integration interaction.
 
