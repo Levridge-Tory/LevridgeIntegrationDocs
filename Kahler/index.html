@@ -108,6 +108,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../AppSettingsApplicationConfiguration.md">Application Settings Configuration</a>
+</li>
+            
+<li >
     <a href="../Deploying-Integration-Framework/">Deploying the Integration Framework</a>
 </li>
             
@@ -166,12 +170,19 @@
   </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../about/">About</a>
-                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Documentation <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Examples</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Create Split Group in F&O/">Create a New Split Group - Accounts Receivable Setup - D365F&O</a>
+</li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
     <a href="#">Inventory Value and Costing</a>
@@ -282,6 +293,9 @@
   </li>
                                 </ul>
                             </li>
+                            <li >
+                                <a href="../about/">About</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -308,7 +322,8 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#kahler">Kahler</a></li>
+        <li class="main active"><a href="#kahler-integration">Kahler Integration</a></li>
+        <li class="main "><a href="#overview">Overview</a></li>
             <li><a href="#setup">Setup</a></li>
             <li><a href="#configuration-for-kahler-on-premise">Configuration for Kahler on Premise</a></li>
             <li><a href="#configuration-for-kahler-in-azure">Configuration for Kahler in Azure</a></li>
@@ -316,11 +331,13 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="kahler">Kahler</h2>
+<h1 id="kahler-integration">Kahler Integration</h1>
 <p>The Kahler integration is a bidirectional integration that consists of a Topic for
 Dispensing Work Orders that go from D365 F&amp;O to Kahler and Dispensing Work Records that go from 
-Kahler to D365 F&amp;O. This means there are two instances of the integration running
-to handle the entire integration.</p>
+Kahler to D365 F&amp;O. </p>
+<h1 id="overview">Overview</h1>
+<p>Because this is a bidirectional integration there are two instances of the integration running
+to handle the entire integration. There is one integration instance for each direction.</p>
 <p>One aspect of Kahler that is different from other integrations is the D365 F&amp;O to Kahler
 instance must run on premise because the Kahler system runs behind the firewall. This
 should be deployed as a service.</p>
@@ -328,7 +345,7 @@ should be deployed as a service.</p>
 topic that apply to that location. This is done with a filter on the service bus topic subscription.
 In order for the filter to work the Levridge Entity Event must be configured to expose
 the branch property on the message.</p>
-<h3 id="setup">Setup</h3>
+<h2 id="setup">Setup</h2>
 <p>To integrate to and from Kahler and D365 F&amp;O you will need to:</p>
 <ul>
 <li><a href="../Configuring-Levridge-Entity-Event-Endpoint/">Configure Event Endpoint in F&amp;O</a></li>
@@ -343,7 +360,7 @@ the branch property on the message.</p>
 <li>Create a subscription on the Dispensing Work Record topic for integration back to F&amp;O</li>
 <li><a href="../Deploy-Integration-As-A-Service/">Deploy the Levridge Integration Framework as a service</a> at each Branch that has a Kahler mixer</li>
 </ul>
-<h3 id="configuration-for-kahler-on-premise">Configuration for Kahler on Premise</h3>
+<h2 id="configuration-for-kahler-on-premise">Configuration for Kahler on Premise</h2>
 <p>This configuration will need to be on premise with the Kahler mixer. The on-premise instance
 will handle the Dispensing Work Order from D365 F&amp;O to Kahler  and the Webhook that receives
 Dispensing Work Records from Kahler.</p>
@@ -432,23 +449,23 @@ of the integration from FinOps to Kahler:</p>
     }
 }
 </code></pre>
-<h4 id="controllers">Controllers</h4>
+<h3 id="controllers">Controllers</h3>
 <p>This section contains a list of controllers that will be loaded by the current instance. In addition to the default 
 controller that we always want to load, we want the system to load the Kahler controller. The names (on the left) are not
 significant and are used only for debugging. The values (on the right) are significant. It must be the name of the assembly
 that should be loaded for the controller.</p>
-<h4 id="sourceconfig"><a href="../SourceConfig/">SourceConfig</a></h4>
+<h3 id="sourceconfig"><a href="../SourceConfig/">SourceConfig</a></h3>
 <p>The source config will represent the data being send from D365 F&amp;O. Currently, the Dispensing Work Order is the only entity
 sent from F&amp;O. In the future the topic may also include master data that is sent to Kahler.</p>
 <p>The ODataConfigName is not currently being used but is a required value. So point it to the section that contains the connection
 information to D365 F&amp;O.</p>
-<h4 id="targetconfig"><a href="../TargetConfig/">TargetConfig</a></h4>
+<h3 id="targetconfig"><a href="../TargetConfig/">TargetConfig</a></h3>
 <p>The target config will represent the data endpoint for the local Kahler mixer. The "ODataConfigName" should point to a section
 that contains the Kahler REST endpoint.</p>
-<h4 id="levridgeintegrationhostkahlercontroller">Levridge.Integration.Host.KahlerController</h4>
+<h3 id="levridgeintegrationhostkahlercontroller">Levridge.Integration.Host.KahlerController</h3>
 <p>This section is used by the Kahler controller to be able to send messages to the proper topic to be handled by the integration
 framework and written to D365 F&amp;O</p>
-<h3 id="configuration-for-kahler-in-azure">Configuration for Kahler in Azure</h3>
+<h2 id="configuration-for-kahler-in-azure">Configuration for Kahler in Azure</h2>
 <p>This instance can be a single instance running in the cloud. This instance will handle 
 the Dispensing Work Record from Kahler to D365 F&amp;O</p>
 <p>In the appsettings.json you will need to define the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
