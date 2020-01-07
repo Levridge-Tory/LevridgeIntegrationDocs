@@ -1,3 +1,18 @@
+<!-- 
+Add instance config reference
+Matt - Add service bus setup reference (move from bottom)
+Matt - Specific documentation for what Entities to setup in F&O. Include information on filtering customers, operations & sites
+  -- Caveat on dependent entities will not necessarily be changed so they won't trigger change control
+
+Add reference to azure key vault setup
+Document Kahler JSON objects
+ -- Dispensing Work Order
+ -- Dispensing Work Record
+ -- Levridge.Integration.Host.KahlerController
+Document URI setup in F&O
+
+-->
+
 # Kahler Integration
 The Kahler integration is a bidirectional integration that consists of a Topic for
 Dispensing Work Orders that go from D365 F&O to Kahler and Dispensing Work Records that go from 

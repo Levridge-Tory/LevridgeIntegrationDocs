@@ -1,3 +1,15 @@
+<!-- 
+Add instance config reference
+Add service bus setup reference (move from bottom)
+Specify Hostfile with info for background task
+Specific documentation for what Entities to setup in F&O. Include information on filtering customers, operations & sites
+  -- Caveat on dependent entities will not necessarily be changed so they won't trigger change control
+Add reference to azure key vault setup
+Change CRM instructions to Create & Deploy CDS solution
+Document Agsync JSON object
+Document BOM setup in F&O
+-->
+
 ## Agsync
 The Agsync integration is a bidirectional integration that consists of a Topic for
 Master Data that goes from D365 F&O to Agsync and Service Calls for Work Orders that go from 
