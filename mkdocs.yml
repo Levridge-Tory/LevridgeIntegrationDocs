@@ -1,4 +1,16 @@
+theme:
+    name: 'material'
+    palette:
+        primary: 'indigo'
+        accent: 'indigo'
+    feature:
+        tabs: true
+markdown_extensions:
+  - meta
+
 site_name: Levridge Documentation
+repo_name: 'levridge-tory.github.io/LevridgeIntegrationDocs'
+repo_url: 'https://github.com/Levridge-Tory/LevridgeIntegrationDocs'
 nav:
     - Home: index.md
     - Products:
