@@ -1,4 +1,6 @@
-﻿# Introduction
+﻿hero: Integration Overview
+
+# Introduction
 The Levridge integration framework provides integration between Dynamics365 Finance and Operations
 and Dynamics 365 Customer Engagement and 3rd party applications.
 
