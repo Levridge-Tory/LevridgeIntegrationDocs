@@ -15,6 +15,7 @@ The node in the appsettings.json file does not actually need to be named "Instan
 You can use a command line parameter to specify the node name (section name) that contains
 the InstanceConfig data. No matter the name, the instance config section must contain the following
 attributes:
+
  - [AzureTableConfiguration](#AzureTableConfiguration)
  - [LogRequestsAndResponses](#LogRequestsAndResponses)
  - [EnableAppInsightsAdaptiveSampling](#EnableAppInsightsAdaptiveSampling)

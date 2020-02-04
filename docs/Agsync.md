@@ -36,17 +36,20 @@ To integrate from D365 F&O to Agsync you will need to:
  - Get Customer Specific Integration ID from Agsync
  - Client Redirect URL is [Azure Webapp base URL]/api/AgsyncAuth
  - Setup Azure Keyvault 
-
-
- - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CRM
- - [Create an application user in D365 CRM](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-) and assign the proper role(s)
  - Create an Azure Service bus topic
  - Create a subscription on the topic above
+ - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CRM
+ - [Create an application user in D365 CRM](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-) and assign the proper role(s)
 
 
 ### Configuration
-In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
+In the appsettings.json you will need to define the [InstanceConfig](./InstanceConfig.md)  [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
+      "InstanceConfig": {
+        "AzureTableConfiguration": "[section name to Azure Table Configuration",
+        "LogRequestsAndResponses": [true or false]
+        "EnableAppInsightsAdaptiveSampling": [true or false]
+      },
       "SourceConfig": {
         "ServiceBusConfigName": "[section name with service bus topic and subscription for Agsync Master Data]",
         "ODataConfigName": "[section name with F&O data configuration]",
@@ -60,12 +63,14 @@ In the appsettings.json you will need to define the [SourceConfig](./SourceConfi
         "Direction": "Target",
       }
 
-You will also have to include the controller entry to have the controller loaded:
+You must also include the controller entry to have the controller loaded:
 
     "Controllers": {
         "HostController": "Levridge.Integration.Host.DefaultController",
         "AgSyncConroller": "Levridge.Integration.Host.AgSyncController"
     }
+
+You must also configure the 
 
 Here is a sample template for the entire appsettings.json file used for the integration
 from FinOps to Agsync:
