@@ -28,6 +28,8 @@ a filter on the event in F&O.
 ### Setup
 To integrate from D365 F&O to Agsync you will need to:
 
+ - [Create an Azure Service bus topic](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
+ - [Create a subscription on the topic above](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
  - [Configure Event Endpoint in F&O](./Configuring-Levridge-Entity-Event-Endpoint.md)
  - [configure Levridge Entity Events](./Configuring-Levridge-Entity-Events.md)
    - Create Filter on Entity Event to only send agronomy customers 
@@ -35,9 +37,7 @@ To integrate from D365 F&O to Agsync you will need to:
  - Get Client ID and CLient password from Agsync
  - Get Customer Specific Integration ID from Agsync
  - Client Redirect URL is [Azure Webapp base URL]/api/AgsyncAuth
- - Setup Azure Keyvault 
- - Create an Azure Service bus topic
- - Create a subscription on the topic above
+ - [Setup Azure Keyvault](./AzureKeyVault.md) 
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CRM
  - [Create an application user in D365 CRM](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-) and assign the proper role(s)
 

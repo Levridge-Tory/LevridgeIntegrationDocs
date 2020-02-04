@@ -27,7 +27,7 @@ nav:
                     - 'oneWeigh' : 'oneWeigh.md'
                     - 'Field Reveal' : 'Field-Reveal.md'
                 - Deployment: 
-                    - 'Application Settings Configuration' : 'AppSettingsApplicationConfiguration.md'
+                    - 'Application Settings Configuration' : 'ApplicationConfiguration.md'
                     - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
                     - 'Deploying CDS' : 'DeployingCDS.md'
             - Print Service: 'print-service.md'
@@ -43,7 +43,7 @@ nav:
     - User Documentation:
         - 'Finance & Operations' :
             - Accounts Receivable Setup :
-                - 'Create a New Split Group': 'Create Split Group in F&O.md'
+                - 'Create a New Split Group': 'Create-Split-Group-in-F&O.md'
         - Inventory Value and Costing :
             - Upload Standard Cost Pricing: 'UploadStandardCostPricing.md'
             - Adjust FIFO Inventory Value: 'AdjustFIFOInventoryValue.md'

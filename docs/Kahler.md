@@ -35,16 +35,17 @@ the branch property on the message.
 ## Setup
 To integrate to and from Kahler and D365 F&O you will need to:
  
+ - [Create an Azure Service bus topic for Dispensing Work Orders (D365 F&O to Kahler)](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
+ - [Create an Azure Service bus topic for Dispensing Work Records (Kahler to D365 F&O)](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
+ - [Create a subscription on the Dispensing Work Order topic for each Branch that has a Kahler mixer](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
+ - [Create a filter on the subscription for each Branch](https://docs.microsoft.com/en-us/azure/service-bus-messaging/topic-filters)
+ - [Create a subscription on the Dispensing Work Record topic for integration back to F&O](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
  - [Configure Event Endpoint in F&O](./Configuring-Levridge-Entity-Event-Endpoint.md)
  - [Configure Levridge Entity Events]("./Configuring-Levridge-Entity-Events.md")
    - You will need to be sure to provide properties on the event to allow filtering by Branch
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 F&O
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
- - Create an Azure Service bus topic for Dispensing Work Orders (D365 F&O to Kahler)
- - Create an Azure Service bus topic for Dispensing Work Records (Kahler to D365 F&O)
- - Create a subscription on the Dispensing Work Order topic for each Branch that has a Kahler mixer
- - Create a filter on the subscription for each Branch
- - Create a subscription on the Dispensing Work Record topic for integration back to F&O
+ - [Setup Azure Keyvault](./AzureKeyVault.md) 
  - [Deploy the Levridge Integration Framework as a service](./Deploy-Integration-As-A-Service.md) at each Branch that has a Kahler mixer
 
 ## Configuration for Kahler on Premise
@@ -52,8 +53,13 @@ This configuration will need to be on premise with the Kahler mixer. The on-prem
 will handle the Dispensing Work Order from D365 F&O to Kahler  and the Webhook that receives
 Dispensing Work Records from Kahler.
 
-In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
+In the appsettings.json you will need to define the [InstanceConfig](./InstanceConfig.md)  [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
+        "InstanceConfig": {
+            "AzureTableConfiguration": "[section name to Azure Table Configuration",
+            "LogRequestsAndResponses": [true or false]
+            "EnableAppInsightsAdaptiveSampling": [true or false]
+        },
         "SourceConfig": {
             "ServiceBusConfigName": "[section name with Dispensing Work Order service bus topic]",
             "ODataConfigName": "[section name with F&O data configuration]",
@@ -92,6 +98,14 @@ of the integration from FinOps to Kahler:
             }
         },
         "AllowedHosts": "*",
+        "ApplicationInsights": {
+            "InstrumentationKey": "08f05bc5-e901-4c19-8358-286bdcedf35e"
+        },
+        "InstanceConfig": {
+            "AzureTableConfiguration": "[section name to Azure Table Configuration",
+            "LogRequestsAndResponses": [true or false]
+            "EnableAppInsightsAdaptiveSampling": [true or false]
+        },
         "SourceConfig": {
             "ServiceBusConfigName": "Dispensing Work Order", //[section name with Dispensing Work Order service bus topic]
             "ODataConfigName": "DynamicsAX", //[section name with F&O data configuration]
@@ -145,6 +159,11 @@ controller that we always want to load, we want the system to load the Kahler co
 significant and are used only for debugging. The values (on the right) are significant. It must be the name of the assembly
 that should be loaded for the controller.
 
+### [InstanceConfig](./InstanceConfig.md)
+InstanceConfig is an object in the appsettings.json file used by the Levridge Integration Framework
+to define the configuration for the Current Instance of the integration framework.
+
+
 ### [SourceConfig](./SourceConfig.md)
 The source config will represent the data being send from D365 F&O. Currently, the Dispensing Work Order is the only entity
 sent from F&O. In the future the topic may also include master data that is sent to Kahler.
@@ -164,8 +183,13 @@ framework and written to D365 F&O
 This instance can be a single instance running in the cloud. This instance will handle 
 the Dispensing Work Record from Kahler to D365 F&O
 
-In the appsettings.json you will need to define the [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
+In the appsettings.json you will need to define the [InstanceConfig](./InstanceConfig.md)  [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
+        "InstanceConfig": {
+            "AzureTableConfiguration": "[section name to Azure Table Configuration",
+            "LogRequestsAndResponses": [true or false]
+            "EnableAppInsightsAdaptiveSampling": [true or false]
+        },
         "SourceConfig": {
             "ServiceBusConfigName": "[section name with Dispensing Work Record service bus topic]"
             "ODataConfigName": "",
@@ -186,6 +210,11 @@ Here is a template of the full appsettings.json file used for the Kahler integra
             "HostController": "Levridge.Integration.Host.DefaultController"
         },
         "Logging": {
+            "ApplicationInsights": {
+                "LogLevel": {
+                    "Default": "Trace"
+                }
+            },
             "Debug": {
                 "LogLevel": {
                     "Default": "Information"
@@ -202,6 +231,11 @@ Here is a template of the full appsettings.json file used for the Kahler integra
             }
         },
         "AllowedHosts": "*",
+        "InstanceConfig": {
+            "AzureTableConfiguration": "[section name to Azure Table Configuration",
+            "LogRequestsAndResponses": [true or false]
+            "EnableAppInsightsAdaptiveSampling": [true or false]
+        },
         "SourceConfig": {
             "ServiceBusConfigName": "Dispensing Work Record", //[section name with Dispensing Work Record service bus topic]
             "ODataConfigName": "",

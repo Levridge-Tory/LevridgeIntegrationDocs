@@ -1,15 +1,16 @@
 # Field Reveal Integration
 
 There are two aspects of integration with [Field Reveal](http://www.fieldreveal.com/).
-- [Recommendations](./Recommendation%20Integration.md)
-- [Fields](./Field%20Integration.md)
+
+- [Recommendations](Recommendation-Integration.md)
+- [Fields](./Field-Integration.md)
 
 ## Recommendation Integrations
-The [Recommendation Integration](./Recommendation%20Integration.md) is a general integration provided by the Levridge API. 
+The [Recommendation Integration](./Recommendation-Integration.md) is a general integration provided by the Levridge API. 
 Field Reveal has built the capabillites to send a perscription for a
-specific field to Levridge through our [Recommendation Integration API](./Recommendation%20Integration.md).
+specific field to Levridge through our [Recommendation Integration API](./Recommendation-Integration.md).
 
 ## Field Integrations
-The [Field Integration](./Field%20Integration.md) is a general integration provided by the Levridge API. 
+The [Field Integration](./Field-Integration.md) is a general integration provided by the Levridge API. 
 Field Reveal has built the capabillites to send field information to Levridge through our 
-[Field Integration API](./Field%20Integration.md).
+[Field Integration API](./Field-Integration.md).
