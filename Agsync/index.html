@@ -1308,6 +1308,8 @@ a filter on the event in F&amp;O. </p>
 <h3 id="setup">Setup</h3>
 <p>To integrate from D365 F&amp;O to Agsync you will need to:</p>
 <ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal">Create an Azure Service bus topic</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal">Create a subscription on the topic above</a></li>
 <li><a href="../Configuring-Levridge-Entity-Event-Endpoint/">Configure Event Endpoint in F&amp;O</a></li>
 <li><a href="../Configuring-Levridge-Entity-Events/">configure Levridge Entity Events</a></li>
 <li>Create Filter on Entity Event to only send agronomy customers 
@@ -1315,9 +1317,7 @@ a filter on the event in F&amp;O. </p>
 <li>Get Client ID and CLient password from Agsync</li>
 <li>Get Customer Specific Integration ID from Agsync</li>
 <li>Client Redirect URL is [Azure Webapp base URL]/api/AgsyncAuth</li>
-<li>Setup Azure Keyvault </li>
-<li>Create an Azure Service bus topic</li>
-<li>Create a subscription on the topic above</li>
+<li><a href="../AzureKeyVault/">Setup Azure Keyvault</a> </li>
 <li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Create an application ID</a> for the integration framework to authenticate to D365 CRM</li>
 <li><a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-">Create an application user in D365 CRM</a> and assign the proper role(s)</li>
 </ul>
