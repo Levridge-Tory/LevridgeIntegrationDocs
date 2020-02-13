@@ -21,17 +21,28 @@ attributes:
  - [EnableAppInsightsAdaptiveSampling](#EnableAppInsightsAdaptiveSampling)
 
 ### AzureTableConfiguration
+**Required**
+
 The AzureTableConfiguration attribute contains a string that specifies the configuration node (section)
 that holds the Azure Table configuration used by the current instance of the Integration Framework.
 
 This must point to a node that is a [AzureTableEntityConfiguration](./ServiceBusConfiguration.md) json object
 
 ### LogRequestsAndResponses
+**Optional**
+
+**Default = false**
+
 The LogRequestsAndResponses attribute contains a boolean that specifies whether or not to
 log the requests and responses of the controllers in the current instance of the Integration 
 Framework.
 
+
 ### EnableAppInsightsAdaptiveSampling
+**Optional**
+
+**Default = true**
+
 The EnableAppInsightsAdaptiveSampling attribute contains a boolean that specifies whether or not to
 enable application insights adaptive sampling. If this is disabled all the messages logged to 
 Application Insights. This should only be used during troubleshooting and testing because the 
