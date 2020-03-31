@@ -1187,7 +1187,7 @@
 to define the configuration for the integration between FinOps and Agsync master data.</p>
 <h1 id="example">Example</h1>
 <pre><code>"AgSyncEndpoint": {
-  "MustUseWktProcessor": true
+  "MustUseWktProcessor": true,
   "UuidSource": "Agsync",
   "BaseFieldUri": "https://fields.agsync.com/api/",
   "BaseOrderUri": "https://orders.agsync.com/api/",
@@ -1196,7 +1196,7 @@ to define the configuration for the integration between FinOps and Agsync master
   "ClientPass": "[Agsync assigned client password]",
   "VaultURL": "https://levridgeagsynckeyvault.vault.azure.net/",
   "AgSyncTokenKey": "AgsyncAccessToken",
-  "RedirectUri": "https://levridgeagsyncintegration.azurewebsites.net/api/AgsyncAuth",
+  "RedirectUri": "[Agsync Integration Base URL]/api/AgsyncAuth",
   "IntegrationId": "[Agsync assigned integration Id]"
 }
 </code></pre>

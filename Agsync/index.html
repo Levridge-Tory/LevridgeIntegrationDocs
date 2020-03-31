@@ -1410,6 +1410,7 @@ from FinOps to Agsync:</p>
         "MetadataResource": "CDSMetadata.xml"
     },
     "AgSyncEndpoint": {
+       "MustUseWktProcessor": true,
         "baseUri": "https://fields.agsync.com/api/",
         "tokenUrl": "https://auth.agsync.com/core/connect/token",
         "ClientId": "[client ID assigned by Agsync]", // customer specific
@@ -1420,6 +1421,7 @@ from FinOps to Agsync:</p>
         "IntegrationId": "CustomerIntegrationID" // customer specific
     },
     "agsync": { // used by Webhook
+        "MustUseWktProcessor": true,
         "ConnectionString": "[connection string to Agsync master data topic]",
         "TopicName": "[Agsync master data topic]",
         "RequiresSession": true,
