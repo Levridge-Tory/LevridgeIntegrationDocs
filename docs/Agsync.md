@@ -23,7 +23,10 @@ Another aspect that is different is that we are using CDS to provide lookup serv
 mapping entity identifiers between systems.
 
 We also need to filter the customers that are sent from F&O to Agsync. This will require configuring
-a filter on the event in F&O. 
+a filter on the event in F&O.
+
+Included in the Agsync integration is a controller that provides UUIDs based on Sync Ids passed
+to the controller. 
 
 ### Setup
 To integrate from D365 F&O to Agsync you will need to:
@@ -70,7 +73,10 @@ You must also include the controller entry to have the controller loaded:
         "AgSyncConroller": "Levridge.Integration.Host.AgSyncController"
     }
 
-You must also configure the 
+You must also configure two objects for Agsync integration:
+
+ - [AgSyncEndpoint](./AgSyncEndpoint.md)
+ - [agsync](./agsyncConfigObject)
 
 Here is a sample template for the entire appsettings.json file used for the integration
 from FinOps to Agsync:
@@ -129,6 +135,7 @@ from FinOps to Agsync:
             "MetadataResource": "CDSMetadata.xml"
         },
         "AgSyncEndpoint": {
+           "MustUseWktProcessor": true,
             "baseUri": "https://fields.agsync.com/api/",
             "tokenUrl": "https://auth.agsync.com/core/connect/token",
             "ClientId": "[client ID assigned by Agsync]", // customer specific
@@ -139,6 +146,7 @@ from FinOps to Agsync:
             "IntegrationId": "CustomerIntegrationID" // customer specific
         },
         "agsync": { // used by Webhook
+            "MustUseWktProcessor": true,
             "ConnectionString": "[connection string to Agsync master data topic]",
             "TopicName": "[Agsync master data topic]",
             "RequiresSession": true,
