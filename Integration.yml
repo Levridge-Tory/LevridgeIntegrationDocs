@@ -12,8 +12,7 @@ site_name: Levridge Integration Documentation
 repo_name: 'LevridgeSoftware.github.io'
 repo_url: 'https://github.com/LevridgeSoftware/LevridgeSoftware.github.io'
 nav:
-    - Home: index.md
-    - Overview: 'Integration-Overview.md'
+    - Home: 'Integration-Overview.md'
     - Integrations:
         - 'D365 CRM to D365 F&O' : 'D365-CRM-to-D365-F&O.md'
         - 'D365 F&O to D365 CRM' : 'D365-F&O-to-D365-CRM.md'
