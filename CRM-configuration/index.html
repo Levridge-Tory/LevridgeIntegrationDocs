@@ -1216,11 +1216,11 @@ create steps on the service endpoint using the Plugin
 require the pricing service. The configuration will 
 look like this:</p>
 <pre><code>   {
-     &quot;clientappid&quot;: &quot;da7c3de3-5555-49ab-8465-d01e8cd22e58&quot;,
-     &quot;clientappsecret&quot;: &quot;dradgg38ddszLzgqbcZ3/8sG2FbC/BSWxnCtXzJsWP8=&quot;,
+     &quot;clientappid&quot;: &quot;[Client AppID from AD]&quot;,
+     &quot;clientappsecret&quot;: &quot;[secret from AD]&quot;,
      &quot;tenant&quot;: &quot;https://login.microsoftonline.com/5555a5b1-fbt8-465b-ad9d-21e21129e610/oauth2/token&quot;,
-     &quot;uristring&quot;: &quot;https://environment22c2251c662a7e541devaos.cloudax.dynamics.com/api/services/LevPricingServices/PricingService/getPricing&quot;,
-     &quot;resource&quot;: &quot;https:// environment22c2251c662a7e541devaos.cloudax.dynamics.com&quot;,
+     &quot;uristring&quot;: &quot;https://[environment subdomain].cloudax.dynamics.com/api/services/LevPricingServices/PricingService/getPricing&quot;,
+     &quot;resource&quot;: &quot;https://[environment subdomain].cloudax.dynamics.com&quot;,
      &quot;username&quot;: &quot;John.smith@email.com&quot;,
      &quot;password&quot;: &quot;plaintextpassword&quot;
    }
