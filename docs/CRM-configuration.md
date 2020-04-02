@@ -20,11 +20,11 @@ require the pricing service. The configuration will
 look like this:
 ```
    {
-     "clientappid": "da7c3de3-5555-49ab-8465-d01e8cd22e58",
-     "clientappsecret": "dradgg38ddszLzgqbcZ3/8sG2FbC/BSWxnCtXzJsWP8=",
+     "clientappid": "[Client AppID from AD]",
+     "clientappsecret": "[secret from AD]",
      "tenant": "https://login.microsoftonline.com/5555a5b1-fbt8-465b-ad9d-21e21129e610/oauth2/token",
-     "uristring": "https://environment22c2251c662a7e541devaos.cloudax.dynamics.com/api/services/LevPricingServices/PricingService/getPricing",
-     "resource": "https:// environment22c2251c662a7e541devaos.cloudax.dynamics.com",
+     "uristring": "https://[environment subdomain].cloudax.dynamics.com/api/services/LevPricingServices/PricingService/getPricing",
+     "resource": "https://[environment subdomain].cloudax.dynamics.com",
      "username": "John.smith@email.com",
      "password": "plaintextpassword"
    }
