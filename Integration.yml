@@ -12,16 +12,17 @@ site_name: Levridge Integration Documentation
 repo_name: 'LevridgeSoftware.github.io'
 repo_url: 'https://github.com/LevridgeSoftware/LevridgeSoftware.github.io'
 nav:
-    - Home: 'Integration-Overview.md'
+    - Home: index.md
     - Integrations:
+        - Overview: 'Integration-Overview.md'
         - 'D365 CRM to D365 F&O' : 'D365-CRM-to-D365-F&O.md'
         - 'D365 F&O to D365 CRM' : 'D365-F&O-to-D365-CRM.md'
         - 'Levridge Scale House' : 'scale-integration.md'
-        - 'Agsync' : 'Agsync.md'
-        - 'Kahler' : 'Kahler.md'
-        - 'Surety' : 'Surety.md'
-        - 'oneWeigh' : 'oneWeigh.md'
-        - 'Field Reveal' : 'Field-Reveal.md'
+        - Agsync: 'Agsync.md'
+        - Kahler: 'Kahler.md'
+        - Surety: 'Surety.md'
+        - oneWeigh: 'oneWeigh.md'
+        - 'Field Reveal': 'Field-Reveal.md'
     - Deployment: 
         - 'Application Settings Configuration' : 'ApplicationConfiguration.md'
         - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
