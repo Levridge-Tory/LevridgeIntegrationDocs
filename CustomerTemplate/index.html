@@ -36,7 +36,7 @@
     
     
       
-        <title>agsync Settings - Levridge Documentation</title>
+        <title>Customer Template - Levridge Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#agsync-settings" tabindex="1" class="md-skip">
+      <a href="#customer-template" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                agsync Settings
+                Customer Template
               
             </span>
           
@@ -179,14 +179,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." class="md-tabs__link md-tabs__link--active">
+      <a href=".." class="md-tabs__link">
         Home
       </a>
     
@@ -712,10 +714,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       User Documentation
@@ -1079,10 +1083,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7" checked>
     
     <label class="md-nav__link" for="nav-3-7">
       Customer
@@ -1110,11 +1116,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../CustomerTemplate/" title="Customer Template" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Customer Template
+      </label>
+    
+    <a href="./" title="Customer Template" class="md-nav__link md-nav__link--active">
       Customer Template
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customer-template_1" class="md-nav__link">
+    Customer Template
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1169,6 +1213,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customer-template_1" class="md-nav__link">
+    Customer Template
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1179,56 +1239,31 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/agsyncConfigObject.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CustomerTemplate.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="agsync-settings">agsync Settings</h1>
-<p>agsync is an object in the appsettings.json file used by the Levridge Integration Framework
-to define the configuration for the integration of Agsync Workorders to FinOps.</p>
-<h1 id="example">Example</h1>
-<pre><code>"agsync": {
-  "MustUseWktProcessor": true,
-  "ConnectionString": "Endpoint=[Customer Servicebus Connection String]",
-  "TopicName": "[Customer Servicebus Topic]",
-  "SubscriptionName": "[Customer Servicebus Topic Subscription]",
-  "PrefetchCount": 5,
-  "RequiresSession": [true/false],
-  "RedirectUri": "[Agsync Integration Base URL]/api/AgsyncAuth",
-  "TokenUrl": "https://auth.agsync.com/core/connect/token",
-  "AuthorizeUrl": "https://auth.agsync.com/core/connect/authorize",
-  "baseUri": "https://fields.agsync.com/api/",
-  "rejectUri": "https://orders.agsync.com/api/orders/",
-  "ClientId": "[Agsync assigned client ID]",
-  "ClientPass": "[Agsync assigned client password]",
-  "VaultURL": "[Integration Framework Key Vault URL]",
-  "AgSyncTokenKey": "[Vault Key Used for Access Token]"
-  "WktUrl": "[Agsync Integration Base URL]/api/WktProcessor",
-  "ProcessStatuses": "Planned, Released, canceled, scheduled, rejected, completed, accepted"
-}
-</code></pre>
-<h1 id="definition">Definition</h1>
-<h2 id="mustusewktprocessor">MustUseWktProcessor</h2>
-<p>The MustUseWktProcessor attribute contains a bollean that specifies whether or not to 
-process the WKT sent in the workorder from Agsync to FinOps.</p>
-<h2 id="connectionstring">ConnectionString</h2>
-<h2 id="topicname">TopicName</h2>
-<h2 id="subscriptionname">SubscriptionName</h2>
-<h2 id="prefetchcount">PrefetchCount</h2>
-<h2 id="requiressession">RequiresSession</h2>
-<h2 id="redirecturi">RedirectUri</h2>
-<h2 id="tokenurl">TokenUrl</h2>
-<h2 id="authorizeurl">AuthorizeUrl</h2>
-<h2 id="baseuri">baseUri</h2>
-<h2 id="rejecturi">rejectUri</h2>
-<h2 id="clientid">ClientId</h2>
-<h2 id="clientpass">ClientPass</h2>
-<h2 id="vaulturl">VaultURL</h2>
-<h2 id="agsynctokenkey">AgSyncTokenKey</h2>
-<h2 id="processstatuses">ProcessStatuses</h2>
-<p><strong>Not Required</strong></p>
-<p>Place a comma delimited list of statuses that should be processed by the controller.</p>
-<p><strong>Deafult</strong></p>
-<p>"Planned,Released,Canceled,Scheduled,Rejected,Completed,Accepted"</p>
+                <h1 id="customer-template">Customer Template</h1>
+<p>Brief introduction of the module, component or feature being documented.</p>
+<p>This document explains ...</p>
+<h2 id="customer-template_1">Customer Template</h2>
+<ol>
+<li>Close the page.
+<img alt="CustomerTemplate1" src="../assets/images/CustomerTemplate/CustomerTemplate1.png" /></li>
+<li>Go to Accounts Receivable &gt; Customers &gt; All Customers.</li>
+<li>In the list, find and select the desired record.
+<img alt="CustomerTemplate3" src="../assets/images/CustomerTemplate/CustomerTemplate3.png" /></li>
+<li>Click Record Info.
+<img alt="CustomerTemplate4" src="../assets/images/CustomerTemplate/CustomerTemplate4.png" /></li>
+<li>Click New.
+<img alt="CustomerTemplate5" src="../assets/images/CustomerTemplate/CustomerTemplate5.png" /></li>
+<li>In the list, find and select the desired record.
+<img alt="CustomerTemplate6" src="../assets/images/CustomerTemplate/CustomerTemplate6.png" /></li>
+<li>Select the Is Default check box.</li>
+<li>Click OK.
+<img alt="CustomerTemplate8" src="../assets/images/CustomerTemplate/CustomerTemplate8.png" /></li>
+<li>Click Cancel.
+<img alt="CustomerTemplate9" src="../assets/images/CustomerTemplate/CustomerTemplate9.png" /></li>
+</ol>
                 
                   
                 
@@ -1245,6 +1280,41 @@ process the WKT sent in the workorder from Agsync to FinOps.</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../AddAddressForDeliveryAndInvoice/" title="Add Address for Delivery and Invoice" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Add Address for Delivery and Invoice
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../CustomerCreationOrganization/" title="Customer Creation Organization" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Customer Creation Organization
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
