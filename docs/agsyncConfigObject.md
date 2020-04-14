@@ -21,7 +21,7 @@ to define the configuration for the integration of Agsync Workorders to FinOps.
       "VaultURL": "[Integration Framework Key Vault URL]",
       "AgSyncTokenKey": "[Vault Key Used for Access Token]"
       "WktUrl": "[Agsync Integration Base URL]/api/WktProcessor",
-      "ProcessStatuses": "Planned, Released, canceled, scheduled, rejected, completed, accepted"
+      "ProcessStatuses": "Planned,Released,Canceled,Scheduled,Rejected,Completed,Accepted"
     }
 
 # Definition
@@ -62,6 +62,8 @@ process the WKT sent in the workorder from Agsync to FinOps.
 **Not Required**
 
 Place a comma delimited list of statuses that should be processed by the controller.
+It is important to make sure the capitalization is correct (Title Case) because it does
+an exact match.
 
 **Deafult**
 
