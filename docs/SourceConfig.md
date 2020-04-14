@@ -18,6 +18,7 @@ the SourceConfig data. No matter the name, the source config section must contai
 attributes:
  - [ServiceBusConfigName](#ServiceBusConfigName)
  - [ODataConfigName](#ODataConfigName)
+ - [CDSConfigName](#CDSConfigName)
  - [SystemName](#SystemName)
  - [Direction](#Direction)
 
@@ -32,6 +33,12 @@ The ODataConfigName attribute contains a string that specifies the configuration
 that holds the data configuration used by the Source of the Integration Interaction.
 
 This must point to a node that is a [ODataConfig](./ODataConfig.md) json object
+
+### CDSConfigName
+The CDSConfigName attribute contains a string that specifies the configuration node (section)
+that holds the CDS configuration used by the Source of the Integration Interaction.
+
+This must point to a node that is a [CDSConfig](./CDSConfig.md) json object
 
 ### SystemName
 The SystemName attribute holds a string value that represents the source system name.

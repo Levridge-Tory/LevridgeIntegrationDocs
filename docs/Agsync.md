@@ -76,7 +76,7 @@ You must also include the controller entry to have the controller loaded:
 You must also configure two objects for Agsync integration:
 
  - [AgSyncEndpoint](./AgSyncEndpoint.md)
- - [agsync](./agsyncConfigObject)
+ - [agsync](./agsyncConfigObject.md)
 
 Here is a sample template for the entire appsettings.json file used for the integration
 from FinOps to Agsync:

@@ -1,6 +1,6 @@
-﻿# AgSyncEndpoint Settings
-AgSyncEndpoint is an object in the appsettings.json file used by the Levridge Integration Framework
-to define the configuration for the integration between FinOps and Agsync master data.
+﻿# agsync Settings
+agsync is an object in the appsettings.json file used by the Levridge Integration Framework
+to define the configuration for the integration of Agsync Workorders to FinOps.
 
 
 # Example
@@ -21,9 +21,11 @@ to define the configuration for the integration between FinOps and Agsync master
       "VaultURL": "[Integration Framework Key Vault URL]",
       "AgSyncTokenKey": "[Vault Key Used for Access Token]"
       "WktUrl": "[Agsync Integration Base URL]/api/WktProcessor",
+      "ProcessStatuses": "Planned, Released, canceled, scheduled, rejected, completed, accepted"
     }
 
 # Definition
+
 ## MustUseWktProcessor
 The MustUseWktProcessor attribute contains a bollean that specifies whether or not to 
 process the WKT sent in the workorder from Agsync to FinOps.
@@ -56,6 +58,12 @@ process the WKT sent in the workorder from Agsync to FinOps.
 
 ## AgSyncTokenKey
 
-## RedirectUri
+## ProcessStatuses
+**Not Required**
 
-## IntegrationId
+Place a comma delimited list of statuses that should be processed by the controller.
+
+**Deafult**
+
+"Planned,Released,Canceled,Scheduled,Rejected,Completed,Accepted"
+

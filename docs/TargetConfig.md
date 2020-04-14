@@ -28,8 +28,8 @@ that holds the data configuration used by the Source of the Integration Interact
 This must point to a node that is a [ODataConfig](./ODataConfig.md) json object
 
 ### CDSConfigName
-The ServiceBusConfigName attribute contains a string that specifies the configuration node (section)
-that holds the service bus configuration used by the Source of the Integration Interaction.
+The CDSConfigName attribute contains a string that specifies the configuration node (section)
+that holds the CDS configuration used by the Target of the Integration Interaction.
 
 This must point to a node that is a [CDSConfig](./CDSConfig.md) json object
 
