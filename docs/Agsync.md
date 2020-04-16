@@ -13,20 +13,85 @@ Document BOM setup in F&O
 ## Agsync
 The Agsync integration is a bidirectional integration that consists of a Topic for
 Master Data that goes from D365 F&O to Agsync and Service Calls for Work Orders that go from 
-Agsync to D365 F&O. Because the Work Orders utilize a direct service call to F&O there is no
-need for two integration instances.
+Agsync to D365 F&O. The Work Order integration utilize a background service running
+in the same application as the Webhook controller so there is no
+need for two integration application instances.
 
-One aspect of the Agsync integration that is different from other integrations is the 
-service call to D365 F&O for work orders.
+There are a few uniqe aspects to the Agsync integration that is different from other integrations:
+- The Workorder integration service runs in the same app service as the controller and the Master Data integration service
+- The Workorder integration service does all the transformation directly rather than using an EntityMapper
+- The Workorder integration service makes a direct service call to D365 F&O rather than using a data source
+- We are using CDS to provide lookup services for mapping entity identifiers between systems.
+- We utilize a filter on the event in F&O to send only the customers 
+  that need to sent from F&O to Agsync.
 
-Another aspect that is different is that we are using CDS to provide lookup services for 
-mapping entity identifiers between systems.
+### Integration Description
+#### Standard Master Data Integration 
+The standard master data integration configuration is shown below.
+ 
+![Agsync Master Data Integration](./assets/images/AgsyncMasterDataCommunicationAgsyncUUIDDiagram.jpg "Agsync Master Data Integration")
 
-We also need to filter the customers that are sent from F&O to Agsync. This will require configuring
-a filter on the event in F&O.
+#### External UUID Master Data Integration
+There is an alternate configuration that may be required when integrating with 
+Field Reveal when Field Reveal is the master source for customer fields.
 
-Included in the Agsync integration is a controller that provides UUIDs based on Sync Ids passed
-to the controller. 
+In this scenario Field Reveal will provide the UUIDs it generates so we can provide
+those values to Agsync when we create the corresponding records in Agsync.
+
+This scenario is complicated and should be avoided if possible. The reason it is
+necessary is because when Field Reveal creates a work order in Agsync directly
+it uses an old Agsync API that uses a UUID as the Sync ID. Field Reveal generates 
+the UUID and needs to provide those to Levridge so they can be used when creating
+the master record in Agsync.
+
+In this scenario, it is imperative that the Customer and Customer Operation is not sent
+from F&O until they have been updated in Field Reveal and a Field created in Field Reveal.
+Once a record is created in Agsync the UUID for it can not be modified.
+
+The order of creation is as follows:
+1. Customer and Customer Operatoin are created in FinOps.
+2. Grower and Farm are created in Field Reveal and SyncIds are added in Field Reveal.
+3. Field is created in Field Reveal. 
+   1. This will cause a Field record to be sent from Field Reveal to the Levridge [Field controller](./Field-Integration.md).
+   2. The Field data will be placed on a service bus topic that has two subscriptions
+      1. One subscription will be serviced by the FieldToCDS integration service
+         1. This will use the UUID information to create a lookup record in CDS
+      2. The other subscription will be serviced by the FieldToAX integration service
+         1. This will create the Customer Site in FinOps
+   3. When the record is created in FinOps it will trigger the event that sends the data to Agsync
+      1. The creation of the Customer Site entity causes the event to be evaluated
+      2. The filter that checks to make sure a Customer has an operation that has a site that corresponds to a field passes
+   4. The Customer, Operation and Site are all sent to the FinOpsToAgsync service bus topic
+   5. The AxToAgsync integration service receives the message and looks up the UUIDs from CDS then sends the records to Agsync for creation
+   6. Agsync creates the records and sends back a GUID.
+   7. The AxToAgsync integration updates CDS with the GUID values.
+
+This communication diagram depicts this interaction:
+![Agsync Master Data Integration External UUID](./assets/images/AgsyncMasterDataCommunicationExternalUUIDDiagram.jpg "Agsync Master Data External UUID Integration")
+
+#### Work Order Integration
+
+![Agsync Workorder Integration External UUID](./assets/images/AgsyncOrderChangedCommunicationDiagram.jpg "Agsync Work Order Integration")
+
+### Controllers
+#### Agsync Auth Controller
+The AgsyncAuth controller is used to generate a token needed to integrate with Agsync.
+
+#### Agsync Auth Test Controller
+The AgsyncAuthTest controller is used to ...
+
+#### Agsync Order Changed Controller
+The AgsyncOrderChanged controller is used by Agsync to send work orders as they are created or updated.
+This controller will bundle the work order into a message and place it in the message topic.
+
+#### Agsync Sync Accounts Controller
+The AgsyncSyncAccounts controller is used to query Agsync for master data and write the information into CDS.
+This is done during go-live to populate the lookup data in CDS.
+
+#### Agsync UUID Controller
+The AgsyncUUID controller provides UUIDs based on Sync Ids passed to the controller. This is used by 
+Field Reveal to obtain the UUID from the Sync ID entered into Field Reveal.
+
 
 ### Setup
 To integrate from D365 F&O to Agsync you will need to:
