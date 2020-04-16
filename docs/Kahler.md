@@ -32,6 +32,10 @@ topic that apply to that location. This is done with a filter on the service bus
 In order for the filter to work the Levridge Entity Event must be configured to expose
 the branch property on the message.
 
+![Kahler Dispensing Work Order Integration](./assets/images/KahlerDispensingWorkOrderCommunicationDiagram.jpg "Kahler Dispensing Work Order Integration")
+
+![Kahler Dispensing Work Record Integration](./assets/images/KahlerDispensingWorkRecordCommunicationDiagram.jpg "Kahler Dispensing Work Record Integration")
+
 ## Setup
 To integrate to and from Kahler and D365 F&O you will need to:
  
