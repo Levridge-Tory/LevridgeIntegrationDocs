@@ -475,6 +475,33 @@
     Integration Description
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-master-data-integration" class="md-nav__link">
+    Standard Master Data Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-uuid-master-data-integration" class="md-nav__link">
+    External UUID Master Data Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-integration" class="md-nav__link">
+    Work Order Integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1302,6 +1329,33 @@
     Integration Description
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-master-data-integration" class="md-nav__link">
+    Standard Master Data Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-uuid-master-data-integration" class="md-nav__link">
+    External UUID Master Data Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-integration" class="md-nav__link">
+    Work Order Integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1418,8 +1472,10 @@ need for two integration application instances.</p>
 - We utilize a filter on the event in F&amp;O to send only the customers 
   that need to sent from F&amp;O to Agsync.</p>
 <h3 id="integration-description">Integration Description</h3>
-<p>The standard master data intration configuration is shown below.</p>
+<h4 id="standard-master-data-integration">Standard Master Data Integration</h4>
+<p>The standard master data integration configuration is shown below.</p>
 <p><img alt="Agsync Master Data Integration" src="../assets/images/AgsyncMasterDataCommunicationAgsyncUUIDDiagram.jpg" title="Agsync Master Data Integration" /></p>
+<h4 id="external-uuid-master-data-integration">External UUID Master Data Integration</h4>
 <p>There is an alternate configuration that may be required when integrating with 
 Field Reveal when Field Reveal is the master source for customer fields.</p>
 <p>In this scenario Field Reveal will provide the UUIDs it generates so we can provide
@@ -1451,6 +1507,8 @@ Once a record is created in Agsync the UUID for it can not be modified.</p>
    7. The AxToAgsync integration updates CDS with the GUID values.</p>
 <p>This communication diagram depicts this interaction:
 <img alt="Agsync Master Data Integration External UUID" src="../assets/images/AgsyncMasterDataCommunicationExternalUUIDDiagram.jpg" title="Agsync Master Data External UUID Integration" /></p>
+<h4 id="work-order-integration">Work Order Integration</h4>
+<p><img alt="Agsync Workorder Integration External UUID" src="../assets/images/AgsyncOrderChangedCommunicationDiagram.jpg" title="Agsync Work Order Integration" /></p>
 <h3 id="controllers">Controllers</h3>
 <h4 id="agsync-auth-controller">Agsync Auth Controller</h4>
 <p>The AgsyncAuth controller is used to generate a token needed to integrate with Agsync.</p>
