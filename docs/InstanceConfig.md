@@ -19,6 +19,7 @@ attributes:
  - [AzureTableConfiguration](#AzureTableConfiguration)
  - [LogRequestsAndResponses](#LogRequestsAndResponses)
  - [EnableAppInsightsAdaptiveSampling](#EnableAppInsightsAdaptiveSampling)
+ - [HttpClientTimeout](#HttpClientTimeout)
 
 ### AzureTableConfiguration
 **Required**
@@ -51,3 +52,13 @@ that adaptive sampling is enabled by default.
 
 See [Sampling in Application Insights](#https://docs.microsoft.com/en-us/azure/azure-monitor/app/sampling#configuring-adaptive-sampling-for-aspnet-core-applications) 
 for more information.
+
+### HttpClientTimeout
+**Optional**
+
+**Default = 100 seconds**
+
+The HttpClientTimeout attribute specifies the number of seconds to use for the timeout on all HTTP Client calls
+in the integration framework. The [default is 100 seconds.](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient.timeout?view=netcore-3.1)
+In some cases this is not enough time under heavy load, particularly the Agsync to FinOps work order integration.
+To change this set the value to an integer value that represents the number of seconds you want for the timeout.

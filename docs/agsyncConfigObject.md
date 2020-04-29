@@ -21,7 +21,8 @@ to define the configuration for the integration of Agsync Workorders to FinOps.
       "VaultURL": "[Integration Framework Key Vault URL]",
       "AgSyncTokenKey": "[Vault Key Used for Access Token]"
       "WktUrl": "[Agsync Integration Base URL]/api/WktProcessor",
-      "ProcessStatuses": "Planned,Released,Canceled,Scheduled,Rejected,Completed,Accepted"
+      "ProcessStatuses": "Plan,Released,Canceled,Scheduled,Rejected,Completed,Accepted",
+      "MustUseCustomerSite": true
     }
 
 # Definition
@@ -65,7 +66,14 @@ Place a comma delimited list of statuses that should be processed by the control
 It is important to make sure the capitalization is correct (Title Case) because it does
 an exact match.
 
-**Deafult**
-
+**Deafult:**
 "Planned,Released,Canceled,Scheduled,Rejected,Completed,Accepted"
 
+## MustUseCustomerSite
+**Not Required**
+
+Set this value to `true` to require a valid customer site on work orders.
+Set this value to `false` to ignore the customer site on work orders.
+
+**Default:**
+true
