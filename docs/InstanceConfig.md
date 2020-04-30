@@ -6,7 +6,8 @@ to define the configuration for the Current Instance of the integration framewor
     "InstanceConfig": {
         "AzureTableConfiguration": "AzureTableConfiguration",
         "LogRequestsAndResponses": true,
-        "EnableAppInsightsAdaptiveSampling": true
+        "EnableAppInsightsAdaptiveSampling": true,
+        "HttpClientTimeout": 100
     }
 
 # Definition
