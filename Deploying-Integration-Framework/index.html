@@ -522,18 +522,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
-      Application Settings Configuration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -565,6 +553,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
       
       
       
@@ -573,6 +568,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
+      Application Settings Configuration
+    </a>
   </li>
 
         
@@ -1221,6 +1228,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
       
       
       
@@ -1244,7 +1258,7 @@
                 
                 <h2 id="deploying-the-integration-framework">Deploying the Integration Framework</h2>
 <p>There are several ways to deploy the integration framework. Since the framework is a
-standard <a href="https://azure.microsoft.com/en-us/services/app-service/">Azure Application Service</a>
+standard <a href="https://azure.microsoft.com/en-us/services/app-service/">Azure App Service</a>
 we can use any of the deployment options available. The simplest deployment is to <a href="https://docs.microsoft.com/en-us/azure/app-service/deploy-zip">deploy
 a zip file</a>.</p>
 <p>Select one of the following options for more information on Deploying to Azure:</p>
@@ -1254,6 +1268,19 @@ a zip file</a>.</p>
 <li>Deploy with Script</li>
 </ul>
 <p>The Integration Framework can also be <a href="../Deploy-Integration-As-A-Service/">deployed as a Windows Service</a>.</p>
+<p>In order to integrate with D365 you must register the integration framework in Active Directory. 
+Here are some articles that explain how to do that:
+ - https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+ - https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/use-single-tenant-server-server-authentication#azure-application-registration
+ - https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/v1-protocols-oauth-code#register-your-application-with-your-ad-tenant</p>
+<p>In order to access certain Azure resources like Azure Key Vault you will need to make sure your App Service
+has a <a href="https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet#add-a-system-assigned-identity">system-assigned identity</a>. </p>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Create Service Bus </li>
+<li><a href="./ApplicationConfiguration">Configure the application</a></li>
+<li></li>
+</ul>
                 
                   
                 
@@ -1274,7 +1301,7 @@ a zip file</a>.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Field-Reveal/" title="Field Reveal" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1283,19 +1310,19 @@ a zip file</a>.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Application Settings Configuration
+                Field Reveal
               </span>
             </div>
           </a>
         
         
-          <a href="../DeployingCDS/" title="Deploying CDS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Deploying CDS
+                Application Settings Configuration
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

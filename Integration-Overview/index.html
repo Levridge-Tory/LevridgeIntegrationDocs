@@ -540,8 +540,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
-      Application Settings Configuration
+    <a href="../Deploying-Integration-Framework/" title="Deploying the Integration Framework" class="md-nav__link">
+      Deploying the Integration Framework
     </a>
   </li>
 
@@ -552,8 +552,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Deploying-Integration-Framework/" title="Deploying the Integration Framework" class="md-nav__link">
-      Deploying the Integration Framework
+    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
+      Application Settings Configuration
     </a>
   </li>
 
@@ -1209,10 +1209,10 @@
                 
                 
                 <h1 id="introduction">Introduction</h1>
-<p>The Levridge integration framework provides integration between Dynamics365 Finance and Operations
+<p>The Levridge integration framework provides integration between Dynamics365 Finance and SCM
 and Dynamics 365 Customer Engagement and 3rd party applications.</p>
-<p>This document provides and overview of the integration framework and links to the document
-that exists for the framework.</p>
+<p>This document provides and overview of the integration framework and links to the documents
+that exist for the framework.</p>
 <h1 id="overview">Overview</h1>
 <p>The Levridge Integration Framework is an entity syncronization framework. 
 It provides a means to synchronize data at an entity level between multiple data sources.</p>
@@ -1221,9 +1221,15 @@ It provides a means to synchronize data at an entity level between multiple data
   2. The data source responds to the integration event by sending one or more entities to the service bus.
   3. The service bus publishes the message(s) to each subscription
   4. An instance of the integration framework receives the message(s) from a subscription
-  5. The integration framework transforms the message it if needed
+  5. The integration framework transforms the message if needed
   6. The integration framework sends the message to the target data source</p>
 <p><img alt="General Entity Integration Pattern." src="../assets/images/GeneralSynchronizationIntegrations.jpg" title="General Entity Integartion Pattern" /></p>
+<p>The Levridge Integration Framework uses a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish and Subscribe messaging pattern</a>.
+We use the <a href="https://azure.microsoft.com/en-us/services/service-bus/">Azure Service Bus</a> to provide the publish and
+subscribe mechanism.</p>
+<p>The Levridge Integration Framework is most commonly run in the cloud as an 
+<a href="https://azure.microsoft.com/en-us/services/app-service/">Azure App Serivce</a>. It can also run as a windows service or 
+as an IIS application. See <a href="../Deploying-Integration-Framework/">this article</a> to learn more about the deployment options.</p>
 <h1 id="integrations">Integrations</h1>
 <p>Currently we support the following integrations:  </p>
 <ul>

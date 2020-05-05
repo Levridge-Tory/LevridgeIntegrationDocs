@@ -36,7 +36,7 @@
     
     
       
-        <title>Introduction - Levridge Documentation</title>
+        <title>Logging Settings - Levridge Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#introduction" tabindex="1" class="md-skip">
+      <a href="#logging-settings" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Introduction
+                Logging Settings
               
             </span>
           
@@ -1179,15 +1179,110 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CommandLineParameters.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Logging.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="introduction">Introduction</h1>
-<p>Brief introduction of the module, component or feature being documented.</p>
-<p>This document explains ...</p>
+                <h1 id="logging-settings">Logging Settings</h1>
+<p>This document describes how to configure logging for the Levridge Integration Framework</p>
 <h1 id="overview">Overview</h1>
-<h1 id="main-point-1">Main Point 1</h1>
-<h2 id="sub-point-11">Sub Point 1.1</h2>
+<p>The Levridge Integration Framework utilizes the standard <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-3.1">ASP.NET Core logging</a> capabilities.
+Our primary target for logging is <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview">Azure Application Insights</a> however
+we can also log to the Windows Event Log. This can be usefull if the integration framework is running as a windows service
+and does not have highspeed internet access to send log data to Application Insights.</p>
+<h1 id="log-settings">Log Settings</h1>
+<p>In the appsettings.json file there is a "Logging" section that defines the log settings for the various
+logging providers.</p>
+<p>A typical logging section may look like this.</p>
+<pre><code>"Logging": {
+    "ApplicationInsights": {
+        "LogLevel": {
+            "Default": "Trace"
+        }
+    },
+    "Debug": {
+        "LogLevel": {
+            "Default": "Trace"
+        }
+    },
+    "Console": {
+        "IncludeScopes": true,
+        "LogLevel": {
+            "Default": "Trace"
+        }
+    },
+    "LogLevel": {
+        "Default": "Warning"
+    }
+},
+</code></pre>
+<p>Unless you are using Debug or Console logging the only setting you need to be concerned with is the
+ApplicationInsights object. In a typical production environment you will want this set to "Information" or 
+"Warning" rather than trace. However, to troubleshoot issues you may need to set this to "Trace".</p>
+<h2 id="valid-log-levels">Valid Log Levels</h2>
+<p>Here are the valid log level settings:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trace</td>
+<td>Logs that contain the most detailed messages. These messages may contain sensitive application data. These messages are disabled by default and should never be enabled in a production environment.</td>
+</tr>
+<tr>
+<td>Debug</td>
+<td>Logs that are used for interactive investigation during development. These logs should primarily contain information useful for debugging and have no long-term value.</td>
+</tr>
+<tr>
+<td>Information</td>
+<td>Logs that track the general flow of the application. These logs should have long-term value.</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the application execution to stop.</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure.</td>
+</tr>
+<tr>
+<td>Critical</td>
+<td>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Not used for writing log messages. Specifies that a logging category should not write any messages.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application-insights-instrumentation-key">Application Insights Instrumentation Key</h2>
+<p>Application Insights uses an Intrumentation Key to specify the Application Insights resource to use for logging.
+If the integration framework is deployed to Azure and Application Insights is enabled, the Instrumentation Key 
+will be specified in the environment variables. However, if the Integration is deployed on premise an Instrumentation Key
+must be specified for the Application Insights logging provider to send the log data to the correct Application Insights
+resource.</p>
+<pre><code>"ApplicationInsights": {
+    "InstrumentationKey": "[Application Insights Instrumentation Key]"
+},
+</code></pre>
+<p>This section is at the top level and not in the Logging section. Here is an example of a partial appsettings.json file.</p>
+<pre><code>"Logging": {
+    "ApplicationInsights": {
+        "LogLevel": {
+            "Default": "Trace"
+        }
+    "LogLevel": {
+        "Default": "Information"
+    }
+},
+"AllowedHosts": "*",
+"ApplicationInsights": {
+    "InstrumentationKey": "1a2b3c4d-5e6f-4b24-9308-4dff05f1cd02"
+},
+</code></pre>
                 
                   
                 
