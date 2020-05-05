@@ -1,5 +1,5 @@
 ﻿# Application Configuration
-The Levridge Integration Framework utilizes standard [Microsoft Configuration for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?tabs=basicconfiguration&view=aspnetcore-2.2) 
+The Levridge Integration Framework utilizes standard [Microsoft Configuration for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?tabs=basicconfiguration&view=aspnetcore-3.1) 
 to mange configuration settings.
 
 This document explains what configuration settings are managed and the definition, 

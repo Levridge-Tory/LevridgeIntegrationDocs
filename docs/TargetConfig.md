@@ -22,13 +22,13 @@ attributes:
  - [Direction](#Direction)
 
 ### ODataConfigName
-The ODataConfigName attribute contains a string that specifies the configuration node (section)
+The ODataConfigName attribute contains a string that specifies the json object (configuration section)
 that holds the data configuration used by the Source of the Integration Interaction.
 
 This must point to a node that is a [ODataConfig](./ODataConfig.md) json object
 
 ### CDSConfigName
-The CDSConfigName attribute contains a string that specifies the configuration node (section)
+The CDSConfigName attribute contains a string that specifies the json object (configuration section)
 that holds the CDS configuration used by the Target of the Integration Interaction.
 
 This must point to a node that is a [CDSConfig](./CDSConfig.md) json object

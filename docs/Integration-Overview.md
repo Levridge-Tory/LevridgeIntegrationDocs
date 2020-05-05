@@ -1,11 +1,11 @@
 ﻿hero: Integration Overview
 
 # Introduction
-The Levridge integration framework provides integration between Dynamics365 Finance and Operations
+The Levridge integration framework provides integration between Dynamics365 Finance and SCM
 and Dynamics 365 Customer Engagement and 3rd party applications.
 
-This document provides and overview of the integration framework and links to the document
-that exists for the framework.
+This document provides and overview of the integration framework and links to the documents
+that exist for the framework.
 
 # Overview
 The Levridge Integration Framework is an entity syncronization framework. 
@@ -16,10 +16,18 @@ All integrations that use the framework follow the same pattern:
   2. The data source responds to the integration event by sending one or more entities to the service bus.
   3. The service bus publishes the message(s) to each subscription
   4. An instance of the integration framework receives the message(s) from a subscription
-  5. The integration framework transforms the message it if needed
+  5. The integration framework transforms the message if needed
   6. The integration framework sends the message to the target data source
 
 ![General Entity Integration Pattern.](./assets/images/GeneralSynchronizationIntegrations.jpg "General Entity Integartion Pattern")
+
+The Levridge Integration Framework uses a [Publish and Subscribe messaging pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
+We use the [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/) to provide the publish and
+subscribe mechanism.
+
+The Levridge Integration Framework is most commonly run in the cloud as an 
+[Azure App Serivce](https://azure.microsoft.com/en-us/services/app-service/). It can also run as a windows service or 
+as an IIS application. See [this article](./Deploying-Integration-Framework.md) to learn more about the deployment options.
 
 
 # Integrations

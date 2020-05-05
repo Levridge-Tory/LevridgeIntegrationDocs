@@ -27,8 +27,8 @@ nav:
                     - 'oneWeigh' : 'oneWeigh.md'
                     - 'Field Reveal' : 'Field-Reveal.md'
                 - Deployment: 
-                    - 'Application Settings Configuration' : 'ApplicationConfiguration.md'
                     - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
+                    - 'Application Settings Configuration' : 'ApplicationConfiguration.md'
                     - 'Deploying CDS' : 'DeployingCDS.md'
             - Print Service: 'print-service.md'
             - CRM Platform:
