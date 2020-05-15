@@ -36,7 +36,7 @@
     
     
       
-        <title>Levridge Agronomy - Levridge Documentation</title>
+        <title>Configuring Controller Security - Levridge Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#agronomy" tabindex="1" class="md-skip">
+      <a href="#configuring-controller-security" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Levridge Agronomy
+                Configuring Controller Security
               
             </span>
           
@@ -179,16 +179,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." class="md-tabs__link">
+      <a href=".." class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -306,12 +304,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -615,20 +611,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Levridge Agronomy" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Agronomy/" title="Levridge Agronomy" class="md-nav__link">
       Levridge Agronomy
     </a>
-    
   </li>
 
         
@@ -1182,6 +1169,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-permissions-roles" class="md-nav__link">
+    Application Permissions (Roles)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-application-permissions" class="md-nav__link">
+    Exposing Application Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigning-application-permissions" class="md-nav__link">
+    Assigning Application Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-authorized-roles" class="md-nav__link">
+    Configuring Authorized Roles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-azuread-settings" class="md-nav__link">
+    Configure AzureAd Settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-security-on-a-controller" class="md-nav__link">
+    Enabling Security on a Controller
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allowing-anonymous-access" class="md-nav__link">
+    Allowing Anonymous Access
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1192,15 +1256,53 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Agronomy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/ControllerSecurity.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="agronomy">Agronomy</h1>
-<p>Brief introduction of the module, component or feature being documented.</p>
-<p>This document explains ...</p>
-<h1 id="overview">Overview</h1>
-<h1 id="main-point-1">Main Point 1</h1>
-<h2 id="sub-point-11">Sub Point 1.1</h2>
+                <h1 id="configuring-controller-security">Configuring Controller Security</h1>
+<h2 id="overview">Overview</h2>
+<p>Levridge has provided configurable security for our controllers. Once a controller is
+secured each instance of the Integration Framework in which it is used must be 
+configured in the Active Directory to expose the API.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Here is a link</a> 
+to the Microsoft documentation that explains the process of registering
+an application in Azure Active Directory.</p>
+<h2 id="application-permissions-roles">Application Permissions (Roles)</h2>
+<p>Since controllers are generally called by applications that are not using the 
+Azure Active Directory to authenticate users we have configured our controllers to
+utilize <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#permission-types">Application Permissions rather than Delegated permissions</a>.</p>
+<h3 id="exposing-application-permissions">Exposing Application Permissions</h3>
+<p>To expose application permissions you must add one or more roles to the registered application manifest.
+Use <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-protected-web-api-app-registration#exposing-application-permissions-app-roles">this link</a> 
+for specific instructions. Don't forget to provide admin consent.</p>
+<h3 id="assigning-application-permissions">Assigning Application Permissions</h3>
+<p>Once you have exposed application permissions you will need to assign those permissions
+to the application that will be calling the API. You will assign Application Permissions 
+as opposed to Delegated Permisions.</p>
+<p>Use <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-web-apis">this link</a>
+for specific instructions.</p>
+<h3 id="configuring-authorized-roles">Configuring Authorized Roles</h3>
+<p>Once the role(s) are defined as application permissions and the calling application is assigned
+the necessary permissions you will need to add the <a href="../InstanceConfig/#AcceptedApiRoles">role(s)</a> to the <a href="../InstanceConfig/">InstanceConfig</a> <a href="../appsettings.json/">appsettings.json</a>.</p>
+<h3 id="configure-azuread-settings">Configure AzureAd Settings</h3>
+<p>You will need to provide the information necessary to utilize Azure AD to authenticate calls 
+to the controller. See <a href="../AzureAd/">AzureAd Settings</a> for more information.</p>
+<h2 id="enabling-security-on-a-controller">Enabling Security on a Controller</h2>
+<p>At the time of this writing (5/15/2020) we only have security enabled on the default controller.</p>
+<p>Be careful about enabling security on controllers. Many of the controllers are called by applcations
+that expect anonymous access.</p>
+<p>To enable security you will need to add the following attribute to the controller class:</p>
+<pre><code>[Authorize(AuthenticationSchemes = OpenIdConnectDefaults.AuthenticationScheme + "," + JwtBearerDefaults.AuthenticationScheme)]
+</code></pre>
+<p>You can simply add the JwtBearer authentication scheme but then you will not be able to access
+the API from a browser.</p>
+<h3 id="allowing-anonymous-access">Allowing Anonymous Access</h3>
+<p>If you have enabled security on a controller but you want certain actions to allow anonymous
+access you can add the <code>[AllowAnonymous]</code> attribute to the method.</p>
+<p>If you want all but a few actions to allow anonymous access you can simply add the
+<code>[Authorize]</code> attribute only to the actions that you want to secure and don't add it 
+to the class. Be sure to specify the Authentication Schemes you want to use or it will 
+simply use the default which is OpenIdConnect.</p>
                 
                   
                 
@@ -1217,41 +1319,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../CRM-configuration/" title="CRM Platform Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                CRM Platform Configuration
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../Commodities/" title="Levridge Commodities" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Levridge Commodities
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
