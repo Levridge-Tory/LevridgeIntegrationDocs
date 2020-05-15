@@ -7,6 +7,11 @@ This document explains the various json objects used in the appsettings.json fil
 
 # Overview
 
+## AzureAd
+The AzureAd section provides the necesary information for authentication.
+
+see [AzureAd Settings](./AzureAd.md)
+
 ## Controllers
 The controllers section provides a list of json objects that define which controllers to load
 for the current Levridge Integration Framework instance.

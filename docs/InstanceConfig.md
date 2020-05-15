@@ -7,7 +7,8 @@ to define the configuration for the Current Instance of the integration framewor
         "AzureTableConfiguration": "AzureTableConfiguration",
         "LogRequestsAndResponses": true,
         "EnableAppInsightsAdaptiveSampling": true,
-        "HttpClientTimeout": 100
+        "HttpClientTimeout": 100,
+        "AcceptedApiRoles":[ "access_as_application" ]
     }
 
 # Definition
@@ -21,6 +22,7 @@ attributes:
  - [LogRequestsAndResponses](#LogRequestsAndResponses)
  - [EnableAppInsightsAdaptiveSampling](#EnableAppInsightsAdaptiveSampling)
  - [HttpClientTimeout](#HttpClientTimeout)
+ - [AcceptedApiRoles](#AcceptedApiRoles)
 
 ### AzureTableConfiguration
 **Required**
@@ -63,3 +65,12 @@ The HttpClientTimeout attribute specifies the number of seconds to use for the t
 in the integration framework. The [default is 100 seconds.](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient.timeout?view=netcore-3.1)
 In some cases this is not enough time under heavy load, particularly the Agsync to FinOps work order integration.
 To change this set the value to an integer value that represents the number of seconds you want for the timeout.
+
+### <a name="AcceptedApiRoles"></a>AcceptedApiRoles
+**Optional**
+
+**Default = Empty Array**
+
+The AcceptedApiRoles attribute specifies what roles in the Active Directory Application Registration
+are accepted as adequate permissions to authorize an application to interact with secured APIs on this
+integration instance.

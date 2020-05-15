@@ -52,6 +52,47 @@ Here are the valid log level settings:
 | Critical | Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention. |
 | None | Not used for writing log messages. Specifies that a logging category should not write any messages. |
 
+### Levridge Guidance for using Log Levels
+In order to provide a consistent user experience when using the configuration to adjust the log levels 
+we need to have a consistent practice accross all of our code for what information is logged at what level.
+
+Generally speaking we would like to have logging set to Information in production unless there is a need
+to troubleshoot a specific issue. At this level we should be able to see all errors and warnings along with
+usefull information for basic troubleshooting.
+
+Here is what Levridge is logging at the different levels:
+
+#### Trace
+Log variable states, parameters & request and response payloads as Trace items.
+Use trace to log verbose information and large payloads. These items may can cause performance issues 
+during normal operation.
+
+### Debug
+Log any information that inidates the basic flow of the code.
+Examples include something like "Entering POST method" or "Enabling authentication."
+
+This is general information that helps someone follow the flow of the code and can be useful in determining
+what is happening when an error occures.
+
+### Information
+Log specific state information. For example "Recieved Order 1234" or "Enabling AzureAd authentication scheme." 
+These messages provide specific instance and state information. For example, in the trace section we showed an 
+example "Enabling authenticaction". The represents the current code that is executing but not any instance or 
+state information. On the other hand, logging "Enabling AzureAd authentication scheme" tells us which type of 
+authenticaion is being enabled.
+
+### Warning
+Log abnormal situations that do not warrent stopping the application and do not leave the application 
+in an unkown state.
+
+### Error
+Log error conditions from which we can recover.
+
+### Critical
+Log all exceptions as critical. Include as much state information as possible to help with troubleshooting 
+the root cause of the exception.
+
+
 ## Application Insights Instrumentation Key
 Application Insights uses an Intrumentation Key to specify the Application Insights resource to use for logging.
 If the integration framework is deployed to Azure and Application Insights is enabled, the Instrumentation Key 
