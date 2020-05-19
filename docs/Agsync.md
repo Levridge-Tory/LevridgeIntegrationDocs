@@ -11,7 +11,7 @@ Document BOM setup in F&O
 -->
 
 ## Agsync
-The Agsync integration is a bidirectional integration that consists of a Topic for
+The scale integration is a bidirectional integration that consists of a Topic for
 Master Data that goes from D365 F&O to Agsync and Service Calls for Work Orders that go from 
 Agsync to D365 F&O. The Work Order integration utilize a background service running
 in the same application as the Webhook controller so there is no
