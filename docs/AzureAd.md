@@ -48,7 +48,13 @@ The TenantId (aka audience) that will be used for authentication. The following 
 
 **No Default value**
 
-The Client ID (aka application ID) assigned in the Azure portal.
+The Client ID (aka application ID) assigned in the Azure Portal. This client ID is obtained
+by [enabling Authentication and Authorization](./ControllerSecurity.md#Application_Managed_Identity) in the Azure Portal. 
+
+Once Authentication is enabled you can obtain the ClientId from the Authentication / Authorization
+section of the app service. Select Azure Active Directory and then select the Azure AD App.
+
+![get application id](./assets/images/get-application-id-back-end.png)
 
 ### CallbackPath
 **Optional**
