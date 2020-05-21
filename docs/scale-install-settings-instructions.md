@@ -107,3 +107,12 @@ To set up the Printer Settings for Scale:
 - **Scale Unit**: Use drop down list to select LB
 - **Max Weight**: Enter in the max weight of the scale head.
 - **Incr. Wt.**: This is what increments the scale head will display weights, i.e. 20 Lbs.
+
+#### Reverse Proxy
+A reverse proxy is a type of proxy server that retrieves resources on behalf of a client from one or more servers. These resources are then returned to the client, appearing as if they originated from the proxy server itself.
+
+When operating through LevScale, the two web servers are operated as a stack with the service operating as a singular standalone. The server is configured to operate as a reverse proxy. IIS communicates with all outside communication.
+
+This enables the LevScale to run the Windows executable in the background through the Web.config. IIS needs to be configured as an out of process to ensure IIS will run the scaleticket.exe as a process outside of IIS. IIS operates as a process; however, it knows how to communicate to a different process based off the out of process hosting model, which creates a reverse proxy. 
+
+A 500 Internal Server Error response code accessing the website is a Web.config, vsanv, and IIS issue. An IIS Issue could be how the app pool is structured or it could be permissions based, or within your specific settings. 

@@ -17,6 +17,14 @@ which lists the entities needed when integrating F&O to scale through System adm
 2.	Run IntegrationConsole.cmd
 3.	When Print is clicked on the scale app, the ticket will then sync to F&O.
 
+#### Printer Server Web Configuration
+The Printer Server Web Config inclues two critical functions: 
+1. Root Directory
+      - This is where the server is in the file pathing and saved in the C-Directory. The printer server should exclude the drive letter and have the path to where the web.config is located since it is looking for its report files. 
+2. Default Connection
+- This is how the printer server communicates with the database. 
+- The key piece is knowing the data source, being eithe rthe IP or the exposed fully qualified domain name to access the database. Fully qualified domain name correlates to the DNS in the internal network. 
+
 #### Scale Entities for Integration
 ##### Agronomy Release
 - Agronomy release
