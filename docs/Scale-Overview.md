@@ -7,7 +7,8 @@ Within the accounting technology solution, the contents of the scale ticket can 
   - [Levridge Scale Installation](scale.md)
   - [Levridge Scale Integration](scale-integration.md) 
   - [How to Update Levridge Scale](howtoupdatelevridgescale.md)
-  - 
+  - [ScaleHead Hardware Setup for Rice Lake 920i](ScaleHeadHardwareSetup.md)
+ 
 
 #### Scale Ticket Types
 
