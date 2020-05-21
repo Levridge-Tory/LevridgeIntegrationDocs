@@ -13,12 +13,11 @@ Within the accounting technology solution, the contents of the scale ticket can 
 
 - Inbound Grain
 - Outbound Grain
-- Inbound Agronomy
-- Outbound Agronomy
+- Agronomy Sales
 - Transfer
 - Weight Only
 
-#### Open Scale Tickets
+#### Trucks in Yard
 - These will be shown "in the yard" since they are uncompleted tickets that have not been printed.
 
 #### Scale Ticket History
