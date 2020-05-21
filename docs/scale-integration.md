@@ -19,7 +19,6 @@ which lists the entities needed when integrating F&O to scale through System adm
 
 #### Scale Entities for Integration
 ##### Agronomy Release
-- Agronomy release
 - LevUnitOfMeasureEntity
 - HcmWorkerEntity
 - LevScaleReleaseProductsEntity
