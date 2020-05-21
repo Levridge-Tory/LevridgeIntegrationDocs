@@ -117,8 +117,7 @@
 ```    
  > Server=localhost/SQLEXPRESS;Database=master;Trusted_Connection=True;
 ```
-- Enable IIS through Control panel > Programs and Features > Turn Windows features on or off > Internet Information Services. 
-- Check the root box for Internet Information Services and let it select the defaults.
+- Enable IIS through Control panel > Programs and Features > Turn Windows features on or off > Internet Information Services. Check the root box for Internet Information Services and let it select the defaults.
 
 #### Install Levridge Scale
 1. Download the file Levridge Scale House Install.exe 
@@ -140,7 +139,7 @@ Reference [Scale Install Settings Instructions](scale-install-settings-instructi
     C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Servers
 ```
 - In the **API** and **Client** folders, configure `appsettings.json`
-Open file explorer and go to: 
+- Open file explorer and go to: 
 ```
     C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services
 ```
@@ -152,13 +151,12 @@ Open file explorer and go to:
 - On the **LevScaleAPI** and **LevPrint** Application Pools, right click > Advanced settings
 - In the Identify field select Custom account > Set and enter username and password
 - Open (Windows) Services
-- There should be six new services installed with startup Type of Automatic:
-1.  LevEstimatedTicketService
-2.  LevHardwareInterfaceService
-3.  LevridgeAxtoScale
-4.  LevridgeScaletoAx
-5.  LevScaleClient
-6.  LevScalePrinterService
+- There should be five new services installed with startup Type of Automatic:
+1.  LevHardwareInterfaceService
+2.  LevridgeAxtoScale
+3.  LevridgeScaletoAx
+4.  LevScaleClient
+5.  LevScalePrinterService
 - On the **LevHardwareInterfaceService** and **LevScaleClient** services, right click > Properties
 - Click the Log On tab
 - Enter account and password and click OK. If the account is part of a directory, click Brose. Then enter the username and click Check Names. 
@@ -185,55 +183,3 @@ Enabled: Yes
 ```
 - Create an Event Framework event and sync all scale entities, referenced in [Scale Integration](scale-integration.md).
 
-
-#### Merge below notes with above documentation:
-Copy the folder name 'LevridgeScaleHouse' from its current location. 
-
-- Copy it to your computers C:Drive
-- This will take around 15 to 30 minutes to complete.
-
-
-Once copied, open PowerShell as an administrator.
-
-- Run command:
-```
-   Cd C:\LevridgeScaleHouse\
-```
-- Next run command:
-```
-     .\ScaleHouseAppInstall.ps1 -installFullPackage $true
-```
-- If presented with an error stating 'cannot be loaded because running scripts is disabled on this system' then run command:
-```
-Set-ExecutionPolicy Unrestricted
-[Y] for Yes
-```
-For the next step, run command:
-```
-.\ScaleHouseAppInstall.ps1 -installFullPackage $true
-```
-You will see a few errors depending on your system settings.
-
-It should then bring you to a Microsoft SQL Server Installer.
-
-- If installation should stop during SQL Server Installation. Run command:
-```
-Install-module-name SqlServer
-[Y]
-```
-After this, you should be seeing Windows IIS features being enabled.
-![Windows-IIS-Features-Enabled](./assets/images/Windows-IIS-Features-Enabled.png)
-
-Once this has been completed, search IIS in Windows Search. Three sites should show:
-![IIS-Default-Web-Site](./assets/images/IIS-Default-Web-Site.png)
-
-Right click the Default Web Site. Select manage web site and stop web site.
-
-The installations should enable two window services.
-
-- Hardware
-- LevScale Printer
-- Eventually some integration service
-
-The installation will turn on IIS, .Net, and SQL windows features.
-The installation will also create App Pools along with websites to run the website server. You will need to setup websites to address them. 

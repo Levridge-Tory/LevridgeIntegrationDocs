@@ -1,7 +1,7 @@
 # How to Update Levridge Scale
 
 #### Prerequisites
-An older Version of LEvridge Scale must be installed and configured
+An older Version of Levridge Scale must be installed and configured
 
 #### Setup
 1.	Open Services
@@ -20,7 +20,7 @@ An older Version of LEvridge Scale must be installed and configured
 8.	Select Typical for the setup type
 9.	Click Install
 10.	When the install is complete, click Finish
-11.	When the installer displays “Installation Successfully Completed”, click Close
+11.	When the installer displays â€œInstallation Successfully Completedâ€, click Close
 12.	Open Services
     - On the **LevHardwareInterfaceService** and **LevScaleClient services**, right click > Properties 
     - Click the Log On tab 
