@@ -23,7 +23,6 @@ which lists the entities needed when integrating F&O to scale through System adm
 - HcmWorkerEntity
 - LevScaleReleaseProductsEntity
 - LevHazardousMaterialsTableEntity
-- LevGrowingSeasonEntity
 - CustCustomerV3Entity
 - LevSplitGroupEntity
 - LevSplitGroupLinesEntity
@@ -36,4 +35,4 @@ which lists the entities needed when integrating F&O to scale through System adm
 - LevWarehouseEntity
 - LevScaleOperatorEntity
 - LevScaleHouseSalesOrderEntity
-- LevScaleHouseScaleTicketEntity
+- LevScaleHouseScaleTicketEntity: Add a filter for: Table Scale tickets; Field Ticket type; Criteria Transfer origin
