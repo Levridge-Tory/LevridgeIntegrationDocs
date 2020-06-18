@@ -43,3 +43,36 @@ Currently we support the following integrations:
  - [oneWeigh](./oneWeigh.md)
  - [Field Reveal](./Field-Reveal.md)
  - [Levridge CRM Remote Printing Service](./Levridge-CRM-Remote-Printing-Service.md)
+
+
+# Levridge Integration System Requirements
+- Azure App Registrations
+  - One each for the Production and Test environments
+  - [Azure App Registrations](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-registration-portal-training-guide)
+- Azure Service Bus Namespace
+  - One each for the Production and Test environments
+    - Configure both using the Standard Pricing Tier
+  - Topics/Subscriptions will be determined based on integration within scope for the project
+  - Documentation
+    - [Azure Service Bus Overview](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-registration-portal-training-guide)
+    - [Azure Service Bus topics and subscriptions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)
+- Azure App Service Plan
+  - One each for Production and Test environments
+    - Use a Standard tier for the Test environment
+    - Use a Premium V2 tier for the Production environment
+      - Additional sizing will be reviewed during the implemenation
+    - [Azure App Service Plan overview](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans)
+    - Individual Azure App Services will be deployed to these App Service Plans
+- Azure App Services
+  - Separate App Services will be deployed for each integrating application
+    - Once deployed and configured we will then deploy the Levridge Integration Framework to each
+    - Separate Levridge Integration Framework configuration will be required
+  - App Services pricing is included in the App Service Plan tier pricing (see App Service Plan overview above)
+- Azure Storage Account
+  - Levridge Integrations utilize Azure Storage Accounts in multiple areas
+  - One each required for the Production and Test environments
+  - Use the General Purpose V2 account type
+  - [Azure Storage Account overview](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+- Azure Key Vault
+  - One key vault is required.  Can be used by both the Production and Test environments
+  - [Azure Key Vault overview](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts)
