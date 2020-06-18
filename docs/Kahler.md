@@ -53,7 +53,7 @@ To integrate to and from Kahler and D365 F&O you will need to:
    - You will need to be sure to provide properties on the event to allow filtering by Branch
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 F&O
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
- - [Setup Azure Keyvault](./AzureKeyVault.md) 
+ - [Set up Azure Key Vault / Overview](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts) 
  - [Deploy the Levridge Integration Framework as a service](./Deploy-Integration-As-A-Service.md) at each Branch that has a Kahler mixer
 
 

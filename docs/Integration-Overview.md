@@ -76,3 +76,8 @@ Currently we support the following integrations:
 - Azure Key Vault
   - One key vault is required.  Can be used by both the Production and Test environments
   - [Azure Key Vault overview](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts)
+
+![Levridge Integration](./assets/images/D365EnvironmentsLevridgeIntegration.jpg)
+
+
+
