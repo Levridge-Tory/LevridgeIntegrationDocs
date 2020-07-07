@@ -1,9 +1,4 @@
 ﻿# Introduction
-Brief introduction of the module, component or feature being documented.
 
-This document explains ...
+[Azure Key Vault Overview](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts)
 
-# Overview
-
-# Main Point 1
-## Sub Point 1.1
