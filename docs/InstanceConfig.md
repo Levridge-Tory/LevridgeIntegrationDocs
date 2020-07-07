@@ -74,3 +74,10 @@ To change this set the value to an integer value that represents the number of s
 The AcceptedApiRoles attribute specifies what roles in the Active Directory Application Registration
 are accepted as adequate permissions to authorize an application to interact with secured APIs on this
 integration instance.
+
+### AzureAdSection
+**Optional**
+
+**Default = "AzureAD"**
+
+The name of the section that contains the AzureAD configuration options used for AzureAD authentication.
