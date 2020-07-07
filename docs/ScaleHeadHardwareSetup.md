@@ -19,10 +19,10 @@
     - From Equipment Management, click Edit on the Equipment record
     - Click Equipment Field Details
     - Click Create New
-    - Name  = "weight"
+    - Name = "weight"
     - SequenceId = 1
     - Check the box by OutputStreamTypeId
-    - FieldName = “weight”
+    - FieldName = "weight"
     - StringLength = 30
     - ReturnTypeResult = String
     - Click Create
@@ -37,7 +37,7 @@
 4. Create a Workstation
     - In LevridgeScale, click Application Configuration > Workstation Management
     - Click Create New
-    - Enter a Workstation name, ex. “Ws1”
+    - Enter a Workstation name, ex. "Ws1"
     - Click Create
     - Click Edit
     - Under Equipment, mark the box next to the Scale
@@ -78,10 +78,10 @@
     - From Equipment Management, click Edit on the Equipment record
     - Click Equipment Field Details
     - Click Create New
-    - Name = “weight”
+    - Name = "weight"
     - SequenceId = 1
     - Check the box by OutputStreamTypeId
-    - FieldName = “weight”
+    - FieldName = "weight"
     - StringLength = 30
     - ReturnTypeResult = String
     - Click Create
@@ -96,7 +96,7 @@
 5. Create a Workstation
     - In LevridgeScale, click Application Configuration > Workstation Management
     - Click Create New
-    - Enter a Workstation name, ex. “Ws1”
+    - Enter a Workstation name, ex. "Ws1"
     - Click Create
     - Click Edit
     - Under Equipment, mark the box next to the Scale
@@ -129,10 +129,10 @@
      - From Equipment Management, click Edit on the Equipment record
      - Click Equipment Field Details
      - Click Create New
-     - Name = “weight”
+     - Name = "weight"
      - SequenceId = 1
      - Check the box by OutputStreamTypeId
-     - FieldName = “weight”
+     - FieldName = "weight"
      - StringLength = 30
      - ReturnTypeResult = String
      - Click Create
@@ -150,7 +150,7 @@
 4. Create a Workstation
     - In LevridgeScale, click Application Configuration > Workstation Management
     - Click Create New
-    - Enter a Workstation name, ex. “Ws1”
+    - Enter a Workstation name, ex. "Ws1"
     - Click Create
     - Click Edit
     - Under Equipment, mark the box next to the Scale
