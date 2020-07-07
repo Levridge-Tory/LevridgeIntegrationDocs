@@ -6,9 +6,9 @@
     - Click Create New
     - Set Is active = Yes
     - Set Is scale = Yes
-    - Enter Equipment Name – this is the name that will show in the UI and on printed reports
-    - Equipment description – not used
-    - Location – not used
+    - Enter Equipment Name - this is the name that will show in the UI and on printed reports
+    - Equipment description - not used
+    - Location - not used
     - Custom character = L
     - ***Click Save, then edit for the next two fields to be visible***
     - Equipment response type ID = 4
@@ -19,10 +19,10 @@
     - From Equipment Management, click Edit on the Equipment record
     - Click Equipment Field Details
     - Click Create New
-    - Name  = “weight”
+    - Name  = "weight"
     - SequenceId = 1
     - Check the box by OutputStreamTypeId
-    - FieldName = “weight”
+    - FieldName = "weight"
     - StringLength = 30
     - ReturnTypeResult = String
     - Click Create
@@ -37,7 +37,7 @@
 4. Create a Workstation
     - In LevridgeScale, click Application Configuration > Workstation Management
     - Click Create New
-    - Enter a Workstation name, ex. “Ws1”
+    - Enter a Workstation name, ex. "Ws1"
     - Click Create
     - Click Edit
     - Under Equipment, mark the box next to the Scale
@@ -65,9 +65,9 @@
     - Click Create New
     - Set Is active = Yes
     - Set Is scale = Yes
-    - Enter Equipment Name – this is the name that will show in the UI and on printed reports
-    - Equipment description – not used
-    - Location – not used
+    - Enter Equipment Name - this is the name that will show in the UI and on printed reports
+    - Equipment description - not used
+    - Location - not used
     - Custom character = L
     - ***Click Save, then edit for the next two fields to be visible***
     - Equipment response type ID = 4
@@ -78,10 +78,10 @@
     - From Equipment Management, click Edit on the Equipment record
     - Click Equipment Field Details
     - Click Create New
-    - Name = “weight”
+    - Name = "weight"
     - SequenceId = 1
     - Check the box by OutputStreamTypeId
-    - FieldName = “weight”
+    - FieldName = "weight"
     - StringLength = 30
     - ReturnTypeResult = String
     - Click Create
@@ -96,7 +96,7 @@
 5. Create a Workstation
     - In LevridgeScale, click Application Configuration > Workstation Management
     - Click Create New
-    - Enter a Workstation name, ex. “Ws1”
+    - Enter a Workstation name, ex. "Ws1"
     - Click Create
     - Click Edit
     - Under Equipment, mark the box next to the Scale
@@ -116,9 +116,9 @@
      - Click Create New
      - Set Is active = Yes
      - Set Is scale = Yes
-     - Enter Equipment Name – this is the name that will show in the UI and on printed reports
-     - Equipment description – not used
-     - Location – not used
+     - Enter Equipment Name - this is the name that will show in the UI and on printed reports
+     - Equipment description - not used
+     - Location - not used
      - Custom character = L
      - ***Click Save, then edit for the next two fields to be visible***
      - Equipment response type ID = 4
@@ -129,10 +129,10 @@
      - From Equipment Management, click Edit on the Equipment record
      - Click Equipment Field Details
      - Click Create New
-     - Name = “weight”
+     - Name = "weight"
      - SequenceId = 1
      - Check the box by OutputStreamTypeId
-     - FieldName = “weight”
+     - FieldName = "weight"
      - StringLength = 30
      - ReturnTypeResult = String
      - Click Create
@@ -150,7 +150,7 @@
 4. Create a Workstation
     - In LevridgeScale, click Application Configuration > Workstation Management
     - Click Create New
-    - Enter a Workstation name, ex. “Ws1”
+    - Enter a Workstation name, ex. "Ws1"
     - Click Create
     - Click Edit
     - Under Equipment, mark the box next to the Scale
