@@ -16,7 +16,7 @@ Document URI setup in F&O
 # Kahler Integration
 The Kahler integration is a bidirectional integration that consists of a Topic for
 Dispensing Work Orders that go from D365 F&O to Kahler and Dispensing Work Records that go from 
-Kahler to D365 F&O. 
+Kahler to D365 F&O with the goal of margin control and recognizing revenue across site locations.
 
 
 # Overview
@@ -36,6 +36,10 @@ the branch property on the message.
 
 ![Kahler Dispensing Work Record Integration](./assets/images/KahlerDispensingWorkRecordCommunicationDiagram.jpg "Kahler Dispensing Work Record Integration")
 
+### Required Resources
+  - Security permissions to access sales orders, transfer orders, and transportation maangement system in D365 F&O
+  - Security permissions and access to Kahler's system
+
 ## Setup
 To integrate to and from Kahler and D365 F&O you will need to:
  
@@ -49,13 +53,14 @@ To integrate to and from Kahler and D365 F&O you will need to:
    - You will need to be sure to provide properties on the event to allow filtering by Branch
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 F&O
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
- - [Setup Azure Keyvault](./AzureKeyVault.md) 
+ - [Set up Azure Key Vault / Overview](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts) 
  - [Deploy the Levridge Integration Framework as a service](./Deploy-Integration-As-A-Service.md) at each Branch that has a Kahler mixer
 
+
 ## Configuration for Kahler on Premise
-This configuration will need to be on premise with the Kahler mixer. The on-premise instance
-will handle the Dispensing Work Order from D365 F&O to Kahler  and the Webhook that receives
-Dispensing Work Records from Kahler.
+This configuration will need to be on premise with the Kahler mixer. The on-premise instance will handle the Dispensing Work Order from D365 F&O to Kahler  and the Webhook that receives Dispensing Work Records from Kahler.
+
+The configuration of D365 F&O is required to release to Kahler. Within the release product itself, default warehouses must be defined to ensure that under Manage Inventory default warehouses are set up with a dispensing method to be able to ship to a Kahler. The dispensing method is a 1:1 ration (1 warehouse 1 dispensing method). This configuration produces a URL that is an identifier for each Kahler. Each Kahler instance has its own URL and that URL must be attached to the product to ensure it is sent to the correct web hub. 
 
 In the appsettings.json you will need to define the [InstanceConfig](./InstanceConfig.md)  [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
@@ -77,7 +82,7 @@ In the appsettings.json you will need to define the [InstanceConfig](./InstanceC
             "Direction": "Target"
         }
 
-Here is a sample template for the entire appsettings.json file used for the on-premise deployemnt
+Here is a sample template for the entire appsettings.json file used for the on-premise deployment
 of the integration from FinOps to Kahler:
 
     {
@@ -180,12 +185,10 @@ The target config will represent the data endpoint for the local Kahler mixer. T
 that contains the Kahler REST endpoint.
 
 ### Levridge.Integration.Host.KahlerController
-This section is used by the Kahler controller to be able to send messages to the proper topic to be handled by the integration
-framework and written to D365 F&O
+This section is used by the Kahler controller to be able to send messages to the proper topic to be handled by the integration framework and written to D365 F&O.
 
 ## Configuration for Kahler in Azure
-This instance can be a single instance running in the cloud. This instance will handle 
-the Dispensing Work Record from Kahler to D365 F&O
+This instance can be a single instance running in the cloud. This instance will handle the Dispensing Work Record from Kahler to D365 F&O.
 
 In the appsettings.json you will need to define the [InstanceConfig](./InstanceConfig.md)  [SourceConfig](./SourceConfig.md) and [TargetConfig](./TargetConfig.md) nodes as follows:
 
@@ -267,3 +270,90 @@ Here is a template of the full appsettings.json file used for the Kahler integra
             "RequiresSession": true
         }
     }
+
+### Dispensing Method Configuration
+1. Release Products Grid
+2. Highlight line
+3. Manage Inventory
+4. Warehouse Tab
+5. Warehouse Items
+6. Dispensing Method field
+7. Select the warehouse that should be tied to the dispensing method
+8. Select the appropriate configure dispensing method
+9. Add Kahler specific URL
+
+If the URL is not setup properly for each product, the product could be sent to an incorrect Kahler location. This step is critical to ensure the setup and configurations are accurate. 
+
+### Sales Order Statuses
+1. Planned (generated sales order)
+2. Booked
+3. Released (order is sent to dispatcher work board)
+4. Scheduled (generates dispensing work record and assigns application site)
+5. Completed
+
+Once the order is in a scheduled status, it will generate a dispnsing work record which kicks off the integration to send the product to Kahler. Once Kahler completes the dispatching of product and the onsite work is completed, the work order status is updated to either completed, pending, or review. Data is populated in the work order completion tab in F&O. 
+
+### Work Order Completion
+1. Rolling stock ID (task completion equipment)
+2. Weather information
+    - Humidity
+    - Temperature
+    - Wind speed
+    - Wind direction
+3. Pests
+4. Acreage completed
+5. Start and end times
+6. Acmount of actual product applied
+
+Once the work is completed by the dispatcher, the work order status updated to the final completion stage (complete/verify). 
+
+### Picking List
+Within each order, there is a possibility of multiple picking lists. Picking lists annotate the amount of batches/truck loads left Kahler and the mix in each truck. 
+
+Picking lists allow one to know how many loads are being used. There are two bill options: 
+1. Bill what Kahler said was used
+2. Bill for what the machine stated was used
+
+Transportation Management System (TMS) has the ability to generate a freight bill after Kahler sends the picking lists to ensure the third party contractor delivering the product is paid. The steps below outline the process:
+1. Data from Kahler creates a picking list
+2. Load creation in TMS
+3. Generate freight bill invoiceable to the third party contractor
+
+### Packing Order
+A packing slip is generated for the work order in an invoiceable status. Packing orders can take place either in the complete, pending, review status or in the complete, verify status. 
+
+### Generate Order Manually
+The below outlines the steps required to generate a manual order. 
+1. Create a sales order. 
+The information collected in the sales order includes: 
+    - Who the grower is
+    - The inventory location the product is being picked up at
+2. Generate product to be shipped to Kahler
+    - Individual products
+    - Custom configuration BOM
+    - Select configuration BOM
+    - Product and supply
+    - Configure line
+    - Configure selected item (product type and amount)
+    - Click OK (BOM is generated)
+    - Select blending site
+    - Save
+    - Explode BOM back out
+3. Warehouse items tab
+    - Release for dispensing
+    - Generates dispensing ID
+    - Order is sent to Kahler
+4. Manually pack, slip, and post
+
+### Manual Transfer Order
+Transfer orders allow product to be moved from one site to another. The below outlines the process: 
+1. Inventory management
+2. Transfer order
+3. Populate "From" and "To" warehouses
+4. Add line
+5. Select product and amont of product to be transferred
+6. Save Ship
+7. Release for dispensing
+8. Transfer order is sent to Kahler to act on physical shipping of the product. 
+
+
