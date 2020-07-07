@@ -19,7 +19,7 @@
     - From Equipment Management, click Edit on the Equipment record
     - Click Equipment Field Details
     - Click Create New
-    - Name  = “weight”
+    - Name  = "weight"
     - SequenceId = 1
     - Check the box by OutputStreamTypeId
     - FieldName = “weight”

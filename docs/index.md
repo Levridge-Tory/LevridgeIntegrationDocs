@@ -28,7 +28,7 @@ Currently we support the following integrations:
 
  - [D365 F&O to D365 CRM](./D365-F&O-to-D365-CRM.md)
  - [D365 CRM to D365 F&O](./D365-CRM-to-D365-F&O.md)
- - [Levridge Scale House](./scale.md)
+ - [Levridge Scale House](./Scale-Overview.md)
  - [Agsync](./Agsync.md)
  - [Kahler](./Kahler.md)
  - [Surety](./Surety.md)

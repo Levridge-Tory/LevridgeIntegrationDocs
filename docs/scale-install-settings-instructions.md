@@ -60,7 +60,7 @@ C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\LevEstimatedTicket\a
 - This shows a list of all customers int he scale database in alphabetical order. Checking the box next to a customer will put that customer into the drop-down list on all of the scale ticket types in order to reduce load times because not all customers will be loading in the customer account drop-down. 
 - To manually add a customer to he short list, check the box next to their name and click submit on the botton left corner of the page. 
 
-![Customer Short List](./assets/images/ScaleApp/customershortlist.png)
+![Customer Short List](./assets/images/ScaleApp/CustomerShortList.png)
 
 #### Gross Quantity Settings
 - Found under Application Configuration > Gross Quantity Settings
