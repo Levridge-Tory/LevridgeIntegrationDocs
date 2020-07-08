@@ -256,7 +256,9 @@ The "Controllers" section above will load the DefaultController and the FieldCon
             "ConnectionString": "Endpoint=sb://[Customer Service Bus Instance].servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=[Customer Access Key]",
             "TopicName": "[Customer Topic Name]",
             "SubscriptionName": "[Customer Subscription Name]",
-            "RequiresSession": true
+            "RequiresSession": true,
+            "CustomerSiteTypeCode": "[CustomerSite TypeCode from FinOps]",
+            "IdOption": "FieldId"
         }
     }
 

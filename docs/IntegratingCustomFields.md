@@ -11,9 +11,11 @@ projects:
 * Custom Source Proxy Project
 
   Contains the proxy for the source datasource with the custom fields in the entities
+
 * Custom Destination Proxy Project
 
   Contains the proxy for the desitination datasource with the custom fields in the entities
+
 * Custom Mapping Project
 
   Contains the code need to map the integration for the custom fields between the source and 
@@ -35,6 +37,12 @@ We recommend you use this naming convention for your custom mapping project: Lev
 ## Create the Destination Proxy Project
 
 ## Add References to the Custom Mapping Project
+The Levridge packages are published to our DevOps Artifacts so you will need to add a Nuget source for those
+packages. This is done in Visual Studio from Tools/Options/NuGet Package Manager/Package Sources. 
+The source is `https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages-beta/nuget/v3/index.json`
+
+![NuGet Package Sources Dialog](./assets/images/NuGet Package Sources Dialog.jpg "NuGet Package Sources")
+
 You will need to add the following Nuget references to your custom mapping project:
 
 * Levridge.EntityFramework
