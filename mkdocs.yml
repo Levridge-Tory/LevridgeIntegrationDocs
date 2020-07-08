@@ -7,6 +7,8 @@ theme:
         tabs: true
 markdown_extensions:
   - meta
+  - toc:
+        anchorlink: True
 
 site_name: Levridge Documentation
 repo_name: 'levridge-tory.github.io/LevridgeIntegrationDocs'

@@ -16,7 +16,7 @@ are shared with the Levridge Integration Framework. The referenced assemblies wi
 be deployed with the Levridge Integration Framework.
 
 To avoid deploying the shared referenced assemblies, be sure to follow the instructions in
-the section titled [Update the references to be excluded from deployment](./IntegratingCustomFields.md#Update-the-references-to-be-excluded-from-deployment).
+the section titled [Update the references to be excluded from deployment](./IntegratingCustomFields.md#update-the-references-to-be-excluded-from-deployment).
 
 You can use visual studio to [deploy to a local folder](https://docs.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-to-local-folder?view=vs-2019#deploy-to-a-local-folder)
 or use Azure DevOps to obtain a zipped folder or your custom assemblies.
