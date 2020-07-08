@@ -17,7 +17,7 @@ nav:
         - Levridge Core:
             - Integration Framework:
                 - Overview : 'Integration-Overview.md'
-                - Integrations:
+                - Integrations :
                     - 'D365 CRM to D365 F&O' : 'D365-CRM-to-D365-F&O.md'
                     - 'D365 F&O to D365 CRM' : 'D365-F&O-to-D365-CRM.md'
                     - 'Levridge Scale House' : 'scale-integration.md'
@@ -26,7 +26,7 @@ nav:
                     - 'Surety' : 'Surety.md'
                     - 'oneWeigh' : 'oneWeigh.md'
                     - 'Field Reveal' : 'Field-Reveal.md'
-                    - 'Integrating Custom Fields':'IntegratingCustomFields.md'
+                    - 'Integrating Custom Fields' : 'IntegratingCustomFields.md'
                 - Deployment: 
                     - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
                     - 'Application Settings Configuration' : 'ApplicationConfiguration.md'
