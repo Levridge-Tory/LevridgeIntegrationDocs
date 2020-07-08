@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -174,15 +174,6 @@
     
     <div class="md-container">
       
-        
-          
-
-
-<div class="md-hero" data-md-component="hero">
-  <div class="md-hero__inner md-grid">
-    Integration Overview
-  </div>
-</div>
         
       
       
@@ -388,9 +379,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Overview
+      </label>
+    
     <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
       Overview
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-planning" class="md-nav__link">
+    Environments Planning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#levridge-integration-system-requirements" class="md-nav__link">
+    Levridge Integration System Requirements
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -718,7 +759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../scale.md" title="Scale Installation" class="md-nav__link">
+    <a href="../scale-install-settings-instructions/" title="Scale Installation" class="md-nav__link">
       Scale Installation
     </a>
   </li>
@@ -1195,6 +1236,43 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-planning" class="md-nav__link">
+    Environments Planning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#levridge-integration-system-requirements" class="md-nav__link">
+    Levridge Integration System Requirements
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1213,7 +1291,7 @@
 and Dynamics 365 Customer Engagement and 3rd party applications.</p>
 <p>This document provides and overview of the integration framework and links to the documents
 that exist for the framework.</p>
-<h1 id="overview">Overview</h1>
+<h2 id="overview">Overview</h2>
 <p>The Levridge Integration Framework is an entity syncronization framework. 
 It provides a means to synchronize data at an entity level between multiple data sources.</p>
 <p>All integrations that use the framework follow the same pattern:
@@ -1230,12 +1308,12 @@ subscribe mechanism.</p>
 <p>The Levridge Integration Framework is most commonly run in the cloud as an 
 <a href="https://azure.microsoft.com/en-us/services/app-service/">Azure App Serivce</a>. It can also run as a windows service or 
 as an IIS application. See <a href="../Deploying-Integration-Framework/">this article</a> to learn more about the deployment options.</p>
-<h1 id="integrations">Integrations</h1>
+<h2 id="integrations">Integrations</h2>
 <p>Currently we support the following integrations:  </p>
 <ul>
 <li><a href="../D365-F&amp;O-to-D365-CRM/">D365 F&amp;O to D365 CRM</a></li>
 <li><a href="../D365-CRM-to-D365-F&amp;O/">D365 CRM to D365 F&amp;O</a></li>
-<li><a href="./scale.md">Levridge Scale House</a></li>
+<li><a href="../Scale-Overview/">Scale</a></li>
 <li><a href="../Agsync/">Agsync</a></li>
 <li><a href="../Kahler/">Kahler</a></li>
 <li><a href="../Surety/">Surety</a></li>
@@ -1243,9 +1321,52 @@ as an IIS application. See <a href="../Deploying-Integration-Framework/">this ar
 <li><a href="../Field-Reveal/">Field Reveal</a></li>
 <li><a href="../Levridge-CRM-Remote-Printing-Service/">Levridge CRM Remote Printing Service</a></li>
 </ul>
+<h2 id="environments-planning">Environments Planning</h2>
+<p>A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&amp;O System Requirements and what one needs to start a project are outlined in <a href="C:\Users\jessiwoi\source\repos\Levridge-Tory\LevridgeIntegrationDocs\docs\EnvironmentsPlanning.md">Environments Planning</a>.</p>
+<h2 id="levridge-integration-system-requirements">Levridge Integration System Requirements</h2>
+<ul>
+<li>Azure App Registrations</li>
+<li>One each for the Production and Test environments</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/app-registration-portal-training-guide">Azure App Registrations</a></li>
+<li>Azure Service Bus Namespace</li>
+<li>One each for the Production and Test environments<ul>
+<li>Configure both using the Standard Pricing Tier</li>
+</ul>
+</li>
+<li>Topics/Subscriptions will be determined based on integration within scope for the project</li>
+<li>Documentation<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/app-registration-portal-training-guide">Azure Service Bus Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions">Azure Service Bus topics and subscriptions</a></li>
+</ul>
+</li>
+<li>Azure App Service Plan</li>
+<li>One each for Production and Test environments<ul>
+<li>Use a Standard tier for the Test environment</li>
+<li>Use a Premium V2 tier for the Production environment</li>
+<li>Additional sizing will be reviewed during the implemenation</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans">Azure App Service Plan overview</a></li>
+<li>Individual Azure App Services will be deployed to these App Service Plans</li>
+</ul>
+</li>
+<li>Azure App Services</li>
+<li>Separate App Services will be deployed for each integrating application<ul>
+<li>Once deployed and configured we will then deploy the Levridge Integration Framework to each</li>
+<li>Separate Levridge Integration Framework configuration will be required</li>
+</ul>
+</li>
+<li>App Services pricing is included in the App Service Plan tier pricing (see App Service Plan overview above)</li>
+<li>Azure Storage Account</li>
+<li>Levridge Integrations utilize Azure Storage Accounts in multiple areas</li>
+<li>One each required for the Production and Test environments</li>
+<li>Use the General Purpose V2 account type</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview">Azure Storage Account overview</a></li>
+<li>Azure Key Vault</li>
+<li>One key vault is required.  Can be used by both the Production and Test environments</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault overview</a></li>
+</ul>
+<p><img alt="Levridge Integration" src="../assets/images/D365EnvironmentsLevridgeIntegration.jpg" /></p>
                 
                   
-                
                 
               
               
@@ -1313,7 +1434,7 @@ as an IIS application. See <a href="../Deploying-Integration-Framework/">this ar
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
