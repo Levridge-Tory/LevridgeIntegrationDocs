@@ -1,7 +1,8 @@
 ﻿<!-- -->
 # Introduction
 In many implementations a client will have specific needs that require custom fields to be added to
-existing entities. This document shows how to create a custom field extension to have those custom
+existing entities or custom behavior for an existing field in an integration. 
+This document shows how to create a custom field extension to have those custom
 fields integrated when the entity is being integrated.
 
 # Overview
@@ -20,6 +21,10 @@ projects:
 
   Contains the code need to map the integration for the custom fields between the source and 
 destination entities
+
+*Note: If there are no custom fields involved and you are only defining custom behavior
+for existing fields you will not need new proxies. You only need a proxy to define the 
+metadata for custom fields.*
 
 # Tutorial
 ## Create the Solution
@@ -49,6 +54,9 @@ You will need to add the following Nuget references to your custom mapping proje
 * Levridge.Integration.IntegrationService.Abstractions
 * Levridge.Integration.IntegrationService.Mapping
 * Microsoft.Extensions.DependencyInjection
+
+*Note: The Levridge packages are available from our Azure DevOps Artifacts repository. The URL is
+https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages/nuget/v3/index.json* 
 
 ## Add Destination Datasource References to Custom Mapping Project
 You will need to reference the destination data source project in order to have acess to any 

@@ -26,9 +26,11 @@ nav:
                     - 'Surety' : 'Surety.md'
                     - 'oneWeigh' : 'oneWeigh.md'
                     - 'Field Reveal' : 'Field-Reveal.md'
+                    - 'Integrating Custom Fields':'IntegratingCustomFields.md'
                 - Deployment: 
                     - 'Deploying the Integration Framework' : 'Deploying-Integration-Framework.md'
                     - 'Application Settings Configuration' : 'ApplicationConfiguration.md'
+                    - 'Deploying Custom Field Mapping Assemblies': 'DeployingCustomFieldMappingAssemblies.md'
                     - 'Deploying CDS' : 'DeployingCDS.md'
             - Print Service: 'print-service.md'
             - CRM Platform:
