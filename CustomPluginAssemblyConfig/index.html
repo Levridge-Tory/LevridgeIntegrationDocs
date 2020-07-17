@@ -36,7 +36,7 @@
     
     
       
-        <title>Field Integration - Levridge Documentation</title>
+        <title>Custom Plugin Assemblies Config Settings - Levridge Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#field-integration" tabindex="1" class="md-skip">
+      <a href="#custom-plugin-assemblies-config-settings" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Field Integration
+                Custom Plugin Assemblies Config Settings
               
             </span>
           
@@ -1203,259 +1203,70 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Field-Integration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CustomPluginAssemblyConfig.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="field-integration"><a class="toclink" href="#field-integration">Field Integration</a></h1>
-<p>The Field integration is a unidirectional integration that receives messages to 
-create a Levridge Customer Site using a configured Customer Site Type that represents
-a customer field.</p>
-<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
-<p>The Field Integration API is a <a href="https://en.wikipedia.org/wiki/Webhook">Webhook</a> that receives a posted message that is used
-to create a new Customer Site in Levridge.</p>
-<h2 id="api"><a class="toclink" href="#api">API</a></h2>
-<pre><code>POST /api/field HTTP/1.1
-Host: [Customer Integration Framework Host]
-Content-Type: application/json
-
-{
-  "growerID": "CUS-000071",
-  "growerUuid": "5ddf9e57-b1ba-4af5-90bf-e9454e87f170",  
-  "farmID": "COP000010",
-  "farmUuid": "5ddf9e57-b1ba-4af5-90bf-e9454e87f171",
-  "fieldID": "CST-000150",
-  "fieldUuid":"5ddf9e57-b1ba-4af5-90bf-e9454e87f172",
-  "fieldName": "Test Field Type",
-  "fieldWkt" : "MULTIPOLYGON(((-97.027808062981 46.999026392986,-97.017851703117 46.998792242651,-97.018023364494 46.991884346149,-97.027636401605 46.991767255461,-97.027808062981 46.999026392986)))",
-  "farmableAcres" : 19.5
-}
-</code></pre>
-<h3 id="authentication"><a class="toclink" href="#authentication">Authentication</a></h3>
-<h3 id="error-codes"><a class="toclink" href="#error-codes">Error Codes</a></h3>
-<h3 id="rate-limit"><a class="toclink" href="#rate-limit">Rate limit</a></h3>
-<h3 id="message-example"><a class="toclink" href="#message-example">Message Example</a></h3>
-<pre><code>{
-  "growerID": "CUS-000071",
-  "growerUuid": "5ddf9e57-b1ba-4af5-90bf-e9454e87f170",  
-  "farmID": "COP000010",
-  "farmUuid": "5ddf9e57-b1ba-4af5-90bf-e9454e87f171",
-  "fieldID": "CST-000150",
-  "fieldUuid":"5ddf9e57-b1ba-4af5-90bf-e9454e87f172",
-  "fieldName": "Test Field Type",
-  "fieldWkt" : "MULTIPOLYGON(((-97.027808062981 46.999026392986,-97.017851703117 46.998792242651,-97.018023364494 46.991884346149,-97.027636401605 46.991767255461,-97.027808062981 46.999026392986)))",
-  "farmableAcres" : 19.5
-}
-</code></pre>
-<h3 id="message-schema"><a class="toclink" href="#message-schema">Message Schema</a></h3>
-<pre><code>1 {
-2   "definitions": {},
-3   "$schema": "http://json-schema.org/draft-07/schema#",
-4   "$id": "http://example.com/root.json",
-5   "type": "object",
-6   "title": "The Root Schema",
-7   "required": [
-8     "growerID",
-9     "farmID",
-10     "fieldID",
-11     "fieldName"
-12   ],
-13   "properties": {
-14     "growerID": {
-15       "$id": "#/properties/growerID",
-16       "type": "string",
-17       "title": "The Growerid Schema",
-18       "default": "",
-19       "examples": [
-20         "CUS-000071"
-21       ],
-22       "pattern": "^(.*)$"
-23     },
-24     "growerUuid": {
-25       "$id": "#/properties/growerUuid",
-26       "type": "string",
-27       "title": "The Groweruuid Schema",
-28       "default": "",
-29       "examples": [
-30         ""
-31       ],
-32       "pattern": "^(.*)$"
-33     },
-34     "farmID": {
-35       "$id": "#/properties/farmID",
-36       "type": "string",
-37       "title": "The Farmid Schema",
-38       "default": "",
-39       "examples": [
-40         "COP000010"
-41       ],
-42       "pattern": "^(.*)$"
-43     },
-44     "farmUuid": {
-45       "$id": "#/properties/farmUuid",
-46       "type": "string",
-47       "title": "The Farmuuid Schema",
-48       "default": "",
-49       "examples": [
-50         ""
-51       ],
-52       "pattern": "^(.*)$"
-53     },
-54     "fieldID": {
-55       "$id": "#/properties/fieldID",
-56       "type": "string",
-57       "title": "The Fieldid Schema",
-58       "default": "",
-59       "examples": [
-60         "CST-000150"
-61       ],
-62       "pattern": "^(.*)$"
-63     },
-64     "fieldUuid": {
-65       "$id": "#/properties/fieldUuid",
-66       "type": "string",
-67       "title": "The Fielduuid Schema",
-68       "default": "",
-69       "examples": [
-70         "5ddf9e57-b1ba-4af5-90bf-e9454e87f172"
-71       ],
-72       "pattern": "^(.*)$"
-73     },
-74     "fieldName": {
-75       "$id": "#/properties/fieldName",
-76       "type": "string",
-77       "title": "The Fieldname Schema",
-78       "default": "",
-79       "examples": [
-80         "Test Field Type"
-81       ],
-82       "pattern": "^(.*)$"
-83     },
-84     "fieldWkt": {
-85       "$id": "#/properties/fieldWkt",
-86       "type": "string",
-87       "title": "The Fieldwkt Schema",
-88       "default": "",
-89       "examples": [
-90         "MULTIPOLYGON(((-97.027808062981 46.999026392986,-97.017851703117 46.998792242651,-97.018023364494 46.991884346149,-97.027636401605 46.991767255461,-97.027808062981 46.999026392986)))"
-91       ],
-92       "pattern": "^(.*)$"
-93     },
-94     "farmableAcres": {
-95       "$id": "#/properties/farmableAcres",
-96       "type": "number",
-97       "title": "The Farmableacres Schema",
-98       "default": 0.0,
-99       "examples": [
-100         19.5
-101       ]
-102     }
-103   }
-104 }
-</code></pre>
-<h2 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h2>
-<p>In the appsettings.json you will need to define a section named "Levridge.Integration.Host.FieldController". 
-The controller looks for this section to get the Service Bus information needed to place
-messages into a Topic.</p>
-<p>You can run the Field to CRM integration in the same instance simply by pointing the SourceConfig.ServiceBusConfigName 
-to "Levridge.Integration.Host.FieldController" also, or a section that defines a connection to the same topic 
-the controller is sending the message to. </p>
-<p>For the instance that handles the integration mapping the <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes should be setup as follows:</p>
-<pre><code>"SourceConfig": {
-    "ServiceBusConfigName": [section name with service bus topic],
-    "ODataConfigName": "",
-    "SystemName": "Field",
-    "Direction": "Source"
-},
-"TargetConfig": {
-    "ODataConfigName": [section name with CRM data configuration],
-    "CDSConfigName": [section name with CDS data configuration],
-    "SystemName": "DynamicsCRM",
-    "Direction": "Target"
-}
-</code></pre>
-<p>In the appsettings.json you will need to add the assembly into the list of controllers. It doesn't matter
-what name you assign to the assembly entry but the assembly name must be "Levridge.Integration.Host.FieldController". 
-In the example below the assembly is named "FieldController". (i.e. "FieldController": "Levridge.Integration.Host.FieldController")</p>
-<pre><code>"Controllers": {
-    "HostController": "Levridge.Integration.Host.DefaultController",
-    "FieldController": "Levridge.Integration.Host.FieldController"
-}
-</code></pre>
-<p>The "Controllers" section above will load the DefaultController and the FieldController.</p>
-<pre><code>{
-    "Controllers": {
-        "HostController": "Levridge.Integration.Host.DefaultController",
-        "FieldController": "Levridge.Integration.Host.FieldController"
-    },
-    "Logging": {
-       "Debug": {
-            "LogLevel": {
-                "Default": "Information"
-            }
-        },
-        "Console": {
-            "IncludeScopes": true,
-            "LogLevel": {
-                "Default": "Information"
-            }
-        },
-        "LogLevel": {
-            "Default": "Information"
-        }
-    },
-    "AllowedHosts": "*",
-    "InstanceConfig": {
-        "AzureTableConfiguration": "AzureTableConfiguration"
-    },
-    "SourceConfig": {
-        "ServiceBusConfigName": "Levridge.Integration.Host.FieldController",
-        "ODataConfigName": "CDS",
-        "SystemName": "Field",
-        "Direction": "Source"
-    },
-    "TargetConfig": {
-        "ODataConfigName": "DynamicsCRM",
-        "SystemName": "DynamicsCRM",
-        "Direction": "Target",
-        "CDSConfigName": "CDS"
-    },
-    "DynamicsCRM": {
-        "UriString": "https://localhost",
-        "ActiveDirectoryResource": "https://[Customer CRM Instance].crm.dynamics.com",
-        "ActiveDirectoryTenant": "https://login.microsoftonline.com/2e14a5b1-fbf8-415b-bc7d-93e20829e510",
-        "ActiveDirectoryClientAppId": "[Application ID]",
-        "ActiveDirectoryClientAppSecret": "[Client Secret]",
-        "ODataEntityPath": "https://[Customer CRM Instance].crm.dynamics.com/api/data/v9.0/",
-        "AssemblyName": "Levridge.ODataDataSources.DynamicsCRM",
-        "AssemblyFile": "Levridge.ODataDataSources.DynamicsCRM.dll",
-        "ClientClassesNameSpace": "Levridge.ODataDataSources.DynamicsCRM",
-        "MetadataResource": "CRMMetadata.xml"
-    },
-    "CDS": {
-        "UriString": "https://localhost",
-        "ActiveDirectoryResource": "https://[Customer CDS Instance].api.crm.dynamics.com",
-        "ActiveDirectoryTenant": "https://login.microsoftonline.com/2e14a5b1-fbf8-415b-bc7d-93e20829e510",
-        "ActiveDirectoryClientAppId": "[Application ID]",
-        "ActiveDirectoryClientAppSecret": "[Client Secret]",
-        "ODataEntityPath": "https://[Customer CDS Instance].api.crm.dynamics.com/api/data/v9.0/",
-        "AssemblyName": "Levridge.ODataDataSources.CDS",
-        "ClientClassesNameSpace": "Levridge.ODataDataSources.CDS",
-        "MetadataResource": "CDSMetadata.xml"
-    },
-    "AzureTableConfiguration": {
-        "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=levridgegeneralstorage;AccountKey=MFkzIfLUU1KyCMxfZVPk7HelhWlC0TZyBnFDMEty4y3D4YnqgA4RHSHu8es+R91C/MmDNjtuKJ1x8yDMJ4vLGA==;EndpointSuffix=core.windows.net",
-        "Table": "FinOpsAndCRM"
-    },
-    "Levridge.Integration.Host.FieldController": { // used by Webhook
-        "ConnectionString": "Endpoint=sb://[Customer Service Bus Instance].servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=[Customer Access Key]",
-        "TopicName": "[Customer Topic Name]",
-        "SubscriptionName": "[Customer Subscription Name]",
-        "RequiresSession": true,
-        "CustomerSiteTypeCode": "[CustomerSite TypeCode from FinOps]",
-        "IdOption": "FieldId"
+                <h1 id="custom-plugin-assemblies-config-settings"><a class="toclink" href="#custom-plugin-assemblies-config-settings">Custom Plugin Assemblies Config Settings</a></h1>
+<p>The CustomPluginAssemblies configuration node is used to define any 
+custom plugin assemblies to be loaded by the integration framework and
+the class method to call to register the custom plugin from the assembly.</p>
+<p>This node is a list (not an array) of named CustomPluginAssemblyConfig
+json objects.</p>
+<h1 id="example"><a class="toclink" href="#example">Example</a></h1>
+<pre><code>"CustomPluginAssemblies": {
+    "CustomFieldsAssembly": {
+        "Path": ".\\plugins",
+        "AssemblyName": "Levridge.Integration.IntegrationService.Mapping.CustomFields",
+        "Namespace": "Levridge.Integration.IntegrationService.Mapping.CustomFields",
+        "ClassName": "CustomFieldsEntityMapBuilderExtensions",
+        "MethodName": "AddCustomFields"
     }
-}
+},
 </code></pre>
+<h1 id="definition"><a class="toclink" href="#definition">Definition</a></h1>
+<p>The CustomMappingAssemblies node above has a single CustomPluginAssemblyConfig object
+named "CustomeFieldAssembly".</p>
+<h2 id="name"><a class="toclink" href="#name">Name</a></h2>
+<p><strong>Required</strong></p>
+<p><strong>Default:</strong>
+No default value.</p>
+<p>This is the name of the custom mapping assembly configuration. 
+Each configuration in the list must have a unique name.
+Because you can have multiple classes and or multiple methods we do 
+not use the AssemblyName as the configuration name. </p>
+<h2 id="path"><a class="toclink" href="#path">Path</a></h2>
+<p><strong>Not Required</strong></p>
+<p><strong>Default:</strong>
+The path of Levridge.Integration.Host</p>
+<p>This is the path for the custom plugin assembly. It can be specified
+as an absolute path or a relative path. The relative path is relative 
+to the current execution directory. (Directory.GetCurrentDirectory())</p>
+<h2 id="assemblyname"><a class="toclink" href="#assemblyname">AssemblyName</a></h2>
+<p><strong>Required</strong></p>
+<p><strong>Default:</strong>
+No default value.</p>
+<p>This is the actual name of the assembly, not the file name. In the current
+version the file name is assumed to be the "[AssemblyName].dll". Do not add
+the file extension or a file path to this value.</p>
+<h2 id="namespace"><a class="toclink" href="#namespace">NameSpace</a></h2>
+<p><strong>Required</strong></p>
+<p><strong>Default:</strong>
+No default value.</p>
+<p>This property must contain the namespace that contains the class. This value will
+be added to the class name to obtain the class type. </p>
+<h2 id="classname"><a class="toclink" href="#classname">ClassName</a></h2>
+<p><strong>Required</strong></p>
+<p><strong>Default:</strong>
+No default value.</p>
+<p>This property is the name of the class that contains the method used to register
+the custom mapping. Do not include the namespace. The namespace will be added to
+the class name to obtain the type.</p>
+<h2 id="methodname"><a class="toclink" href="#methodname">MethodName</a></h2>
+<p><strong>Required</strong></p>
+<p><strong>Default:</strong>
+No default value.</p>
+<p>This property is the name of the method that will be called on the class 
+that is used to register the custom mapping. Do not include the class name here.</p>
                 
                   
                 
