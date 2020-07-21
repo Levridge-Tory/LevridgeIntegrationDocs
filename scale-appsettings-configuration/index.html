@@ -1,0 +1,1511 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>Scale Appsettings Configuration - Levridge Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.18ac144a.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.616af814.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scale-appsettings-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Levridge Documentation" class="md-header-nav__button md-logo" aria-label="Levridge Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Levridge Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Scale Appsettings Configuration
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Levridge Documentation" class="md-nav__button md-logo" aria-label="Levridge Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Levridge Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Products
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Products" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Products
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Levridge Core
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Levridge Core" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Levridge Core
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1" type="checkbox" id="nav-2-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1">
+      Integration Framework
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Integration Framework" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Integration Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Integration-Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1-2" type="checkbox" id="nav-2-1-1-2">
+    
+    <label class="md-nav__link" for="nav-2-1-1-2">
+      Integrations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Integrations" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-1-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D365-CRM-to-D365-F%26O/" title="D365 CRM to D365 F&O" class="md-nav__link">
+      D365 CRM to D365 F&O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D365-F%26O-to-D365-CRM/" title="D365 F&O to D365 CRM" class="md-nav__link">
+      D365 F&O to D365 CRM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scale-integration/" title="Levridge Scale House" class="md-nav__link">
+      Levridge Scale House
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agsync/" title="Agsync" class="md-nav__link">
+      Agsync
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kahler/" title="Kahler" class="md-nav__link">
+      Kahler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Surety/" title="Surety" class="md-nav__link">
+      Surety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oneWeigh/" title="oneWeigh" class="md-nav__link">
+      oneWeigh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Field-Reveal/" title="Field Reveal" class="md-nav__link">
+      Field Reveal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IntegratingCustomFields/" title="Integrating Custom Fields" class="md-nav__link">
+      Integrating Custom Fields
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1-3" type="checkbox" id="nav-2-1-1-3">
+    
+    <label class="md-nav__link" for="nav-2-1-1-3">
+      Deployment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Deployment" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-1-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Deployment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Integration-Framework/" title="Deploying the Integration Framework" class="md-nav__link">
+      Deploying the Integration Framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
+      Application Settings Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeployingCustomFieldMappingAssemblies/" title="Deploying Custom Field Mapping Assemblies" class="md-nav__link">
+      Deploying Custom Field Mapping Assemblies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeployingCDS/" title="Deploying CDS" class="md-nav__link">
+      Deploying CDS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print-service/" title="Print Service" class="md-nav__link">
+      Print Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-3" type="checkbox" id="nav-2-1-3">
+    
+    <label class="md-nav__link" for="nav-2-1-3">
+      CRM Platform
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="CRM Platform" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        CRM Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CRM-configuration/" title="CRM Platform Configuration" class="md-nav__link">
+      CRM Platform Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agronomy/" title="Levridge Agronomy" class="md-nav__link">
+      Levridge Agronomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Levridge Commodities" class="md-nav__link">
+      Levridge Commodities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feed/" title="Levridge Feed" class="md-nav__link">
+      Levridge Feed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Equity/" title="Levridge Equity Accounting" class="md-nav__link">
+      Levridge Equity Accounting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      Levridge Scale
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Levridge Scale" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Levridge Scale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scale-Overview/" title="Scale Overview" class="md-nav__link">
+      Scale Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scale-install-settings-instructions.md" title="Scale Installation" class="md-nav__link">
+      Scale Installation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      User Documentation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="User Documentation" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        User Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Finance & Operations
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Finance & Operations" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Finance & Operations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-1">
+      Accounts Receivable Setup
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Accounts Receivable Setup" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Accounts Receivable Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Create-Split-Group-in-F%26O/" title="Create a New Split Group" class="md-nav__link">
+      Create a New Split Group
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Inventory Value and Costing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Inventory Value and Costing" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Inventory Value and Costing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../UploadStandardCostPricing/" title="Upload Standard Cost Pricing" class="md-nav__link">
+      Upload Standard Cost Pricing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AdjustFIFOInventoryValue/" title="Adjust FIFO Inventory Value" class="md-nav__link">
+      Adjust FIFO Inventory Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SetupCostVariances/" title="Setup Cost Variances" class="md-nav__link">
+      Setup Cost Variances
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CloseInventory/" title="Close Inventory" class="md-nav__link">
+      Close Inventory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SetupStandardCost/" title="Setup a Standard Cost" class="md-nav__link">
+      Setup a Standard Cost
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Procurement Hierarchy
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Procurement Hierarchy" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Procurement Hierarchy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CreatePurchaseRequistionAndConsolidation/" title="Create a Purchase Requisition and Consolidation" class="md-nav__link">
+      Create a Purchase Requisition and Consolidation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PurchasingPolicyAssignment/" title="Purchasing Policy Assignment" class="md-nav__link">
+      Purchasing Policy Assignment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PublishCatalog/" title="Publish Catalog" class="md-nav__link">
+      Publish Catalog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CreateProcurementCategory/" title="Create a Procurement Category" class="md-nav__link">
+      Create a Procurement Category
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CreateProcurementHierarchy/" title="Create a Procurement Hierarchy" class="md-nav__link">
+      Create a Procurement Hierarchy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AssignItemToProcurementCategory/" title="Assign Item to a Procurement Category" class="md-nav__link">
+      Assign Item to a Procurement Category
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AssignPostingProfiletoProcurementCategory/" title="Assign Posting Profile to Procuremnet Category" class="md-nav__link">
+      Assign Posting Profile to Procuremnet Category
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Vendor Customer Pricing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Vendor Customer Pricing" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Vendor Customer Pricing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TradeAgreementsPriceGroup/" title="Trade Agreements Price Group" class="md-nav__link">
+      Trade Agreements Price Group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BasicVendorPriceWithPriceUpdate/" title="Basic Vendor Price with Price Update" class="md-nav__link">
+      Basic Vendor Price with Price Update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BasicVendorPurchasePrice/" title="Basic Vendor Purchase Price" class="md-nav__link">
+      Basic Vendor Purchase Price
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BasicCustomerPriceSetup/" title="Basic Customer Price Setup" class="md-nav__link">
+      Basic Customer Price Setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RFQ/" title="RFQ" class="md-nav__link">
+      RFQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commissions/" title="Commissions" class="md-nav__link">
+      Commissions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Customer
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Customer" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Customer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AddAddressForDeliveryAndInvoice/" title="Add Address for Delivery and Invoice" class="md-nav__link">
+      Add Address for Delivery and Invoice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CustomerTemplate/" title="Customer Template" class="md-nav__link">
+      Customer Template
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CustomerCreationOrganization/" title="Customer Creation Organization" class="md-nav__link">
+      Customer Creation Organization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-appsettings-files" class="md-nav__link">
+    Configure Appsettings Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Appsettings Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#levscaleclient" class="md-nav__link">
+    LevScaleClient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#levscaleapi" class="md-nav__link">
+    LevScaleAPI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#axtoscaleintegration" class="md-nav__link">
+    AxToScaleIntegration
+  </a>
+  
+    <nav class="md-nav" aria-label="AxToScaleIntegration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardwareinterface" class="md-nav__link">
+    HardwareInterface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/scale-appsettings-configuration.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="scale-appsettings-configuration"><a class="toclink" href="#scale-appsettings-configuration">Scale Appsettings Configuration</a></h1>
+<h3 id="configure-appsettings-files"><a class="toclink" href="#configure-appsettings-files">Configure Appsettings Files</a></h3>
+<p>Configure the appsettings.json file in the following default locations:
+C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Servers\LevScaleClient
+C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Servers\LevScaleAPI
+C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\AxToScaleIntegration
+C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\HardwareInterface</p>
+<h4 id="levscaleclient"><a class="toclink" href="#levscaleclient">LevScaleClient</a></h4>
+<pre><code>{
+  &quot;GeneratedDb&quot;: &quot;C:\\LevridgeScaleHouse\\sql&quot;,
+  &quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;Data Source=.\\SQLEXPRESS;Initial Catalog=LevScale;Trusted_Connection=True;MultipleActiveResultSets=true;&quot;
+  },
+  &quot;WipProcessInterval&quot;: 10000,
+  &quot;WipCleanupInterval&quot;: 86400000,
+  &quot;Logging&quot;: {
+    &quot;IncludeScopes&quot;: false,
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Warning&quot;
+    }
+  },
+  &quot;ServiceBusSettings&quot;: {
+    &quot;ServiceBusConnectionString&quot;:
+//Enter the endpoint for the service bus for integration from Levridge Scale to F&amp;O
+ &quot;Endpoint=sb://integration.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=PG5SCOfZHIKQ7rmRmSdKwGe2OW27hRhxxxxxx=&quot;,
+//Enter the Topic name for the service bus
+    &quot;TopicName&quot;: &quot;scaletofo&quot;
+  },
+
+  &quot;WebAPI&quot;: {
+    &quot;Port&quot;: 80,
+    &quot;URL&quot;: &quot;http://localhost:8080&quot;,
+  },
+  &quot;Printer&quot;: {
+    &quot;DataSource&quot;: &quot;Server=.;Initial Catalog=LevScale;Trusted_Connection=True;MultipleActiveResultSets=true;&quot;,
+    &quot;ReportPath&quot;: &quot;./&quot;
+  },
+
+  &quot;ScaleInterface&quot;: {
+    &quot;UriString&quot;: &quot;http://localhost:44323/&quot;,
+    &quot;TLSVersion&quot;: &quot;&quot;
+  },
+&quot;LogLocationCleanup&quot;: {
+        /// &lt;summary&gt;
+        /// The location of the log folder.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;The default value is 'C:\Temp'.&lt;/remarks&gt;
+        &quot;LogFolder&quot;: &quot;C:\\Temp&quot;,
+        /// &lt;summary&gt;
+        /// The time to wait (in minutes) before clearing old logs from the reporting location.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;The default is 1,440 mintues (24 hours).&lt;/remarks&gt;
+        &quot;RecheckInterval&quot;: 2880,
+        /// &lt;summary&gt;
+        /// Log files may be deleted that are older than this many mintues..
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;The default is 2,880 minutes (24 hours).&lt;/remarks&gt;
+        &quot;RemoveAfter&quot;: 2880,
+        /// &lt;summary&gt;
+        /// The file filter used when clearing old report files.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;The default is &quot;*&quot;.&lt;/remarks&gt;
+        &quot;FileFilter&quot;: &quot;*.txt&quot;,
+        /// &lt;summary&gt;
+        /// The file search options.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;The default is &lt;see cref=&quot;SearchOption.TopDirectoryOnly&quot;/&gt;&lt;/remarks&gt;
+        &quot;FileSearchOptions&quot;: &quot;TopDirectoryOnly&quot;
+    },
+
+  &quot;Log4Net&quot;: { &quot;xml&quot;: &quot;log4net.xml&quot; },
+&quot;DynamicsAX&quot;: {
+//Enter the connection details for F&amp;O
+    &quot;UriString&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com/&quot;,
+    &quot;ActiveDirectoryResource&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com&quot;,
+    &quot;ActiveDirectoryTenant&quot;: &quot;https://login.microsoftonline.com/bb671371-5d5c-4dca-9c53-9376bxxxx&quot;,
+    &quot;ActiveDirectoryClientAppId&quot;: &quot;ef8c69c1-0d35-40eb-aec9-b393xxxx&quot;,
+    &quot;ActiveDirectoryClientAppSecret&quot;: &quot;4ZpHiXn0k2Nx9vnsgmJq+uYbT4drRL1cJLcxxxx=&quot;,
+    &quot;TLSVersion&quot;: &quot;&quot;,
+    &quot;ODataEntityPath&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com/data/&quot;,
+    &quot;DataAreaId&quot;: &quot;100&quot;
+  }
+
+
+}
+</code></pre>
+
+<h4 id="levscaleapi"><a class="toclink" href="#levscaleapi">LevScaleAPI</a></h4>
+<pre><code>{
+    &quot;AllowedHosts&quot;: &quot;*&quot;,  
+  &quot;GeneratedDb&quot;: &quot;C:\\LevridgeScaleHouse\\sql&quot;,
+  &quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;Data Source=.\\SQLEXPRESS;Initial Catalog=LevScale;Trusted_Connection=True;MultipleActiveResultSets=true;&quot;
+  },
+  &quot;WipProcessInterval&quot;: 10000,
+  &quot;WipCleanupInterval&quot;: 86400000,
+  &quot;Logging&quot;: {
+    &quot;IncludeScopes&quot;: false,
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Warning&quot;
+    }
+  },
+  &quot;ServiceBusSettings&quot;: {
+    &quot;ServiceBusConnectionString&quot;:
+//Enter the endpoint for the service bus for integration from Levridge Scale to F&amp;O
+  &quot;Endpoint=sb://integration.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=PG5SCOfZHIKQ7rmRmSdKwGe2OW27hRhxxxxxx=&quot;,
+//Enter the Topic name for the service bus
+    &quot;TopicName&quot;: &quot;scaletofo&quot;
+  },
+
+
+  &quot;WebAPI&quot;: {
+    &quot;Port&quot;: 80,
+    &quot;URL&quot;: &quot;http://localhost:8080&quot;,
+  },
+  &quot;Printer&quot;: {
+    &quot;DataSource&quot;: &quot;Server=.;Initial Catalog=LevScale;Trusted_Connection=True;MultipleActiveResultSets=true;&quot;,
+    &quot;ReportPath&quot;: &quot;./&quot;
+  },
+
+  &quot;ScaleInterface&quot;: {
+    &quot;UriString&quot;: &quot;http://localhost:44323/&quot;,
+    &quot;TLSVersion&quot;: &quot;&quot;
+  },
+
+  &quot;Log4Net&quot;: { &quot;xml&quot;: &quot;log4net.xml&quot; }
+
+
+}
+</code></pre>
+
+<h3 id="axtoscaleintegration"><a class="toclink" href="#axtoscaleintegration">AxToScaleIntegration</a></h3>
+<pre><code>{
+  &quot;Logging&quot;: {
+    &quot;Debug&quot;: {
+      &quot;LogLevel&quot;: {
+        &quot;Default&quot;: &quot;Trace&quot;
+      }
+    },
+    &quot;Console&quot;: {
+      &quot;IncludeScopes&quot;: false,
+      &quot;LogLevel&quot;: {
+        &quot;Default&quot;: &quot;Debug&quot;
+      }
+    },
+    &quot;LogLevel&quot;: {
+      &quot;Default&quot;: &quot;Information&quot;
+    }
+  },
+  &quot;ApplicationInsights&quot;: {
+    &quot;InstrumentationKey&quot;: &quot;&quot;
+  },
+    &quot;InstanceConfig&quot;: {
+        &quot;AzureTableConfiguration&quot;: &quot;AzureTableConfigurationAX&quot;
+    },
+    &quot;SourceConfig&quot;: {
+    &quot;ServiceBusConfigName&quot;: &quot;AxToScale&quot;,
+    &quot;ODataConfigName&quot;: &quot;DynamicsAX&quot;,
+    &quot;SystemName&quot;: &quot;DynamicsAX&quot;,
+    &quot;Direction&quot;: &quot;Source&quot;
+  },
+  &quot;TargetConfig&quot;: {
+    &quot;ODataConfigName&quot;: &quot;ScaleOData&quot;,
+    &quot;SystemName&quot;: &quot;ScaleHouse&quot;,
+    &quot;Direction&quot;: &quot;Target&quot;
+  },
+ //Enter the connection details for F&amp;O
+  &quot;DynamicsAX&quot;: {
+    &quot;UriString&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com/&quot;,
+    &quot;ActiveDirectoryResource&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com&quot;,
+    &quot;ActiveDirectoryTenant&quot;: &quot;https://login.microsoftonline.com/bb671371-5d5c-4dca-9c53xxxxxxx&quot;,
+    &quot;ActiveDirectoryClientAppId&quot;: &quot;ef8c69c1-0d35-40eb-aec9-b39381xxxxx&quot;,
+    &quot;ActiveDirectoryClientAppSecret&quot;: &quot;4ZpHiXn0k2Nx9vnsgmJq+uYbT4drRL1xxxxxI=&quot;,
+    &quot;TLSVersion&quot;: &quot;&quot;,
+    &quot;ODataEntityPath&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com/data/&quot;,
+    &quot;DataAreaId&quot;: &quot;100&quot;
+  },
+//Enter the Active Directory details for F&amp;O. Leave the default values for UriString and ODataEntityPath
+    &quot;ScaleOData&quot;: {
+        &quot;UriString&quot;: &quot;http://localhost:8080/odata&quot;,
+    &quot;ActiveDirectoryResource&quot;: &quot;https://landusuat.sandbox.operations.dynamics.com&quot;,
+    &quot;ActiveDirectoryTenant&quot;: &quot;https://login.microsoftonline.com/bb671371-5d5c-4dca-9c53-9376xxxxx&quot;,
+    &quot;ActiveDirectoryClientAppId&quot;: &quot;ef8c69c1-0d35-40eb-aec9-b3xxxxx&quot;,
+    &quot;ActiveDirectoryClientAppSecret&quot;: &quot;4ZpHiXn0k2Nx9vnsgmJq+uYbT4drRL1cJLcxxxxx=&quot;,
+        &quot;TLSVersion&quot;: &quot;&quot;,
+        &quot;ODataEntityPath&quot;: &quot;http://localhost:8080/odata&quot;
+    },
+
+  &quot;AxToScale&quot;: {
+    &quot;ConnectionString&quot;:
+ //Enter the endpoint for the service bus for integration from F&amp;O to Levridge Scale
+  &quot;Endpoint=sb://integration.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=PG5SCOfZHIKQ7rmRmSdKwGe2OW27hRhxxxxxx=&quot;,
+//Enter the Topic name for the service bus
+    &quot;TopicName&quot;: &quot;axtoscale&quot;,
+//Enter the Subscription name for the service bus
+    &quot;SubscriptionName&quot;: &quot;000&quot;,
+    &quot;RequiresSession&quot;: true
+  }
+
+}
+</code></pre>
+
+<h4 id="hardwareinterface"><a class="toclink" href="#hardwareinterface">HardwareInterface</a></h4>
+<pre><code>{
+    &quot;ConnectionStrings&quot;: {
+        &quot;DefaultConnection&quot;: &quot;Data Source=.\\SQLEXPRESS;Initial Catalog=LevScale;Trusted_Connection=True;&quot;
+    },
+    &quot;Logging&quot;: {
+        &quot;LogLevel&quot;: {
+            &quot;Default&quot;: &quot;Warning&quot;
+        }
+    },
+    &quot;AllowedHosts&quot;: &quot;*&quot;,
+    &quot;Hardware&quot;: {
+        &quot;HubUrl&quot;: &quot;http://localhost:80/scalehub&quot;,
+        &quot;WorkstationName&quot; : &quot;Ws1&quot;
+    }
+}
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
