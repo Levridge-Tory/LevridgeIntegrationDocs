@@ -11,8 +11,8 @@ The LevridgeScaleApp structure is a browser-based Scale application with the fun
 The functionality is chosen based on the specific requirements of the clients. If the client’s functionality only includes a Windows desktop station, Levridge Scale App can be run as a service capability as not every scale will have a server.  
 
 
-  - [Levridge Scale Installation](scale-install-settings-instructions.md)
-  - [Levridge Scale Integration](scale-integration.md) 
+  - [Scale Settings Configuration](scale-settings-configuration.md)
+  - [How to Install Levridge Scale](how-to-install-levridge-scale.md) 
   - [How to Update Levridge Scale](HowtoupdateLevridgeScale.md)
   - [ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280](ScaleHeadHardwareSetup.md) 
  
