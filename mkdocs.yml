@@ -43,7 +43,7 @@ nav:
         - Levridge Equity Accounting: 'Equity.md'
         - Levridge Scale : 
             - Scale Overview : 'Scale-Overview.md'
-            - Scale Installation : 'scale-install-settings-instructions.md'
+            - Scale Settings Configuration : 'scale-settings-configuration.md'
     - User Documentation:
         - 'Finance & Operations' :
             - Accounts Receivable Setup :
