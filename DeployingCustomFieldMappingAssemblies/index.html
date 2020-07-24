@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploying-custom-field-maps" class="md-skip">
+        <a href="#deploying-custom-plugin-assemblies" class="md-skip">
           Skip to content
         </a>
       
@@ -666,7 +666,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../scale-settings-Configuration.md" title="Scale Settings Configuration" class="md-nav__link">
+    <a href="../scale-settings-configuration/" title="Scale Settings Configuration" class="md-nav__link">
       Scale Settings Configuration
     </a>
   </li>
@@ -1203,14 +1203,14 @@
                   
                 
                 
-                <h1 id="deploying-custom-field-maps"><a class="toclink" href="#deploying-custom-field-maps">Deploying Custom Field Maps</a></h1>
-<p>This document explains how to deploy a custom field mapping assembly. See <a href="../IntegratingCustomFields/">Integrating Custom Fields</a> for instructions
+                <h1 id="deploying-custom-plugin-assemblies"><a class="toclink" href="#deploying-custom-plugin-assemblies">Deploying Custom Plugin Assemblies</a></h1>
+<p>This document explains how to deploy a custom plugin assembly. Custom plugins can be used for numerous
+purposes, but the most common is for field mapping assemblies. See <a href="../IntegratingCustomFields/">Integrating Custom Fields</a> for instructions
 on how to create a custom field mapping assembly.</p>
 <h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
-<p>If you have developed custom field mapping assembly you will have to deploy it to a Levridge
+<p>If you have developed custom plugin assembly you will have to deploy it to a Levridge
 Integration Framework instance.</p>
-<p>You will need to deploy the custom mapping assembly library and any custom proxy
-libraries you may have built.</p>
+<p>You will need to deploy the assembly library and any custom dependencies you may have built.</p>
 <h2 id="deployment"><a class="toclink" href="#deployment">Deployment</a></h2>
 <p>It is important to deploy only the custom assemblies and not any referenced assemblies that 
 are shared with the Levridge Integration Framework. The referenced assemblies will already
@@ -1222,7 +1222,7 @@ or use Azure DevOps to obtain a zipped folder or your custom assemblies.</p>
 <p>You will need to copy the custom assemblies into the same folder as the Levridge Integration
 Framework.</p>
 <h2 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h2>
-<p>You will need to add a <a href="../CustomMappingConfig/">CustomMappingAssemblies</a> node to the appsettings.json file.</p>
+<p>You will need to add a <a href="../CustomPluginAssemblyConfig/">CustomMappingAssemblies</a> node to the appsettings.json file.</p>
                 
               
               

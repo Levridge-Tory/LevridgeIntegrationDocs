@@ -15,7 +15,7 @@
     
     
       
-        <title>Custom Mapping Assemblies Config Settings - Levridge Documentation</title>
+        <title>Custom Plugin Assemblies Config Settings - Levridge Documentation</title>
       
     
     
@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#custom-mapping-assemblies-config-settings" class="md-skip">
+        <a href="#custom-plugin-assemblies-config-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Custom Mapping Assemblies Config Settings
+              Custom Plugin Assemblies Config Settings
             
           </span>
         </div>
@@ -649,7 +649,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../scale-settings-Configuration.md" title="Scale Settings Configuration" class="md-nav__link">
+    <a href="../scale-settings-configuration/" title="Scale Settings Configuration" class="md-nav__link">
       Scale Settings Configuration
     </a>
   </li>
@@ -1178,7 +1178,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CustomMappingConfig.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CustomPluginAssemblyConfig.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1186,15 +1186,16 @@
                   
                 
                 
-                <h1 id="custom-mapping-assemblies-config-settings"><a class="toclink" href="#custom-mapping-assemblies-config-settings">Custom Mapping Assemblies Config Settings</a></h1>
-<p>The CustomMappingAssemblies configuration node is used to define any 
-custom mapping assemblies to be loaded by the integration framework and
-the class method to call to register the custom mapping from the assembly.</p>
+                <h1 id="custom-plugin-assemblies-config-settings"><a class="toclink" href="#custom-plugin-assemblies-config-settings">Custom Plugin Assemblies Config Settings</a></h1>
+<p>The CustomPluginAssemblies configuration node is used to define any 
+custom plugin assemblies to be loaded by the integration framework and
+the class method to call to register the custom plugin from the assembly.</p>
 <p>This node is a list (not an array) of named CustomPluginAssemblyConfig
 json objects.</p>
 <h1 id="example"><a class="toclink" href="#example">Example</a></h1>
-<pre><code>"CustomMappingAssemblies": {
+<pre><code>"CustomPluginAssemblies": {
     "CustomFieldsAssembly": {
+        "Path": ".\\plugins",
         "AssemblyName": "Levridge.Integration.IntegrationService.Mapping.CustomFields",
         "Namespace": "Levridge.Integration.IntegrationService.Mapping.CustomFields",
         "ClassName": "CustomFieldsEntityMapBuilderExtensions",
@@ -1213,6 +1214,13 @@ No default value.</p>
 Each configuration in the list must have a unique name.
 Because you can have multiple classes and or multiple methods we do 
 not use the AssemblyName as the configuration name. </p>
+<h2 id="path"><a class="toclink" href="#path">Path</a></h2>
+<p><strong>Not Required</strong></p>
+<p><strong>Default:</strong>
+The path of Levridge.Integration.Host</p>
+<p>This is the path for the custom plugin assembly. It can be specified
+as an absolute path or a relative path. The relative path is relative 
+to the current execution directory. (Directory.GetCurrentDirectory())</p>
 <h2 id="assemblyname"><a class="toclink" href="#assemblyname">AssemblyName</a></h2>
 <p><strong>Required</strong></p>
 <p><strong>Default:</strong>
