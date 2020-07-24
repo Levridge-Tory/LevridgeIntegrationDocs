@@ -1,14 +1,15 @@
-﻿# Custom Mapping Assemblies Config Settings
-The CustomMappingAssemblies configuration node is used to define any 
-custom mapping assemblies to be loaded by the integration framework and
-the class method to call to register the custom mapping from the assembly.
+﻿# Custom Plugin Assemblies Config Settings
+The CustomPluginAssemblies configuration node is used to define any 
+custom plugin assemblies to be loaded by the integration framework and
+the class method to call to register the custom plugin from the assembly.
 
 This node is a list (not an array) of named CustomPluginAssemblyConfig
 json objects.
 
 # Example
-    "CustomMappingAssemblies": {
+    "CustomPluginAssemblies": {
         "CustomFieldsAssembly": {
+            "Path": ".\\plugins",
             "AssemblyName": "Levridge.Integration.IntegrationService.Mapping.CustomFields",
             "Namespace": "Levridge.Integration.IntegrationService.Mapping.CustomFields",
             "ClassName": "CustomFieldsEntityMapBuilderExtensions",
@@ -30,6 +31,16 @@ This is the name of the custom mapping assembly configuration.
 Each configuration in the list must have a unique name.
 Because you can have multiple classes and or multiple methods we do 
 not use the AssemblyName as the configuration name. 
+
+## Path
+**Not Required**
+
+**Default:**
+The path of Levridge.Integration.Host
+
+This is the path for the custom plugin assembly. It can be specified
+as an absolute path or a relative path. The relative path is relative 
+to the current execution directory. (Directory.GetCurrentDirectory())
 
 ## AssemblyName
 **Required**

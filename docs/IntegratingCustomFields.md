@@ -6,25 +6,32 @@ This document shows how to create a custom field extension to have those custom
 fields integrated when the entity is being integrated.
 
 # Overview
-In order to integrate custom fields you will need to create a Visual Studio solution with three
+In order to integrate custom fields you will need to create a Visual Studio solution with upto three
 projects:
 
 * Custom Source Proxy Project
 
   Contains the proxy for the source datasource with the custom fields in the entities
+  This project is only necessary if there are custom fields in the source. If your customizations
+  only include custom behavior for existing fields then a custom source proxy will not be needed.
 
 * Custom Destination Proxy Project
 
   Contains the proxy for the desitination datasource with the custom fields in the entities
+  This project is only necessary if there are custom fields in the destination. If your customizations
+  only include custom behavior for existing fields then a custom destination proxy will not be needed.
 
 * Custom Mapping Project
 
   Contains the code need to map the integration for the custom fields between the source and 
-destination entities
+  destination entities
 
 *Note: If there are no custom fields involved and you are only defining custom behavior
 for existing fields you will not need new proxies. You only need a proxy to define the 
 metadata for custom fields.*
+
+Please see [Deploying Custom Field Mapping Assemblies](./DeployingCustomFieldMappingAssemblies.md) for information
+on deploying the custom mapping assembly.
 
 # Tutorial
 ## Create the Solution
@@ -44,9 +51,13 @@ We recommend you use this naming convention for your custom mapping project: Lev
 ## Add References to the Custom Mapping Project
 The Levridge packages are published to our DevOps Artifacts so you will need to add a Nuget source for those
 packages. This is done in Visual Studio from Tools/Options/NuGet Package Manager/Package Sources. 
-The source is `https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages-beta/nuget/v3/index.json`
+The source is `https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages-beta/nuget/v3/index.json` 
+If you are working the LevDevelopment branch. If you are working in the customer's repository you should use
+'https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages/nuget/v3/index.json' which 
+is the released version of the packages.
 
-![NuGet Package Sources Dialog](./assets/images/NuGet Package Sources Dialog.jpg "NuGet Package Sources")
+
+![NuGet Package Sources Dialog](./assets/images/NuGetPackageSourcesDialog.jpg "NuGet Package Sources")
 
 You will need to add the following Nuget references to your custom mapping project:
 
@@ -54,16 +65,20 @@ You will need to add the following Nuget references to your custom mapping proje
 * Levridge.Integration.IntegrationService.Abstractions
 * Levridge.Integration.IntegrationService.Mapping
 * Microsoft.Extensions.DependencyInjection
+* System.ComponentModel.Composition
 
-*Note: The Levridge packages are available from our Azure DevOps Artifacts repository. The URL is
+*Note: The Levridge packages are available from our Azure DevOps Artifacts repository. The URL for released packages is
 https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages/nuget/v3/index.json* 
 
-## Add Destination Datasource References to Custom Mapping Project
-You will need to reference the destination data source project in order to have acess to any 
-Field types and other types used during mapping. If your destination is CRM you would include
-the following references.
-
+## Add Source and Destination Datasource References to Custom Mapping Project
+You will need to reference the destination data source project in order to have access to any 
+Field types and other types used during mapping. If your datasource is CRM you would include
+this reference:
 * Levridge.ODataDataSources.CRMODataDataSource
+
+If your datasource is F&O you would include this reference:
+* Levridge.DynamicsAxDataSource
+
 
 ### Update the references to be excluded from deployment
 These references will be needed for the build process, but we will want to use the libraries
@@ -94,15 +109,24 @@ this.
 ```
 
 ## Add a reference to the two datasource proxy projects
-Your custom mapping mehtods will need to access the source and data entities so you will need to 
+Your custom mapping methods will need to access the source and data entities so you will need to 
 add a reference to the two proxy projects you created in sections [Create the Source Proxy Project](#Create-the-Source-Proxy-Project)
 and [Create the Destination Proxy Project](#Create-the-Destination-Proxy-Project)
+
+If you do not need a custom proxy project you should add a reference package to the correct
+Levridge nuget package. The F&O and CRM packages are:
+* Levridge.DynamicsAxDataSource
+* Levridge.ODataDataSources.DynamicsCRM
 
 ## Create An EntityMapBuilderExtension class
 We need to have a class that will contain the necessary mapping methods for the custom
 fields being added to the integration.
 
-1. Create a public static class 
+1. Create a public class 
+    This can not be a static class because Microsoft MEF won't export a static class.
+    1. Add the [Export] attribute to the class
+        The Export attribute is in the System.ComponentModel.Composition that was added 
+        in the section [Add References to the Custom Mapping Project](#Add-References-to-the-Custom-Mapping-Project)
 2. Name the class 
     We recommend using something like [client]CustomFieldsEntityMapping. The actual name is
     not important, orther than to be clear the purpose of the class. In our example
@@ -110,7 +134,7 @@ fields being added to the integration.
 3. Add a public static void method that takes a single `IServiceCollection` parameter.
    In our example we added the following method:
    `public static void AddContosoCustomMaps(IServiceCollection services)`
-4. Add a private static method that a single `IEntityMapBuilder` parameter and returns an `IEntityMapBuilder`
+4. Add a private static method that takes a single `IEntityMapBuilder` parameter and returns an `IEntityMapBuilder`
     and takes two generic parameters.
     In our example we added the following method:
     `private static IEntityMapBuilder AddContosoCustomFieldsToMaps<TSource, TTarget>(IEntityMapBuilder builder)`
@@ -127,6 +151,9 @@ fields being added to the integration.
            var builder = new EntityMapBuilder(services);
            ContosoCustomFieldsEntityMapping.AddContosoCustomFieldsToMaps<AxEntities.CustomerV3, CRMEntities.lev_customer>(builder);
        }
+
+    *Note: The namespaces AxEntities and CRMEntities should reference your custom proxies if you created them
+    otherwise it should reference the packaged Levridge provided proxy*
 
 6. Add the following code to the private static method created in step 4 above:
 
@@ -210,10 +237,12 @@ fields being added to the integration.
     using Levridge.Integration.IntegrationService.Abstractions;
     using AxEntities = ContosoCustomFields.Microsoft.Dynamics.DataEntities;
     using CRMEntities = ContosoCustomFields.ODataDataSources.DynamicsCRM;
+    using System.ComponentModel.Composition;
 
     namespace Levridge.Integration.IntegrationService.Mapping.ContosoCustomFields
     {
-        public static class ContosoCustomFieldsEntityMapBuilderExtensions
+        [Export]
+        public class ContosoCustomFieldsEntityMapBuilderExtensions
         {
             public static void AddContosoCustomMaps(IServiceCollection services)
             {
@@ -296,3 +325,9 @@ fields being added to the integration.
             }
         }
     }
+
+# Deploying the Custom Mapping Assemblies
+To deploy the custom assembly you simply copy the output of the mapping assembly to the same
+directory that contains the Levridge.Integration.Host assemblies.
+
+See [Deploying Custom Field Mapping Assemblies](./DeployingCustomFieldMappingAssemblies.md) for more information.
