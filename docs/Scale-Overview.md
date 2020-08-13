@@ -22,11 +22,10 @@ If LevridgeScaleApp is ran as a server, it would operate with a Reverse Proxy. T
 
 Clients are always classified as “server” regardless if operating as a service or server. The intent is the client operates to serve content to the client. 
 
-The three servers are: 
+The two servers are: 
 1. LevScaleAPI
       - This server handles all the back-end calls. This is where the integration framework communications with the scale. O-Data calls which are in turn the integration framework. O-Data is very necessary due to the ability to operate with other ERP systems. 
-2. LevScaleClient
-3. LevScalePrint
+2. LevScalePrint
       - This server renders all the reports for printing. It communicates with the client printer service. This is within the .net framework. 
 
 #### Desktop Environment Service Functionality
