@@ -30,17 +30,13 @@ The three servers are:
       - This server renders all the reports for printing. It communicates with the client printer service. This is within the .net framework. 
 
 #### Desktop Environment Service Functionality
-The five services within a Windows desktop environment include: 
-1.	LevEstimatedService
-       - This handles O-Data calls to Dynamics F&O to receive the estimated ticket information.
-2.	LevPrintClient
+The three services within a Windows desktop environment include: 
+
+1.	LevPrintService
       - Can install the LevPrintService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrintClient is registered at the specific location. This also includes the Zebra printing capability. 
-3.	LevridgeAXToScale
-      - Along with LevridgeScaleToAX is the integration framework. The only difference between LevridgeScaleToAX is the app settings: LevridgeAXToScale being the source target and LevScaletoAX being the target source. 
-      - They are both provided in the package as there can be many integration systems. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
-4.	LevridgeScaleToAX
-      - This is the inverse of LevridgeAXToScale and is an optional criterion to install. This acts like a funnel. 
-5.	LevScale
+2.	LevridgeAXToScale
+      - Along with LevridgeScaleToAX is the integration framework. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
+3.	LevScale
       - LevScale is the defining factor between a server and service. LevScaleClient and LevScale are executing the same file path and processes. This is operating a straight web server without the reverse proxy capability. 
 
 #### Scale Ticket Types
