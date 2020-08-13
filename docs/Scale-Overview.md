@@ -29,13 +29,15 @@ The two servers are:
       - This server renders all the reports for printing. It communicates with the client printer service. This is within the .net framework. 
 
 #### Desktop Environment Service Functionality
-The three services within a Windows desktop environment include: 
+The four services within a Windows desktop environment include: 
 
 1.	LevPrintService
       - Can install the LevPrintService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrintClient is registered at the specific location. This also includes the Zebra printing capability. 
-2.	LevridgeAXToScale
+2.	LevHardwareService
+      - This is the service that handles communication with hardware such as the scale head.
+3.	LevridgeAXToScale
       - Along with LevridgeScaleToAX is the integration framework. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
-3.	LevScale
+4.LevScale
       - LevScale is the defining factor between a server and service. LevScaleClient and LevScale are executing the same file path and processes. This is operating a straight web server without the reverse proxy capability. 
 
 #### Scale Ticket Types
