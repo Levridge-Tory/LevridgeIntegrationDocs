@@ -30,7 +30,7 @@ reference the *2. Levridge Scale Appsettings* document
 4. In **AxToScaleIntegration** and **HardwareInterface** folders, configure appsettings.json
 
 #### Log into Services
-1. Oepn IIS
+1. Open IIS
 2. In Application Pools, right click DefaultAppPool and click Stop
 3. On the left under Sites, rick click Default Web Site>Manager Website>Stop
 4. On the left select Application Pools, on the right do the follow steps for BOTH **LevScaleAPI** and **LevPrint**
