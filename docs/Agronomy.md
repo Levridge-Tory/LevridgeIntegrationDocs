@@ -1,6 +1,6 @@
 ﻿# Agronomy
 
-The [CRM End-to-End Scenarios](CRM-End-To-End-Scenarios.md) and Processes provides an overview of the following information: 
+The [CRM End-to-End Scenarios](CRM-End-To-End-Scenarios.md) and Processes provides an overview of the following information. 
 
 ## Overview
 1. *Planned to Sales Agreement* - sales tool within CRM used to price product and transition growers into contracts.
