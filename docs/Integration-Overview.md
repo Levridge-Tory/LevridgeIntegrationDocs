@@ -6,8 +6,7 @@ This document provides and overview of the integration framework and links to th
 that exist for the framework.
 
 ## Overview
-The Levridge Integration Framework is an entity syncronization framework. 
-It provides a means to synchronize data at an entity level between multiple data sources.
+Levridge has created an integration framework to handle all the integrations between systems.  This framework uses json entities to exchange information. The integration framework uses Microsoft [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/) to provide a [Publish and Subscribe messaging pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). Levridge has created an event framework in D365 Finance that will publish entity data to the service bus based on Creates, Deletes and Updates. Information/messages sent to the service bus can be subscribed to by 3rd party applications or by the Levridge integration framework and sent to 3rd party applications like AgSync. The data entities in D365 Finance and can be filtered so only certain records are sent.
 
 All integrations that use the framework follow the same pattern:
   1. A data source has an integration event
@@ -18,10 +17,6 @@ All integrations that use the framework follow the same pattern:
   6. The integration framework sends the message to the target data source
 
 ![General Entity Integration Pattern.](./assets/images/GeneralSynchronizationIntegrations.jpg "General Entity Integartion Pattern")
-
-The Levridge Integration Framework uses a [Publish and Subscribe messaging pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
-We use the [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/) to provide the publish and
-subscribe mechanism.
 
 The Levridge Integration Framework is most commonly run in the cloud as an 
 [Azure App Serivce](https://azure.microsoft.com/en-us/services/app-service/). It can also run as a windows service or 
@@ -43,7 +38,7 @@ Currently we support the following integrations:
  - [Levridge CRM Remote Printing Service](./Levridge-CRM-Remote-Printing-Service.md)
 
 ## Environments Planning
-A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&O System Requirements and what one needs to start a project are outlined in [Environments Planning](C:\Users\jessiwoi\source\repos\Levridge-Tory\LevridgeIntegrationDocs\docs\EnvironmentsPlanning.md).
+A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&O System Requirements and what one needs to start a project are outlined in [Environments Planning](.\EnvironmentsPlanning.md).
 
 ## Levridge Integration System Requirements
 - Azure App Registrations
