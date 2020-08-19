@@ -142,6 +142,11 @@ C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\HardwareInterface
 ```
 {
   "Logging": {
+  	"ApplicationInsights": {
+             "LogLevel": {
+                 "Default": "Trace"
+             }
+         },
     "Debug": {
       "LogLevel": {
         "Default": "Trace"
@@ -204,7 +209,8 @@ C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\HardwareInterface
     "TopicName": "axtoscale",
 //Enter the Subscription name for the service bus
     "SubscriptionName": "000",
-    "RequiresSession": true
+    "PrefetchCount": 40,
+    "MaxConcurrentCount": 20
   }
  
 }

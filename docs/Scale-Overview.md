@@ -22,25 +22,22 @@ If LevridgeScaleApp is ran as a server, it would operate with a Reverse Proxy. T
 
 Clients are always classified as “server” regardless if operating as a service or server. The intent is the client operates to serve content to the client. 
 
-The three servers are: 
+The two servers are: 
 1. LevScaleAPI
       - This server handles all the back-end calls. This is where the integration framework communications with the scale. O-Data calls which are in turn the integration framework. O-Data is very necessary due to the ability to operate with other ERP systems. 
-2. LevScaleClient
-3. LevScalePrint
+2. LevScalePrint
       - This server renders all the reports for printing. It communicates with the client printer service. This is within the .net framework. 
 
 #### Desktop Environment Service Functionality
-The five services within a Windows desktop environment include: 
-1.	LevEstimatedService
-       - This handles O-Data calls to Dynamics F&O to receive the estimated ticket information.
-2.	LevPrintClient
+The four services within a Windows desktop environment include: 
+
+1.	LevPrintService
       - Can install the LevPrintService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrintClient is registered at the specific location. This also includes the Zebra printing capability. 
+2.	LevHardwareService
+      - This is the service that handles communication with hardware such as the scale head.
 3.	LevridgeAXToScale
-      - Along with LevridgeScaleToAX is the integration framework. The only difference between LevridgeScaleToAX is the app settings: LevridgeAXToScale being the source target and LevScaletoAX being the target source. 
-      - They are both provided in the package as there can be many integration systems. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
-4.	LevridgeScaleToAX
-      - This is the inverse of LevridgeAXToScale and is an optional criterion to install. This acts like a funnel. 
-5.	LevScale
+      - Along with LevridgeScaleToAX is the integration framework. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
+4.LevScale
       - LevScale is the defining factor between a server and service. LevScaleClient and LevScale are executing the same file path and processes. This is operating a straight web server without the reverse proxy capability. 
 
 #### Scale Ticket Types
