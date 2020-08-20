@@ -7,7 +7,8 @@ a service bus queue or topic.
       "ConnectionString": "Endpoint=[Customer Servicebus Connection String]",
       "TopicName": "[Customer Servicebus Topic]",
       "SubscriptionName": "[Customer Servicebus Topic Subscription]",
-      "MaxConcurrentCount":10
+      "MaxConcurrentCount":10,
+      "PrefetchCount": 5
     },
 
 
@@ -18,3 +19,4 @@ a service bus queue or topic.
 ## SubscriptionName
 ## MaxConcurrentCount
 The maximum number of messages that will be allowed to be processed simultaneously.
+## PrefetchCount
