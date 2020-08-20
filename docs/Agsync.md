@@ -73,8 +73,6 @@ The order of creation is as follows:
 This communication diagram depicts this interaction:
 ![Agsync Master Data Integration External UUID](./assets/images/AgsyncMasterDataCommunicationExternalUUIDDiagram.jpg "Agsync Master Data External UUID Integration")
 
-
-
 ### Common Data Service (CDS)
 The [Common Data Service (CDS)](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro) is a solution from Microsoft built on top of the Power Platform. CDS tables are used in the integrations between D365 and AgSync to translate values that are different between the 2 systems. For example, in AgSync, customers have unique identifiers called GUIDs.  These values are different from the unique identifiers D365 has for the same customer accounts. Levridge has implemented new tables in CDS to translate the D365 Customer account to the AgSync GUID.   
 
@@ -121,6 +119,12 @@ Below is the process to generate a work order in AgSync:
 - Indicate the impacted crop(s)
 - Add in any additional notes
 - Save Order
+
+After a work order is saved, AgSync calls the Levridge AgsyncOrderChanged webhook sending over the work order data. The Levridge AgsyncOrderChanged webhook transforms the work order data and sends it to F&O where it creates or updates a corresponding sales order. If F&O accounts receivables are configured to perform a credit check and the credit check fails, F&O will send back a response indicating that the credit check did not pass. Then a rejection request is sent to Agsync to mark the work order as rejected. 
+
+When F&O receives an updated work order from Agsync, F&O will remove all existing sales order line(s) and create new sale order line(s) to match the Agsync updated work order. This is done to keep the F&O sale order in sync with the possible changes that came through with Agsync updated work order. 
+If a F&O sale's order has an active dispensing work order associated to it, then F&O will not delete or create new sales order line(s).
+
 
 An important item to note: A business process needs to be in place in the situation if AgSync creates a scheduled work order which gets scheduled, and then a dispensing work order is created and gets sent to Kahler. F&O will not pick up new changes if AgSync tries to go back to a release status and make changes and try to reschedule it. AgSync needs to cancel the Kahler order and F&O dispensing order and reschedule their AgSync work order. 
 
@@ -270,7 +274,9 @@ Most Levridge clients will be able to utilize the Standard Service Bus tier, how
 
 The Azure Key Vault is a tool for securely storing and accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. The vault enables us to securely store passwords, certificates, etc. with secure access. The key vault stores the authorization credentials for AgSync and by providing the secret to AgSync it lets AgSync know it is Levridge talking to them. This is required for all AgSync integrations. One can read how to setup the [Azure Key Vault](./KeyVault.md).
 
-When customer entities are sent from D365 to the Azure service bus, the agsync integration queries CDS to find the stored Customer ID. If there is no matching customer record the record is sent as a Create to AgSync. The customer is created in AgSync and the response from Agsync contains the Agsync specific ID for that customer. The newly generated AgSync ID is saved in combination with the D365 customer account in CDS. If CDS did have an existing record for the D365 customer, the message is updated to include the Agsync ID for that customer and the messages is sent to Agsync as an Update and.
+When customer entities are sent from D365 to the Azure service bus, the agsync integration queries CDS to find the stored Customer ID. If there is no matching customer record the record is sent as a Create to AgSync. The customer is created in AgSync and the response from Agsync contains the Agsync specific ID for that customer. The newly generated AgSync ID is saved in combination with the D365 customer account in CDS. If CDS did have an existing record for the D365 customer, the message is updated to include the Agsync ID for that customer and the messages is sent to Agsync as an Update.
+
+Once a sales order is created in F&O, we will message back to AgSync and update them with the sales order number and the dispensing work order number (if available at the time of creation). This requires an entity setup in the event framework.
 
 Integration purchase requirements include: 
 1. CDS Instance 

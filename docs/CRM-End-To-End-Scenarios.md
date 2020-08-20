@@ -151,8 +151,7 @@ The Fertilizer Calculator is a tool used to generate blends of fertility product
 ![Dry Calculation Method](.\assets\images\DryCalculationMethod.PNG)
 
 5. Save
-6. Blend lines will populate w
-7. With ntrient and product
+6. Blend lines will populate with nutrient and product
 7. Input either input value (lbs.) or ratio (percentage)
 8. Click Calculate to populate output 
     - Quantity needed
