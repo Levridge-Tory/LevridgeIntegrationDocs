@@ -23,6 +23,7 @@ attributes:
  - [EnableAppInsightsAdaptiveSampling](#EnableAppInsightsAdaptiveSampling)
  - [HttpClientTimeout](#HttpClientTimeout)
  - [AcceptedApiRoles](#AcceptedApiRoles)
+ - [AzureAdSection](#AzureAdSection)
 
 ### AzureTableConfiguration
 **Required**
