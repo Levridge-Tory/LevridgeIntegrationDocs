@@ -34,6 +34,11 @@ Sources is where the transactional data comes from including previous years. You
 - 1099PATR Filing Entity: This field annotates if a member is filing a 1099PATR. If set to yes, the source is available to create 1099-PATR records for and you can populate the information on the Filing Details tab.
 - The Filings Details tab outlines the information required on a 1099PATR electronic filing report. 
     - Address, Phone number, Tax ID number, Name, Contact
+
+### Imported Transaction
+An Imported Transaction includes the Transaction Details, outlining the Invoice Number, Branch, Source, and the ability to mark whether it is an eligible transaction. The “Create Patronage Detail” process needs to be run to create eligible transactions utilizing the patronage splits defined on the account record.
+There is the traceability functionality under “Eligible Transactions” where you can view where the transactions came from and how they are being processed and utilized throughout the system. 
+
 ### Customer Information
 #### Account Form
 - Account Information: The fields are integrated over from F&O. 
