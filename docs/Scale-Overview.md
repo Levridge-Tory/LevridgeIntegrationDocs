@@ -1,4 +1,4 @@
-﻿# Levridge Scale Overview
+﻿# Scale Overview
 
 The purpose of Levridge Scale is to receive all the data measured at the scales at ag retailer locations and incorporate it into a scale ticket
 which can be printed out and given to the grower, while also bringing the scale ticket into the Dynamics 365 ERP system. 
@@ -16,6 +16,7 @@ The functionality is chosen based on the specific requirements of the clients. I
   - [How to Update Levridge Scale](HowtoupdateLevridgeScale.md)
   - [ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280](ScaleHeadHardwareSetup.md) 
   - [Scale Appsettings Configuration](scale-appsettings-configuration.md)
+  - [Scale Implementation Activities and Estimates](ScaleImplementationActivities.md)
  
 #### IIS Server Functionality
 If LevridgeScaleApp is ran as a server, it would operate with a Reverse Proxy. This is very important for implementation purposes. Required server information include the Printer Server and API Server.  

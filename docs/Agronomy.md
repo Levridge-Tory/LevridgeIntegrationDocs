@@ -1,8 +1,15 @@
 ﻿# Agronomy
 
-The [CRM End-to-End Scenarios](CRM-End-To-End-Scenarios.md) and Processes provides an overview of the following information. 
 
-## Overview
-1. *Planned to Sales Agreement* - sales tool within CRM used to price product and transition growers into contracts.
-2. *Fertilizer Calculator* - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).
-3. *Sales Order Process* - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&O. 
+
+## Cross Referenced Documents
+The [CRM End-to-End Scenarios and Processes](CRM-End-To-End-Scenarios.md) provides an overview of: 
+  - Planned to Sales Agreement
+  - Fertilizer Calculator
+  - Sales Order Process
+
+The [Agronomy Implementation Activities and Estimates](AgronomyImplementationActivities.md) provides an overview of the implementation activities and estimates necessary for: 
+- Integrations with AgSync and Kahler to FinOps
+- CE Integrations to FinOps
+- Agronomy for CE: A stand-alone CE instances without integration to FinOps
+
