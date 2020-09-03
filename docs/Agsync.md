@@ -24,7 +24,7 @@ There are a few unique aspects to the AgSync integration that is different from 
 - We are using CDS to provide lookup services for mapping entity identifiers between systems.
 - We utilize a filter on the event in F&O to send only the customers that need to to be sent from F&O to AgSync.
 
-This document will provide an overview of the integration framework used to move the data and then it will describe the data moving within the integration. Let’s start with the technology behind the integration.
+This document will provide an overview of the integration framework used to move the data and then it will describe the data moving within the integration. Let's start with the technology behind the integration.
 
 
 ### Integration Description
@@ -77,7 +77,7 @@ This communication diagram depicts this interaction:
 The [Common Data Service (CDS)](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro) is a solution from Microsoft built on top of the Power Platform. CDS tables are used in the integrations between D365 and AgSync to translate values that are different between the 2 systems. For example, in AgSync, customers have unique identifiers called GUIDs.  These values are different from the unique identifiers D365 has for the same customer accounts. Levridge has implemented new tables in CDS to translate the D365 Customer account to the AgSync GUID.   
 
 For the CDS environment there are two purchasing options:  
-1. If the ag retailer has an existing CRM/CE instance, use it.  A portion of the CRM instance can be firewalled off for security purposes and then it can be used to host the CDS solution.
+1. If the ag retailer has an existing CRM/CE instance, use it. A portion of the CRM instance can be firewalled off for security purposes and then it can be used to host the CDS solution.
 2. Buy a specific CDS environment for only the CDS solution. This is more expensive.
 
 There are 7 types of data stored in CDS:
@@ -321,7 +321,7 @@ There are 4 types of master records sent from D365 to AgSync:
 4. LevAgSyncSalesDetailEntity
     - The LevAgSyncSalesDetailEntity stores sales, order number, dispensing work order numbers, and a unique work order ID that identifies the AgSync work order that needs to update. 
 
-A Dispensing Account ID field has been added in F&O on the customer account under the sales order tab.  Its purpose is to indicate which dispensing branch the customer receives services from. The dispensing branch within AgSync can be set up as either: 
+A Dispensing Account ID field has been added in F&O on the customer account under the sales order tab. Its purpose is to indicate which dispensing branch the customer receives services from. The dispensing branch within AgSync can be set up as either: 
 - An inventory site indicating where the product is physically located
 - Commission/Sales groups indicating the agronomist that sold the service to the customer (Confirm and clarify this statement) 
 
