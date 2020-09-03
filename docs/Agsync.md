@@ -32,8 +32,7 @@ Levridge's Integration Framework can be viewed in [Integration Overview](./Integ
 
 #### Standard Master Data Integration 
 The standard master data integration configuration is shown below.
- 
-![Agsync Master Data Integration](./assets/images/AgsyncMasterDataCommunicationAgsyncUUIDDiagram.jpg "Agsync Master Data Integration")
+
 
 #### External UUID Master Data Integration
 There is an alternate configuration that may be required when integrating with 

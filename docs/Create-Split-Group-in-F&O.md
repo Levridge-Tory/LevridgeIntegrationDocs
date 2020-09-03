@@ -1,8 +1,5 @@
 ﻿# Create a New Split Group
 
-# Overview
-There should be some text here.
-
 ## Steps
 
 Split Group Setup:
