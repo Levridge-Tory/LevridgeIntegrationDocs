@@ -19,21 +19,21 @@ The Item Category, Relationship to the Product, and Products under Site Navigato
 This section allows a cooperative to set up stock classes. Some cooperatives will have many stock classes, some will have none.  
 ### Periods
 Periods include calendar and fiscal periods. These are not integrated from F&O and set up on CE Patronage. 
-- Fiscal period: 1099PATR reporting is run on calendar year, requiring the fiscal period to include a year calendar. 
-- Split due date: A Patronage Split is how a grower would like their patronage eligible transactions to be split to another grower. The Split due date is the date the annual member letters must be returned by. This used when cooperatives send their annual letters to their members and the date they request the letter to be returned.  
-- Minimum Spend: This is the minimum spend amount within a period to receive patronage. There is currently no functionality around this field and more for informational purposes. 
-- Minimum Voting Activity: There is currently no functionality around this field and more for informational purposes.
+  - Fiscal period: 1099PATR reporting is run on calendar year, requiring the fiscal period to include a year calendar. 
+  - Split due date: A Patronage Split is how a grower would like their patronage eligible transactions to be split to another grower. The Split due date is the date the annual member letters must be returned by. This used when cooperatives send their annual letters to their members and the date they request the letter to be returned.  
+  - Minimum Spend: This is the minimum spend amount within a period to receive patronage. There is currently no functionality around this field and more for informational purposes. 
+  - Minimum Voting Activity: There is currently no functionality around this field and more for informational purposes.
 ### Sources
 Sources is where the transactional data comes from including previous years. You could have multiple sources if you have had mergers or acquisitions with other cooperatives.  They include rules and regulations from mergers and acquisitions with other cooperatives. With those cooperatives comes different rules and regulations, and this is where cooperatives can identify where those transactions come from, different payout rates, and what rules should apply. If a cooperative has not undergone a merger or acquisition, there will more than likely be only one source information.
-- Primary retirement age: This field is used to set up the retirement age that members will get paid out. This annotates what age the member is eligible to receive Patronage.
-- Secondary retirement age: This field is used as a secondary option to pay out Patronage. This is the age where Patronage pay outs are mandatory. There is currently no functionality around this field and more for informational purposes.
-- Default stock class: There is currently no functionality around this field and more for informational purposes. 
-- Minimum payout threshold: Can enter the minimum amount the company will pay patronage on. This is informational and can be used building the payment summary export if included in the query that is built.
-- Minimum Dividend percentage: Can enter the minimum percentage to receive dividends. This is informational and can be included when building queries.
-- ERP System: This field is to track where the ERP system information comes from. There is currently no functionality around this field and more for informational purposes.
-- 1099PATR Filing Entity: This field annotates if a member is filing a 1099PATR. If set to yes, the source is available to create 1099-PATR records for and you can populate the information on the Filing Details tab.
-- The Filings Details tab outlines the information required on a 1099PATR electronic filing report. 
-    - Address, Phone number, Tax ID number, Name, Contact
+  - Primary retirement age: This field is used to set up the retirement age that members will get paid out. This annotates what age the member is eligible to receive Patronage.
+  - Secondary retirement age: This field is used as a secondary option to pay out Patronage. This is the age where Patronage pay outs are mandatory. There is currently no functionality around this field and more for informational purposes.
+  - Default stock class: There is currently no functionality around this field and more for informational purposes. 
+  - Minimum payout threshold: Can enter the minimum amount the company will pay patronage on. This is informational and can be used building the payment summary export if included in the query that is built.
+  - Minimum Dividend percentage: Can enter the minimum percentage to receive dividends. This is informational and can be included when building queries.
+  - ERP System: This field is to track where the ERP system information comes from. There is currently no functionality around this field and more for informational purposes.
+  - 1099PATR Filing Entity: This field annotates if a member is filing a 1099PATR. If set to yes, the source is available to create 1099-PATR records for and you can populate the information on the Filing Details tab.
+  - The Filings Details tab outlines the information required on a 1099PATR electronic filing report. 
+      - Address, Phone number, Tax ID number, Name, Contact
 
 ### Imported Transaction
 An Imported Transaction includes the Transaction Details, outlining the Invoice Number, Branch, Source, and the ability to mark whether it is an eligible transaction. The “Create Patronage Detail” process needs to be run to create eligible transactions utilizing the patronage splits defined on the account record.
@@ -53,21 +53,21 @@ There are several reporting statements available per account, to include: alloca
 #### Stocks
 Stock Subscriptions outline how many shares one has in a certain stock along with payment date, amount, and certificate number. Stock transfers and adjustments can be completed within the system. 
 There are two stock types: 
-1. Account type: A transfer of stock to another account. There is the option for an approval process under this type.   
-2. Stock class type: Changing stocks into another type of stock.
+  1. Account type: A transfer of stock to another account. There is the option for an approval process under this type.   
+  2. Stock class type: Changing stocks into another type of stock.
 
 Adjustments: if there was a data entry error or, one can make adjustments. This field is highly auditable with several restrictions
 ## D365 Finance and Operations Patronage
 ### Customers
 The Customer Account information includes a Membership tab for informational data. It does not drive functionality. It includes the following fields: 
-- Membership Type, Patron, Membership Date, Member ID, and Legal Classification
-- Legal classification is utilized with 1099PATR reporting
+  - Membership Type, Patron, Membership Date, Member ID, and Legal Classification
+  - Legal classification is utilized with 1099PATR reporting
 
 Released Product Details includes the Patronage unit where fields on the product need to be set up. The unit conversions come from the Patronage unit field and needs to be set up through F&O to be able to calculate the right unit when you switch over to D365 CE. 
 ### Payment Details
 By clicking on “Process patronage”, one can pull invoices within a specific date range, reading the invoice lines not creating. Converting the invoiced units to patronage units if the patronage unit is different on the released items. It also pulls in charge codes or discounts. Charge codes can be set up to either increase in price or decrease in price depending on how your rules are set up. 
 
-When a sales order is generated, the F&O will break up the sales order into split allocations, creating an invoice to the customers financially responsible for what was delivered. From the information generated, one can export the data into an Excel file or CSV file to import into CE. This is done by “Imported Transactions” under the standard import functionality. You can then filter the list and “Create Patronage Detail”. This takes the information you have from your patronage splits and whether this item is chargeable and nonchargeable and creates your eligible transactions. The data needs to be in the right format to be imported into CE and can be imported from any system, not just F&O. 
+When a sales order is generated, the F&O will break up the sales order into split allocations, creating an invoice to the customers financially responsible for what was delivered. From the information generated, one can export the data into an Excel file or CSV file to import into CE. This is done by "Imported Transactions" under the standard import functionality. You can then filter the list and "Create Patronage Detail". This takes the information you have from your patronage splits and whether this item is chargeable and nonchargeable and creates your eligible transactions. The data needs to be in the right format to be imported into CE and can be imported from any system, not just F&O. 
 ### Eligible Transactions
 Patronage processing is generated once all eligible transactions have been created. One does not need to bring in imported transactions if they do not use splits or are already split out, they can import right into Eligible Transactions. These are the records that will be used when calculating the equity credit and payments through Patronage Category allocations.
 ### Patronage Categories
@@ -101,38 +101,38 @@ The 1099 information is located under the Annual Allocations navigation. It incl
 - 1099 PATR
  ##### 1099 PATR
 The 1099 PATR is a form a cooperative files for each person whom: 
-- The cooperative has paid at least $10 in patronage dividends and other distributions described in IRS tax section 6044(b).
-- The cooperative withheld any federal income tax under the backup withholding rules regardless of the amount of the payment.
+  - The cooperative has paid at least $10 in patronage dividends and other distributions described in IRS tax section 6044(b).
+  - The cooperative withheld any federal income tax under the backup withholding rules regardless of the amount of the payment.
  
 When a cooperative collects new information for a 1099 year, they would create a new 1099 PATR form. Under 1099 PATR, click “Build 1099 PATR”
-- A dialog box will open asking to select the following: 
-    - 1099 Year (a calendar year)
-    - Source (where you want the information to be coming from)
-      - This is the information collected previously under Source. 
-    - Click Generate. This generates the records requested and pulls in the details required for the form. 
-    - Additional items that make up a 1099 PATR form include:  
-      - General Account Information
-      - 1099 Credit
-        - This includes a variety of credit types available. 
-    - Deductions
-      - Records created from Patronage categories 
-    - Non-Patronage Distributions
-      - Includes all the source data that made up the record. This is necessary for auditing purposes
-    - Payments 
-      - Equity Credits 
-      - Related 
+  - A dialog box will open asking to select the following: 
+      - 1099 Year (a calendar year)
+      - Source (where you want the information to be coming from)
+        - This is the information collected previously under Source. 
+      - Click Generate. This generates the records requested and pulls in the details required for the form. 
+      - Additional items that make up a 1099 PATR form include:  
+        - General Account Information
+        - 1099 Credit
+          - This includes a variety of credit types available. 
+      - Deductions
+        - Records created from Patronage categories 
+      - Non-Patronage Distributions
+        - Includes all the source data that made up the record. This is necessary for auditing purposes
+      - Payments 
+        - Equity Credits 
+        - Related 
  
 The 1099 PATR form is used for electronic filing. The cooperative can print either 1099 PATR-B or 1099 PATR-C versions of the 1099 PATR to provide to their members for tax purposes. The 1099 PATR form is also available online and can be accessed through a portal for members to download. 
 ### Patronage Power BI Dashboards
 There are several dashboards available for Patronage through Power BI. These are powerful reporting tools to analyze and view key Patronage data and summaries. They are located: Customer Info navigation tab > Customers > Customer Info > Add Dashboards > Patronage Dashboard
 
 The following dashboards are already pre-loaded: 
-- 1099A Deductions
-- Allocation Summary
-- Eligible Transactions
-- Equity Credit
-- Equity Revolvements
-- Patronage Dashboard
+  - 1099A Deductions
+  - Allocation Summary
+  - Eligible Transactions
+  - Equity Credit
+  - Equity Revolvements
+  - Patronage Dashboard
 ### Payment Details and Summary
 The Patronage Category Process creates an individual payment detail record for each eligible transaction. There is a summarize payment option that if you use the Advanced Find functionality received with CE, you can put in any sort of query you want to show payment details and from there can “Generate Payment Summary”.  This would summarize all the records. Once you have that summary detail, you can export it to an Excel file. This is the data you would bring into your financial system.
 Once the data is exported, you can go into F&O under Accounts Payable and import the data. This will create a vendor invoice for each record. Once you have the vendor invoices, you can create a journal specific to Patronage. There are designations for specific invoice journals for Patronage. 
