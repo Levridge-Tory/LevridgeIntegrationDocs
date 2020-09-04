@@ -1,6 +1,6 @@
 ﻿
-# Configuration Setup CRM
-To begin configuration setup in CRM, first 
+# Configuration Setup CE
+To begin configuration setup in CE, first 
 import LevCore Solution followed by importing
 Agronomy Solution.
 
@@ -11,7 +11,7 @@ Migrate the ESG Configuration data using the Configuration Migration Tool.
 Ensure an Application User has been created with admin 
 security roles assigned. 
 
-If integrating records from CRM to AX, you will need to 
+If integrating records from CE to AX, you will need to 
 create steps on the service endpoint using the Plugin
  Registration tool.
 
@@ -30,12 +30,12 @@ look like this:
    }
 ```
 
-Setup the data through integrations, create it in CRM, 
+Setup the data through integrations, create it in CE, 
 or import data packets.
 
 ![ColorLabelsCRMConfig](./assets/images/ColorLabelsCRMConfig.png)
 
-Entities in pink must be set up in CRM.
+Entities in pink must be set up in CE.
 
 Entities in yellow will integrate over from FinOps. 
 

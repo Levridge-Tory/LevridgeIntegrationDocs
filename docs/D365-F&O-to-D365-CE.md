@@ -1,11 +1,11 @@
-## D365 F&O to D365 CRM
+## D365 F&O to D365 CE
 
 ### Setup
-To integrate from D365 F&O to D365 CRM you will need to:
+To integrate from D365 F&O to D365 CE you will need to:
  - [Configure Event Endpoint in F&O](./Configuring-Levridge-Entity-Event-Endpoint.md) 
  - [configure Levridge Entity Events](./Configuring-Levridge-Entity-Events.md)
- - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CRM
- - [Create an application user in D365 CRM](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-) and assign the proper role(s)
+ - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CE
+ - [Create an application user in D365 CE](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-) and assign the proper role(s)
  - Create an Azure Service bus topic
  - Create a subscription on the topic above
 

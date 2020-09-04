@@ -1,11 +1,11 @@
-﻿# CRM End-to-End Scenarios
+﻿# Agronomist End-to-End Scenarios
 
 ## Overview
-1. *Planned to Sales Agreement* - sales tool within CRM used to price product and transition growers into contracts.
+1. *Planned to Sales Agreement* - sales tool within CE used to price product and transition growers into contracts.
 2. *Fertilizer Calculator* - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).
 3. *Sales Order Process* - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&O. 
 ### Process #1: Planned to Sales Agreement
-There are three separate methods of kicking off a planned sales agreement with CRM: 
+There are three separate methods of kicking off a planned sales agreement with CE: 
 1. Batch plans
 2. Regular plans
 3. Proposals
@@ -104,7 +104,7 @@ There are three different proposal types within a batch plan: Customer, Prospect
     - Launch line you would like to discount
     - Charge codes
     - Add new proposal line change
-    - Select charge code: Charge codes are user defined data that are defined in F&O/AX and are integrated over to CE/CRM
+    - Select charge code: Charge codes are user defined data that are defined in F&O/AX and are integrated over to CE
     - Value: dollar amount to be deducated off total product price
     - Save
     - Refresh
@@ -133,7 +133,7 @@ Once your proposal is priced and complete, it is ready to be submitted for appro
       - At this point in the process, it is important to check back in unti lthe license number has been documented. 
 2. Generate sales agreement
     - The sales agreement will be sent to F&O/AX once generated. 
-    - The process is then complete within CE/CRM.
+    - The process is then complete within CE.
     - The final step in the sales process would be to pull up the third-party integration (ex: Hello Sign) to capture a digital signature.
 ### Process #2 Fertilizer Calculator
 The Fertilizer Calculator is a tool used to generate blends of fertility products. 
@@ -160,8 +160,8 @@ The Fertilizer Calculator is a tool used to generate blends of fertility product
     - Blend percent
 9. Generate sales order and release report to blender facilities to begin blending product (this function is not currently available but will be once it is fully developed and tested.)
 ### Process #3 Sales Order Process
-The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE/CRM the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. 
-##### Generating New Sales Order in CE/CRM
+The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. 
+##### Generating New Sales Order in CE
 1. Sales order tab
 2. Generate new
 3. Populate applicable sales order fields
@@ -178,7 +178,7 @@ The sales order is comprised of two pieces: the sales order and the work order. 
 1. Add product
 2. Pick quantity
 3. Save
-After saving the estimated price, which is pulled from CRM/CE, will be populated. This may not be the price that is actually paid but is a stored list price that adjustments can be made to. 
+After saving the estimated price, which is pulled from CE, will be populated. This may not be the price that is actually paid but is a stored list price that adjustments can be made to. 
 4. Submit for Approval
     - Checks for any products that need an applicator license
     - Checks for any seed tech licenses that may be required
@@ -186,7 +186,7 @@ After saving the estimated price, which is pulled from CRM/CE, will be populated
 5. Generate Sales Order
     - Once your submission has been approved, you will need to generate a sales order in F&O. 
     - You will receive a pop-up notifying you the sales order was created successfully in F&O/AX.
-    - Once order is acted upon in F&O, you can go into details within CRM and will provide more information on the split group allocations so the person in CRM has access to details. 
+    - Once order is acted upon in F&O, you can go into details within CE and will provide more information on the split group allocations so the person in CE has access to details. 
 #### Work Order 
 The work order is a type of sales order where the Ag Retailer will be performing a service. A work order requires more detail than a basic sales order. 
 1. Orders
@@ -230,7 +230,7 @@ The work order is a type of sales order where the Ag Retailer will be performing
     - Application Site
     - Quantity
 4. Submit for Approval
-    - If this is an integrated order from AgSync or a third-party dispatch, the submit for approval function would not be present. The "Submit for Proposal" would show up if generated in CRM.
+    - If this is an integrated order from AgSync or a third-party dispatch, the submit for approval function would not be present. The "Submit for Proposal" would show up if generated in CE.
 5. If you open a work order line, you will be able to view the Work Order Completion tab which provides more information on the application and applicator. 
     - Application Worker
     - Application License

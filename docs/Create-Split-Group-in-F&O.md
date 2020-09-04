@@ -3,12 +3,12 @@
 ## Steps
 
 Split Group Setup:
-- In Accounts Receivable > Customers > All customers > Select a customer and under the “Agriculture” tab
-- Click on “Split groups” under “Operation Management”
-- The Split Group screen will show the specific split groups associated to the customer. 
-    - There is no limit to the number of split groups that can be created per customer. 
-    - A specific split group can be set to active or inactive when it is no longer needed.
-- After a split group is created and made active, it can be selected for use on sales agreements and sales orders. Prepayments are applied against a sales invoice according to the split selected on the sales order. 
+  - In Accounts Receivable > Customers > All customers > Select a customer and under the “Agriculture” tab
+  - Click on "Split groups" under "Operation Management"
+  - The Split Group screen will show the specific split groups associated to the customer. 
+      - There is no limit to the number of split groups that can be created per customer. 
+      - A specific split group can be set to active or inactive when it is no longer needed.
+  - After a split group is created and made active, it can be selected for use on sales agreements and sales orders. Prepayments are applied against a sales invoice according to the split selected on the sales order. 
 
 
 | Steps  | Expected Result           |

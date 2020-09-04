@@ -1,14 +1,14 @@
-## D365 CRM to D365 F&O
+## D365 CE to D365 F&O
 ### Setup
-To integrate from D365 CRM to D365 F&O you will need to:
- - Configure Azure Service Bus Endpoint in CRM
+To integrate from D365 CE to D365 F&O you will need to:
+ - Configure Azure Service Bus Endpoint in CE
  - Configure Azure Service Bus plug-in on the appropriate entities
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 F&O
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
  - Create an Azure Service bus topic
  - Create a subscription on the topic above
  
-Note: Because CRM does not support sending messages to topics with 
+Note: Because CE does not support sending messages to topics with 
 subscriptions that require sessions, it is important to make sure that 
 the subscription is created **without** enabling sessions.
 

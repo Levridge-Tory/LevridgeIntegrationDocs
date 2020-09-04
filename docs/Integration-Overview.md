@@ -27,8 +27,8 @@ as an IIS application. See [this article](./Deploying-Integration-Framework.md) 
 
 Currently we support the following integrations:  
 
- - [D365 F&O to D365 CRM](./D365-F&O-to-D365-CRM.md)
- - [D365 CRM to D365 F&O](./D365-CRM-to-D365-F&O.md)
+ - [D365 F&O to D365 CE](./D365-F&O-to-D365-CE.md)
+ - [D365 CE to D365 F&O](./D365-CE-to-D365-F&O.md)
  - [Scale](./Scale-Overview.md)
  - [Agsync](./Agsync.md)
  - [Kahler](./Kahler.md)
@@ -37,7 +37,7 @@ Currently we support the following integrations:
  - [Field Reveal](./Field-Reveal.md)
  - [Levridge CRM Remote Printing Service](./Levridge-CRM-Remote-Printing-Service.md)
 
-## Environments Planning
+## Environment Planning
 A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&O System Requirements and what one needs to start a project are outlined in [Environment Planning](.\EnvironmentPlanning.md).
 
 ## Levridge Integration System Requirements
