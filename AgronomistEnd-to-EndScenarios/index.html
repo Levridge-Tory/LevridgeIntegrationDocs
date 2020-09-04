@@ -15,7 +15,7 @@
     
     
       
-        <title>CRM End-to-End Scenarios - Levridge Documentation</title>
+        <title>Agronomist End-to-End Scenarios - Levridge Documentation</title>
       
     
     
@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#crm-end-to-end-scenarios" class="md-skip">
+        <a href="#agronomist-end-to-end-scenarios" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              CRM End-to-End Scenarios
+              Agronomist End-to-End Scenarios
             
           </span>
         </div>
@@ -309,8 +309,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../D365-CRM-to-D365-F%26O/" title="D365 CRM to D365 F&O" class="md-nav__link">
-      D365 CRM to D365 F&O
+    <a href="../D365-CE-to-D365-F%26O/" title="D365 CE to D365 F&O" class="md-nav__link">
+      D365 CE to D365 F&O
     </a>
   </li>
 
@@ -321,8 +321,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../D365-F%26O-to-D365-CRM/" title="D365 F&O to D365 CRM" class="md-nav__link">
-      D365 F&O to D365 CRM
+    <a href="../D365-F&O-to-D365-CE.md" title="D365 F&O to D365 CE" class="md-nav__link">
+      D365 F&O to D365 CE
     </a>
   </li>
 
@@ -542,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../CRM-configuration/" title="CRM Platform Configuration" class="md-nav__link">
+    <a href="../CRM-configuration.md" title="CRM Platform Configuration" class="md-nav__link">
       CRM Platform Configuration
     </a>
   </li>
@@ -1279,8 +1279,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generating-new-sales-order-in-cecrm" class="md-nav__link">
-    Generating New Sales Order in CE/CRM
+  <a href="#generating-new-sales-order-in-ce" class="md-nav__link">
+    Generating New Sales Order in CE
   </a>
   
 </li>
@@ -1328,7 +1328,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CRM-End-To-End-Scenarios.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/AgronomistEnd-to-EndScenarios.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1336,15 +1336,15 @@
                   
                 
                 
-                <h1 id="crm-end-to-end-scenarios"><a class="toclink" href="#crm-end-to-end-scenarios">CRM End-to-End Scenarios</a></h1>
+                <h1 id="agronomist-end-to-end-scenarios"><a class="toclink" href="#agronomist-end-to-end-scenarios">Agronomist End-to-End Scenarios</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
 <ol>
-<li><em>Planned to Sales Agreement</em> - sales tool within CRM used to price product and transition growers into contracts.</li>
+<li><em>Planned to Sales Agreement</em> - sales tool within CE used to price product and transition growers into contracts.</li>
 <li><em>Fertilizer Calculator</em> - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).</li>
 <li><em>Sales Order Process</em> - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&amp;O. </li>
 </ol>
 <h3 id="process-1-planned-to-sales-agreement"><a class="toclink" href="#process-1-planned-to-sales-agreement">Process #1: Planned to Sales Agreement</a></h3>
-<p>There are three separate methods of kicking off a planned sales agreement with CRM: 
+<p>There are three separate methods of kicking off a planned sales agreement with CE: 
 1. Batch plans
 2. Regular plans
 3. Proposals</p>
@@ -1469,7 +1469,7 @@
 <li>Launch line you would like to discount</li>
 <li>Charge codes</li>
 <li>Add new proposal line change</li>
-<li>Select charge code: Charge codes are user defined data that are defined in F&amp;O/AX and are integrated over to CE/CRM</li>
+<li>Select charge code: Charge codes are user defined data that are defined in F&amp;O/AX and are integrated over to CE</li>
 <li>Value: dollar amount to be deducated off total product price</li>
 <li>Save</li>
 <li>Refresh</li>
@@ -1501,7 +1501,7 @@
       - At this point in the process, it is important to check back in unti lthe license number has been documented. 
 2. Generate sales agreement
     - The sales agreement will be sent to F&amp;O/AX once generated. 
-    - The process is then complete within CE/CRM.
+    - The process is then complete within CE.
     - The final step in the sales process would be to pull up the third-party integration (ex: Hello Sign) to capture a digital signature.</p>
 <h3 id="process-2-fertilizer-calculator"><a class="toclink" href="#process-2-fertilizer-calculator">Process #2 Fertilizer Calculator</a></h3>
 <p>The Fertilizer Calculator is a tool used to generate blends of fertility products. 
@@ -1530,8 +1530,8 @@
 <li>Generate sales order and release report to blender facilities to begin blending product (this function is not currently available but will be once it is fully developed and tested.)</li>
 </ol>
 <h3 id="process-3-sales-order-process"><a class="toclink" href="#process-3-sales-order-process">Process #3 Sales Order Process</a></h3>
-<p>The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE/CRM the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. </p>
-<h5 id="generating-new-sales-order-in-cecrm"><a class="toclink" href="#generating-new-sales-order-in-cecrm">Generating New Sales Order in CE/CRM</a></h5>
+<p>The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. </p>
+<h5 id="generating-new-sales-order-in-ce"><a class="toclink" href="#generating-new-sales-order-in-ce">Generating New Sales Order in CE</a></h5>
 <ol>
 <li>Sales order tab</li>
 <li>Generate new</li>
@@ -1553,7 +1553,7 @@
 <li>Add product</li>
 <li>Pick quantity</li>
 <li>Save
-After saving the estimated price, which is pulled from CRM/CE, will be populated. This may not be the price that is actually paid but is a stored list price that adjustments can be made to. </li>
+After saving the estimated price, which is pulled from CE, will be populated. This may not be the price that is actually paid but is a stored list price that adjustments can be made to. </li>
 <li>Submit for Approval<ul>
 <li>Checks for any products that need an applicator license</li>
 <li>Checks for any seed tech licenses that may be required</li>
@@ -1563,7 +1563,7 @@ After saving the estimated price, which is pulled from CRM/CE, will be populated
 <li>Generate Sales Order<ul>
 <li>Once your submission has been approved, you will need to generate a sales order in F&amp;O. </li>
 <li>You will receive a pop-up notifying you the sales order was created successfully in F&amp;O/AX.</li>
-<li>Once order is acted upon in F&amp;O, you can go into details within CRM and will provide more information on the split group allocations so the person in CRM has access to details. </li>
+<li>Once order is acted upon in F&amp;O, you can go into details within CE and will provide more information on the split group allocations so the person in CE has access to details. </li>
 </ul>
 </li>
 </ol>
@@ -1613,7 +1613,7 @@ After saving the estimated price, which is pulled from CRM/CE, will be populated
 </ul>
 </li>
 <li>Submit for Approval<ul>
-<li>If this is an integrated order from AgSync or a third-party dispatch, the submit for approval function would not be present. The "Submit for Proposal" would show up if generated in CRM.</li>
+<li>If this is an integrated order from AgSync or a third-party dispatch, the submit for approval function would not be present. The "Submit for Proposal" would show up if generated in CE.</li>
 </ul>
 </li>
 <li>If you open a work order line, you will be able to view the Work Order Completion tab which provides more information on the application and applicator. <ul>
