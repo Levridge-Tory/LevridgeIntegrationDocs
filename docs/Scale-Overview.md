@@ -16,7 +16,7 @@ The functionality is chosen based on the specific requirements of the clients. I
   - [How to Update Levridge Scale](HowtoupdateLevridgeScale.md)
   - [ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280](ScaleHeadHardwareSetup.md) 
   - [Scale Appsettings Configuration](scale-appsettings-configuration.md)
-  - [Scale Implementation Activities and Estimates](ScaleImplementationActivities.md)
+  - [Scale Implementation Activities](ScaleImplementationActivities.md)
  
 #### IIS Server Functionality
 If LevridgeScaleApp is ran as a server, it would operate with a Reverse Proxy. This is very important for implementation purposes. Required server information include the Printer Server and API Server.  

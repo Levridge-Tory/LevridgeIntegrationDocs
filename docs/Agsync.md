@@ -77,7 +77,7 @@ This communication diagram depicts this interaction:
 The [Common Data Service (CDS)](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro) is a solution from Microsoft built on top of the Power Platform. CDS tables are used in the integrations between D365 and AgSync to translate values that are different between the 2 systems. For example, in AgSync, customers have unique identifiers called GUIDs.  These values are different from the unique identifiers D365 has for the same customer accounts. Levridge has implemented new tables in CDS to translate the D365 Customer account to the AgSync GUID.   
 
 For the CDS environment there are two purchasing options:  
-1. If the ag retailer has an existing CRM/CE instance, use it. A portion of the CRM instance can be firewalled off for security purposes and then it can be used to host the CDS solution.
+1. If the ag retailer has an existing CE instance, use it. A portion of the CE instance can be firewalled off for security purposes and then it can be used to host the CDS solution.
 2. Buy a specific CDS environment for only the CDS solution. This is more expensive.
 
 There are 7 types of data stored in CDS:
@@ -99,7 +99,7 @@ The Worker Table is a translation table required to map the applicator (worker) 
 Three entities need to be manually entered in CDS. 
 
 The CDS setup includes:
-- CRM Levridge
+- CE Levridge
 - AgSync Solution
 - Choose appropriate UI Form
 
@@ -280,7 +280,7 @@ Once a sales order is created in F&O, we will message back to AgSync and update 
 
 Integration purchase requirements include: 
 1. CDS Instance 
-    - CRM License
+    - CE License
 2. Azure Subscription 
     - Service Bus
     - App Service
@@ -300,7 +300,7 @@ Internal setup time for configuration is 24 hours. To integrate from D365 F&O to
  - Get Customer Specific Integration ID from Agsync
  - Client Redirect URL is [Azure Webapp base URL]/api/AgsyncAuth
  - [Setup Azure Keyvault](./AzureKeyVault.md) 
- - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CRM
+ - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 CE
  - [Create an application user in D365 CRM](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-) and assign the proper role(s)
 
 A webhook is an API provided by the Levridge Integration Framework that gives AgSync the ability to send workorders to Levridge. AgSync sends workorders to the Levridge API  which places the order on the service bus. 
