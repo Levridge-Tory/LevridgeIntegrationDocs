@@ -45,7 +45,7 @@ Shows a list of all customers in the scale database in alphabetical order. Check
 
 1. To add a customer to the short list manually, check the box next to their name, and click submit on the bottom left corner of the page. 
 
-![Scale Customer Short List](.\assets\images\ScaleApp\Scale-Customer-Short-List.png)
+![Scale Customer Short List.](.\assets\images\ScaleApp\Scale-Customer-Short-List.png "Scale Customer Short List")
 
 ### Gross Quantity Settings
 Under Application Configuration>Gross Quantity Settings
