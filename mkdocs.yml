@@ -16,13 +16,13 @@ repo_url: 'https://github.com/Levridge-Tory/LevridgeIntegrationDocs'
 nav:
     - Home: index.md
     - Products:
-        - Levridge Core:
+        - System Information:
             - Integration Framework:
                 - Overview : 'Integration-Overview.md'
                 - Integrations :
                     - 'D365 CRM to D365 F&O' : 'D365-CRM-to-D365-F&O.md'
                     - 'D365 F&O to D365 CRM' : 'D365-F&O-to-D365-CRM.md'
-                    - 'Levridge Scale House' : 'scale-integration.md'
+                    - 'Scale' : 'scale-integration.md'
                     - 'Agsync' : 'Agsync.md'
                     - 'Kahler' : 'Kahler.md'
                     - 'Surety' : 'Surety.md'
@@ -37,11 +37,11 @@ nav:
             - Print Service: 'print-service.md'
             - CRM Platform:
                 - CRM Platform Configuration : 'CRM-configuration.md'
-        - Levridge Agronomy: 'Agronomy.md'
-        - Levridge Commodities: 'Commodities.md'
-        - Levridge Feed: 'Feed.md'
-        - Levridge Equity Accounting: 'Patronage.md'
-        - Levridge Scale : 
+        - Agronomy: 'Agronomy.md'
+        - Commodities: 'Commodities.md'
+        - Feed: 'Feed.md'
+        - Equity Management: 'Patronage.md'
+        - Scale : 
             - Scale Overview : 'Scale-Overview.md'
             - Scale Settings Configuration : 'scale-settings-configuration.md'
     - User Documentation:

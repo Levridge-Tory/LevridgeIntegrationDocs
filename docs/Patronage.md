@@ -4,7 +4,7 @@
 Patronage is a dividend or distribution that a co-operative pays to its members or investors. Patronage dividends are given based on a proportion of profit that the business makes. Once this amount is determined, management calculates the dividend according to how much each member has used the co-op's services. It is typically an annual process of generating dividends and equity balances. Managing this process has been streamlined and simplified within the Levridge solution. In a few simple steps, you can accurately set up splits, distributions, equity, reports, and cut checks. 
 
 ## Implementation Activities
-The [Implementation Activities for Patronage](PatronageImplementationActivities.md) provides an overview of the implementation activities and estimates necessary for getting started with processing Patronage. 
+The [Implementation Activities for Patronage](PatronageImplementationActivities.md) provides an overview of the implementation activities necessary for getting started with processing Patronage. 
  
 ## Base Type Functionality
 The Patronage solutions is operated on Dynamics 365 Customer Engagement (CE) functionality, with an integration from F&O. There is certain functionality that is reliant on the integration between F&O and CE Patronage to get the data into the system, one of those being “Products” under the Setup navigation area. All the products listed are integrated over from F&O.

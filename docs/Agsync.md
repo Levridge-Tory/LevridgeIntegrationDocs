@@ -133,12 +133,12 @@ An important item to note: A business process needs to be in place in the situat
 ### Microsoft Azure App Service
 The [Levridge Integration Framework](./Integration-Overview.md) has been written as a web application that hosts HTTP endpoints as REST APIs and background processes that handle integrations. It is most commonly run in the cloud as an Azure App Serivce. It can also run as a windows service or as an IIS application. The [Integration Overview](./Integration-Overview.md) provides additional information about the deployment options.
 
-Most of the setup will occur in Azure App Service. This is a requirement for AgSync in which AgSync pulls from Levridge’s Azure Service Bus and an HTTP-based service for hosting web applications. Azure hosts our web app integration. The steps needed to create an App Service can be found under the [Integration Overview](./Integration-Overview.md).  
+Most of the setup will occur in Azure App Service. This is a requirement for AgSync in which AgSync pulls from Levridge's Azure Service Bus and an HTTP-based service for hosting web applications. Azure hosts our web app integration. The steps needed to create an App Service can be found under the [Integration Overview](./Integration-Overview.md).  
 
 After the App ID has been generated along with the [deployed integration code to App Service](./Deploying-Integration-Framework.md), there is an application configuration file named [appsettings.json])./appsettings.json.md). This file is located within the generated Azure Service. In the App Services portion of the Azure Portal there is a Kudos button on the left-hand side, with a [function to ZipDeploy code](./Deploy-Integration-Framework-as-Zip-File.md). This is where one would deploy the integration code. After deployed, back in Azure Service and right below Kudos button, there is an App Service Editor where one would deploy the App Settings json file to, which will give a list of all the files part of the integration. One of those is called [AppSettings.json](./appsettings.json.md) where the configuration is made for the Azure Service.
 
 ### Configuration
-- Set up the [logging level](./logging.md). 
+- Set up the [logging level](./Logging.md). 
 - The next section to be configured would outline what direction information is flowing within the service itself. There is a [target configuration](./TargetConfig) and [source configuration](./SourceConfig) which is needed to specify:
     - Which system is the source system and which system is the target system. 
     - Which configuration section contains data connection information.
@@ -305,7 +305,7 @@ Internal setup time for configuration is 24 hours. To integrate from D365 F&O to
 
 A webhook is an API provided by the Levridge Integration Framework that gives AgSync the ability to send workorders to Levridge. AgSync sends workorders to the Levridge API  which places the order on the service bus. 
 
-The customer’s specific URL needs to be whitelisted by AgSync. To whitelist a URL, one would log into AgSync and create a helpdesk ticket requesting AgSync to add the AgsyncOrderChanged URL into their setup file. The expected service time is between 24-48 hours. Escalate after 48 hours.
+The customer's specific URL needs to be whitelisted by AgSync. To whitelist a URL, one would log into AgSync and create a helpdesk ticket requesting AgSync to add the AgsyncOrderChanged URL into their setup file. The expected service time is between 24-48 hours. Escalate after 48 hours.
 
 General setup timelines:
 - Deploying code to App Service takes the longest. 400 table lines for all three. 
@@ -325,8 +325,8 @@ A Dispensing Account ID field has been added in F&O on the customer account unde
 - An inventory site indicating where the product is physically located
 - Commission/Sales groups indicating the agronomist that sold the service to the customer (Confirm and clarify this statement) 
 
-#### Integration Framework Setup for Sending Customers: 
-“Out of the Box Customer V3” is being utilized and the code in the integration is choosing the data fields the entities pass through. The Dispatching Account ID is included on the customer form to only send accounts that have a dispatching account tied to it to AgSync. This is filtered by the Event Framework V3 Entity. An example is a client might have 100K in their database but for work order purposes there are only 30K that will ever work with AgSync. Filtering is again used in the Event Framework V3 Entity in the Customer Operation. This is a more sophisticated filter due to multiple types of operations an individual customer could have. 
+#### Integration Framework Setup for Sending Customers 
+"Out of the Box Customer V3" is being utilized and the code in the integration is choosing the data fields the entities pass through. The Dispatching Account ID is included on the customer form to only send accounts that have a dispatching account tied to it to AgSync. This is filtered by the Event Framework V3 Entity. An example is a client might have 100K in their database but for work order purposes there are only 30K that will ever work with AgSync. Filtering is again used in the Event Framework V3 Entity in the Customer Operation. This is a more sophisticated filter due to multiple types of operations an individual customer could have. 
 
 Customer Operation is setup by four different filters: 
 1. Customer Operation Type
@@ -341,7 +341,7 @@ Customer Operation is setup by four different filters:
 - Dispatcher is going to see all released orders. 
 - Dispatcher takes orders, creates task packet, assigns to worker, annotates which piece of application equipment is going to be running, and saves as scheduled packet.
 - The message is once again generated to webhook in F&O. 
-- Status is updated to “scheduled” if a blend. 
+- Status is updated to "scheduled" if a blend. 
     - This creates an automatically explode bomb at scheduled date. (ex: if a client is using automatic fertilizer, dispensing ticket is released at the scheduled state which kicks off another integration to Kahler, so they can blend and send product out to field that is going to be applied.)
 
 ### Controllers
