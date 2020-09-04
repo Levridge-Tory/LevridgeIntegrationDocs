@@ -12,12 +12,12 @@ The Levridge Integration Framework is an entity syncronization framework.
 It provides a means to synchronize data at an entity level between multiple data sources.
 
 All integrations that use the framework follow the same pattern:
-  1. A data source has an integration event
-  2. The data source responds to the integration event by sending one or more entities to the service bus.
-  3. The service bus publishes the message(s) to each subscription
-  4. An instance of the integration framework receives the message(s) from a subscription
-  5. The integration framework transforms the message it if needed
-  6. The integration framework sends the message to the target data source
+1. A data source has an integration event
+2. The data source responds to the integration event by sending one or more entities to the service bus.
+3. The service bus publishes the message(s) to each subscription
+4. An instance of the integration framework receives the message(s) from a subscription
+5. The integration framework transforms the message it if needed
+6. The integration framework sends the message to the target data source
 
 ![General Entity Integration Pattern.](./assets/images/GeneralSynchronizationIntegrations.jpg "General Entity Integartion Pattern")
 
