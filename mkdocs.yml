@@ -38,12 +38,14 @@ nav:
             - CRM Platform:
                 - CRM Platform Configuration : 'CRM-configuration.md'
         - Agronomy: 'Agronomy.md'
-        - Commodities: 'Commodities.md'
+        - Agronomy Retail : 'AgronomyRetail.md'
+        - Commodity Accounting: 'Commodities.md'
         - Feed: 'Feed.md'
         - Equity Management: 'Patronage.md'
         - Scale : 
             - Scale Overview : 'Scale-Overview.md'
-            - Scale Settings Configuration : 'scale-settings-configuration.md'
+            - Scale Settings Configuration : 'scale-settings-configuration.md' 
+        - Environment Planning : 'EnvironmentPlanning.md'
     - User Documentation:
         - 'Finance & Operations' :
             - Accounts Receivable Setup :

@@ -1,4 +1,4 @@
-﻿# Environments Planning
+﻿# Environment Planning
 A standard D365 implementation is used when launching a Levridge environment plan. The standard D365 implementation guidelines are captured in the Stoneridge Software [Asset Library](https://teams.microsoft.com/_#/tab%3A%3A65b5d435-4201-42ef-8a5b-cd0720466fbd/General?threadId=19%3A94c20c3705b444129e55850b80f0ea8e%40thread.skype&ctx=channel). 
 
 ## Overview

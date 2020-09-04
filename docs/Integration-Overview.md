@@ -1,5 +1,5 @@
 ﻿# Introduction
-The Levridge integration framework provides integration between Dynamics365 Finance and SCM
+The Levridge integration framework provides integration between Dynamics 365 Finance 
 and Dynamics 365 Customer Engagement and 3rd party applications.
 
 This document provides and overview of the integration framework and links to the documents
@@ -38,7 +38,7 @@ Currently we support the following integrations:
  - [Levridge CRM Remote Printing Service](./Levridge-CRM-Remote-Printing-Service.md)
 
 ## Environments Planning
-A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&O System Requirements and what one needs to start a project are outlined in [Environments Planning](.\EnvironmentsPlanning.md).
+A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&O System Requirements and what one needs to start a project are outlined in [Environment Planning](.\EnvironmentPlanning.md).
 
 ## Levridge Integration System Requirements
 - Azure App Registrations
