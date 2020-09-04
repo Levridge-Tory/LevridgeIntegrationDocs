@@ -48,8 +48,8 @@ nav:
             - Environment Planning : 'EnvironmentPlanning.md'
     - User Documentation:
         - 'Finance & Operations' :
-            - Accounts Receivable Setup :
-                - 'Create a New Split Group': 'Create-Split-Group-in-F&O.md'
+            - Accounts Receivable Setup : 
+                - 'Create a New Split Group': 'Create-Split-Group.md'
         - Inventory Value and Costing :
             - Upload Standard Cost Pricing: 'UploadStandardCostPricing.md'
             - Adjust FIFO Inventory Value: 'AdjustFIFOInventoryValue.md'

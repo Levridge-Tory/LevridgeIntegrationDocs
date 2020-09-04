@@ -45,5 +45,5 @@ In Levridge, there are two different types of default split groups:
 
 The Commodity default split defines ownership of products when the grower is selling to the Ag retailer. The Ordering default split is used when the grower is buying products from the Ag retailer (that will be utilized in customer sites and operations). 
 
-Here is [How to Create a Split Group in F&O](./Create-Split-Group-in-F&O.md) and information on how to [Manage Splits, Sales Contracts and Prepayments](./ManagingSplits_SalesContracts_Prepayments.md). 
+Here is [How to Create a Split Group in F&O](./Create-Split-Group.md) and information on how to [Manage Splits, Sales Contracts and Prepayments](./ManagingSplits_SalesContracts_Prepayments.md). 
 
