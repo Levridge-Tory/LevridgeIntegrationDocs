@@ -1,8 +1,5 @@
 ﻿# Agronomy
 
-
-
-## Cross Referenced Documents
 The [Agronomist End-to-End Scenarios](AgronomistEnd-to-EndScenarios.md) provides an overview of: 
    - Planned to Sales Agreement
    - Fertilizer Calculator
