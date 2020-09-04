@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#levridge-scale-overview" class="md-skip">
+        <a href="#scale-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -602,7 +602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Equity/" title="Levridge Equity Accounting" class="md-nav__link">
+    <a href="../Patronage/" title="Levridge Equity Accounting" class="md-nav__link">
       Levridge Equity Accounting
     </a>
   </li>
@@ -1347,7 +1347,7 @@
                   
                 
                 
-                <h1 id="levridge-scale-overview"><a class="toclink" href="#levridge-scale-overview">Levridge Scale Overview</a></h1>
+                <h1 id="scale-overview"><a class="toclink" href="#scale-overview">Scale Overview</a></h1>
 <p>The purpose of Levridge Scale is to receive all the data measured at the scales at ag retailer locations and incorporate it into a scale ticket
 which can be printed out and given to the grower, while also bringing the scale ticket into the Dynamics 365 ERP system. 
 Within the accounting technology solution, the contents of the scale ticket can be accounted for and posted against contracts the grower has with the ag retailer.</p>
@@ -1361,29 +1361,34 @@ Within the accounting technology solution, the contents of the scale ticket can 
 <li><a href="../HowtoupdateLevridgeScale/">How to Update Levridge Scale</a></li>
 <li><a href="../ScaleHeadHardwareSetup/">ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280</a> </li>
 <li><a href="../scale-appsettings-configuration/">Scale Appsettings Configuration</a></li>
+<li><a href="../ScaleImplementationActivities/">Scale Implementation Activities and Estimates</a></li>
 </ul>
 <h4 id="iis-server-functionality"><a class="toclink" href="#iis-server-functionality">IIS Server Functionality</a></h4>
 <p>If LevridgeScaleApp is ran as a server, it would operate with a Reverse Proxy. This is very important for implementation purposes. Required server information include the Printer Server and API Server.  </p>
 <p>Clients are always classified as “server” regardless if operating as a service or server. The intent is the client operates to serve content to the client. </p>
-<p>The three servers are: 
+<p>The two servers are: 
 1. LevScaleAPI
       - This server handles all the back-end calls. This is where the integration framework communications with the scale. O-Data calls which are in turn the integration framework. O-Data is very necessary due to the ability to operate with other ERP systems. 
-2. LevScaleClient
-3. LevScalePrint
+2. LevScalePrint
       - This server renders all the reports for printing. It communicates with the client printer service. This is within the .net framework. </p>
 <h4 id="desktop-environment-service-functionality"><a class="toclink" href="#desktop-environment-service-functionality">Desktop Environment Service Functionality</a></h4>
-<p>The five services within a Windows desktop environment include: 
-1.  LevEstimatedService
-       - This handles O-Data calls to Dynamics F&amp;O to receive the estimated ticket information.
-2.  LevPrintClient
-      - Can install the LevPrintService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrintClient is registered at the specific location. This also includes the Zebra printing capability. 
-3.  LevridgeAXToScale
-      - Along with LevridgeScaleToAX is the integration framework. The only difference between LevridgeScaleToAX is the app settings: LevridgeAXToScale being the source target and LevScaletoAX being the target source. 
-      - They are both provided in the package as there can be many integration systems. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&amp;O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
-4.  LevridgeScaleToAX
-      - This is the inverse of LevridgeAXToScale and is an optional criterion to install. This acts like a funnel. 
-5.  LevScale
-      - LevScale is the defining factor between a server and service. LevScaleClient and LevScale are executing the same file path and processes. This is operating a straight web server without the reverse proxy capability. </p>
+<p>The four services within a Windows desktop environment include: </p>
+<ol>
+<li>LevPrintService<ul>
+<li>Can install the LevPrintService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrintClient is registered at the specific location. This also includes the Zebra printing capability. </li>
+</ul>
+</li>
+<li>LevHardwareService<ul>
+<li>This is the service that handles communication with hardware such as the scale head.</li>
+</ul>
+</li>
+<li>LevridgeAXToScale<ul>
+<li>Along with LevridgeScaleToAX is the integration framework. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&amp;O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
+4.LevScale</li>
+<li>LevScale is the defining factor between a server and service. LevScaleClient and LevScale are executing the same file path and processes. This is operating a straight web server without the reverse proxy capability. </li>
+</ul>
+</li>
+</ol>
 <h4 id="scale-ticket-types"><a class="toclink" href="#scale-ticket-types">Scale Ticket Types</a></h4>
 <ul>
 <li>Inbound Grain</li>
@@ -1431,7 +1436,7 @@ Within the accounting technology solution, the contents of the scale ticket can 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Equity/" title="Levridge Equity Accounting" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Patronage/" title="Levridge Equity Accounting" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>

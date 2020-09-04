@@ -600,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Equity/" title="Levridge Equity Accounting" class="md-nav__link">
+    <a href="../Patronage/" title="Levridge Equity Accounting" class="md-nav__link">
       Levridge Equity Accounting
     </a>
   </li>
@@ -1377,6 +1377,11 @@ C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\HardwareInterface</p
 <h3 id="axtoscaleintegration"><a class="toclink" href="#axtoscaleintegration">AxToScaleIntegration</a></h3>
 <pre><code>{
   &quot;Logging&quot;: {
+    &quot;ApplicationInsights&quot;: {
+             &quot;LogLevel&quot;: {
+                 &quot;Default&quot;: &quot;Trace&quot;
+             }
+         },
     &quot;Debug&quot;: {
       &quot;LogLevel&quot;: {
         &quot;Default&quot;: &quot;Trace&quot;
@@ -1439,7 +1444,8 @@ C:\Program Files (x86)\Levridge\LevridgeScaleHouse\Services\HardwareInterface</p
     &quot;TopicName&quot;: &quot;axtoscale&quot;,
 //Enter the Subscription name for the service bus
     &quot;SubscriptionName&quot;: &quot;000&quot;,
-    &quot;RequiresSession&quot;: true
+    &quot;PrefetchCount&quot;: 40,
+    &quot;MaxConcurrentCount&quot;: 20
   }
 
 }

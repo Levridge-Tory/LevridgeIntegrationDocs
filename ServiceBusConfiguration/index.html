@@ -600,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Equity/" title="Levridge Equity Accounting" class="md-nav__link">
+    <a href="../Patronage/" title="Levridge Equity Accounting" class="md-nav__link">
       Levridge Equity Accounting
     </a>
   </li>
@@ -1194,7 +1194,8 @@ a service bus queue or topic.</p>
   "ConnectionString": "Endpoint=[Customer Servicebus Connection String]",
   "TopicName": "[Customer Servicebus Topic]",
   "SubscriptionName": "[Customer Servicebus Topic Subscription]",
-  "MaxConcurrentCount":10
+  "MaxConcurrentCount":10,
+  "PrefetchCount": 5
 },
 </code></pre>
 <h1 id="definition"><a class="toclink" href="#definition">Definition</a></h1>
@@ -1203,6 +1204,7 @@ a service bus queue or topic.</p>
 <h2 id="subscriptionname"><a class="toclink" href="#subscriptionname">SubscriptionName</a></h2>
 <h2 id="maxconcurrentcount"><a class="toclink" href="#maxconcurrentcount">MaxConcurrentCount</a></h2>
 <p>The maximum number of messages that will be allowed to be processed simultaneously.</p>
+<h2 id="prefetchcount"><a class="toclink" href="#prefetchcount">PrefetchCount</a></h2>
                 
               
               

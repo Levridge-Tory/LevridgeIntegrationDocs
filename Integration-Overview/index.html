@@ -669,7 +669,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Equity/" title="Levridge Equity Accounting" class="md-nav__link">
+    <a href="../Patronage/" title="Levridge Equity Accounting" class="md-nav__link">
       Levridge Equity Accounting
     </a>
   </li>
@@ -1299,8 +1299,7 @@ and Dynamics 365 Customer Engagement and 3rd party applications.</p>
 <p>This document provides and overview of the integration framework and links to the documents
 that exist for the framework.</p>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<p>The Levridge Integration Framework is an entity syncronization framework. 
-It provides a means to synchronize data at an entity level between multiple data sources.</p>
+<p>Levridge has created an integration framework to handle all the integrations between systems.  This framework uses json entities to exchange information. The integration framework uses Microsoft <a href="https://azure.microsoft.com/en-us/services/service-bus/">Azure Service Bus</a> to provide a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish and Subscribe messaging pattern</a>. Levridge has created an event framework in D365 Finance that will publish entity data to the service bus based on Creates, Deletes and Updates. Information/messages sent to the service bus can be subscribed to by 3rd party applications or by the Levridge integration framework and sent to 3rd party applications like AgSync. The data entities in D365 Finance and can be filtered so only certain records are sent.</p>
 <p>All integrations that use the framework follow the same pattern:
   1. A data source has an integration event
   2. The data source responds to the integration event by sending one or more entities to the service bus.
@@ -1309,9 +1308,6 @@ It provides a means to synchronize data at an entity level between multiple data
   5. The integration framework transforms the message if needed
   6. The integration framework sends the message to the target data source</p>
 <p><img alt="General Entity Integration Pattern." src="../assets/images/GeneralSynchronizationIntegrations.jpg" title="General Entity Integartion Pattern" /></p>
-<p>The Levridge Integration Framework uses a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">Publish and Subscribe messaging pattern</a>.
-We use the <a href="https://azure.microsoft.com/en-us/services/service-bus/">Azure Service Bus</a> to provide the publish and
-subscribe mechanism.</p>
 <p>The Levridge Integration Framework is most commonly run in the cloud as an 
 <a href="https://azure.microsoft.com/en-us/services/app-service/">Azure App Serivce</a>. It can also run as a windows service or 
 as an IIS application. See <a href="../Deploying-Integration-Framework/">this article</a> to learn more about the deployment options.</p>
@@ -1329,7 +1325,7 @@ as an IIS application. See <a href="../Deploying-Integration-Framework/">this ar
 <li><a href="../Levridge-CRM-Remote-Printing-Service/">Levridge CRM Remote Printing Service</a></li>
 </ul>
 <h2 id="environments-planning"><a class="toclink" href="#environments-planning">Environments Planning</a></h2>
-<p>A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&amp;O System Requirements and what one needs to start a project are outlined in <a href="C:\Users\jessiwoi\source\repos\Levridge-Tory\LevridgeIntegrationDocs\docs\EnvironmentsPlanning.md">Environments Planning</a>.</p>
+<p>A standard D365 implementation is used when launching a Levridge environment plan. The D365 F&amp;O System Requirements and what one needs to start a project are outlined in <a href="../EnvironmentsPlanning/">Environments Planning</a>.</p>
 <h2 id="levridge-integration-system-requirements"><a class="toclink" href="#levridge-integration-system-requirements">Levridge Integration System Requirements</a></h2>
 <ul>
 <li>Azure App Registrations</li>
