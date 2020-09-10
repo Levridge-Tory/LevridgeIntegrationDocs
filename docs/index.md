@@ -2,7 +2,7 @@
 
 # Levridge
 
-![Levridge Overview.](./assets/images/levridge.png)
+![Levridge Overview.](.\assets\images\levridge.PNG
 
 ## Overview
 Levridge is dedicated to building modern, user-friendly business solutions for the agricultural industry. The Levridge solution enables Ag Retailers, Ag Cooperatives and Commodity Processors to run businesses in a modern, connected way.
