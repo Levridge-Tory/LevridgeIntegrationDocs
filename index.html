@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#levridge" class="md-skip">
           Skip to content
         </a>
       
@@ -203,9 +203,97 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="." title="Home" class="md-nav__link md-nav__link--active">
       Home
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agronomy" class="md-nav__link">
+    Agronomy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grain" class="md-nav__link">
+    Grain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting-and-retail" class="md-nav__link">
+    Accounting and Retail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feed" class="md-nav__link">
+    Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commodity-processing" class="md-nav__link">
+    Commodity Processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equity-and-patronage" class="md-nav__link">
+    Equity and Patronage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1211,6 +1299,78 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agronomy" class="md-nav__link">
+    Agronomy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grain" class="md-nav__link">
+    Grain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting-and-retail" class="md-nav__link">
+    Accounting and Retail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feed" class="md-nav__link">
+    Feed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commodity-processing" class="md-nav__link">
+    Commodity Processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    Scale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equity-and-patronage" class="md-nav__link">
+    Equity and Patronage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1229,35 +1389,40 @@
                   
                 
                 
-                <h1 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h1>
-<p>The Levridge integration framework provides integration between Dynamics365 Finance and Operations
-and Dynamics 365 Customer Engagement and 3rd party applications.</p>
-<p>This document provides and overview of the integration framework and links to the document
-that exists for the framework.</p>
-<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
-<p>The Levridge Integration Framework is an entity syncronization framework. 
-It provides a means to synchronize data at an entity level between multiple data sources.</p>
-<p>All integrations that use the framework follow the same pattern:
-1. A data source has an integration event
-2. The data source responds to the integration event by sending one or more entities to the service bus.
-3. The service bus publishes the message(s) to each subscription
-4. An instance of the integration framework receives the message(s) from a subscription
-5. The integration framework transforms the message it if needed
-6. The integration framework sends the message to the target data source</p>
-<p><img alt="General Entity Integration Pattern." src="assets/images/GeneralSynchronizationIntegrations.jpg" title="General Entity Integartion Pattern" /></p>
-<h1 id="integrations"><a class="toclink" href="#integrations">Integrations</a></h1>
-<p>Currently we support the following integrations:  </p>
-<ul>
-<li><a href="D365-F%26O-to-D365-CE/">D365 F&amp;O to D365 CE</a></li>
-<li><a href="D365-CE-to-D365-F%26O/">D365 CE to D365 F&amp;O</a></li>
-<li><a href="Scale-Overview/">Levridge Scale House</a></li>
-<li><a href="Agsync/">Agsync</a></li>
-<li><a href="Kahler/">Kahler</a></li>
-<li><a href="Surety/">Surety</a></li>
-<li><a href="oneWeigh/">oneWeigh</a></li>
-<li><a href="Field-Reveal/">Field Reveal</a></li>
-<li><a href="Levridge-CRM-Remote-Printing-Service/">Levridge CRM Remote Printing Service</a></li>
-</ul>
+                <h1 id="levridge"><a class="toclink" href="#levridge">Levridge</a></h1>
+<p><img alt="Levridge Overview." src="./assets/images/levridge.png" /></p>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>Levridge is dedicated to building modern, user-friendly business solutions for the agricultural industry. The Levridge solution enables Ag Retailers, Ag Cooperatives and Commodity Processors to run businesses in a modern, connected way.</p>
+<h3 id="agronomy"><a class="toclink" href="#agronomy">Agronomy</a></h3>
+<p><img alt="Agronomy" src="assets/images/LevridgeHomePage/Agronomy.PNG" /> </p>
+<p>This cloud-based solution infinitely increases efficiencies in agronomy through the elimination of paper and the need for manual double entries, better visibility into inventory and procurement and the opportunity for real-time invoicing. Using the many functions and features of customer relationship management Levridge has multiple tools to help the agronomist overcome challenges with tracking data related to the grower, employee and contractor. This includes providing access to vital historical information, addressing knowledge sharing amongst employees, application and chemical certifications, and licensing and DOT tracking.</p>
+<p>Vital features for the agronomist include Outlook integration, email tracking, visibility to sales activities and follow up. Most importantly, it provides a 360-degree view of the client in a way that is accessible to all team members who need it.</p>
+<p><a href="Agronomy/">Agronomy Overview</a></p>
+<p><a href="AgronomistEnd-to-EndScenarios/">Agronomist End-to-End Scenarios</a></p>
+<p><a href="AgronomyImplementationActivities/">Agronomy Implementation Activities</a></p>
+<h3 id="grain"><a class="toclink" href="#grain">Grain</a></h3>
+<p><img alt="Grain" src="assets/images/LevridgeHomePage/grain.PNG" /> </p>
+<p><em>To be documented</em></p>
+<h3 id="accounting-and-retail"><a class="toclink" href="#accounting-and-retail">Accounting and Retail</a></h3>
+<p><img alt="Accounting and Retail" src="assets/images/LevridgeHomePage/accounting.PNG" /> </p>
+<p>Split billing is a unique and necessary challenge for the ag industry. Levridge includes billing split management and the ability to clearly define splits by collecting data and using grower confirmation to maintain accuracy. The ag retail functionality includes the ability for customers and vendors to prepay and the opportunity to track and make adjustments based on consumption and usage.</p>
+<p>Levridge includes a modern and integrated approach to reaching low net pricing by seamlessly handling grower rebates and pricing. By taking advantage of the commissions, rebates and trade agreement set up functions that are native to the Dynamics 365 solution.</p>
+<p><a href="AgronomyRetail/">Agronomy Retail</a></p>
+<h3 id="feed"><a class="toclink" href="#feed">Feed</a></h3>
+<p><img alt="Feed" src="assets/images/LevridgeHomePage/feed.PNG" /> </p>
+<p><a href="Feed/">Feed Overview</a> <em>to be documented</em></p>
+<h3 id="commodity-processing"><a class="toclink" href="#commodity-processing">Commodity Processing</a></h3>
+<p><img alt="Commodity Processing" src="assets/images/LevridgeHomePage/commodity.PNG" /> </p>
+<p>No more dealing with inflexible reporting. A modern cloud-based platform with integration to the Microsoft Office suite and the ability to work with multiple other software applications gives Levridge an enhanced commodity accounting experience. With a built-in connection to the back office and your accounting team, access to information is seamless. </p>
+<h3 id="scale"><a class="toclink" href="#scale">Scale</a></h3>
+<p><img alt="Scale" src="assets/images/LevridgeHomePage/scale.PNG" /> </p>
+<p>With the fastest-speed on the market, the Levridge scale is built with real-time synchronization to see ticket information almost immediately. The Levridge scale can connect to any ERP system within minimal hardware and only one system to maintain and service. The Levridge scale is NTEP certified.</p>
+<p><a href="Scale-Overview/">Scale Overview</a></p>
+<h3 id="equity-and-patronage"><a class="toclink" href="#equity-and-patronage">Equity and Patronage</a></h3>
+<p><img alt="Equity and Patronage" src="assets/images/LevridgeHomePage/equity.PNG" /> </p>
+<p>Due to the many factors involved and difficulty tracking revolving member equity and stock allocations, this has been traditionally handled outside of the central accounting application. It is very likely stored in Excel or some other system that integrates with your accounting or agribusiness solution.</p>
+<p>In Levridge equity and stock allocations are managed within ONE solution. Equity tracking, from build-up, to current balance to pay-out is handled within the Levridge solution.</p>
+<p><a href="Patronage/">Patronage Overview</a></p>
                 
                   
                 
