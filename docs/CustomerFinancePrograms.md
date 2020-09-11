@@ -2,8 +2,8 @@
 
 
 ## Overview
-[Create, Maintain, Monitor Customer Programs](./CreateMaintainMonitorCustomerPrograms.md)
+[Create a Finance Program](./BaseFinanceProgram.md)
 
-[Create a Base Finance Program](./BaseFinanceProgram.md)
+[Create, Maintain, Monitor Customer Programs](./CreateMaintainMonitorCustomerPrograms.md)
 
 [Finance Program Processes](./FinanceProgramProcesses.md)

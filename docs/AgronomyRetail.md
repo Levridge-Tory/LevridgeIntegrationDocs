@@ -9,5 +9,5 @@
 
 [Agronomy Retail Implementation Activities](./AgronomyRetailImplementationActivities.md)
 
-[Customer Finance Programs Documentation](./CustomerFinancePrograms.md)
+[Customer Finance Programs](./CustomerFinancePrograms.md)
 
