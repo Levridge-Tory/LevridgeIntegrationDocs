@@ -1,7 +1,9 @@
 ﻿# Finance Program Processes 
+
 This document outlines other finance program related processes.  
 
 ## Process Finance Program Payments via Transfer
+
 Scenario: Payment is accepted to a central customer account for the Finance program. Funds are then transferred from this account to the intended Customer(s) using a specially configured Customer payment journal.
 1.	Go to Accounts receivable > Payments > Customer payment journal.
 2.	Click New.
@@ -29,6 +31,7 @@ Scenario: Payment is accepted to a central customer account for the Finance prog
 18.	When the journal has been completed. Click Post.
 
 ## Process Finance Program Refund via Transfer
+
 Scenario: Payment is applied to a customer account for the Finance program from the finance company. Funds are not used and must be refunded back to the Finance company. The Finance company has a customer account. Funds are transferred from the Customer(s) to the Finance account using a specially configured Customer payment journal. Once this journal is posted, the Reimbursement process may be executed.
 1.	Go to Accounts receivable > Payments > Customer payment journal.
 2.	Click New.
@@ -55,6 +58,7 @@ Scenario: Payment is applied to a customer account for the Finance program from 
 18.	When the journal has been completed. Click Post.
 
 ## Reimbursement/Issue Refund Process
+
 1.	Go to Accounts receivable > Customers > All customers.
 2.	Use the Quick Filter to find records. For example, filter on the Name field or Account number.
 3.	Select the record.
@@ -98,6 +102,7 @@ Scenario: Payment is applied to a customer account for the Finance program from 
 19.	Process for review and payment per usual processes.
 
 ## Process Finance Program Refund via Journal 
+
 Scenario: Payment is applied to a customer account for the Finance program from the finance company. Funds are not used and must be refunded back to the Finance company. The Finance company has a vendor account. Funds are transferred from the Customer(s) to the Finance account using a specially configured Customer payment journal. Once this journal is posted, the AP process may be executed.
 1.	Go to Accounts receivable > Payments > Customer payment journal.
 2.	Click New.
