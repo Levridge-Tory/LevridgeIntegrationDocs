@@ -9,7 +9,7 @@ The following is an overview of the implementation activities necessary for Comm
  
 In Product information management > Setup > Categories and attributes > Category hierarchies 
 
-- Create product categories for commodities and add commodities to the categories - Need client input
+- Create product categories for commodities and add commodities to the categories
  
 In Product information management > Products > Released products
 
@@ -18,12 +18,12 @@ In Product information management > Products > Released products
  
 In Accounts receivable > Customers > All customers
 
-- Set up lien holders for commodity customer - timeline dependent on how many customers and lien holders (roughly 10 min per customer/p lien holder)
+- Set up lien holders for commodity customer
 - Enter ship to addresses for scale tickets, sales contracts and transportation management (often imported with data migration activities)
  
 In Accounts receivable > Setup > Agriculture > Split groups
 
-- Enter split groups used for commodity accounting (roughly 5 minutes per split, might be imported during data migration)
+- Enter split groups used for commodity accounting
  
 In Accounts receivable > Customers > All customers > Agriculture tab in the action pane > Operations
 
@@ -69,7 +69,7 @@ In Commodity accounting > Setup > Quality and grade factors
 In Commodity accounting > Setup > Risk
 
 - Create dispositions
-- Configure DPR parameters (requires input from client)
+- Configure DPR parameters
 - Enter hedge charge codes 
 - Enter Market zones 
  
