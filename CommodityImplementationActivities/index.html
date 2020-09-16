@@ -15,7 +15,7 @@
     
     
       
-        <title>Commodity Accounting - Levridge Documentation</title>
+        <title>Commodity Accounting Implementation Activities - Levridge Documentation</title>
       
     
     
@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commodity-accounting-overview" class="md-skip">
+        <a href="#commodity-accounting-implementation-activities" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Commodity Accounting
+              Commodity Accounting Implementation Activities
             
           </span>
         </div>
@@ -195,12 +195,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -246,20 +244,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Commodity Accounting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
       Commodity Accounting
     </a>
-    
   </li>
 
         
@@ -717,6 +706,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    Activities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -727,7 +746,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodities.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CommodityImplementationActivities.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -735,8 +754,84 @@
                   
                 
                 
-                <h1 id="commodity-accounting-overview"><a class="toclink" href="#commodity-accounting-overview">Commodity Accounting Overview</a></h1>
-<p><a href="../CommodityImplementationActivities/">Commodity Accounting Implementation Activities</a></p>
+                <h1 id="commodity-accounting-implementation-activities"><a class="toclink" href="#commodity-accounting-implementation-activities">Commodity Accounting Implementation Activities</a></h1>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>The following is an overview of the implementation activities necessary for Commodity Accounting.  </p>
+<h3 id="activities"><a class="toclink" href="#activities">Activities</a></h3>
+<p><em>All of the following tasks are in FinOps:</em></p>
+<p>In Product information management &gt; Setup &gt; Categories and attributes &gt; Category hierarchies </p>
+<ul>
+<li>Create product categories for commodities and add commodities to the categories - Need client input</li>
+</ul>
+<p>In Product information management &gt; Products &gt; Released products</p>
+<ul>
+<li>On each product that is a commodity, enter values into the Commodity fast tab</li>
+<li>Enter units of measures and conversions specific to commodities</li>
+</ul>
+<p>In Accounts receivable &gt; Customers &gt; All customers</p>
+<ul>
+<li>Set up lien holders for commodity customer - timeline dependent on how many customers and lien holders (roughly 10 min per customer/p lien holder)</li>
+<li>Enter ship to addresses for scale tickets, sales contracts and transportation management (often imported with data migration activities)</li>
+</ul>
+<p>In Accounts receivable &gt; Setup &gt; Agriculture &gt; Split groups</p>
+<ul>
+<li>Enter split groups used for commodity accounting (roughly 5 minutes per split, might be imported during data migration)</li>
+</ul>
+<p>In Accounts receivable &gt; Customers &gt; All customers &gt; Agriculture tab in the action pane &gt; Operations</p>
+<ul>
+<li>On customer operations and sites set the commodity split defaults for each commodity customer</li>
+</ul>
+<p>In Accounts receivable &gt; Setup &gt; Agriculture</p>
+<ul>
+<li>Create growing seasons for use on scale tickets</li>
+</ul>
+<p>In Cash and bank management &gt; Bank accounts</p>
+<ul>
+<li>Enter bank accounts that will be used as hedge accounts</li>
+</ul>
+<p>In General ledger &gt; Journal setup &gt; Journal names</p>
+<ul>
+<li>Verify a customer prepayment journal type exists for sales advances</li>
+<li>Create journals to be used for grain settlements and payments</li>
+</ul>
+<p>To utilize the Daily position report (DPR) set up Power BI</p>
+<p>In Commodity accounting &gt; Setup</p>
+<ul>
+<li>Configure Commodity accounting parameters</li>
+<li>Setup Inbound ticket auto apply schedule</li>
+</ul>
+<p>In Commodity accounting &gt; Setup &gt; Discounts and fees</p>
+<ul>
+<li>Create discount tables and schedules</li>
+<li>Create fee schedules and tables</li>
+</ul>
+<p>In Commodity accounting &gt; Setup &gt; Contracts</p>
+<ul>
+<li>Enter contract types</li>
+<li>Enter weights to govern</li>
+<li>Enter grades to govern</li>
+</ul>
+<p>In Commodity accounting &gt; Setup &gt; Quality and grade factors</p>
+<ul>
+<li>Enter grade factors</li>
+<li>Enter quality grades</li>
+<li>Enter grade averaging schedules</li>
+</ul>
+<p>In Commodity accounting &gt; Setup &gt; Risk</p>
+<ul>
+<li>Create dispositions</li>
+<li>Configure DPR parameters (requires input from client)</li>
+<li>Enter hedge charge codes </li>
+<li>Enter Market zones </li>
+</ul>
+<p>In Commodity accounting &gt; Risk management</p>
+<ul>
+<li>Enter commodity tickers</li>
+<li>Create delivery periods</li>
+<li>Enter the bid sheet configuration</li>
+<li>Enter discount schedule defaults</li>
+<li>Enter grade average defaults</li>
+</ul>
                 
               
               
@@ -751,41 +846,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../AgronomyRetail/" title="Agronomy Retail" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy Retail
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Feed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
