@@ -1,9 +1,4 @@
-﻿# Introduction
-Brief introduction of the module, component or feature being documented.
+﻿# Commodity Accounting Overview
 
-This document explains ...
+[Commodity Accounting Implementation Activities](CommodityImplementationActivities.md)
 
-# Overview
-
-# Main Point 1
-## Sub Point 1.1
