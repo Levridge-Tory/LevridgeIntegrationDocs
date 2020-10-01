@@ -630,8 +630,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../CE-configuration/" title="CE Platform Configuration" class="md-nav__link">
-      CE Platform Configuration
+    <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
+      CE to AX Integration Implementation Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Implementation_Checklist/" title="CE Implementation Checklist" class="md-nav__link">
+      CE Implementation Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Setup_Records/" title="CE Setup Records" class="md-nav__link">
+      CE Setup Records
     </a>
   </li>
 
@@ -729,9 +753,9 @@
 <li>Enter setup data under Organization administration &gt; Global address book &gt; Relationship types
     a. Need to define a relationship from customer to customer operation</li>
 <li>Enter sales agreement classifications under Accounts Receivable &gt; Setup &gt; Sales agreement classifications</li>
-<li>Under General Ledger &gt; Journal setup &gt; Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments</li>
-<li>Configure parameters under Accounts Receivable &gt; Setup &gt; Agriculture &gt; Agriculture parameters</li>
-<li>Under Organization administration &gt; Number sequences &gt; Number sequences enter or generate number sequences</li>
+<li>Under General Ledger &gt; Journal setup &gt; Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments </li>
+<li>Configure parameters under Accounts Receivable &gt; Setup &gt; Agriculture &gt; Agriculture parameters </li>
+<li>Under Organization administration &gt; Number sequences &gt; Number sequences enter or generate number sequences </li>
 <li>Enter setup data under Accounts payable &gt; Payment:
     a. Terms of payment - set prepayment fields
     b. Cash discounts - set prepayment fields
@@ -769,10 +793,10 @@
        i. Setup applicator licenses</li>
 <li>Enter indirect ag taxes under Tax &gt; Indirect taxes &gt; Sales tax:
     a. Sales tax codes
-    b.  Sales tax groups
-    c.  Item sales tax groups
-    d.  Sales tax settlement periods
-    e.  Tax reasons</li>
+    b. Sales tax groups
+    c. Item sales tax groups
+    d. Sales tax settlement periods
+    e. Tax reasons</li>
 <li>Under Inventory management &gt; Setup &gt; Inventory breakdown setup sites and warehouse set ag tax values</li>
 <li>Prepare and enter products by setting up ag settings in:
     a. Product information management &gt; Setup &gt; Categories and attributes &gt; Category hierarchies
@@ -797,39 +821,104 @@
         - Define ag specific settings on supplementary sales items
        i. Setup up substitute items</li>
 <li>Under Accounts receivable &gt; Setup &gt; Trade agreement journals enter trade agreement journals including ag specific settings</li>
-<li>Define transfer order charges Under Inventory management &gt; Setup &gt; Charge codes</li>
-<li>If using Transportation management:
-    a. Configure TMS Parameters under Transportation management &gt; Setup &gt; Transportation management parameters
-       i. In the parameters form choose to Initialize base engine data
-    b. Configure data under Transportation management &gt; Setup &gt; Load building
-       i. Load templates
-       ii. Equipment
-    c. Configure data under Transportation management &gt; Setup &gt; Carriers:
-       i. Carrier service codes
-       ii. Mode
-       iii. Transportation methods
-    d.  Enter data under Transportation management &gt; Setup &gt; Rating
-        i.  Carrier accessorial charge
-        ii. Break master
-        iii. Rate master
-        iv. Rating profile
-        v. Rating metadata
-        vi. Miscellaneous charges
-    e. Enter data under Transportation management &gt; Setup&gt; Freight reconciliation
-         i. Reconciliation reasons
-        ii. Freight bill type assignments
-        iii.    Audit master
-    f. Enter data under Transportation management &gt; Setup &gt; Bing map usage key (if using mapping which most clients will be doing)
-    g. Enter data under Transportation management &gt; Setup &gt; Transportation standards
-        i. NMFC codes
-        ii. LTL classes
-    h. Enter data under Transportation management &gt; Setup &gt; Engines
-        i. Mileage engine
-        ii. Rate engine
-        iii. Transit time engine
-        iv. Zone master
-    i. Enter shipping carriers under Transportation management &gt; Setup &gt; Carriers &gt; Shipping carriers
-       i. On the carriers define services, addresses and rating profiles and assign the shipping carrier to a vendor account</li>
+<li>Define transfer order charges Under Inventory management &gt; Setup &gt; Transfer order charges </li>
+<li>
+<p>If using Transportation management:</p>
+<ol>
+<li>
+<p>Configure TMS Parameters under Transportation management &gt; Setup &gt; Transportation management parameters
+   i. General &gt; Vendor invoice</p>
+<ul>
+<li>Write vendor invoice journal - set to yes</li>
+<li>Assign vendor journal name</li>
+<li>Freight bill invoice text
+ii. General &gt; Loads<ul>
+<li>Set flags for when loads get created automatically</li>
+<li>Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
+   iii. General &gt; Dispensing loads</li>
+<li>Set flags for when loads get created (Kahler integration only)
+   iv. General &gt; Freight reconciliation</li>
+<li>Enable freight reconciliation - set to yes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Configure data under Transportation management &gt; Setup &gt; Load building
+   i. Load templates
+   ii. Equipment</p>
+</li>
+<li>Configure data under Transportation management &gt; Setup &gt; Carriers:
+   i. Carrier service codes
+   ii. Mode
+   iii. Transportation methods</li>
+<li>
+<p>Shipping carriers
+        - Name - Specific structure required 
+        - Activate Carrier flag set to yes
+        - Assign vendor account
+        - Activate carrier rating - set to yes
+        - Services
+          - Assign services
+        - Rating profiles</p>
+</li>
+<li>
+<p>Enter data under Transportation management &gt; Setup &gt; Rating
+    i.  Carrier accessorial charge
+    ii. Break master
+    iii. Rate master
+          - Rate base
+    iv. Rating profile
+    v. Rating metadata
+    vi. Miscellaneous charges</p>
+</li>
+<li>Enter data under Transportation management &gt; Setup&gt; Freight reconciliation
+     i. Reconciliation reasons
+    ii. Freight bill type assignments
+    iii.    Audit master</li>
+<li>Enter data under Transportation management &gt; Setup &gt; Bing map usage key (if using mapping which most clients will be doing)</li>
+<li>Enter data under Transportation management &gt; Setup &gt; Transportation standards
+    i. NMFC codes
+    ii. LTL classes</li>
+<li>Enter data under Transportation management &gt; Setup &gt; Engines
+    i. Mileage engine
+    ii. Rate engine
+    iii. Transit time engine
+    iv. Zone master</li>
+<li>
+<p>Warehouse Management Configurations</p>
+</li>
+<li>
+<p>Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses
+    i. Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS
+b. Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)
+c. Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats
+    i. Configure one location format
+d. Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types
+    i. Configure two location types; Dock and User
+e. Warehouse Management &gt; Setup &gt; Location profiles
+    i. Configure two profiles; Default and User
+f. Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters
+    i. General &gt; Assign location profile &amp; Location Type
+g. Warehouse Management &gt; Setup &gt; Load &gt; Item load
+   i. By item group indicate the load template id</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Under Inventory management &gt; Setup &gt; Agriculture &gt; Agriculture parameters
+     a. Dispensing &gt; Load template ID</p>
+</li>
+<li>
+<p>Under Accounts receivable &gt; Setup &gt; Agriculture &gt; Agriculture parameters
+     a. Dispensing &gt; Load template ID</p>
+</li>
+<li>
+<p>Under Product information management &gt; Products &gt; Released products
+     a. Transportation &gt; Use transportation management processes
+     b. Transportation &gt; Carrier service 
+    c. Manage Inventory &gt; Net Weight</p>
+</li>
 </ol>
                 
               
