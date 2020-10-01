@@ -5,7 +5,6 @@
 Implementation checklist for the CE to AX Integration including CE specific items. 
 
 1. Azure App Service(s)
-
 - Created
 - Given Dynamics CE impersonation rights 
   - [Microsoft Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
@@ -24,9 +23,8 @@ Implementation checklist for the CE to AX Integration including CE specific item
 - Subscription
 
 3. CE Setup
-
 - Secure and Unsecure config populated in CE
-- [CE Plugin Dndpoint Configuration](CE_Plugin_Endpoint_Configuration.md)
+- [CE Plugin Endpoint Configuration](CE_Plugin_Endpoint_Configuration.md)
 - [CE Implementation Checklist](CE_Implementation_Checklist.md)
 - [Create Initial Setup Records](CE_Setup_Records.md)
 - [Pricing Service Setup](Pricing_Service_Setup.md)
@@ -38,7 +36,6 @@ Implementation checklist for the CE to AX Integration including CE specific item
    - Set correct default company for application user in F&O
 
 5. Integration setup
-
 - [D365 F&O to D365 CE](D365-F&O-to-D365-CE.md)
 - [D365 CE to D365 F&O](D365-CE-to-D365-F&O.md)
 - [appsettings.json Configuration File](appsettings.json.md)
