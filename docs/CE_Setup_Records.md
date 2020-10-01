@@ -1,5 +1,5 @@
 ﻿
-# CE Setup Recrods
+# CE Setup Records
 Initial CE setup records can be created multiple ways depending on client requirements. They can be set up through the integration, manually created in CE, or imported with tools. 
 
 
