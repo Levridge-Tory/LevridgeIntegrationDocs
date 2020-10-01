@@ -1,8 +1,7 @@
-﻿
 # Levridge CE Implementation Checklist
 Listed are the steps one would want to take to implement CE.
 
-1. CE Setup
+CE Setup
 
   - Secure and Unsecure config populated in CE
   - [Address Data Mapping Configured](Address_Data_Mapping.md)
