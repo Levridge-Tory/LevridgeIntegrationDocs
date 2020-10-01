@@ -1,9 +1,4 @@
 ﻿# Customer Creation
-Brief introduction of the module, component or feature being documented.
-
-This document explains ...
-
-## Customer Creation
 
 1. Go to Accounts receivable > Customers > All Customers.
 2. Click New.

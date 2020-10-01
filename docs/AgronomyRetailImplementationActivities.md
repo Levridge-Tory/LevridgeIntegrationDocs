@@ -16,9 +16,9 @@ The following is an overview of the Agronomy Retail implementation activities.
 2.	Enter setup data under Organization administration > Global address book > Relationship types
 	a. Need to define a relationship from customer to customer operation
 3.	Enter sales agreement classifications under Accounts Receivable > Setup > Sales agreement classifications
-4.	Under General Ledger > Journal setup > Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments
-5.	Configure parameters under Accounts Receivable > Setup > Agriculture > Agriculture parameters
-6.	Under Organization administration > Number sequences > Number sequences enter or generate number sequences
+4.	Under General Ledger > Journal setup > Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments 
+5.	Configure parameters under Accounts Receivable > Setup > Agriculture > Agriculture parameters 
+6.	Under Organization administration > Number sequences > Number sequences enter or generate number sequences 
 7.	Enter setup data under Accounts payable > Payment:
 	a. Terms of payment - set prepayment fields
 	b. Cash discounts - set prepayment fields
@@ -56,10 +56,10 @@ The following is an overview of the Agronomy Retail implementation activities.
        i. Setup applicator licenses
 11.	Enter indirect ag taxes under Tax > Indirect taxes > Sales tax:
     a. Sales tax codes
-    b.	Sales tax groups
-    c.	Item sales tax groups
-    d.	Sales tax settlement periods
-    e.	Tax reasons
+    b. Sales tax groups
+    c. Item sales tax groups
+    d. Sales tax settlement periods
+    e. Tax reasons
 12.	Under Inventory management > Setup > Inventory breakdown setup sites and warehouse set ag tax values
 13.	Prepare and enter products by setting up ag settings in:
     a. Product information management > Setup > Categories and attributes > Category hierarchies
@@ -84,36 +84,82 @@ The following is an overview of the Agronomy Retail implementation activities.
         - Define ag specific settings on supplementary sales items
        i. Setup up substitute items
 14.	Under Accounts receivable > Setup > Trade agreement journals enter trade agreement journals including ag specific settings
-15.	Define transfer order charges Under Inventory management > Setup > Charge codes
+15. Define transfer order charges Under Inventory management > Setup > Transfer order charges 
 16.	If using Transportation management:
-    a. Configure TMS Parameters under Transportation management > Setup > Transportation management parameters
-       i. In the parameters form choose to Initialize base engine data
-    b. Configure data under Transportation management > Setup > Load building
+    1. Configure TMS Parameters under Transportation management > Setup > Transportation management parameters
+       i. General > Vendor invoice
+           - Write vendor invoice journal - set to yes
+           - Assign vendor journal name
+           - Freight bill invoice text
+        ii. General > Loads
+            - Set flags for when loads get created automatically
+            - Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
+       iii. General > Dispensing loads
+            - Set flags for when loads get created (Kahler integration only)
+       iv. General > Freight reconciliation
+            - Enable freight reconciliation - set to yes
+
+    2. Configure data under Transportation management > Setup > Load building
        i. Load templates
        ii. Equipment
-    c. Configure data under Transportation management > Setup > Carriers:
+    3. Configure data under Transportation management > Setup > Carriers:
        i. Carrier service codes
        ii. Mode
        iii. Transportation methods
-    d.	Enter data under Transportation management > Setup > Rating
+       4.   Shipping carriers
+            - Name - Specific structure required 
+            - Activate Carrier flag set to yes
+            - Assign vendor account
+            - Activate carrier rating - set to yes
+            - Services
+              - Assign services
+            - Rating profiles
+
+    4.	Enter data under Transportation management > Setup > Rating
         i.	Carrier accessorial charge
         ii.	Break master
         iii. Rate master
+              - Rate base
         iv. Rating profile
         v. Rating metadata
         vi. Miscellaneous charges
-    e. Enter data under Transportation management > Setup> Freight reconciliation
+    5. Enter data under Transportation management > Setup> Freight reconciliation
          i.	Reconciliation reasons
         ii.	Freight bill type assignments
         iii.	Audit master
-    f. Enter data under Transportation management > Setup > Bing map usage key (if using mapping which most clients will be doing)
-    g. Enter data under Transportation management > Setup > Transportation standards
+    6. Enter data under Transportation management > Setup > Bing map usage key (if using mapping which most clients will be doing)
+    7. Enter data under Transportation management > Setup > Transportation standards
         i. NMFC codes
         ii.	LTL classes
-    h. Enter data under Transportation management > Setup > Engines
+    8. Enter data under Transportation management > Setup > Engines
         i. Mileage engine
         ii. Rate engine
         iii. Transit time engine
         iv. Zone master
-    i. Enter shipping carriers under Transportation management > Setup > Carriers > Shipping carriers
-       i. On the carriers define services, addresses and rating profiles and assign the shipping carrier to a vendor account
+17.	Warehouse Management Configurations
+
+    1. Warehouse management > Setup > Warehouse > Warehouses
+        i. Warehouse > Use warehouse management processes – set flag to yes for all warehouses that will use TMS
+    b. Warehouse Management > Setup > Load posting methods > Regenerate methods (button)
+    c. Warehouse Management > Setup > Warehouse > Location formats
+        i. Configure one location format
+    d. Warehouse Management > Setup > Warehouse > Location types
+        i. Configure two location types; Dock and User
+    e. Warehouse Management > Setup > Location profiles
+        i. Configure two profiles; Default and User
+    f. Configure Warehouse management parameters under Warehouse management > Setup > Warehouse management parameters
+        i. General > Assign location profile & Location Type
+    g. Warehouse Management > Setup > Load > Item load
+       i. By item group indicate the load template id
+ 
+18.	Under Inventory management > Setup > Agriculture > Agriculture parameters
+     a. Dispensing > Load template ID
+ 
+19.	Under Accounts receivable > Setup > Agriculture > Agriculture parameters
+     a. Dispensing > Load template ID
+ 
+20.	Under Product information management > Products > Released products
+     a. Transportation > Use transportation management processes
+     b. Transportation > Carrier service 
+    c. Manage Inventory > Net Weight
+
