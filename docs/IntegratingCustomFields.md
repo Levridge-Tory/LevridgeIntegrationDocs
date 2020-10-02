@@ -53,7 +53,7 @@ The Levridge packages are published to our DevOps Artifacts so you will need to 
 packages. This is done in Visual Studio from Tools/Options/NuGet Package Manager/Package Sources. 
 The source is `https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages-beta/nuget/v3/index.json` 
 If you are working the LevDevelopment branch. If you are working in the customer's repository you should use
-'https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages/nuget/v3/index.json' which 
+`https://pkgs.dev.azure.com/stoneridgesoftware/Levridge/_packaging/LevridgePackages/nuget/v3/index.json` which 
 is the released version of the packages.
 
 
