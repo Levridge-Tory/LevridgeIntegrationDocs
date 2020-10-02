@@ -814,37 +814,45 @@
 <p>To help guarantee a successful cloud implementation, it is important that you discuss and plan your environment early in the project. </p>
 <h2 id="getting-started"><a class="toclink" href="#getting-started">Getting Started</a></h2>
 <ul>
-<li>Configure your Azure Subscription</li>
+<li>Configure your Azure Subscription<ul>
 <li>Create a D365 Subscription</li>
 <li>Create Azure Active Directory accounts</li>
-<li>Request vCPU quota increase for planned environments<ul>
+<li>Request vCPU quota increase for planned environments</li>
 <li><a href="https://docs.microsoft.com/en-us/azure/azure-portal/supportability/per-vm-quota-requests#:~:text=Request%20a%20standard%20quota%20increase%20from%20Subscriptions,-To%20request%20a&amp;text=Select%20the%20subscription%20whose%20quota%20you%20want%20to%20increase.,%2DvCPUs">Azure VM Quota Increase</a></li>
 </ul>
 </li>
-<li>Deploy your Azure DevOps project</li>
+<li>Deploy your Azure DevOps project<ul>
 <li><a href="https://azure.microsoft.com/en-us/services/devops/">Microsoft Azure Dev Ops</a></li>
 <li>Create a security token using your D365Admin account (Used for integration with Lifecycle Services)</li>
-<li>Deploy your Lifecycle Services project (D365 licensing required)</li>
+</ul>
+</li>
+<li>Deploy your Lifecycle Services project (D365 licensing required)<ul>
 <li><a href="https://lcs.dynamics.com/v2">Microsoft Dynamics Lifecycle Services</a></li>
-<li>Complete the Lifecycle Services Onboarding workflow<ul>
+<li>Complete the Lifecycle Services Onboarding workflow</li>
 <li>Includes DevOps integration and Azure integration for environment deployments</li>
 <li><a href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/project-onboarding">Project Onboarding</a></li>
 </ul>
 </li>
-<li>Deploy environments</li>
+<li>Deploy environments<ul>
 <li>Deployed via Lifecycle Services</li>
 <li><a href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/lcs-user-guide">Lifecycle Services (LCS) user guide</a></li>
-<li>Configure Levridge Integrations</li>
+</ul>
+</li>
+<li>Configure Levridge Integrations<ul>
 <li><a href="C:\Users\jessiwoi\source\repos\Levridge-Tory\LevridgeIntegrationDocs\docs\Integration-Overview.md">Levridge Integration Deployment Procedures</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="d365-fo-system-requirements"><a class="toclink" href="#d365-fo-system-requirements">D365 F&amp;O System Requirements</a></h2>
 <ul>
 <li>Azure Tenant</li>
-<li>Azure Active Directory Accounts</li>
+<li>Azure Active Directory Accounts<ul>
 <li>D365Admin</li>
 <li>D365Test1</li>
 <li>D365Test2</li>
 <li>LevridgeIntegrations</li>
+</ul>
+</li>
 <li>Azure Execution Account (Manage Azure VM schedules)</li>
 <li>Lifecycle Services Project (included with D365 licensing)</li>
 <li>Azure DevOps (Cloud based)</li>
