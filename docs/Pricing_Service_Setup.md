@@ -12,4 +12,4 @@ The configuration for the pricing service setup is as follows:
      "resource": "https://[environment subdomain].cloudax.dynamics.com",
      "username": "John.smith@email.com",
      "password": "plaintextpassword"
-}
+    }
