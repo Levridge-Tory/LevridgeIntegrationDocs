@@ -3,8 +3,8 @@
 # Pricing Service Setup
 The configuration for the pricing service setup is as follows:  
 
-
-    {
+```
+ {
      "clientappid": "[Client AppID from AD]",
      "clientappsecret": "[secret from AD]",
      "tenant": "https://login.microsoftonline.com/5555a5b1-fbt8-465b-ad9d-21e21129e610/oauth2/token",
@@ -13,3 +13,5 @@ The configuration for the pricing service setup is as follows:
      "username": "John.smith@email.com",
      "password": "plaintextpassword"
 }
+```
+
