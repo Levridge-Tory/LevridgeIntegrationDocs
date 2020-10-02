@@ -671,47 +671,6 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#azure-app-services" class="md-nav__link">
-    Azure App Service(s)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-azure-service-bus" class="md-nav__link">
-    Setup Azure Service Bus
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ce-setup" class="md-nav__link">
-    CE Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fo-setup" class="md-nav__link">
-    F&amp;O Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-setup" class="md-nav__link">
-    Integration Setup
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -800,47 +759,6 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#azure-app-services" class="md-nav__link">
-    Azure App Service(s)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setup-azure-service-bus" class="md-nav__link">
-    Setup Azure Service Bus
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ce-setup" class="md-nav__link">
-    CE Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fo-setup" class="md-nav__link">
-    F&amp;O Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-setup" class="md-nav__link">
-    Integration Setup
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -866,42 +784,52 @@
                 <h1 id="ce-to-ax-integration-implementation-checklist"><a class="toclink" href="#ce-to-ax-integration-implementation-checklist">CE to AX Integration Implementation Checklist</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
 <p>Implementation checklist for the CE to AX Integration including CE specific items. </p>
-<h3 id="azure-app-services"><a class="toclink" href="#azure-app-services">Azure App Service(s)</a></h3>
 <ol>
+<li>Azure App Service(s)</li>
 <li>Created</li>
 <li>Given Dynamics CE impersonation rights </li>
 <li><a href="https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory">Microsoft Tutorial: Register an app with Azure Active Directory</a></li>
-<li>Given AX rights
-   <img alt="IntegrationAXrights" src="../assets/images/IntegrationAXrights.png" /></li>
+<li>Given AX rights</li>
+</ol>
+<p><img alt="IntegrationAXrights" src="../assets/images/IntegrationAXrights.png" /></p>
+<ul>
 <li>User set up in AX</li>
 <li>Default Company set up in AX</li>
 <li>Set up as an application user in CE</li>
-<li><a href="https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-an-application-user">Create users and assign security roles</a></li>
-</ol>
-<h3 id="setup-azure-service-bus"><a class="toclink" href="#setup-azure-service-bus">Setup <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview">Azure Service Bus</a></a></h3>
-<ul>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-an-application-user">Create users and assign security roles</a></p>
+</li>
+<li>
+<p>Setup <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview">Azure Service Bus</a></p>
+</li>
 <li>Topic</li>
-<li>Subscription</li>
-</ul>
-<h3 id="ce-setup"><a class="toclink" href="#ce-setup">CE Setup</a></h3>
-<ul>
+<li>
+<p>Subscription</p>
+</li>
+<li>
+<p>CE Setup</p>
+</li>
 <li>Secure and Unsecure config populated in CE</li>
-<li><a href="../CE_Plugin_Endpoint_Configuration/">CE Plugin Endpoint Configuration</a></li>
+<li><a href="../CE_Plugin_Endpoint_Configuration/">CE Plugin Dndpoint Configuration</a></li>
 <li><a href="../CE_Implementation_Checklist/">CE Implementation Checklist</a></li>
 <li><a href="../CE_Setup_Records/">Create Initial Setup Records</a></li>
-<li><a href="../Pricing_Service_Setup/">Pricing Service Setup</a></li>
-</ul>
-<h3 id="fo-setup"><a class="toclink" href="#fo-setup">F&amp;O Setup</a></h3>
-<ul>
+<li>
+<p><a href="../Pricing_Service_Setup/">Pricing Service Setup</a></p>
+</li>
+<li>
+<p>F&amp;O Setup</p>
+</li>
 <li>Fill out Azure Active Directory Application in F&amp;O</li>
 <li>By allowing an external application to access your data you are affirming that you understand that the data handling and compliance standards of the external application may not be the same as those provided by Microsoft. Please consult the documentation for the application that you are enabling to learn more. Your privacy is important to us. For more information, see privacy statement.</li>
-<li>Set correct default company for application user in F&amp;O</li>
-</ul>
-<h3 id="integration-setup"><a class="toclink" href="#integration-setup">Integration Setup</a></h3>
-<ul>
+<li>
+<p>Set correct default company for application user in F&amp;O</p>
+</li>
+<li>
+<p>Integration setup</p>
+</li>
 <li><a href="../D365-F%26O-to-D365-CE/">D365 F&amp;O to D365 CE</a></li>
 <li><a href="../D365-CE-to-D365-F%26O/">D365 CE to D365 F&amp;O</a></li>
-<li><a href="../appsettings.json/">appsettings.json configuration file</a></li>
+<li><a href="../appsettings.json/">appsettings.json Configuration File</a></li>
 <li>Create source and target config for F&amp;O to CE</li>
 <li>Create source and target config for CE to F&amp;O</li>
 <li><a href="../Logging/">Logging Settings</a></li>
