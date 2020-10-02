@@ -19,7 +19,7 @@ Implementation checklist for the CE to AX Integration including CE specific item
     - Subscription
 3. CE Setup
     - Secure and Unsecure config populated in CE
-    - [CE Plugin Dndpoint Configuration](CE_Plugin_Endpoint_Configuration.md)
+    - [CE Plugin Endpoint Configuration](CE_Plugin_Endpoint_Configuration.md)
     - [CE Implementation Checklist](CE_Implementation_Checklist.md)
     - [Create Initial Setup Records](CE_Setup_Records.md)
     - [Pricing Service Setup](Pricing_Service_Setup.md)
