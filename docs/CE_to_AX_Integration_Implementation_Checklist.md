@@ -30,11 +30,11 @@ Implementation checklist for the CE to AX Integration including CE specific item
       - Set correct default company for application user in F&O
 
 5. Integration setup
-- [D365 F&O to D365 CE](D365-F&O-to-D365-CE.md)
-- [D365 CE to D365 F&O](D365-CE-to-D365-F&O.md)
-- [appsettings.json Configuration File](appsettings.json.md)
-- Create source and target config for F&O to CE
-- Create source and target config for CE to F&O
-- [Logging Settings](Logging.md)
-   - Use warning or error for product
-- Set [Instance Config](InstanceConfig.md)
+    - [D365 F&O to D365 CE](D365-F&O-to-D365-CE.md)
+    - [D365 CE to D365 F&O](D365-CE-to-D365-F&O.md)
+    - [appsettings.json Configuration File](appsettings.json.md)
+    - Create source and target config for F&O to CE
+    - Create source and target config for CE to F&O
+    - [Logging Settings](Logging.md)
+       - Use warning or error for product
+    - Set [Instance Config](InstanceConfig.md)
