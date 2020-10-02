@@ -6,9 +6,9 @@ Implementation checklist for the CE to AX Integration including CE specific item
 
 1. Azure App Service(s)
 
-   - Created
-   - Given Dynamics CE impersonation rights 
-   - [Microsoft Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
+   * Created
+   * Given Dynamics CE impersonation rights 
+   * [Microsoft Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
    - Given AX rights
 
 ![IntegrationAXrights](./assets/images/IntegrationAXrights.png)
