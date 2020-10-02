@@ -6,17 +6,17 @@ Implementation checklist for the CE to AX Integration including CE specific item
 
 1. Azure App Service(s)
 
-   - Created
-   - Given Dynamics CE impersonation rights 
-   - [Microsoft Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
-   - Given AX rights
+   1. Created
+   2. Given Dynamics CE impersonation rights 
+   3. [Microsoft Tutorial: Register an app with Azure Active Directory](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory)
+   4. Given AX rights
 
 ![IntegrationAXrights](./assets/images/IntegrationAXrights.png)
  
-   - User set up in AX
-   - Default Company set up in AX
-   - Set up as an application user in CE
-     - [Create users and assign security roles](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-an-application-user)
+   5. User set up in AX
+   6. Default Company set up in AX
+   7. Set up as an application user in CE
+      - [Create users and assign security roles](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-an-application-user)
 
 2. Setup [Azure Service Bus](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
    - Topic
