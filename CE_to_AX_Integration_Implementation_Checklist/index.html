@@ -837,50 +837,45 @@
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
 <p>Implementation checklist for the CE to AX Integration including CE specific items. </p>
 <ol>
-<li>Azure App Service(s)</li>
-</ol>
-<!-- need to do something -->
-
-<ul>
+<li>Azure App Service(s)<ul>
 <li>Created</li>
 <li>Given Dynamics CE impersonation rights </li>
 <li><a href="https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/walkthrough-register-app-azure-active-directory">Microsoft Tutorial: Register an app with Azure Active Directory</a></li>
 <li>Given AX rights</li>
 </ul>
+</li>
+</ol>
 <p><img alt="IntegrationAXrights" src="../assets/images/IntegrationAXrights.png" /></p>
+<pre><code>* User set up in AX
+* Default Company set up in AX
+* Set up as an application user in CE
+  - [Create users and assign security roles](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-an-application-user)
+</code></pre>
 <ol>
-<li>User set up in AX</li>
-<li>Default Company set up in AX</li>
 <li>
-<p>Set up as an application user in CE</p>
+<p>Setup <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview">Azure Service Bus</a></p>
 <ul>
-<li><a href="https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles#create-an-application-user">Create users and assign security roles</a></li>
+<li>Topic</li>
+<li>Subscription</li>
 </ul>
 </li>
 <li>
-<p>Setup <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview">Azure Service Bus</a></p>
-</li>
-<li>Topic</li>
-<li>
-<p>Subscription</p>
-</li>
-<li>
 <p>CE Setup</p>
-</li>
+<ul>
 <li>Secure and Unsecure config populated in CE</li>
 <li><a href="../CE_Plugin_Endpoint_Configuration/">CE Plugin Dndpoint Configuration</a></li>
 <li><a href="../CE_Implementation_Checklist/">CE Implementation Checklist</a></li>
 <li><a href="../CE_Setup_Records/">Create Initial Setup Records</a></li>
-<li>
-<p><a href="../Pricing_Service_Setup/">Pricing Service Setup</a></p>
+<li><a href="../Pricing_Service_Setup/">Pricing Service Setup</a></li>
+</ul>
 </li>
 <li>
 <p>F&amp;O Setup</p>
-</li>
+<ul>
 <li>Fill out Azure Active Directory Application in F&amp;O</li>
 <li>By allowing an external application to access your data you are affirming that you understand that the data handling and compliance standards of the external application may not be the same as those provided by Microsoft. Please consult the documentation for the application that you are enabling to learn more. Your privacy is important to us. For more information, see privacy statement.</li>
-<li>
-<p>Set correct default company for application user in F&amp;O</p>
+<li>Set correct default company for application user in F&amp;O</li>
+</ul>
 </li>
 <li>
 <p>Integration setup</p>
