@@ -1,8 +1,8 @@
-﻿# Agronomy Retail Implementation Activities
+﻿# Agronomy Sales Implementation Activities
 
 
 ## Overview
-The following is an overview of the Agronomy Retail implementation activities.  
+The following is an overview of the Agronomy Sales implementation activities.  
    
 1. Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported) 
 	a. Customer operation types

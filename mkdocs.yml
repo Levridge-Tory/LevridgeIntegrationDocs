@@ -17,7 +17,7 @@ nav:
     - Home: index.md
     - Products:
         - Agronomy: 'Agronomy.md'
-        - Agronomy Retail: 'AgronomyRetail.md'
+        - Agronomy Sales: 'AgronomySales.md'
         - Commodity Accounting: 'Commodities.md'
         - Feed: 'Feed.md'
         - Equity Management: 'Patronage.md'
