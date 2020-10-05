@@ -32,7 +32,7 @@ Split billing is a unique and necessary challenge for the ag industry. Levridge 
 
 Levridge includes a modern and integrated approach to reaching low net pricing by seamlessly handling grower rebates and pricing. By taking advantage of the commissions, rebates and trade agreement set up functions that are native to the Dynamics 365 solution.
 
-[Agronomy Retail](AgronomyRetail.md)
+[Agronomy Sales](AgronomySales.md)
 
 ### Feed
 ![Feed](./assets/images/LevridgeHomePage/feed.PNG) 

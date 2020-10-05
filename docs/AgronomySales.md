@@ -7,7 +7,7 @@
 
 [Manage Splits, Sales Contracts and Prepayments](./ManagingSplits_SalesContracts_Prepayments.md) 
 
-[Agronomy Retail Implementation Activities](./AgronomyRetailImplementationActivities.md)
+[Agronomy Sales Implementation Activities](./AgronomySalesImplementationActivities.md)
 
 [Customer Finance Programs](./CustomerFinancePrograms.md)
 
