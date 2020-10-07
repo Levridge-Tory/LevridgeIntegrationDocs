@@ -11,3 +11,6 @@
 
 [Customer Finance Programs](./CustomerFinancePrograms.md)
 
+[Managing Fertilizer Contracts for Ag Retailers](Managing_Fertilizer_Contracts_For_Ag_Retailers.md)
+
+
