@@ -23,7 +23,13 @@ Vital features for the agronomist include Outlook integration, email tracking, v
 ### Grain
 ![Grain](./assets/images/LevridgeHomePage/grain.PNG) 
 
-*To be documented*
+[Grain Overview](Grain.md)
+
+Includes an overview of the outbound and inbound grain processes. 
+
+[Outbound Processes](Grain_Outbound_Processes.md)
+
+An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. 
 
 ### Accounting and Retail
 ![Accounting and Retail](./assets/images/LevridgeHomePage/accounting.PNG) 
