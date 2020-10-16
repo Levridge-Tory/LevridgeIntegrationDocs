@@ -726,18 +726,22 @@
 <h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
 <p>An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. </p>
 <p>Finance &amp; Operations &gt; Modules &gt; Commodity Accounting </p>
-<p>From the commodity accounting menu, the outbound process consists of: 
-- Sales contracts
-- Sales commodity contracts for load requests
-- Load requests
-- Outbound scale tickets
-- Outbound scale ticket application
-- Open contracts</p>
-<p>One also has the Invoicing option, which includes:
-- Grain shipped not invoiced
-- Outbound scale ticket destination weights and grades
-- Shipped not invoiced – Bulk
-- All sales advances</p>
+<p>From the commodity accounting menu, the outbound process consists of: </p>
+<ul>
+<li>Sales contracts</li>
+<li>Sales commodity contracts for load requests</li>
+<li>Load requests</li>
+<li>Outbound scale tickets</li>
+<li>Outbound scale ticket application</li>
+<li>Open contracts</li>
+</ul>
+<p>One also has the Invoicing option, which includes:</p>
+<ul>
+<li>Grain shipped not invoiced</li>
+<li>Outbound scale ticket destination weights and grades</li>
+<li>Shipped not invoiced – Bulk</li>
+<li>All sales advances</li>
+</ul>
 <h2 id="sales-contracts"><a class="toclink" href="#sales-contracts">Sales Contracts</a></h2>
 <h3 id="creating-a-new-sales-contract"><a class="toclink" href="#creating-a-new-sales-contract">Creating a New Sales Contract</a></h3>
 <p>There are two sections of Sales Contracts:
@@ -750,9 +754,11 @@
 <li>Customer account: Automatically defaulted; can be changed</li>
 <li>Commodity: user defined</li>
 <li>Contract quantity: Amount of commodity available for the contract</li>
-<li>Load based: This is a toggle field set to yes / no. </li>
+<li>Load based: This is a toggle field set to yes / no. <ul>
 <li>If set to no, the Number of loads will default to the Contract quantity. </li>
 <li>If set to yes: the contract is only satisfied by the number of loads. One would indicate the number of loads requested, which the system would calculate the load size. The Contract quantity is not significant to satisfy the contract. The Load size is user-defined with the Number of loads being reflective of the Load size. </li>
+</ul>
+</li>
 <li>Discount schedule: you can choose discount schedule you would like in order to calculate the discounts that will be charged to you based off grain you deliver. </li>
 <li>Delivery Terms: user-defined. Majority of commodities are shipped on a Delivered basis. </li>
 <li>Grades to govern: user-defined. Defaults to Destination</li>
@@ -760,8 +766,10 @@
 <li>Delivery Period: Choose specific month and year</li>
 <li>Ticker: Pricing purposes</li>
 <li>Board Price: Becomes grayed out (un-usable) if Basis contract is used.  </li>
-<li>Net Price: Becomes grayed out (un-usable) if Basis contract is used.  </li>
+<li>Net Price: Becomes grayed out (un-usable) if Basis contract is used.  <ul>
 <li>Basis: Enter basis price if Basis contract is used. If Cash contract is used, it opens up board price and basis. Would need to enter both of those and the system will calculate Net price. </li>
+</ul>
+</li>
 </ul>
 <p>Click Create</p>
 <p>After the contract is created, the Sales contract is available to view in the Sales contract header. The Delivery Period section shows the commodity scheduled for that delivery period. There can be multiple delivery periods along with the option to enter additional delivery periods and remove delivery periods. </p>
@@ -775,57 +783,61 @@
 <p>The Header section includes the following fields: </p>
 <ul>
 <li>Sales contract header </li>
-<li>Miscellaneous details</li>
+<li>Miscellaneous details<ul>
 <li>The ability to identify the trader, broker, and broker commission rates. The system does not create a payable based off commission rate. This would need to be paid separately. </li>
-<li>Reference Numbers</li>
+</ul>
+</li>
+<li>Reference Numbers<ul>
 <li>An alphanumeric field available as a cross reference to ensure the Sales Contract matches with the broker and/or trader’s purchase contract number. </li>
-<li>Notes</li>
+</ul>
+</li>
+<li>Notes<ul>
 <li>An option for notes to be included and printed on the contract.</li>
-<li>Contract dates and quantities</li>
+</ul>
+</li>
+<li>Contract dates and quantities<ul>
 <li>The ability to keep track if the contract has been signed and returned. </li>
 <li>Can include Contract date, Sent date, and Date returned. This allows the ability to generate a report out of the system and preview what contracts have been sent and returned.</li>
-<li>Discounts, fees, and freight</li>
+</ul>
+</li>
+<li>Discounts, fees, and freight<ul>
 <li>The Discount schedule previously chosen by generating a new Sales Contract will show in this field. If there are additional discount schedules, one can include on Fee schedule field. Terms of payment will default from customer. </li>
 <li>Delivery terms</li>
-<li>Market to market adjustment<ul>
+<li>Market to market adjustment</li>
 <li>Market adjustments made through individual site or central site locations. </li>
 <li>If brought to a central site, the freight adjustment could be received from the issuing location back to the pricing location and brough together for one market price. Gains or losses would be calculated based off this market to market adjustment.</li>
-</ul>
-</li>
-<li>Freight included in basis<ul>
+<li>Freight included in basis</li>
 <li>The ability to determine freight costs from the basis. Some merchandisers prefer to see freight separately. This is an option to set freight costs in the system with the commodity dollar amount posting to a freight expense account instead of being part of the margin. </li>
-</ul>
-</li>
-<li>Freight per unit<ul>
+<li>Freight per unit</li>
 <li>The ability to record what the freight rate was. This is for informational purposes and with the ability to print on the contract if preferred. </li>
-</ul>
-</li>
-<li>Freight invoiceable<ul>
+<li>Freight invoiceable</li>
 <li>A toggle switch with the ability to create an invoice based of freight weight (if toggled to yes). </li>
 </ul>
 </li>
-<li>Addresses</li>
+<li>Addresses<ul>
 <li>When a ticket is entered and applied to a contract, the addresses need to match. </li>
 <li>Ship from address: current location</li>
 <li>Ship to name: </li>
 <li>FOB address: destination contract. </li>
-<li>Hedge commodity</li>
-<li>For hedging purposes. The ability to identify if there was a commodity either being bought or sold that was not traded on an exchange. 
-Within the contract entry, additional functionality includes: </li>
-<li>View: </li>
-<li>Scale tickets and load requests issued against a contract, along with load orders tied to a contract. </li>
-<li>Generate: </li>
-<li>Pricing confirmation. This can be printed. </li>
-<li>Fill:</li>
-<li>Ability to fill at market price or contract price. <ul>
-<li>Market price: </li>
-<li>Takes quantity against current market. The system calculates gain/loss to create either a payable or receivable </li>
-<li>Contract price: </li>
-<li>Takes quantity against current contract price. There is no gain or losses. </li>
-<li>Can cancel or underfill the contract at any time. </li>
+</ul>
+</li>
+<li>Hedge commodity<ul>
+<li>For hedging purposes. The ability to identify if there was a commodity either being bought or sold that was not traded on an exchange. </li>
 </ul>
 </li>
 </ul>
+<p>Within the contract entry, additional functionality includes: 
+- View: 
+    - Scale tickets and load requests issued against a contract, along with load orders tied to a contract. 
+- Generate: 
+    - Pricing confirmation. This can be printed. 
+- Fill:
+    - Ability to fill at market price or contract price. 
+      - Market price: 
+        - Takes quantity against current market. The system calculates gain/loss to create either a payable or receivable 
+      - Contract price: 
+        - Takes quantity against current contract price. There is no gain or losses. 
+      - Can cancel or underfill the contract at any time. </p>
 <h3 id="sales-commodity-contracts-for-load-requests"><a class="toclink" href="#sales-commodity-contracts-for-load-requests">Sales Commodity Contracts for Load Requests</a></h3>
 <p>Load request contracts can be viewed under Commodity Accounting &gt; Outbound menu tab. 
 A load request is a shipping order that states the specific ship date/time for a specific sales contract. </p>
