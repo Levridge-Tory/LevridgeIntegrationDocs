@@ -29,6 +29,8 @@ Includes an overview of the outbound and inbound grain processes.
 
 [Outbound Processes](Grain_Outbound_Processes.md)
 
+[Inbound Processes](Grain_Inbound_Processes.md)
+
 An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. 
 
 ### Accounting and Retail

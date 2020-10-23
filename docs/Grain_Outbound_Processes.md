@@ -241,3 +241,5 @@ If the shipment is selected to invoice, the system processes the shipment and ca
 ![Picture7](.\assets\images\Grain\Picture7.png)
 
 This is all the transactional outbound shipments for sales purposes. 
+
+The Grain Inbound Processes can be found under [Grain Inbound Processes](Grain_Inbound_Processes.md)
