@@ -29,9 +29,13 @@ Includes an overview of the outbound and inbound grain processes.
 
 [Outbound Processes](Grain_Outbound_Processes.md)
 
+An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. 
+
 [Inbound Processes](Grain_Inbound_Processes.md)
 
-An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. 
+An overview of the inbound grain process beginning with contracts and working through settlements. The in-bound process will be used for anyone buying in a commodity.  
+
+
 
 ### Accounting and Retail
 ![Accounting and Retail](./assets/images/LevridgeHomePage/accounting.PNG) 
