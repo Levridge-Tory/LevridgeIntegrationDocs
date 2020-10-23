@@ -16,7 +16,7 @@
     
     
       
-        <title>Grain Outbound Processes - Levridge Documentation</title>
+        <title>Grain Inbound Processes - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grain-outbound-processes" class="md-skip">
+        <a href="#grain-inbound-processes" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Grain Outbound Processes
+              Grain Inbound Processes
             
           </span>
         </div>
@@ -714,7 +714,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Grain_Outbound_Processes.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Grain_Inbound_Processes.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -722,109 +722,107 @@
                   
                 
                 
-                <h2 id="grain-outbound-processes"><a class="toclink" href="#grain-outbound-processes">Grain - Outbound Processes</a></h2>
+                <h2 id="grain-inbound-processes"><a class="toclink" href="#grain-inbound-processes">Grain - Inbound Processes</a></h2>
 <h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
-<p>An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. </p>
+<p>An overview of the inbound grain process beginning with contracts and working through settlements. The in-bound process will be used for anyone buying in a commodity.  </p>
 <p>Finance &amp; Operations &gt; Modules &gt; Commodity Accounting </p>
 <p>From the commodity accounting menu, the outbound process consists of: </p>
 <ul>
-<li>Sales contracts</li>
-<li>Sales commodity contracts for load requests</li>
-<li>Load requests</li>
-<li>Outbound scale tickets</li>
-<li>Outbound scale ticket application</li>
+<li>Contracts<ul>
+<li>Offers</li>
+<li>Purchase contracts</li>
+<li>Storage agreements</li>
+<li>Contract expiration</li>
 <li>Open contracts</li>
 </ul>
-<p>One also has the Invoicing option, which includes:</p>
+</li>
+<li>Delivery </li>
+<li>Settlement</li>
+</ul>
+<h2 id="contracts"><a class="toclink" href="#contracts">Contracts</a></h2>
+<h3 id="offers"><a class="toclink" href="#offers">Offers</a></h3>
+<p>Commodity Accounting &gt; Inbound &gt; Contract &gt; Offers
+The Offers My view shows a list of open offers. Open offers can be filtered by Branch, Commodity and Executed offers. Executed Offers is a yes/no toggle button if flipped to “Yes” will show the contracts that have been filled with a purchase contract issued to the contract. </p>
+<p><img alt="Picture1" src="../assets/images/Grain_Inbound/Picture1.png" /></p>
+<p>To create a new offer, click New. </p>
+<p><img alt="Picture2" src="../assets/images/Grain_Inbound/Picture2.png" /></p>
+<p>A Create offer window will appear on the right-hand side. The Create offer fields include: </p>
 <ul>
-<li>Grain shipped not invoiced</li>
-<li>Outbound scale ticket destination weights and grades</li>
-<li>Shipped not invoiced – Bulk</li>
-<li>All sales advances</li>
+<li>Branch</li>
+<li>Offer date</li>
+<li>Offer type<ul>
+<li>Notification - Before offer can be executed, the user needs to contact whoever created the offer and ask if they want the contract to be executed. </li>
+<li>Market offer - If the current market or bid at this location reaches offer level, the contract is executed automatically.</li>
 </ul>
-<h2 id="sales-contracts"><a class="toclink" href="#sales-contracts">Sales Contracts</a></h2>
-<h3 id="creating-a-new-sales-contract"><a class="toclink" href="#creating-a-new-sales-contract">Creating a New Sales Contract</a></h3>
-<p>There are two sections of Sales Contracts:
-- Line Detail
-- Header</p>
-<p>The following items are viewable in the Line Detail section.</p>
-<p>To enter a new sales contract (grain that is being shipped to another individual or company), click on Sales contracts. The new window will show a listing of all the sales contracts that currently exist. Click New located on the tab bar. The Create sales contract window will appear on the right-hand side and will default in the Branch one is located at.  The Branch location can be changed. Additional items to be entered include: </p>
+</li>
+<li>Customer</li>
+<li>Commodity</li>
+<li>Contract type</li>
+<li>Delivery period</li>
+<li>Offer quantity</li>
+<li>Ticket default: Automatically defaults. The input is reflective of selected Delivery period. </li>
+<li>Board price</li>
+<li>Basis</li>
+<li>Net price</li>
+<li>Expiration date</li>
+<li>FOB location</li>
+<li>Notes</li>
+</ul>
+<p>Click Create. A review of the contract is then generated. Click Save. Created offers can be removed. </p>
+<h3 id="purchase-contracts"><a class="toclink" href="#purchase-contracts">Purchase Contracts</a></h3>
+<p>The Create purchase contract is generated by clicking New and opening an offer. A Create offer window will appear on the right-hand side. This is the same Create purchase contract window shown in the Create Contracts section. </p>
+<p>Click Create. The system will show the created Purchase contract. </p>
+<p>The Line view includes General and Delivery and pricing information. The General view outlines the line detail part of the contract capturing the contract information currently in the system. The Customer operation field is a farm field type development. The Delivery and pricing information view show the delivery information. </p>
+<p><img alt="Picture4" src="../assets/images/Grain_Inbound/Picture4.png" /></p>
+<p>The Header view shows additional detail:</p>
 <ul>
-<li>Contract Type: user defined </li>
-<li>Customer account: Automatically defaulted; can be changed</li>
-<li>Commodity: user defined</li>
-<li>Contract quantity: Amount of commodity available for the contract</li>
-<li>Load based: This is a toggle field set to yes / no. <ul>
-<li>If set to no, the Number of loads will default to the Contract quantity. </li>
-<li>If set to yes: the contract is only satisfied by the number of loads. One would indicate the number of loads requested, which the system would calculate the load size. The Contract quantity is not significant to satisfy the contract. The Load size is user-defined with the Number of loads being reflective of the Load size. </li>
-</ul>
-</li>
-<li>Discount schedule: you can choose discount schedule you would like in order to calculate the discounts that will be charged to you based off grain you deliver. </li>
-<li>Delivery Terms: user-defined. Majority of commodities are shipped on a Delivered basis. </li>
-<li>Grades to govern: user-defined. Defaults to Destination</li>
-<li>Weights to govern: user-defined. Defaults to Destination</li>
-<li>Delivery Period: Choose specific month and year</li>
-<li>Ticker: Pricing purposes</li>
-<li>Board Price: Becomes grayed out (un-usable) if Basis contract is used.  </li>
-<li>Net Price: Becomes grayed out (un-usable) if Basis contract is used.  <ul>
-<li>Basis: Enter basis price if Basis contract is used. If Cash contract is used, it opens up board price and basis. Would need to enter both of those and the system will calculate Net price. </li>
-</ul>
-</li>
-</ul>
-<p>Click Create</p>
-<p>After the contract is created, the Sales contract is available to view in the Sales contract header. The Delivery Period section shows the commodity scheduled for that delivery period. There can be multiple delivery periods along with the option to enter additional delivery periods and remove delivery periods. </p>
-<h3 id="setting-the-price-on-a-basis-contract"><a class="toclink" href="#setting-the-price-on-a-basis-contract">Setting the Price on a Basis Contract</a></h3>
-<p>Basis contracts are required to have a price set. This is done by clicking on “Set price” under Delivery Periods. The system will open a Contract pricing slider where the user can enter a Price quantity for the contract. The user can price out the whole quantity or a portion of the quantity. The Net price will be generated with the entering of the Price quantity, along with the Board price and previously entered Basis.</p>
-<p>Click Create</p>
-<p>A new delivery period line is created with the set price contract. </p>
-<h3 id="alternate-delivery-pricing"><a class="toclink" href="#alternate-delivery-pricing">Alternate Delivery Pricing</a></h3>
-<p>A function available with Sales Contract is the alternate delivery pricing. This functionality allows one to choose a different shipping address and a different price in (adjustment for shipping). Depending on when the ticket is entered and the chosen shipping address, the system will know what price to pull from. </p>
-<h3 id="contract-entry"><a class="toclink" href="#contract-entry">Contract Entry</a></h3>
-<p>The Header section includes the following fields: </p>
-<ul>
-<li>Sales contract header </li>
-<li>Miscellaneous details<ul>
-<li>The ability to identify the trader, broker, and broker commission rates. The system does not create a payable based off commission rate. This would need to be paid separately. </li>
-</ul>
-</li>
-<li>Reference Numbers<ul>
-<li>An alphanumeric field available as a cross reference to ensure the Sales Contract matches with the broker and/or trader’s purchase contract number. </li>
-</ul>
-</li>
-<li>Notes<ul>
-<li>An option for notes to be included and printed on the contract.</li>
+<li>General contract information<ul>
+<li>Includes Direct Ship information</li>
 </ul>
 </li>
 <li>Contract dates and quantities<ul>
-<li>The ability to keep track if the contract has been signed and returned. </li>
-<li>Can include Contract date, Sent date, and Date returned. This allows the ability to generate a report out of the system and preview what contracts have been sent and returned.</li>
+<li>Once tickets are applied to the contract, the system begins tracking what has been delivered. </li>
+<li>Part of a commodity can also be canceled. </li>
+<li>Sent date: The ability to track whether the contract has been signed </li>
+<li>Date returned: The date when the contract was returned</li>
+<li>Contract expires: The date when the contract expires. There is a contract expiration program track and get rid of contracts that have expired. </li>
 </ul>
 </li>
-<li>Discounts, fees, and freight<ul>
-<li>The Discount schedule previously chosen by generating a new Sales Contract will show in this field. If there are additional discount schedules, one can include on Fee schedule field. Terms of payment will default from customer. </li>
-<li>Delivery terms</li>
-<li>Market to market adjustment</li>
-<li>Market adjustments made through individual site or central site locations. </li>
-<li>If brought to a central site, the freight adjustment could be received from the issuing location back to the pricing location and brough together for one market price. Gains or losses would be calculated based off this market to market adjustment.</li>
-<li>Freight included in basis</li>
-<li>The ability to determine freight costs from the basis. Some merchandisers prefer to see freight separately. This is an option to set freight costs in the system with the commodity dollar amount posting to a freight expense account instead of being part of the margin. </li>
-<li>Freight per unit</li>
-<li>The ability to record what the freight rate was. This is for informational purposes and with the ability to print on the contract if preferred. </li>
-<li>Freight invoiceable</li>
-<li>A toggle switch with the ability to create an invoice based of freight weight (if toggled to yes). </li>
+<li>Discounts, fees and freight<ul>
+<li>The “Use discount schedule in place at time of delivery” is a yes/no toggle button with the option to have commodity and branch set up with a default discount schedule. In the setup page, there is a setup flag to use a discount schedule which would default to every contract or scale ticket. </li>
+<li>Fee schedule: Storage charges or assessments. </li>
+<li>Market to market adjustment: if the user is bringing contracts to market and you want to bring them back to market at one location, you can use a basis or freight adjustment to add/subtract to price to get the right calculation of bringing contracts to market. </li>
+<li>Freight included in basis: information of basis level of how much was freight. </li>
 </ul>
 </li>
 <li>Addresses<ul>
-<li>When a ticket is entered and applied to a contract, the addresses need to match. </li>
-<li>Ship from address: current location</li>
-<li>Ship to name: </li>
-<li>FOB address: destination contract. </li>
+<li>Multiple addresses to use on contract. These addresses can be overwritten <ul>
+<li>Ship from name</li>
+<li>Ship to name: Defaults to branch previously entered in</li>
+<li>FOB name: Where ownership changes</li>
 </ul>
 </li>
-<li>Hedge commodity<ul>
-<li>For hedging purposes. The ability to identify if there was a commodity either being bought or sold that was not traded on an exchange. </li>
 </ul>
 </li>
+<li>Miscellaneous details<ul>
+<li>Can identify who in your company created contract. If a Broker was used, this can be identified along with the Broker commission rate. The commission rate is not processed and is just for informational purposes. It does not create a payable. </li>
+</ul>
+</li>
+<li>Hedge commodity  <ul>
+<li>The commodity will default in. </li>
+<li>Additional hedge commodities can be entered. Can get long/short to run by hedge commodity. </li>
+</ul>
+</li>
+</ul>
+<p><img alt="Picture5" src="../assets/images/Grain_Inbound/Picture5.png" /></p>
+<h3 id="pricing-of-a-contract"><a class="toclink" href="#pricing-of-a-contract">Pricing of a Contract</a></h3>
+<p>Commodity &gt; Inbound &gt; Contract &gt; Purchase contracts</p>
+<p>The Delivery and Pricing view is available under the “Line” My view. </p>
+<ul>
+<li>To set a price, highlight the delivery period. Click on Set price. The Contract pricing window will appear on the right-hand side. </li>
+<li>The user can change the Price quantity, Board price, and Basis to match what should be on the contract. The Net price is calculated from Board Price, subtracted Basis, and gave Net price.</li>
+<li>Click Create. </li>
+<li>A new delivery period line is created. Throughout system, you will see same contract number, but it will have two delivery period lines showing up. </li>
 </ul>
 <p>Within the contract entry, additional functionality includes: </p>
 <ul>
@@ -837,7 +835,7 @@
 </ul>
 </li>
 <li>Fill:<ul>
-<li>Ability to fill at market price or contract price. </li>
+<li>Ability to fill at market price or contract price. <ul>
 <li>Market price: <ul>
 <li>Takes quantity against current market. The system calculates gain/loss to create either a payable or receivable </li>
 </ul>
@@ -846,124 +844,147 @@
 <li>Takes quantity against current contract price. There is no gain or losses. </li>
 </ul>
 </li>
-<li>Can cancel or underfill the contract at any time. </li>
 </ul>
 </li>
 </ul>
-<h3 id="sales-commodity-contracts-for-load-requests"><a class="toclink" href="#sales-commodity-contracts-for-load-requests">Sales Commodity Contracts for Load Requests</a></h3>
-<p>Load request contracts can be viewed under Commodity Accounting &gt; Outbound menu tab. </p>
-<p>A load request is a shipping order that states the specific ship date/time for a specific sales contract. </p>
-<ul>
-<li>Load orders: The individual shipments to be done</li>
-<li>Load requests: Shipments to be made</li>
-</ul>
-<p>Once loads have been shipped, the order quantity will show up based off load request, shipped quantity, ticket number and where it was shipped to. Those are used to request shipments. </p>
-<p>To create a new load request: </p>
-<ol>
-<li>Click New</li>
-<li>Choose specific contract number</li>
-<li>Choose delivery period</li>
-<li>Create request</li>
-</ol>
-<p>The newly created load requests automatically inputs the contract information (commodity, customer, customer account, contract number, and requested delivery date). The user will need to input the shipper in the Shipping carrier field. </p>
-<p><img alt="Picture1" src="../assets/images/Grain/Picture1.png" /></p>
-<p>To create a new load order: </p>
-<ol>
-<li>Click Add Load
-The system will assign a number along with the shipping carrier that was previously selected. </li>
-<li>Input the Requested ship date</li>
-<li>Input Ordered Qty</li>
-<li>Choose Ship to address</li>
-<li>The ship to address needs to match what is on the contract. </li>
-<li>Click Save. 
-This sets up a single load. You can remove a load or create multiple loads at one time with the Generate Load function. It depends on the user how many loads they would like to create. The load dates can be changed</li>
-</ol>
-<h3 id="outbound-scale-ticket-entry"><a class="toclink" href="#outbound-scale-ticket-entry">Outbound Scale Ticket Entry</a></h3>
-<p>Commodity accounting &gt; Outbound &gt; Outbound scale tickets</p>
-<p>By clicking on the Outbound scale tickets window, all of the outbound scale tickets within the system are viewable. </p>
-<p>To create a new scale ticket: </p>
-<ol>
-<li>Click on New</li>
-<li>The Create scale ticket window will appear on the righthand side</li>
-<li>Ticket type: Outbound</li>
-<li>Commodity: enter commodity</li>
-<li>Branch: autogenerated</li>
-<li>Warehouse: autogenerated</li>
-<li>Customer account: choose customer</li>
-<li>Ticket date: autogenerated</li>
-<li>Delivery name: Autogenerated</li>
-<li>Address: will auto-populate with specific customer selected above. </li>
-<li>Click Create</li>
-</ol>
-<p>The new scale ticket will now appear in your main window.  </p>
-<p>The user will be able to choose the specific load number previously set up to reflect on the shipped ticket. You do not have to use a load number. After entering in the outlined fields, click Save.  </p>
-<ul>
-<li>Scale ticket split details: will rarely if ever use splits on a scale ticket</li>
-<li>Origin weights: most of the customers will use scale interface. Most of this information will be imported in the scale system.  </li>
-<li>Designation weights: designation weights and grades are based off contract. The user can enter the contract’s gross weight, tare weight and net weight, which will be reflected on the ticket record and with the ability to invoice based off that information. </li>
-<li>Grade Factors: can enter in any grade information. </li>
-<li>Transportation details: information to track truck and driver. This will feed into the TMS system for freight payment and tracking. Requirements state you must state what the previously hauled commodity is. This is a field identified on the Transportation details section. </li>
-<li>Direct Ship: This is a yes/no toggle switch. If flipped to yes, the Partner ticket number and Direct ship ticket number would become active and flagged. Direct ship indicates the grower is going to ship specific commodities stored onsite (ex: farm) to the receiving farm. It is a function to record commodities shipped from the users own inventory. This would set up the inbound scale ticket as well as a direct ship function so it doesn’t update inventory. </li>
-</ul>
-<p><img alt="Picture2" src="../assets/images/Grain/Picture2.png" /></p>
-<p>The ticket is now ready to be applied to a contract. Click Apply. The Outbound scale ticket application is now viewable and shows all of the outbound scale tickets, along with the sales contracts and storage agreements specific to the customer.</p>
-<p><img alt="Picture3" src="../assets/images/Grain/Picture3.png" /></p>
-<ul>
-<li>Show all delivery periods. This is a yes/no toggle switch where you can view contracts. The default is to only show the current delivery period unless you wish to apply it to older contracts. But to apply against an upcoming period, you would need to turn toggle switch on. </li>
-<li>Spot Contract: if there is no contract available for this ticket or portion of it, the user can create a spot contract. The situation would be the purchaser would call the elevator and mention there was an over shipment. The elevator can at that point spot it out. If spotted out, the user would click the Spot Contract button where a new window will appear to create a spot contract.</li>
-</ul>
-<p>Once the selected contract shows the quantity to be allocated, the next steps include choosing the contract to apply it to. </p>
-<ul>
-<li>Click Post</li>
-</ul>
-<p>The contract will be updated in system and applied where it needs to be processed. </p>
-<h2 id="invoicing"><a class="toclink" href="#invoicing">Invoicing</a></h2>
-<p>Commodity Accounting Menu &gt; Invoice &gt; Grain shipped not invoiced</p>
-<h3 id="outbound-scale-ticket-destination-weights-and-grades"><a class="toclink" href="#outbound-scale-ticket-destination-weights-and-grades">Outbound scale ticket destination weights and grades</a></h3>
-<p>Outbound scale ticket destination weights and grades is a menu option where one can enter the destination weights, gross quantity per pound, and destination moisture, test weight, and additional grades for a specific contract. These results are inputted to calculate final payment.  </p>
-<h3 id="grain-shipped-not-invoiced"><a class="toclink" href="#grain-shipped-not-invoiced">Grain shipped not invoiced</a></h3>
-<p>A menu option showing all the loads shipped and yet to receive payment. These are separated by customer and by commodity.  </p>
-<p><img alt="Picture4" src="../assets/images/Grain/Picture4.png" /></p>
-<p>The user can select the number of loads they would like to create an invoice. The invoice process is referred to as a matching process. Majority of the shipments are made for commodity purposes, which means they do not need to send out invoices to request a payment. These invoices are after the fact and are known as a matching process. The goal is to match the payment sent when loads were sent. Under the Customer invoice amount field, they may not pay exact net amount due to weight or grade differences. Because the user will want the customer invoice and net amount to match, there is a future user option to adjust amount to match. For any dollar amounts differed on the commodity load, there will be functionality capturing the difference.</p>
-<ul>
-<li>Click Invoice</li>
-</ul>
-<p>There are two Invoice options: </p>
-<ol>
-<li>Pro forma invoice: this is in the rare situation where the user needs to send the invoice to the customer. This creates a document that looks like an invoice but doesn’t update in the system as an invoice. It creates a document and then goes away. </li>
-<li>
-<p>Invoice: this is the process of creating an invoice. The system generates the processes necessary to get the information back in F&amp;O and creates a receivable on the customer account. After processing, a new Posting invoice window will appear with the invoice information:</p>
-<ul>
-<li>Parameters: printing specifications</li>
-<li>Overview: tickets being invoiced</li>
-<li>Setup: any payment format adjustments</li>
-<li>Line details: packing and delivery information</li>
-</ul>
 </li>
-</ol>
-<p><img alt="Picture5" src="../assets/images/Grain/Picture5.png" /></p>
-<h3 id="shipped-not-invoiced-bulk"><a class="toclink" href="#shipped-not-invoiced-bulk">Shipped not invoiced-Bulk</a></h3>
-<p>A menu option which includes slight variations to be used with items that are not considered commodities (ex: ethanol). </p>
-<h3 id="all-sales-advances"><a class="toclink" href="#all-sales-advances">All Sales advances</a></h3>
-<p>A menu option used on rail shipments for commodities. When railcars are loaded, it could take a couple of weeks to get to their destination. As soon as the railcars are loaded and released for shipment, the user can draft up to 90% of the commodity value for immediate payment. 
-Once the shipments are recorded in system, a new invoice can be created. A Sales advance create window will pop up on right hand side. </p>
+</ul>
+<h2 id="delivery-process-on-in-bound-grain"><a class="toclink" href="#delivery-process-on-in-bound-grain">Delivery Process on In-bound Grain</a></h2>
+<p>Commodity accounting &gt; Inbound &gt; Delivery</p>
+<p>Delivery Process on in-bound grain includes:</p>
 <ul>
-<li>Sales advance description</li>
-<li>Customer account</li>
+<li>Inbound scale tickets</li>
+<li>Delivery sheets</li>
+<li>Inbound scale ticket application</li>
+<li>Unit trains</li>
+</ul>
+<h3 id="inbound-scale-tickets"><a class="toclink" href="#inbound-scale-tickets">Inbound Scale Tickets</a></h3>
+<p>Commodity accounting &gt; Inbound &gt; Delivery &gt; Inbound scale tickets</p>
+<p>Most of the inbound scale tickets will be imported in from scale a scale interface. But you do have the ability to add new scale tickets or edit existing scale tickets that have been imported. </p>
+<p>To create a new scale ticket, click on New. </p>
+<p>A Create scale ticket window will appear on the right-hand side.  </p>
+<ul>
+<li>Ticket type</li>
 <li>Commodity</li>
-<li>Currency</li>
-<li>Contract number: select contract you are going to advance it against. </li>
-<li>Unit number: unit number of the rail car</li>
-<li>Note: will appear on the printed documented</li>
+<li>Branch</li>
+<li>Warehouse</li>
+<li>Customer account</li>
+<li>Name</li>
+<li>Ticket date: this is a user field and can be overridden </li>
+<li>Customer operation: There can be multiple operations for a customer. Must choose one.  A customer operation is required. </li>
+<li>Customer site: This field is not required but can choose for tracking purposes.  </li>
+<li>Split Group: Will default in with the customer operation. This can be overridden. </li>
 </ul>
-<p>If the shipment is selected to invoice, the system processes the shipment and calculates the profit. The system automatically inputs 90% for the advance percentage. If there were discounts or any other fees or charges, it would also calculate at 90%.  </p>
-<p><img alt="Picture6" src="../assets/images/Grain/Picture6.png" /></p>
+<p>Click Create. </p>
+<p>The below image shows a newly created inbound scale ticket. </p>
+<p><img alt="Picture6" src="../assets/images/Grain_Inbound/Picture6.png" /></p>
+<p>Additional information and categories one can enter attached to a scale ticket. </p>
 <ul>
-<li>Click Save. This locks it in system and the user can print a document showing the advance and the calculation took place. The Sales advance is created as a receivable.  </li>
+<li>Scale ticket split details: If there were multiple splits, the system would preview the split they would be receiving. </li>
+<li>Weights: The system calculates net weight. This is a toggle on/off button (defaults Driver to on). The user can select scale operation and grader if they want the information recorded on the ticket. </li>
+<li>Date/Time: Can be viewed on the printed ticket. </li>
+<li>Notes: There are two types of notes: External and Internal. External will print on scale ticket. </li>
+<li>Grade factors: Grade factors are set up in the system and assigned to the commodity. The sequence they show up in the table is user defined. There is the ability for the moisture and test weight depending on equipment person has but can import moisture and test weight (TW). </li>
+<li>User can enter other discount factors as well. Those are used to defer back to the discount schedules that are attached to any contract or storage agreement user has and calculate any premium or charges that are due based off those discounts. </li>
+<li>Transportation Details: This is not a required entry but can be provided. It is a way to identify the driver delivering the commodity for informational purposes and when the truck comes back empty. </li>
+<li>The Unit number is primary used in rail shipments can add and group this ticket with others. Sometimes previously hauled commodity is a required field so that there wasn’t hazardous material hauled prior to commodity. </li>
 </ul>
-<p><img alt="Picture7" src="../assets/images/Grain/Picture7.png" /></p>
-<p>This is all the transactional outbound shipments for sales purposes. </p>
-<p>The Grain Inbound Processes can be found under <a href="../Grain_Inbound_Processes/">Grain Inbound Processes</a></p>
+<p>The next step is to Post to Inventory so all commodity received will show up in inventory to track and update DPR for inventory amounts. </p>
+<p>DPR: daily position report.</p>
+<p>After the ticket is posted, it is locked in and ready to be used in other parts of the system. This concludes the inbound scale ticket option. </p>
+<h3 id="inbound-scale-ticket-application-process"><a class="toclink" href="#inbound-scale-ticket-application-process">Inbound scale ticket application process</a></h3>
+<p>The Inbound scale ticket application process takes scale tickets received and provides the user the option to determine how the scale tickets will be used. </p>
+<p><img alt="Picture7" src="../assets/images/Grain_Inbound/Picture7.png" /></p>
+<ul>
+<li>The contract number can be changed. </li>
+<li>Inbound scale ticket auto-apply:<ul>
+<li>The user can set up a sequence in the system to auto apply on each contract. e.g. If you have it set up to sequence if you want your first application contract, second agreement storage agreement. The system will automatically apply your scale ticket or a portion of it to an existing purchase contract or to an existing storage agreement based on the sequences set up on your auto-apply functionality. </li>
+<li>Inbound scale ticket un-apply<ul>
+<li>Ability to unassign scale tickets from contracts</li>
+<li>Can select a scale ticket not previously assigned to a contract (if let’s say it was un-applied as mentioned above) the user can click on the scale ticket and allocate it to a purchase contract or a storage agreement. Or you can do the full amount or part of a contract. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is what the inbound scale ticket application program will do to get commodities moved to the specific obligations a customer may have.  </p>
+<h3 id="delivery-sheets"><a class="toclink" href="#delivery-sheets">Delivery Sheets</a></h3>
+<p>Delivery Sheets is a way to group multiple tickets together for same commodity and same customer. You can also use delivery sheet to calculate average grades. It is a delivery sheet to group tickets together and process them as a group instead of individually. </p>
+<p><img alt="Picture8" src="../assets/images/Grain_Inbound/Picture8.png" /></p>
+<p>The system automatically assigns Delivery Sheet number. 
+If you want to see completed sheets, you can click on the Show Completed toggle button (Yes/No). You can also show the Voided delivery sheets as well (toggle button).</p>
+<p>To create a new delivery sheet, click New. </p>
+<p>The Create delivery sheet window will appear on the right-hand side of the window. </p>
+<p><img alt="Picture9" src="../assets/images/Grain_Inbound/Picture9.png" /></p>
+<ul>
+<li>Branch: Defaults to last branch used</li>
+<li>Date: Defaults to current date</li>
+<li>Customer account: Enter account name or number</li>
+<li>Commodity: Choose commodity</li>
+<li>Customer operation: Choose the customer operation</li>
+<li>Customer Site: Choose customer site</li>
+<li>Split group: The system assigns a split group, but this can be overridden</li>
+<li>Estimated start date: not required fields. Some customers use a planning process. </li>
+<li>Estimated delivery quantity: “above” helps with planning purposes. </li>
+</ul>
+<p>Click Create. A new delivery sheet will be created and open in the main window. </p>
+<p><img alt="Picture10" src="../assets/images/Grain_Inbound/Picture10.png" /></p>
+<p>Under the Delivery sheet ownership splits section: </p>
+<ul>
+<li>All tickets applied to the delivery sheet will be assigned to the one account. You can have multiple accounts with different percentages applied and as the ability to complete splits. </li>
+<li>Can choose default disposition. Each time the user applies a ticket to the delivery sheet, it will be applied to that specific contract. The user can choose what they intend to do with the storage agreement. </li>
+<li>There is the option of the tickets to be applied when added to the delivery sheet. </li>
+</ul>
+<p>Delivery sheet completion details: </p>
+<ul>
+<li>Details the splits and dispositions of the delivery sheet</li>
+</ul>
+<p>After these sections are reviewed and filled out, the user can complete the delivery sheet. This finishes the process and lock down the calculations. The user cannot settle any of the tickets delivered until it is completed. The tickets will not show up as available to settle until the complete function has been done. </p>
+<h3 id="unit-trains"><a class="toclink" href="#unit-trains">Unit Trains</a></h3>
+<p>If unit trains are received within a facility, this is a simple program to create a Unit train number, which is an alphanumeric field. After creating a number, click save. These numbers are now available within the system to be used and attached to a scale ticket.</p>
+<p><img alt="Picture11" src="../assets/images/Grain_Inbound/Picture11.png" /></p>
+<h2 id="settlement"><a class="toclink" href="#settlement">Settlement</a></h2>
+<p>Commodity accounting &gt; Inbound &gt; Settlement</p>
+<ul>
+<li>Settlement requests</li>
+<li>Settlement payments</li>
+<li>Discounts, fees and charging invoicing</li>
+<li>Settle options with grower</li>
+<li>Warehouse receipts</li>
+<li>Settlement sheet reprint</li>
+</ul>
+<h3 id="settlement-requests"><a class="toclink" href="#settlement-requests">Settlement Requests</a></h3>
+<p>Commodity accounting &gt; Inbound &gt; Settlement &gt; Settlement requests</p>
+<p>Settlement request window shows all settlement requests with a status of either opened, invoiced, or paid. </p>
+<p>To create new settlement request, click New.</p>
+<p><img alt="Picture12" src="../assets/images/Grain_Inbound/Picture12.png" /></p>
+<p>Select a customer, commodity, and branch. The disposition is a drop-down field asking the location of the contracts (Stored, Price later, Priced contract). After choosing, click Next. </p>
+<p>If chosen Priced Contract, the system shows all the scale tickets that have been applied to a priced contract that have not been settled yet. These are available to be settled. After choosing the contracts to be settled, click Next. The system provides a Preliminary summary with the contract number, delivery period, end price, settled quantity, and settled amount (gross dollar amount). Discounts, fees and charges would be summarized as well in the bottom quadrant. Click Next. </p>
+<p>The system will take the user to the Remittance screen. This screen summarizes the remittance portion. </p>
+<p><img alt="Picture13" src="../assets/images/Grain_Inbound/Picture13.png" /></p>
+<p>The Deferred payment function is utilized frequently. This is the option to lock in a commodity price and selling the commodity in a future date. The Requested payment date can change to reflect the future date. The Deferred charge code and Deferred Terms code are utilized along with the deferred payment option. The user can choose to have a premium on the deferred payment. </p>
+<p>Add/Split Payments is another function with the ability to issue additional checks.  </p>
+<p>Click Next. The system is now ready to issue the check(s). The Settlement request summary provides a summary of the Settlement Request. Click Finish. From there, the user can go to Settlement Payment. </p>
+<h3 id="settlement-and-payment-process"><a class="toclink" href="#settlement-and-payment-process">Settlement and Payment Process</a></h3>
+<p>Settlement and Payment Process is a two-step process:</p>
+<ul>
+<li>Confirm</li>
+<li>Confirm and Pay</li>
+</ul>
+<p>After the user selects one of the above options (self-explanatory), the system will validate the settlement and post in journal. </p>
+<h3 id="discount-fees-and-charges-invoicing"><a class="toclink" href="#discount-fees-and-charges-invoicing">Discount, fees, and charges invoicing.</a></h3>
+<p>Functionality not completed as of October 2020. </p>
+<h3 id="warehouse-receipt"><a class="toclink" href="#warehouse-receipt">Warehouse receipt</a></h3>
+<p>This is a legal tender document. If the document is listed as a negotiable warehouse receipt, it is a legal tender. A non-negotiable document does not have the same legal tender but has same protection level. </p>
+<p>To issue a new warehouse receipt, Click New. </p>
+<p>The Create warehouse receipt will appear on the right-hand side in a new window. </p>
+<p><img alt="Picture14" src="../assets/images/Grain_Inbound/Picture14.png" /></p>
+<p>After completing the warehouse receipt, the user would choose a Storage agreement. Click Save. A warehouse receipt will then be issued. This is another form of storage for the grower. </p>
+<h3 id="settle-options-with-grower"><a class="toclink" href="#settle-options-with-grower">Settle options with grower</a></h3>
+<p>Functionality not completed as of October 2020. </p>
+<h3 id="settle-sheet-reprint"><a class="toclink" href="#settle-sheet-reprint">Settle sheet reprint</a></h3>
+<p>This is the option to be able to reprint a settlement sheet. </p>
+<p>The Grain Outbound Processes can be found under <a href="../Grain_Outbound_Processes/">Grain Outbound Processes</a></p>
                 
               
               
