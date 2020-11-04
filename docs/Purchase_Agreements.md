@@ -5,12 +5,14 @@ Agriculture retailers will contract with vendors to purchase a quantity of inven
 1. Store release order information in a table that is on a purchase agreement. This information is displayed in a new screen ‘Purchase Agreement Release’. Each purchase agreement will store all the load numbers given to the ag retailer from the supplier for the duration of the agreement. Managing release loads becomes more efficient with access to a list of outstanding commitments. A user may highlight a line or load number from the below table and create a purchase order and direct delivery sales order.
 
 See vendor reference on top screen that represents the vendor load number.
+
 a. Review all purchase orders and all sales orders related to the purchase agreement
 b. Assign an estimated freight value for Fertilizer Daily Position Report (DPR)
 
 2. The above Purchase Agreement Release view may be filtered for use by a logistics expert. They may see lines that don’t have delivery address or carrier assignments.  
 
 This allows them to:
+
 a. Assign pickup address and delivery address
 b. Assign carriers
 c. Release and auto confirm a PO from a purchase agreement release line
