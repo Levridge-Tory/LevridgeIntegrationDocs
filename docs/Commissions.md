@@ -1,9 +1,4 @@
 ﻿# Commissions
-Brief introduction of the module, component or feature being documented.
-
-This document explains ...
-
-# Commissions
 
 1. Go to Sales and marketing > Commissions > Commission Calculation.
 2. Click New.
