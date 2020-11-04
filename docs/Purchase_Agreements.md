@@ -6,16 +6,16 @@ Agriculture retailers will contract with vendors to purchase a quantity of inven
 
 See vendor reference on top screen that represents the vendor load number.
 
-a. Review all purchase orders and all sales orders related to the purchase agreement
-b. Assign an estimated freight value for Fertilizer Daily Position Report (DPR)
+- Review all purchase orders and all sales orders related to the purchase agreement
+- Assign an estimated freight value for Fertilizer Daily Position Report (DPR)
 
 2. The above Purchase Agreement Release view may be filtered for use by a logistics expert. They may see lines that don’t have delivery address or carrier assignments.  
 
 This allows them to:
 
-a. Assign pickup address and delivery address
-b. Assign carriers
-c. Release and auto confirm a PO from a purchase agreement release line
+- Assign pickup address and delivery address
+- Assign carriers
+- Release and auto confirm a PO from a purchase agreement release line
 
 3. Upon release of the PO a TMS load number is created. A carrier is also assigned on the line for auto invoicing.
 
@@ -23,6 +23,6 @@ c. Release and auto confirm a PO from a purchase agreement release line
 
 New functionality has been added to the process to:
 
-   - Link a prepayment to the purchase agreement that will be surfaced on subsequent released purchased orders.
-   - Levridge has enhanced TMS functionality to link a sales order to a release purchase order that will direct ship to the customer.
+- Link a prepayment to the purchase agreement that will be surfaced on subsequent released purchased orders.
+- Levridge has enhanced TMS functionality to link a sales order to a release purchase order that will direct ship to the customer.
 
