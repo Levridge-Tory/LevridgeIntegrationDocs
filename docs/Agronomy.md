@@ -10,3 +10,7 @@ The [Agronomy Implementation Activities](AgronomyImplementationActivities.md) pr
 - CE Integrations to FinOps
 - Agronomy for CE: A stand-alone CE instances without integration to FinOps
 
+[Licensing and Certifications](Licensing_Certifications.md) provides an overview of the Agronomy certification and licensing requirements. 
+
+
+

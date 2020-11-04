@@ -1,7 +1,7 @@
 ﻿# Rolling Stock Management
 
 ## Overview
-The rolling stock or equipment module addresses the issue gap between the fixed assets and operational equipment management dashboarder module. 
+The rolling stock or equipment module addresses the issue gap between the fixed assets and operational equipment management dashboarder module. Rolling stock is fixed assets on wheels such as trucks, application equipment, etc. Need to track what they are, where equipment is located, when serviced, when license/insurance are due, weight with or without product, who they are assigned to. The tracking will assist with the recognition of revenue & expenses, tracking for maintenance and location of the equipment assets. Fleet tracking captures information from the scale application, work order, and third-party dispatching application. 
 
 Fixed Assets – geared towards managing assets that we find on a balance sheet (Accounting Staff).
 

@@ -1,16 +1,26 @@
 ﻿# Agronomist End-to-End Scenarios
 
 ## Overview
-1. *Planned to Sales Agreement* - sales tool within CE used to price product and transition growers into contracts.
+1. *Plan to Sales Agreement* - sales tool within CE used to price product and transition growers into contracts.
 2. *Fertilizer Calculator* - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).
 3. *Sales Order Process* - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&O. 
-### Process #1: Planned to Sales Agreement
-There are three separate methods of kicking off a planned sales agreement with CE: 
+
+## Process #1: Plan to Sales Agreement
+There are three separate methods of kicking off a plan to sales agreement with CE: 
+
 1. Batch plans
 2. Regular plans
 3. Proposals
 
-#### Batch Plans
+### Batch Plans
+A way to quickly create a proposal or sale agreement
+
+- Field type – All product needs across all fields may be added as a batch.  Individual products can then be added after the plan is created.  For example, fertilizer, and chemical may be the same for all fields, with the see added to different areas of the field after the batch process.  Required to know field details, but not customer. 
+- Prospect type – Potential customer information is added to capture pricing for products in a proposal to provide to the prospect.  Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.
+- Customer type – Does not require field details.  Creates proposal for seed, fertilizer or crop protection as needed.
+
+There is an ability to generate a proposal or go directly to a sales agreement for the field and customer types.
+
 1. Bath Plans tab
 2. Generate new
 3. Populate required fields
@@ -27,8 +37,20 @@ There are three separate methods of kicking off a planned sales agreement with C
 6. After adding your products, you can either:
     - Generate a proposal
     - Generate a sales agreement
-#### Proposal Types
+
+### Proposal Types
+Programs, recommendations, plans and batch plans include products. Proposals will now include pricing.  Proposal is way to take all the products for field or group of fields for an operation, puts them on one document and adds pricing for a grower. The proposal rolls all of the same products together. A detailed breakdown is available that includes how much product for each field with breakdown by owner for financial responsibility based on split groups.
+
+The pricing service is an integration with FinOps where product, accounts in split group, individual product quantities for the product are shared. FinOps will look at trade agreements per sale period to capture the appropriate pricing. The customer has the option to include volume pricing, which will review previous contracts for this sales year which can then be applied to pricing.
+
+The initial price is returned from FinOps to CE. Charge codes may be added in CE to provide a discount. Thresholds are defined in the charge code and validated for each proposal line. If the threshold is exceeded, management must approve or deny the discount. Example, an LCR (local competitive response) charge code may be added in CE to the proposal at $15. Management has setup a threshold of $10 for that charge code, therefore during the approval process the system would send the proposal to the agronomist manager to approval prior to submission to the grower.
+
+Credit checking is also validated for the customers on the proposal through FinOps and returns a yes or no. If no, the overage for the credit limit is displayed. This could be in the form of a warning or a stop. Note:  If a customer is on credit hold, a plan would not be allowed.	
+
+Once the proposal is approved, the proposal form may be printed for the customer.
+ 
 There are three different proposal types within a batch plan: Customer, Prospect, and Field.
+
 1. Customer: Simplest proposal type and is the most used proposal type for a batch plan
 2. Prospect: Individual the salesperson is pursuing that is not a current client and would like to generate a price for product and contract. 
     - Generate contract
@@ -44,7 +66,12 @@ There are three different proposal types within a batch plan: Customer, Prospect
 3. Field: Least common proposal type used
     - Only benefit of the field is if we go through and make individual plans
     - You can add products once to all applicable fields
-#### Creating a Regular Plan 
+
+### Creating a Regular Plan 
+Sales agreements are generated from proposals that have been approved by a grower. Agreements are separated by product types of seed, fertilizer and chemicals. This is standard as there may be different fiduciary requirements for these different product types.  For example, 3 agreements could be created, one for seed, one for fertilizer and one for chemicals. The sale agreements include customer, prepayment details, payment terms, with products, quantity and pricing. There is also the ability to capture the company branch for each agreement. 
+
+These sales agreements are integrated with FinOps.
+
 1. Plan to sales agreement
 2. Plans
 3. Generate new plan record
@@ -76,7 +103,9 @@ There are three different proposal types within a batch plan: Customer, Prospect
       - Unit/Rate
         - This calculation not only helps get the product pricing but also helps to know when the grower needs specific products applied. 
       - Plan is complete and proposal can be generated
-#### New Proposal
+
+### New Proposal
+
 1. Plan to sales agreement
 2. Proposals
 3. Generate new proposal
@@ -111,16 +140,20 @@ There are three different proposal types within a batch plan: Customer, Prospect
     - Proposal line will be updated to reflect new unit price after charge code has been applied.
     - Unit price: You can manually override this field to decrease price as well. 
     - Calculate prices
-#### Add product lines from proposal lines tab
+
+### Add product lines from proposal lines tab
 In some instances, a customer will decide to add products after you have generated the proposal. Using the add new proposal line within the proposal lines tab will allow you to add last minute products to the proposal and recalculate price. 
+
 1. (+) New proposal line
 2. Select product
 3. Quantity
 4. save
 5. Calculate prices
 6. Line will be added to the proposal lines toab and price will be updated for that product from data from F&O/AX.
-#### Submit for Approval
+
+### Submit for Approval
 Once your proposal is priced and complete, it is ready to be submitted for approval. The submit for approval function/button ensures that margin on products are maintained throughout the sales process.
+
 1. Submit for approval
     - Looks for any charge code or line item changes that were made and compares them to the defined thresholds that have been set. 
     - If any changes rise above threshold set it will stop the process, lock down proposal, and send to the Manager that the proposal needs approval before moving forward to contract/agreement
@@ -135,7 +168,42 @@ Once your proposal is priced and complete, it is ready to be submitted for appro
     - The sales agreement will be sent to F&O/AX once generated. 
     - The process is then complete within CE.
     - The final step in the sales process would be to pull up the third-party integration (ex: Hello Sign) to capture a digital signature.
-### Process #2 Fertilizer Calculator
+
+### Setups in CE
+Record information setup in CE is shared with FinOps for processing of data.	
+
+**Crops**: CE>Agronomy>Configuration>Crops
+
+A prepopulated list is available that includes crops such as alfalfa, canola, or corn.  A user may add/edit/delete records from the crop list.
+
+**Required Crop Units**: CE>Agronomy>Required Crop Units
+
+Defines the crop unit size.  How many seeds are in the bag?  80,000 kernels of corn in a bag.  Other crops by be sold by pound. No link to unit of measure. This is used on the seed calculator which calculates the number of seeds to cover a field and converts to quantity of seed in a bag, and therefore, how many bags are needed.
+
+**Timings under agronomy**: 
+
+Timing defines when the product, program or plan will be used.  For example, the timing of applying chemicals to a crop could be considered pre or post planting or based on the amount of vegetation such as V1 or V2.  
+
+**Charge Code Configurations**: CE> Agronomy>Charge code configurations
+
+Allows percentage or amount thresholds to be defined for the charge code. When charge code is used, validation to this configuration is completed.  Approval would be required to override the configuration. For example, a price override threshold may be setup for a proposal.  If the threshold is exceeded, further approval may be required.  
+
+**Pest Types**: CE>Agronomy>Pest Types
+
+A data package will be provide for this listing including examples of bacterial, fungal, or insect.  
+
+**Pests**: 	CE>Agronomy>Pests
+
+A data package will be provided that includes a list of pests with type of pests. 
+Examples include Aspergillus Ear Rot (fungal), Bean Leaf Beetle (Insect).   Pests may be identified in a work order to apply herbicides to the field.  This information may be manually added to crop history for review by the agronomist for future planning.
+
+Note:  A pest applicator license if required by federal and state to apply.  
+
+**Item Categories**: CE>Agronomy>Item Categories
+
+Sync with FinOps including path.  Used for filtering in CE, for example, fertilizer or chemical categories. Flex Grids within the plan and batch plan are filtered by item category. 
+
+## Process #2 Fertilizer Calculator
 The Fertilizer Calculator is a tool used to generate blends of fertility products. 
 1. Planning Tools
 2. Fertilizer Calculator
@@ -148,7 +216,7 @@ The Fertilizer Calculator is a tool used to generate blends of fertility product
       - Dry
       - Liquid
 
-![Dry Calculation Method](.\assets\images\DryCalculationMethod.PNG)
+    ![Dry Calculation Method](.\assets\images\DryCalculationMethod.PNG)
 
 5. Save
 6. Blend lines will populate with nutrient and product
@@ -159,9 +227,11 @@ The Fertilizer Calculator is a tool used to generate blends of fertility product
     - Number of batches needed
     - Blend percent
 9. Generate sales order and release report to blender facilities to begin blending product (this function is not currently available but will be once it is fully developed and tested.)
-### Process #3 Sales Order Process
+
+## Process #3 Sales Order Process
 The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. 
-##### Generating New Sales Order in CE
+
+### Generating New Sales Order in CE
 1. Sales order tab
 2. Generate new
 3. Populate applicable sales order fields
@@ -174,7 +244,9 @@ The sales order is comprised of two pieces: the sales order and the work order. 
     - Sales period: Used to price products against
     - Ship date: Will default if not manually if not populated. Not a requirement. 
     - Save
-#### Enter Sales Order Lines
+
+### Enter Sales Order Lines
+
 1. Add product
 2. Pick quantity
 3. Save
@@ -187,8 +259,31 @@ After saving the estimated price, which is pulled from CE, will be populated. Th
     - Once your submission has been approved, you will need to generate a sales order in F&O. 
     - You will receive a pop-up notifying you the sales order was created successfully in F&O/AX.
     - Once order is acted upon in F&O, you can go into details within CE and will provide more information on the split group allocations so the person in CE has access to details. 
-#### Work Order 
+
+### Work Order 
 The work order is a type of sales order where the Ag Retailer will be performing a service. A work order requires more detail than a basic sales order. 
+
+A third-party dispatching software defines the following setups and integrates with FinOps to create a work order type of sales order:
+
+- Field(s) where products will used
+- The product to be used on the field(s)
+- The proper ratio to blend the fertilizer or chemicals for the field(s)
+- Define the service to apply the product to the field(s)
+
+Within FinOps the work order type of sales order which includes the products and services from the dispatching software. CE will be updated with a summary view of the work order from FinOps.  When a work order comes into CE an auto print service will print the work order and driving directions to be shared with the driver.
+
+####  Blending and Dispensing
+Lastly the work order information integrates with an additional third-party application to create a production order.  Setups regarding the product and warehouse storage within the third-party application is required. This order will provide the blending and dispensing of the fertilizer or chemicals and confirm the completed quantities.  
+
+Once the production order is complete:
+
+- Transfer orders will be created for the movement of inventory 
+- Inventory will be reduced in the sales location
+- Sales agreement will be applied to the details of the work order
+- Equipment usage will be shared with the Rolling Stock module
+
+To generate a new work order:
+
 1. Orders
 2. Work Orders
 3. Generate new
@@ -219,6 +314,7 @@ The work order is a type of sales order where the Ag Retailer will be performing
       - Notes that are specific to the application
     - Application Notes: Notes or observations the equipment operator made while in the field. 
     - Save
+
 #### Enter Work Order Lines
 1. Work Order Lines tab
 2. Add new line
