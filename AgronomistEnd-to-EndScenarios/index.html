@@ -715,15 +715,14 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#process-1-planned-to-sales-agreement" class="md-nav__link">
-    Process #1: Planned to Sales Agreement
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-1-plan-to-sales-agreement" class="md-nav__link">
+    Process #1: Plan to Sales Agreement
   </a>
   
-    <nav class="md-nav" aria-label="Process #1: Planned to Sales Agreement">
+    <nav class="md-nav" aria-label="Process #1: Plan to Sales Agreement">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -768,19 +767,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#setups-in-ce" class="md-nav__link">
+    Setups in CE
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#process-2-fertilizer-calculator" class="md-nav__link">
     Process #2 Fertilizer Calculator
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#process-3-sales-order-process" class="md-nav__link">
     Process #3 Sales Order Process
   </a>
@@ -805,6 +811,14 @@
           <li class="md-nav__item">
   <a href="#work-order" class="md-nav__link">
     Work Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blending-and-dispensing" class="md-nav__link">
+    Blending and Dispensing
   </a>
   
 </li>
@@ -849,16 +863,25 @@
                 <h1 id="agronomist-end-to-end-scenarios"><a class="toclink" href="#agronomist-end-to-end-scenarios">Agronomist End-to-End Scenarios</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
 <ol>
-<li><em>Planned to Sales Agreement</em> - sales tool within CE used to price product and transition growers into contracts.</li>
+<li><em>Plan to Sales Agreement</em> - sales tool within CE used to price product and transition growers into contracts.</li>
 <li><em>Fertilizer Calculator</em> - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).</li>
 <li><em>Sales Order Process</em> - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&amp;O. </li>
 </ol>
-<h3 id="process-1-planned-to-sales-agreement"><a class="toclink" href="#process-1-planned-to-sales-agreement">Process #1: Planned to Sales Agreement</a></h3>
-<p>There are three separate methods of kicking off a planned sales agreement with CE: 
-1. Batch plans
-2. Regular plans
-3. Proposals</p>
-<h4 id="batch-plans"><a class="toclink" href="#batch-plans">Batch Plans</a></h4>
+<h2 id="process-1-plan-to-sales-agreement"><a class="toclink" href="#process-1-plan-to-sales-agreement">Process #1: Plan to Sales Agreement</a></h2>
+<p>There are three separate methods of kicking off a plan to sales agreement with CE: </p>
+<ol>
+<li>Batch plans</li>
+<li>Regular plans</li>
+<li>Proposals</li>
+</ol>
+<h3 id="batch-plans"><a class="toclink" href="#batch-plans">Batch Plans</a></h3>
+<p>A way to quickly create a proposal or sale agreement</p>
+<ul>
+<li>Field type – All product needs across all fields may be added as a batch.  Individual products can then be added after the plan is created.  For example, fertilizer, and chemical may be the same for all fields, with the see added to different areas of the field after the batch process.  Required to know field details, but not customer. </li>
+<li>Prospect type – Potential customer information is added to capture pricing for products in a proposal to provide to the prospect.  Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.</li>
+<li>Customer type – Does not require field details.  Creates proposal for seed, fertilizer or crop protection as needed.</li>
+</ul>
+<p>There is an ability to generate a proposal or go directly to a sales agreement for the field and customer types.</p>
 <ol>
 <li>Bath Plans tab</li>
 <li>Generate new</li>
@@ -883,24 +906,38 @@
 </ul>
 </li>
 </ol>
-<h4 id="proposal-types"><a class="toclink" href="#proposal-types">Proposal Types</a></h4>
-<p>There are three different proposal types within a batch plan: Customer, Prospect, and Field.
-1. Customer: Simplest proposal type and is the most used proposal type for a batch plan
-2. Prospect: Individual the salesperson is pursuing that is not a current client and would like to generate a price for product and contract. 
-    - Generate contract
-    - Sales period
-    - Farmable Acreage approximation
-    - Navigate to the seed, fertilizer, or chemical tab(s) to add product
-    - Create proposal
-    - Open proposal 
-    - Proposal lines tab
-    - Run report
-    - Print proposal
-    - Give to potential client
-3. Field: Least common proposal type used
-    - Only benefit of the field is if we go through and make individual plans
-    - You can add products once to all applicable fields</p>
-<h4 id="creating-a-regular-plan"><a class="toclink" href="#creating-a-regular-plan">Creating a Regular Plan</a></h4>
+<h3 id="proposal-types"><a class="toclink" href="#proposal-types">Proposal Types</a></h3>
+<p>Programs, recommendations, plans and batch plans include products. Proposals will now include pricing.  Proposal is way to take all the products for field or group of fields for an operation, puts them on one document and adds pricing for a grower. The proposal rolls all of the same products together. A detailed breakdown is available that includes how much product for each field with breakdown by owner for financial responsibility based on split groups.</p>
+<p>The pricing service is an integration with FinOps where product, accounts in split group, individual product quantities for the product are shared. FinOps will look at trade agreements per sale period to capture the appropriate pricing. The customer has the option to include volume pricing, which will review previous contracts for this sales year which can then be applied to pricing.</p>
+<p>The initial price is returned from FinOps to CE. Charge codes may be added in CE to provide a discount. Thresholds are defined in the charge code and validated for each proposal line. If the threshold is exceeded, management must approve or deny the discount. Example, an LCR (local competitive response) charge code may be added in CE to the proposal at $15. Management has setup a threshold of $10 for that charge code, therefore during the approval process the system would send the proposal to the agronomist manager to approval prior to submission to the grower.</p>
+<p>Credit checking is also validated for the customers on the proposal through FinOps and returns a yes or no. If no, the overage for the credit limit is displayed. This could be in the form of a warning or a stop. Note:  If a customer is on credit hold, a plan would not be allowed.    </p>
+<p>Once the proposal is approved, the proposal form may be printed for the customer.
+ 
+There are three different proposal types within a batch plan: Customer, Prospect, and Field.</p>
+<ol>
+<li>Customer: Simplest proposal type and is the most used proposal type for a batch plan</li>
+<li>Prospect: Individual the salesperson is pursuing that is not a current client and would like to generate a price for product and contract. <ul>
+<li>Generate contract</li>
+<li>Sales period</li>
+<li>Farmable Acreage approximation</li>
+<li>Navigate to the seed, fertilizer, or chemical tab(s) to add product</li>
+<li>Create proposal</li>
+<li>Open proposal </li>
+<li>Proposal lines tab</li>
+<li>Run report</li>
+<li>Print proposal</li>
+<li>Give to potential client</li>
+</ul>
+</li>
+<li>Field: Least common proposal type used<ul>
+<li>Only benefit of the field is if we go through and make individual plans</li>
+<li>You can add products once to all applicable fields</li>
+</ul>
+</li>
+</ol>
+<h3 id="creating-a-regular-plan"><a class="toclink" href="#creating-a-regular-plan">Creating a Regular Plan</a></h3>
+<p>Sales agreements are generated from proposals that have been approved by a grower. Agreements are separated by product types of seed, fertilizer and chemicals. This is standard as there may be different fiduciary requirements for these different product types.  For example, 3 agreements could be created, one for seed, one for fertilizer and one for chemicals. The sale agreements include customer, prepayment details, payment terms, with products, quantity and pricing. There is also the ability to capture the company branch for each agreement. </p>
+<p>These sales agreements are integrated with FinOps.</p>
 <ol>
 <li>Plan to sales agreement</li>
 <li>Plans</li>
@@ -942,7 +979,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="new-proposal"><a class="toclink" href="#new-proposal">New Proposal</a></h4>
+<h3 id="new-proposal"><a class="toclink" href="#new-proposal">New Proposal</a></h3>
 <ol>
 <li>Plan to sales agreement</li>
 <li>Proposals</li>
@@ -989,31 +1026,57 @@
 </ul>
 </li>
 </ol>
-<h4 id="add-product-lines-from-proposal-lines-tab"><a class="toclink" href="#add-product-lines-from-proposal-lines-tab">Add product lines from proposal lines tab</a></h4>
-<p>In some instances, a customer will decide to add products after you have generated the proposal. Using the add new proposal line within the proposal lines tab will allow you to add last minute products to the proposal and recalculate price. 
-1. (+) New proposal line
-2. Select product
-3. Quantity
-4. save
-5. Calculate prices
-6. Line will be added to the proposal lines toab and price will be updated for that product from data from F&amp;O/AX.</p>
-<h4 id="submit-for-approval"><a class="toclink" href="#submit-for-approval">Submit for Approval</a></h4>
-<p>Once your proposal is priced and complete, it is ready to be submitted for approval. The submit for approval function/button ensures that margin on products are maintained throughout the sales process.
-1. Submit for approval
-    - Looks for any charge code or line item changes that were made and compares them to the defined thresholds that have been set. 
-    - If any changes rise above threshold set it will stop the process, lock down proposal, and send to the Manager that the proposal needs approval before moving forward to contract/agreement
-    - Seed:
-      - Patented traits owned by specific manufacturer that you must have a license from before you can purchase and use product
-      - The system will look and see if grower has  avalid agreement to buy this product and if there is configuration fin F&amp;O/AX to either warn or stop theprocess.
-      - With seed, you will typically use the "warn" function instead of full stopping the process. 
-    - Restricted used pesticides:
-      - Based on federal and state laws, before restricted products can be picked up, we must ensure the applicator has a valid license to apply the product. This license number needs to be physically listed on the invoice. This will warn the process this item needs to be reviewed. 
-      - At this point in the process, it is important to check back in unti lthe license number has been documented. 
-2. Generate sales agreement
-    - The sales agreement will be sent to F&amp;O/AX once generated. 
-    - The process is then complete within CE.
-    - The final step in the sales process would be to pull up the third-party integration (ex: Hello Sign) to capture a digital signature.</p>
-<h3 id="process-2-fertilizer-calculator"><a class="toclink" href="#process-2-fertilizer-calculator">Process #2 Fertilizer Calculator</a></h3>
+<h3 id="add-product-lines-from-proposal-lines-tab"><a class="toclink" href="#add-product-lines-from-proposal-lines-tab">Add product lines from proposal lines tab</a></h3>
+<p>In some instances, a customer will decide to add products after you have generated the proposal. Using the add new proposal line within the proposal lines tab will allow you to add last minute products to the proposal and recalculate price. </p>
+<ol>
+<li>(+) New proposal line</li>
+<li>Select product</li>
+<li>Quantity</li>
+<li>save</li>
+<li>Calculate prices</li>
+<li>Line will be added to the proposal lines toab and price will be updated for that product from data from F&amp;O/AX.</li>
+</ol>
+<h3 id="submit-for-approval"><a class="toclink" href="#submit-for-approval">Submit for Approval</a></h3>
+<p>Once your proposal is priced and complete, it is ready to be submitted for approval. The submit for approval function/button ensures that margin on products are maintained throughout the sales process.</p>
+<ol>
+<li>Submit for approval<ul>
+<li>Looks for any charge code or line item changes that were made and compares them to the defined thresholds that have been set. </li>
+<li>If any changes rise above threshold set it will stop the process, lock down proposal, and send to the Manager that the proposal needs approval before moving forward to contract/agreement</li>
+<li>Seed:</li>
+<li>Patented traits owned by specific manufacturer that you must have a license from before you can purchase and use product</li>
+<li>The system will look and see if grower has  avalid agreement to buy this product and if there is configuration fin F&amp;O/AX to either warn or stop theprocess.</li>
+<li>With seed, you will typically use the "warn" function instead of full stopping the process. </li>
+<li>Restricted used pesticides:</li>
+<li>Based on federal and state laws, before restricted products can be picked up, we must ensure the applicator has a valid license to apply the product. This license number needs to be physically listed on the invoice. This will warn the process this item needs to be reviewed. </li>
+<li>At this point in the process, it is important to check back in unti lthe license number has been documented. </li>
+</ul>
+</li>
+<li>Generate sales agreement<ul>
+<li>The sales agreement will be sent to F&amp;O/AX once generated. </li>
+<li>The process is then complete within CE.</li>
+<li>The final step in the sales process would be to pull up the third-party integration (ex: Hello Sign) to capture a digital signature.</li>
+</ul>
+</li>
+</ol>
+<h3 id="setups-in-ce"><a class="toclink" href="#setups-in-ce">Setups in CE</a></h3>
+<p>Record information setup in CE is shared with FinOps for processing of data.    </p>
+<p><strong>Crops</strong>: CE&gt;Agronomy&gt;Configuration&gt;Crops</p>
+<p>A prepopulated list is available that includes crops such as alfalfa, canola, or corn.  A user may add/edit/delete records from the crop list.</p>
+<p><strong>Required Crop Units</strong>: CE&gt;Agronomy&gt;Required Crop Units</p>
+<p>Defines the crop unit size.  How many seeds are in the bag?  80,000 kernels of corn in a bag.  Other crops by be sold by pound. No link to unit of measure. This is used on the seed calculator which calculates the number of seeds to cover a field and converts to quantity of seed in a bag, and therefore, how many bags are needed.</p>
+<p><strong>Timings under agronomy</strong>: </p>
+<p>Timing defines when the product, program or plan will be used.  For example, the timing of applying chemicals to a crop could be considered pre or post planting or based on the amount of vegetation such as V1 or V2.  </p>
+<p><strong>Charge Code Configurations</strong>: CE&gt; Agronomy&gt;Charge code configurations</p>
+<p>Allows percentage or amount thresholds to be defined for the charge code. When charge code is used, validation to this configuration is completed.  Approval would be required to override the configuration. For example, a price override threshold may be setup for a proposal.  If the threshold is exceeded, further approval may be required.  </p>
+<p><strong>Pest Types</strong>: CE&gt;Agronomy&gt;Pest Types</p>
+<p>A data package will be provide for this listing including examples of bacterial, fungal, or insect.  </p>
+<p><strong>Pests</strong>:  CE&gt;Agronomy&gt;Pests</p>
+<p>A data package will be provided that includes a list of pests with type of pests. 
+Examples include Aspergillus Ear Rot (fungal), Bean Leaf Beetle (Insect).   Pests may be identified in a work order to apply herbicides to the field.  This information may be manually added to crop history for review by the agronomist for future planning.</p>
+<p>Note:  A pest applicator license if required by federal and state to apply.  </p>
+<p><strong>Item Categories</strong>: CE&gt;Agronomy&gt;Item Categories</p>
+<p>Sync with FinOps including path.  Used for filtering in CE, for example, fertilizer or chemical categories. Flex Grids within the plan and batch plan are filtered by item category. </p>
+<h2 id="process-2-fertilizer-calculator"><a class="toclink" href="#process-2-fertilizer-calculator">Process #2 Fertilizer Calculator</a></h2>
 <p>The Fertilizer Calculator is a tool used to generate blends of fertility products. 
 1. Planning Tools
 2. Fertilizer Calculator
@@ -1025,7 +1088,8 @@
     - Fertilizer State
       - Dry
       - Liquid</p>
-<p><img alt="Dry Calculation Method" src="../assets/images/DryCalculationMethod.PNG" /></p>
+<pre><code>![Dry Calculation Method](.\assets\images\DryCalculationMethod.PNG)
+</code></pre>
 <ol>
 <li>Save</li>
 <li>Blend lines will populate with nutrient and product</li>
@@ -1039,9 +1103,9 @@
 </li>
 <li>Generate sales order and release report to blender facilities to begin blending product (this function is not currently available but will be once it is fully developed and tested.)</li>
 </ol>
-<h3 id="process-3-sales-order-process"><a class="toclink" href="#process-3-sales-order-process">Process #3 Sales Order Process</a></h3>
+<h2 id="process-3-sales-order-process"><a class="toclink" href="#process-3-sales-order-process">Process #3 Sales Order Process</a></h2>
 <p>The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. </p>
-<h5 id="generating-new-sales-order-in-ce"><a class="toclink" href="#generating-new-sales-order-in-ce">Generating New Sales Order in CE</a></h5>
+<h3 id="generating-new-sales-order-in-ce"><a class="toclink" href="#generating-new-sales-order-in-ce">Generating New Sales Order in CE</a></h3>
 <ol>
 <li>Sales order tab</li>
 <li>Generate new</li>
@@ -1058,7 +1122,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="enter-sales-order-lines"><a class="toclink" href="#enter-sales-order-lines">Enter Sales Order Lines</a></h4>
+<h3 id="enter-sales-order-lines"><a class="toclink" href="#enter-sales-order-lines">Enter Sales Order Lines</a></h3>
 <ol>
 <li>Add product</li>
 <li>Pick quantity</li>
@@ -1077,38 +1141,60 @@ After saving the estimated price, which is pulled from CE, will be populated. Th
 </ul>
 </li>
 </ol>
-<h4 id="work-order"><a class="toclink" href="#work-order">Work Order</a></h4>
-<p>The work order is a type of sales order where the Ag Retailer will be performing a service. A work order requires more detail than a basic sales order. 
-1. Orders
-2. Work Orders
-3. Generate new
-4. Populate applicable fields
-    - Account
-    - Customer Operation
-    - Customer Site
-    - Auto Print: Printer logic exists to automatically print a report remotely. Would be needed when a hard copy is necessary for the remote location to send with the driver. 
-    - Sales site: Party who is responsible for the sale of the product. 
-    - Application Site: Paraty performing task
-    - Application Operation: Type of work beign done (synced with AgSync). 
-    - Application Date: Anticipated application date of the product
-    - Application Window: For chemical product this is important because depending on stage of the crop, it could cause harm if applied outside a specific timeframe. 
-    - Crop: Crop the product will be applied to
-    - Order Status:
-      - Planned: Occurring in the future
-      - Booked: Occurring in the future
-      - Released: Moved to queue to get done and application date is set
-      - Scheduled: Has been assigned to an applicator for a scheduled date
-      - In-Progress: Product was administered partially and due to an unforeseen event, the job was not completed and requires further attention. 
-      - Completed Pending Review: Applicatoin is complete. 
-      - Archived
-      - Rejected
-    - Work Order ID: Generated number out of AgSync
-    - Dispensing Order Number: Only comes into effect if there is a blender/Kahler integration. This number is created when the picking list/mixed ticket is dispatched out to the warehouse. 
-    - Ordering Notes:
-      - Notes that are specific to the field
-      - Notes that are specific to the application
-    - Application Notes: Notes or observations the equipment operator made while in the field. 
-    - Save</p>
+<h3 id="work-order"><a class="toclink" href="#work-order">Work Order</a></h3>
+<p>The work order is a type of sales order where the Ag Retailer will be performing a service. A work order requires more detail than a basic sales order. </p>
+<p>A third-party dispatching software defines the following setups and integrates with FinOps to create a work order type of sales order:</p>
+<ul>
+<li>Field(s) where products will used</li>
+<li>The product to be used on the field(s)</li>
+<li>The proper ratio to blend the fertilizer or chemicals for the field(s)</li>
+<li>Define the service to apply the product to the field(s)</li>
+</ul>
+<p>Within FinOps the work order type of sales order which includes the products and services from the dispatching software. CE will be updated with a summary view of the work order from FinOps.  When a work order comes into CE an auto print service will print the work order and driving directions to be shared with the driver.</p>
+<h4 id="blending-and-dispensing"><a class="toclink" href="#blending-and-dispensing">Blending and Dispensing</a></h4>
+<p>Lastly the work order information integrates with an additional third-party application to create a production order.  Setups regarding the product and warehouse storage within the third-party application is required. This order will provide the blending and dispensing of the fertilizer or chemicals and confirm the completed quantities.  </p>
+<p>Once the production order is complete:</p>
+<ul>
+<li>Transfer orders will be created for the movement of inventory </li>
+<li>Inventory will be reduced in the sales location</li>
+<li>Sales agreement will be applied to the details of the work order</li>
+<li>Equipment usage will be shared with the Rolling Stock module</li>
+</ul>
+<p>To generate a new work order:</p>
+<ol>
+<li>Orders</li>
+<li>Work Orders</li>
+<li>Generate new</li>
+<li>Populate applicable fields<ul>
+<li>Account</li>
+<li>Customer Operation</li>
+<li>Customer Site</li>
+<li>Auto Print: Printer logic exists to automatically print a report remotely. Would be needed when a hard copy is necessary for the remote location to send with the driver. </li>
+<li>Sales site: Party who is responsible for the sale of the product. </li>
+<li>Application Site: Paraty performing task</li>
+<li>Application Operation: Type of work beign done (synced with AgSync). </li>
+<li>Application Date: Anticipated application date of the product</li>
+<li>Application Window: For chemical product this is important because depending on stage of the crop, it could cause harm if applied outside a specific timeframe. </li>
+<li>Crop: Crop the product will be applied to</li>
+<li>Order Status:</li>
+<li>Planned: Occurring in the future</li>
+<li>Booked: Occurring in the future</li>
+<li>Released: Moved to queue to get done and application date is set</li>
+<li>Scheduled: Has been assigned to an applicator for a scheduled date</li>
+<li>In-Progress: Product was administered partially and due to an unforeseen event, the job was not completed and requires further attention. </li>
+<li>Completed Pending Review: Applicatoin is complete. </li>
+<li>Archived</li>
+<li>Rejected</li>
+<li>Work Order ID: Generated number out of AgSync</li>
+<li>Dispensing Order Number: Only comes into effect if there is a blender/Kahler integration. This number is created when the picking list/mixed ticket is dispatched out to the warehouse. </li>
+<li>Ordering Notes:</li>
+<li>Notes that are specific to the field</li>
+<li>Notes that are specific to the application</li>
+<li>Application Notes: Notes or observations the equipment operator made while in the field. </li>
+<li>Save</li>
+</ul>
+</li>
+</ol>
 <h4 id="enter-work-order-lines"><a class="toclink" href="#enter-work-order-lines">Enter Work Order Lines</a></h4>
 <ol>
 <li>Work Order Lines tab</li>

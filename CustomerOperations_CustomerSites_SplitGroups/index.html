@@ -715,6 +715,40 @@
     Overview
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customer-operation" class="md-nav__link">
+    Customer Operation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-site" class="md-nav__link">
+    Customer Site
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-site-locations" class="md-nav__link">
+    Customer Site Locations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#territory" class="md-nav__link">
+    Territory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -755,19 +789,43 @@
 <li>Contact: Members of a farm or livestock organization.  These contacts can be involved in the organization in different ways.  For example, a veterinarian or farm hand might be contacts for a farm.</li>
 </ul>
 <p>An account or customer is who the ag retailer does business with.  This party is often referred to as the grower.  This party has the financial responsibilities with the Ag retailer.</p>
+<h3 id="customer-operation"><a class="toclink" href="#customer-operation">Customer Operation</a></h3>
 <p>The customer operation is the business entity the account or customer participates in.  A customer might be part of multiple customer operations.  Products and services are exchanged between the Ag retailer and the customer and the operation the customer is participating in.  In Levridge, an Ag retailer could provide feedback in the form of a return on investment (ROI) or balance sheet to the grower based on information delivered to a specific customer operation. Historical information can also be tracked to individuals assigned to or working on the specific operation (ex: agronomist, feed salesperson, tractor driver). This is helpful for corporate farms to be able to break down who is handling what operation. </p>
-<p>A customer site is a subset of a customer operation.  A customer operation might have many customer sites/fields.  Data is stored on customer sites and tasks are performed against the sites.  </p>
-<p>For example, the following information can be tracked on a customer site: 
-- Farmable Acres – used in calculations of seed requirements and fertilizer amounts
-- County, Township, Plat, etc.
-- Field Photo
-- Crop History
-- Commodity varieties and yields over time
-- Pest pressures</p>
-<p>The following example tasks that can be performed against customer sites:
-- Applications – track all applications per growing season
-- Soil Samples – track all sampling activity</p>
+<p>Customer operations are a way to organize and track how your growers organize and manage their business.  This could be a farm.  Accounts and people with financial responsibility can change, but data is tied to one spot.  Grower/farm/field or Ranch/barn/bin is standard, however Levridge offers the flexibility to allow grower to have breakdown with different operation types with lines of business including agronomy, livestock, energy uses, etc.   For example, a farm may be broken down by different managers, therefore creating different operations.  Another example, a customer may have operations for crops versus cattle.  Or a hog operation with different locations and multiple barns, may define each barn as an operation.</p>
+<p>A farm may be owned by a father, mother, with some fields that are rented.  This helps to control dividends or patronage by operation.  Levridge permits you to mirror within the system the structure of your grower’s operation.  A default for ordering split group and commodity split group may be setup under the customer operation. </p>
+<p>Customer operations allow the ability to create a customized profit/loss statement by customer operation.</p>
+<p>The setup of customer types resides at:</p>
+<ul>
+<li>FinOps&gt;Accounts Receivable&gt;Setup&gt;Agriculture&gt;Customer operation types</li>
+<li>Types may be viewed in CE at CE&gt;Core&gt;Configuration&gt;Customer Operation Types</li>
+</ul>
+<p>The setup of the customer operations resides at:</p>
+<ul>
+<li>FinOps&gt;Accounts Receivable&gt;Customers&gt;All Customers&gt;Agriculture&gt;Operations</li>
+<li>Operations may be viewed in CE at CE&gt;Agronomy&gt;Customer Operations</li>
+</ul>
+<h3 id="customer-site"><a class="toclink" href="#customer-site">Customer Site</a></h3>
+<p>A customer site is a subset of a customer operation.  A customer operation might have many customer sites/fields.  Data is stored on customer sites and tasks are performed against the sites.  Customer sites represent the main transactional point in Levridge and defines a breakdown of an operation.  For example, this could represent fields (customer sites) within a farm (customer operation) or pens (customer sites) within a barn (customer operation). The customer site may represent the field, barn, feed lot or pasture.  </p>
+<p>Customer sites include the following information:</p>
+<ul>
+<li>Address, legal description, and geo points details </li>
+<li>Tracking of field boundaries and data layers (field maps with product detail)</li>
+<li>Default ordering split groups tied to allow splitting of revenue and cost</li>
+<li>Contacts may be defined for quick point of contact when deliver feed, etc.</li>
+<li>Historical data, some of which is also tracked in CE including yields, crop history, &amp; pest pressure.  </li>
+<li>Ability to create a customized profit/loss statement by customer site</li>
+</ul>
+<p>The following example tasks that can be performed against customer sites:</p>
+<ul>
+<li>Applications – track all applications per growing season</li>
+<li>Soil Samples – track all sampling activity</li>
+</ul>
 <p>As a customer operation can have several customer sites, within the animal feed space, customer sites can have several customer site locations. For example, a barn can have several bins. </p>
+<h3 id="customer-site-locations"><a class="toclink" href="#customer-site-locations">Customer Site Locations</a></h3>
+<p>This depends on the type of site.  For example, if the site is a field, then the field can be split into halves or thirds based on productivity.  Different seed or fertilizer.  Allows work orders to be stored by subsection of a field.</p>
+<p>There may be a barn, site locations would represent pens within the barn.  For delivery of feed. Physical field or piece of dirt could include grain bins – site location allows tracking of the seed, etc.</p>
+<h3 id="territory"><a class="toclink" href="#territory">Territory</a></h3>
+<p>Entity, or way to assign sales people or company sites, for commission and reporting purposes onto a customer operation.  For example, if I am an agronomist that is covering 40 different operations, it is a way to quickly link for reporting purposes.  Can breakout sales and other analytics.</p>
 <h2 id="split-groups"><a class="toclink" href="#split-groups">Split Groups</a></h2>
 <p>Split groups (commonly referred to as splits) are the link between customers and customer operations. Split groups define how to allocate costs or revenue across the one or more customers involved in the split.  For example, if there are 3 different participants involved in a single customer operation, the split group might look like this:</p>
 <pre><code>Customer A – 40%
@@ -779,6 +837,13 @@ Customer C – 30%
 1. Ordering split
 2. Commodity split</p>
 <p>The Commodity default split defines ownership of products when the grower is selling to the Ag retailer. The Ordering default split is used when the grower is buying products from the Ag retailer (that will be utilized in customer sites and operations). </p>
+<p>Splits allow the percentage of financial responsibility to be recognized for relationships on sales orders or in CE through proposal or batch.  </p>
+<p>Splits may be defined by partnerships, renters, or by family relationships (father/son). Splits also identify the customer to receive any rounding value.  Levridge handles splits uniquely due to customer structure.  Most are rigid, however customer operations will allow splitting of revenue and costs.  </p>
+<p>The function that allows you to view and maintain all split groups is at F&amp;O&gt;Accounts Receivable&gt;Setup&gt;Agriculture&gt;Split Groups OR CE&gt;Agronomy or Core&gt;Split Groups.</p>
+<p>All the split groups that a customer is participating in may be viewed and maintained under the customer account. Go to F&amp;F&gt;Accounts Receivable&gt;Customer&gt;All Customers&gt;Agriculture&gt;Split Group.</p>
+<p>Split Group setups are synced between F&amp;O and CE.</p>
+<p>Within the split group setup, each line will define a customer account, the percentage applied to the customer account and which customer will receive rounding. </p>
+<p>The setups include a ‘Where Used’ view that displays all records related to the split group such as customer operations or sales orders.</p>
 <p>Here is <a href="../Create-Split-Group/">How to Create a Split Group in F&amp;O</a> and information on how to <a href="../ManagingSplits_SalesContracts_Prepayments/">Manage Splits, Sales Contracts and Prepayments</a>. </p>
                 
               
