@@ -16,7 +16,7 @@
     
     
       
-        <title>CE Implementation Checklist - Levridge Documentation</title>
+        <title>Unit of Measure Setup - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#levridge-ce-implementation-checklist" class="md-skip">
+        <a href="#unit-of-measure-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              CE Implementation Checklist
+              Unit of Measure Setup
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -330,12 +328,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
     
     <label class="md-nav__link" for="nav-2-7">
       System Information
@@ -611,12 +607,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-3" type="checkbox" id="nav-2-7-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-7-3" type="checkbox" id="nav-2-7-3">
     
     <label class="md-nav__link" for="nav-2-7-3">
       CE Platform
@@ -646,20 +640,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="CE Implementation Checklist" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../CE_Implementation_Checklist/" title="CE Implementation Checklist" class="md-nav__link">
       CE Implementation Checklist
     </a>
-    
   </li>
 
         
@@ -729,7 +714,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/CE_Implementation_Checklist.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Unit_of_Measure_Setup.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -737,18 +722,11 @@
                   
                 
                 
-                <h1 id="levridge-ce-implementation-checklist"><a class="toclink" href="#levridge-ce-implementation-checklist">Levridge CE Implementation Checklist</a></h1>
-<p>Listed are the steps one would want to take to implement CE.</p>
-<p>CE Setup</p>
-<ul>
-<li>Secure and Unsecure config populated in CE</li>
-<li><a href="../Address_Data_Mapping/">Address Data Mapping Configured</a></li>
-<li>Set up flexgrids</li>
-<li><a href="https://levridgesoftware.github.io/Levridge-CRM-Remote-Printing-Service/">Remote printing setup</a></li>
-<li>Base Data import</li>
-<li><a href="../Unit_of_Measure_Setup/">Unit of Measure Setup</a></li>
-</ul>
-<p>These steps fall within the <a href="../CE_to_AX_Integration_Implementation_Checklist/">CE to AX Integration Implementation Checklist</a>.</p>
+                <h1 id="unit-of-measure-setup"><a class="toclink" href="#unit-of-measure-setup">Unit of Measure Setup</a></h1>
+<p>The unit of measure integration between F&amp;O and CE does not currently include conversions. It only makes sure that each UOM in F&amp;O has a corresponding UOM in CE and that the UOM is placed in the correct Unit Group. The Primary UOM for a unit group can not be changed after the Unit group is created. Because the integration will randomly assign the default UOM when it creates a unit group, it is important to always create the Unit group manually prior to running the integration. The following fields should be set in CE to their matching values (Including capitalization) from F&amp;O for every Unit Class that will be integrated to CE.</p>
+<p><img alt="UOM" src="../assets/images/UOM/UOM1.jpg" /></p>
+<p><img alt="UOM" src="../assets/images/UOM/UOM2.png" /></p>
+<p>Once the integration of UOM is run, outstanding UOM records should be placed into their correct Unit Group and have the correct base UOM.</p>
                 
               
               
@@ -763,41 +741,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                CE to AX Integration Implementation Checklist
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../CE_Setup_Records/" title="CE Setup Records" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                CE Setup Records
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
