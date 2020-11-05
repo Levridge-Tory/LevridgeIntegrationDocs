@@ -8,6 +8,7 @@ CE Setup
   - Set up flexgrids
   - [Remote printing setup](https://levridgesoftware.github.io/Levridge-CRM-Remote-Printing-Service/)
   - Base Data import
+  - [Unit of Measure Setup](Unit_of_Measure_Setup.md)
 
 These steps fall within the [CE to AX Integration Implementation Checklist](CE_to_AX_Integration_Implementation_Checklist.md).
 
