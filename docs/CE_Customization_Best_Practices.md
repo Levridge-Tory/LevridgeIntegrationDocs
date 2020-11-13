@@ -43,6 +43,6 @@ It’s particularly important to choose maintain customizations when importing i
 
 While these best practices will help you avoid the more common pitfalls, a comprehensive understanding of CE solution laying is the best way to administer a layered environment with confidence.  Resources for further reading about CE solutions include:
 
-   - [Solution Lifecycle Management for Dynamics 365 for Customer Engagement apps](https://teams.microsoft.com/l/file/D205FD77-798D-4139-B40A-119084806348?tenantId=2e14a5b1-fbf8-415b-bc7d-93e20829e510&fileType=pdf&objectUrl=https%3A%2F%2Fstoneridgesoft.sharepoint.com%2FIMdocs%2FSolutionLifecycleManagement.pdf&baseUrl=https%3A%2F%2Fstoneridgesoft.sharepoint.com%2F&serviceName=customspo&threadId=19:94c20c3705b444129e55850b80f0ea8e@thread.skype&groupId=157889a3-6953-4507-9003-17f9b1982f33) (If link does not work, visit Stoneridge Teams > Playbook > General > Asset Library)
+   - [Solution Lifecycle Management for Dynamics 365 for Customer Engagement apps](https://download.microsoft.com/download/1/F/3/1F32DC2E-57BB-4533-8996-ACB5F803CD58/SolutionLifecycleManagement.pdf) (You can also find the documentation under Stoneridge Teams > Playbook > General > Asset Library)
 
    - [How Managed Solutions Are Merged](https://docs.microsoft.com/en-us/power-platform/alm/how-managed-solutions-merged)
