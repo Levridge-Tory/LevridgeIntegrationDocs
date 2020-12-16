@@ -298,8 +298,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../AgronomyRetail/" title="Agronomy Retail" class="md-nav__link">
-      Agronomy Retail
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
+      Agronomy Sales
     </a>
   </li>
 
@@ -684,6 +684,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../CE_Customization_Best_Practices/" title="CE Customization Best Practices" class="md-nav__link">
+      CE Customization Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
       CE to AX Integration Implementation Checklist
     </a>
@@ -769,6 +781,61 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sales-orders" class="md-nav__link">
+    Sales Orders
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sales-order-header" class="md-nav__link">
+    Sales order header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-order-line" class="md-nav__link">
+    Sales order line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supplementary-items-on-the-sales-order-line" class="md-nav__link">
+    Supplementary items on the sales order line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packing-slip-post" class="md-nav__link">
+    Packing Slip Post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-sales-order-split-group-allocations" class="md-nav__link">
+    All Sales Order Split Group Allocations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivered-not-billed" class="md-nav__link">
+    Delivered Not Billed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#product-functionality" class="md-nav__link">
     Product Functionality
   </a>
@@ -832,6 +899,38 @@
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
 <p>Within Levridge, when a sales order or invoice is created, the system automatically selects the sales contract according to the items and categories identified. It also selects a prepayment against it, eliminating the need to manually go in and figure out the process, creating fewer invoicing issues sent to growers. </p>
 <p>Target Audience: This functionality applies to individuals in Ag Retailers who manage splits, contracts, and prepayments on behalf of customers. </p>
+<h2 id="sales-orders"><a class="toclink" href="#sales-orders">Sales Orders</a></h2>
+<p>Levridge syncs sales orders between CE and F&amp;O. As sales orders are entered in CE and generated, the sales order is then created in F&amp;O. The sales order in CE becomes read only once generated.  As sales orders are entered in F&amp;O, it will be shared with CE.  </p>
+<h3 id="sales-order-header"><a class="toclink" href="#sales-order-header">Sales order header</a></h3>
+<p>When a sales order is created, the ordering customer is selected along with a customer operation and optionally a customer site.  The customer site if selected, will be used to default the split group, else the split group will default from the customer operation. Note that the split group may be updated within sales order entry as needed. The operation information will default to the sales order lines.</p>
+<p>A branch, line of business, growing season and sales period may also be entered as part of the sales order entry process. The sales period is required. If AR parameters use the sales period for pricing, the pricing on the sales order will be determined based on these dates.</p>
+<p>Branch and line of business may be used to filter or categorize sales orders for list pages and some reporting. Growing season entry on a sales order will help to determine volume pricing is used, else used as a filter for list pages and some reporting.</p>
+<h3 id="sales-order-line"><a class="toclink" href="#sales-order-line">Sales order line</a></h3>
+<p>During sales order line entry, the operation will default, but may be updated by the user.</p>
+<p>Levridge displays only the list pricing during sales order entry as specific customer pricing is determined at time of delivery applying the sales agreements.  </p>
+<p>On each line, the split group intended method for pricing may be entered. For example, a counter sale where the seed bag is damaged, could reference a flat price. Another example, during sales order entry, a specific sales agreement for pricing could be requested.  </p>
+<p>Validation of license and certification may require a contact for certain products before it can be sent for approval. The contact information is entered in the header area.</p>
+<h3 id="supplementary-items-on-the-sales-order-line"><a class="toclink" href="#supplementary-items-on-the-sales-order-line">Supplementary items on the sales order line</a></h3>
+<p>On a released item, a product may contain required or optional supplementary items.  Levridge has added functionality to automatically address the use of required supplementary items including:</p>
+<ul>
+<li>A new field linking the supplementary item to the master item is created.</li>
+<li>Automatically adding the supplementary line to an order with the appropriate quantity based on the associated item.  </li>
+<li>If the associated item is deleted or the quantity is changed, the supplementary item is also deleted, or the quantity is automatically changed on the existing supplementary line. The supplementary item’s splits and taxes will also be recalculated.  </li>
+<li>Added a supplementary item flag of ‘Multiple Percentage’ to calculate a percentage of the multiple as needed.  </li>
+<li>New fields for the supplementary item that recognize if a minimum quantity is required and the value of the minimum quantity.</li>
+</ul>
+<h3 id="packing-slip-post"><a class="toclink" href="#packing-slip-post">Packing Slip Post</a></h3>
+<p>When the sales order posts a packing slip in F&amp;O, the pricing will be applied to each customer participating in the split group on each line. The system will initially look for intended method for pricing on the participating customer in the split group.  The system then looks at valid sales agreements to apply the sales agreement pricing and any associated prepayments. If there are multiple sales agreements, the oldest will be used first.  </p>
+<p>If there is a quantity remaining that is not covered by a sales agreement, any uncontracted prepayments will be applied. The uncontracted price date may be used to determine pricing. For any remaining quantities the pricing will based on the price date of the sales order.</p>
+<p>Price dates are determined by the AR Parameter to determine what date should be used to determine pricing.</p>
+<p>The split allocation line is defined from procedures above. If the sales order line includes a Bill of Materials (BOM) item, it will validate the ‘Expand on Sales Order Allocation’ parameter on the item. If the parameter is set to yes, each of the components of the BOM will be broken out on the split allocation line for pricing. If this parament is set to no, the pricing will be based on the BOM item. For example, as fertilizer is blended, there may be a sales agreement for component products supplied by the customer.</p>
+<p>Modifications to pricing may be made upon review for billing.</p>
+<h3 id="all-sales-order-split-group-allocations"><a class="toclink" href="#all-sales-order-split-group-allocations">All Sales Order Split Group Allocations</a></h3>
+<p>This view has been created in AR&gt;Order to review all the allocation lines from all sales orders.</p>
+<h3 id="delivered-not-billed"><a class="toclink" href="#delivered-not-billed">Delivered Not Billed</a></h3>
+<p>AR&gt;orders&gt;shipped not invoiced split group allocations</p>
+<p>Standard FinOps allows delivery of products that will be ready for invoicing. The invoicing can be today or future billed. This is standard.</p>
+<p>There are new list pages that displays deliveries that need to be billed that are broken down per customer (based on splits) by allocation line. The item must be invoiced, so all parties will be billed. Unable to partially bill a product to one customer in a split.</p>
 <h2 id="product-functionality"><a class="toclink" href="#product-functionality">Product Functionality</a></h2>
 <h3 id="create-split-groups-in-fo"><a class="toclink" href="#create-split-groups-in-fo">Create Split Groups in F&amp;O</a></h3>
 <p>The split group setup is located under <a href="Create-Split-Group-in-F&amp;O">Create Split Group in F&amp;O</a>. </p>

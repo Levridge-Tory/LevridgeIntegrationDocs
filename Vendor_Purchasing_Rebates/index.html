@@ -36,7 +36,7 @@
     
     
       
-        <title>Agronomy Retail Implementation Activities - Levridge Documentation</title>
+        <title>Vendor Purchasing Rebates - Levridge Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#agronomy-retail-implementation-activities" tabindex="1" class="md-skip">
+      <a href="#vendor-purchasing-rebates" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Agronomy Retail Implementation Activities
+                Vendor Purchasing Rebates
               
             </span>
           
@@ -298,8 +298,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../AgronomyRetail/" title="Agronomy Retail" class="md-nav__link">
-      Agronomy Retail
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
+      Agronomy Sales
     </a>
   </li>
 
@@ -684,6 +684,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../CE_Customization_Best_Practices/" title="CE Customization Best Practices" class="md-nav__link">
+      CE Customization Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
       CE to AX Integration Implementation Checklist
     </a>
@@ -762,8 +774,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#vendor-rebate-group" class="md-nav__link">
+    Vendor Rebate Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#item-rebate-group" class="md-nav__link">
+    Item Rebate Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-master" class="md-nav__link">
+    Product Master
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebate-agreement" class="md-nav__link">
+    Rebate Agreement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brand-pairing" class="md-nav__link">
+    Brand Pairing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebate-process" class="md-nav__link">
+    Rebate Process
   </a>
   
 </li>
@@ -784,192 +831,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/AgronomyRetailImplementationActivities.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Vendor_Purchasing_Rebates.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="agronomy-retail-implementation-activities"><a class="toclink" href="#agronomy-retail-implementation-activities">Agronomy Retail Implementation Activities</a></h1>
-<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<p>The following is an overview of the Agronomy Retail implementation activities.  </p>
-<ol>
-<li>Enter setup data under Accounts Receivable &gt; Setup &gt; Agriculture (if not previously imported) 
-    a. Customer operation types
-    b. Customer site types
-    c. Growing seasons
-    d. Sales periods
-    e. Lines of business
-    f. Finance programs
-    g. Seed and technology agreement compliance
-    h. Dispatching accounts</li>
-<li>Enter setup data under Organization administration &gt; Global address book &gt; Relationship types
-    a. Need to define a relationship from customer to customer operation</li>
-<li>Enter sales agreement classifications under Accounts Receivable &gt; Setup &gt; Sales agreement classifications</li>
-<li>Under General Ledger &gt; Journal setup &gt; Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments </li>
-<li>Configure parameters under Accounts Receivable &gt; Setup &gt; Agriculture &gt; Agriculture parameters </li>
-<li>Under Organization administration &gt; Number sequences &gt; Number sequences enter or generate number sequences </li>
-<li>Enter setup data under Accounts payable &gt; Payment:
-    a. Terms of payment - set prepayment fields
-    b. Cash discounts - set prepayment fields
-        i. Within cash discounts set up cash discount schedules</li>
-<li>Configure ag specific settings in Accounts Receivable &gt; Setup &gt; Accounts receivable parameters:
-    a. Credit rating
-    b. Credit limits
-    c. Prices</li>
-<li>Enter vendor zones under Procurement and sourcing &gt; Setup &gt; Prices and discounts &gt; Vendor zones</li>
-<li>Enter master data - involves a lot of client feedback
-    a. Customers
-       i. Ag specific settings are:
-          1. Zone address
-          2. Dispatching account id if using a 3rd party dispatching system (like AgSync)
-          3. Seed and technology agreements
-          4. Membership fast tab for patronage
-          5. Taxation fast tab
-          6. On customer addresses set ag taxes
-          7. Billing notes
-    b. Split groups
-    c. Customer operations
-    d. Customer sites
-    e. Customer finance programs
-    f. Vendors (if not the same as customers in the Ag parameters config form)
-       i. On vendor addresses set ag taxes
-    g. Rolling stock
-       i. Cab configuration
-       ii. Drive train
-       iii. Equipment types
-       iv. Status
-       v. Equipment reasons
-       vi. Equipment parameters
-       vii. Equipment
-    h. Contacts
-       i. Setup applicator licenses</li>
-<li>Enter indirect ag taxes under Tax &gt; Indirect taxes &gt; Sales tax:
-    a. Sales tax codes
-    b. Sales tax groups
-    c. Item sales tax groups
-    d. Sales tax settlement periods
-    e. Tax reasons</li>
-<li>Under Inventory management &gt; Setup &gt; Inventory breakdown setup sites and warehouse set ag tax values</li>
-<li>Prepare and enter products by setting up ag settings in:
-    a. Product information management &gt; Setup &gt; Categories and attributes &gt; Category hierarchies
-    b. Accounts receivable &gt; Setup &gt; License and certification:
-      i. Certificate types
-      ii. Certificates compliance
-      iii. Regulated products
-      iv. Restricted product regional lists
-    c. Feed and livestock &gt; Setup &gt; Veterinary feed directive (VFD):
-       i. Veterinary feed directive (VFD) drug groups
-       ii. Veterinary feed directive (VFD) compliance
-    d. On released products, set the default order settings for each valid site and warehouse for the product
-       i. If using Kahler with this item, under Manage inventory on Action pane &gt; Warehouse items &gt; Set the dispensing method
-    e. On released products:
-        - Assign regional lists
-        - Assign certificates
-        - Assign drug groups
-        - Assign active ingredients
-        - Assign nutrients
-        - If using scale - set flag to recognize the product as one that will be used at scale
-        - If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service
-        - Define ag specific settings on supplementary sales items
-       i. Setup up substitute items</li>
-<li>Under Accounts receivable &gt; Setup &gt; Trade agreement journals enter trade agreement journals including ag specific settings</li>
-<li>Define transfer order charges Under Inventory management &gt; Setup &gt; Transfer order charges </li>
-<li>
-<p>If using Transportation management:</p>
-<ol>
-<li>
-<p>Configure TMS Parameters under Transportation management &gt; Setup &gt; Transportation management parameters
-   i. General &gt; Vendor invoice</p>
+                <h1 id="vendor-purchasing-rebates"><a class="toclink" href="#vendor-purchasing-rebates">Vendor Purchasing Rebates</a></h1>
+<p>Levridge has expanded vendor rebate collection from the manufacturer or distributor based on the sales and purchases they make. Rebates may be cumulated using thresholds or by tagging a product or vendor with multiple rebate groups.</p>
+<h2 id="vendor-rebate-group"><a class="toclink" href="#vendor-rebate-group">Vendor Rebate Group</a></h2>
+<p>A link has been added to the vendor for access to the vendor rebate table. This will allow the user to select the vendor rebate groups that need to be associated with that vendor.</p>
+<p>The vendor rebate group now includes a ‘Vendor Selection’ option that shows all vendors assigned to the selected vendor item rebate group. Vendors may be added or removed from the group.</p>
+<h2 id="item-rebate-group"><a class="toclink" href="#item-rebate-group">Item Rebate Group</a></h2>
+<p>A link has been added to the item release for access to the item rebate table. This will allow the user to select the item rebate groups that need to be associated with that item.</p>
+<p>The item rebate group now includes an ‘Item Selection’ option to show all products assigned to the selected vendor item rebate group. Products may be added or removed from the group.  Product dimensions may also be displayed. </p>
+<h2 id="product-master"><a class="toclink" href="#product-master">Product Master</a></h2>
+<p>A field has been added to store the rebate redemption price. This price is used to calculate rebates and is provided by the vendor.</p>
+<h2 id="rebate-agreement"><a class="toclink" href="#rebate-agreement">Rebate Agreement</a></h2>
+<p>The rebate agreement defines parameters that trigger the cumulation of rebates. The agreement parameters include:</p>
 <ul>
-<li>Write vendor invoice journal - set to yes</li>
-<li>Assign vendor journal name</li>
-<li>Freight bill invoice text
-ii. General &gt; Loads<ul>
-<li>Set flags for when loads get created automatically</li>
-<li>Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
-   iii. General &gt; Dispensing loads</li>
-<li>Set flags for when loads get created (Kahler integration only)
-   iv. General &gt; Freight reconciliation</li>
-<li>Enable freight reconciliation - set to yes</li>
+<li>Drop down option for sales order invoices or purchase order invoices</li>
+<li>Switch to allow retroactive rebate as needed</li>
+<li>Switch that looks at items in an item rebate group and if multiple items from a group are purchased, the percentage of rebate will be based off how many products are listed determining the correct percentage.</li>
+<li>Switch for ‘Use redemption price’, new field on product master.</li>
 </ul>
-</li>
+<p>Upon creation of a vendor rebate agreement, the default expiry date of never has been changed to one year following the start date. The user has the option to update the expiry date.</p>
+<h2 id="brand-pairing"><a class="toclink" href="#brand-pairing">Brand Pairing</a></h2>
+<p>Brand pairing allows rebate records provided by vendors for the purchase of items from two or more brands or manufacturers.  </p>
+<ul>
+<li>Items may be added to vendor rebate item groups that represent the brand to which they belong.</li>
+<li>The Item Selection feature currently available in Vendor Rebate Agreements will be re-purposed as a Vendor Item Rebate Group Selection. (This will allow multiple Vendor Item Rebate Groups to be assigned to a single Vendor Rebate Agreement.) </li>
+<li>Rebate Agreement form will be modified to enable and disable specific features that support rebates associated with Brand Pairing. </li>
+<li>Rebate Cumulation will be modified to evaluate the number of Pairs selected during the Cumulation Period and apply that information to the rebate calculation.</li>
 </ul>
-</li>
-<li>
-<p>Configure data under Transportation management &gt; Setup &gt; Load building
-   i. Load templates
-   ii. Equipment</p>
-</li>
-<li>Configure data under Transportation management &gt; Setup &gt; Carriers:
-   i. Carrier service codes
-   ii. Mode
-   iii. Transportation methods</li>
-<li>
-<p>Shipping carriers
-        - Name - Specific structure required 
-        - Activate Carrier flag set to yes
-        - Assign vendor account
-        - Activate carrier rating - set to yes
-        - Services
-          - Assign services
-        - Rating profiles</p>
-</li>
-<li>
-<p>Enter data under Transportation management &gt; Setup &gt; Rating
-    i.  Carrier accessorial charge
-    ii. Break master
-    iii. Rate master
-          - Rate base
-    iv. Rating profile
-    v. Rating metadata
-    vi. Miscellaneous charges</p>
-</li>
-<li>Enter data under Transportation management &gt; Setup&gt; Freight reconciliation
-     i. Reconciliation reasons
-    ii. Freight bill type assignments
-    iii.    Audit master</li>
-<li>Enter data under Transportation management &gt; Setup &gt; Bing map usage key (if using mapping which most clients will be doing)</li>
-<li>Enter data under Transportation management &gt; Setup &gt; Transportation standards
-    i. NMFC codes
-    ii. LTL classes</li>
-<li>Enter data under Transportation management &gt; Setup &gt; Engines
-    i. Mileage engine
-    ii. Rate engine
-    iii. Transit time engine
-    iv. Zone master</li>
-<li>
-<p>Warehouse Management Configurations</p>
-</li>
-<li>
-<p>Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses
-    i. Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS
-b. Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)
-c. Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats
-    i. Configure one location format
-d. Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types
-    i. Configure two location types; Dock and User
-e. Warehouse Management &gt; Setup &gt; Location profiles
-    i. Configure two profiles; Default and User
-f. Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters
-    i. General &gt; Assign location profile &amp; Location Type
-g. Warehouse Management &gt; Setup &gt; Load &gt; Item load
-   i. By item group indicate the load template id</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Under Inventory management &gt; Setup &gt; Agriculture &gt; Agriculture parameters
-     a. Dispensing &gt; Load template ID</p>
-</li>
-<li>
-<p>Under Accounts receivable &gt; Setup &gt; Agriculture &gt; Agriculture parameters
-     a. Dispensing &gt; Load template ID</p>
-</li>
-<li>
-<p>Under Product information management &gt; Products &gt; Released products
-     a. Transportation &gt; Use transportation management processes
-     b. Transportation &gt; Carrier service 
-    c. Manage Inventory &gt; Net Weight</p>
-</li>
-</ol>
+<h2 id="rebate-process"><a class="toclink" href="#rebate-process">Rebate Process</a></h2>
+<p>Once the rebate agreements are setup up properly, every time a Purchase order or sales order is invoiced, the rebate will show up in the accrual account as well as in the Rebate claims screen.  </p>
+<p>A rebate claims screen will provide details of rebates processed.  Processing from the claims will create a credit on the vendors account that can be left as a credit or settled against the payment from the </p>
                 
                   
                 

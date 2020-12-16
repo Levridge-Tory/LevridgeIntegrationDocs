@@ -302,8 +302,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../AgronomyRetail/" title="Agronomy Retail" class="md-nav__link">
-      Agronomy Retail
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
+      Agronomy Sales
     </a>
   </li>
 
@@ -442,13 +442,6 @@
         <li class="md-nav__item">
   <a href="#delivery-sheets" class="md-nav__link">
     Delivery Sheets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-scale-tickets" class="md-nav__link">
-    Create Scale Tickets
   </a>
   
 </li>
@@ -777,6 +770,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../CE_Customization_Best_Practices/" title="CE Customization Best Practices" class="md-nav__link">
+      CE Customization Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
       CE to AX Integration Implementation Checklist
     </a>
@@ -903,13 +908,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#create-scale-tickets" class="md-nav__link">
-    Create Scale Tickets
-  </a>
-  
-</li>
-      
       
       
       
@@ -956,18 +954,20 @@ Within the accounting technology solution, the contents of the scale ticket can 
 <h4 id="desktop-environment-service-functionality"><a class="toclink" href="#desktop-environment-service-functionality">Desktop Environment Service Functionality</a></h4>
 <p>The four services within a Windows desktop environment include: </p>
 <ol>
-<li>LevPrintService<ul>
-<li>Can install the LevPrintService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrintClient is registered at the specific location. This also includes the Zebra printing capability. </li>
+<li>LevPrinterService<ul>
+<li>Can install the LevPrinterService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrint Client is registered at the specific location. This also includes the Zebra printing capability.</li>
 </ul>
 </li>
 <li>LevHardwareService<ul>
 <li>This is the service that handles communication with hardware such as the scale head.</li>
 </ul>
 </li>
-<li>LevridgeAXToScale<ul>
-<li>Along with LevridgeScaleToAX is the integration framework. The ratio would be one LevridgeAXToScale and one for the current desktop or LevScale instance. This enables F&amp;O to broadcast all internal information that is necessary. LevridgeAXToScale would be looking at the specific service bus channel. It will then write into the LevScale through the LevScaleAPI. 
-4.LevScale</li>
-<li>LevScale is the defining factor between a server and service. LevScaleClient and LevScale are executing the same file path and processes. This is operating a straight web server without the reverse proxy capability. </li>
+<li>LevridgeAxToScaleService<ul>
+<li>Along with LevridgeScaleToAxService is the integration framework. When using multiple Levridge Scale servers along with one Enterprise system, only one LevridgeAxToScaleService is needed and can be set up as a cloud service. For LevridgeScaleToAxService, one is needed for each desktop or Levridge Scale instance. The integration framework uses the LevScaleAPI server to write into the LevScale database.</li>
+</ul>
+</li>
+<li>LevScaleClient<ul>
+<li>This is operating a straight web server without the reverse proxy capability.</li>
 </ul>
 </li>
 </ol>
@@ -995,10 +995,6 @@ Within the accounting technology solution, the contents of the scale ticket can 
 <ul>
 <li>Here you can view and create delivery sheets for grain tickets.</li>
 <li>The scale tickets and delivery sheets will sync both ways between F&amp;O and the scale app.</li>
-</ul>
-<h4 id="create-scale-tickets"><a class="toclink" href="#create-scale-tickets">Create Scale Tickets</a></h4>
-<ul>
-<li>http://levscaledev.corp.stoneridgesoftware.com/</li>
 </ul>
                 
                   

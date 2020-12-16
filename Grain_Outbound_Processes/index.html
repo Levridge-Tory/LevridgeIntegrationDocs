@@ -1,0 +1,1069 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Grain Outbound Processes - Levridge Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#grain-outbound-processes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Levridge Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Levridge Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Grain Outbound Processes
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Agronomy/" class="md-tabs__link">
+          Products
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Levridge Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Levridge Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Products
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Products
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agronomy/" title="Agronomy" class="md-nav__link">
+      Agronomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
+      Agronomy Sales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
+      Commodity Accounting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feed/" title="Feed" class="md-nav__link">
+      Feed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Patronage/" title="Equity Management" class="md-nav__link">
+      Equity Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      Scale
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        Scale
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scale-Overview/" title="Scale Overview" class="md-nav__link">
+      Scale Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scale-settings-configuration/" title="Scale Settings Configuration" class="md-nav__link">
+      Scale Settings Configuration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      System Information
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        System Information
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-1" type="checkbox" id="nav-2-7-1">
+    
+    <label class="md-nav__link" for="nav-2-7-1">
+      Integration Framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-1">
+        Integration Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Integration-Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-1-2" type="checkbox" id="nav-2-7-1-2">
+    
+    <label class="md-nav__link" for="nav-2-7-1-2">
+      Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-1-2">
+        Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D365-CE-to-D365-F&O/" title="D365 CE to D365 F&O" class="md-nav__link">
+      D365 CE to D365 F&O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D365-F&O-to-D365-CE/" title="D365 F&O to D365 CE" class="md-nav__link">
+      D365 F&O to D365 CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scale-integration/" title="Scale" class="md-nav__link">
+      Scale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agsync/" title="Agsync" class="md-nav__link">
+      Agsync
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kahler/" title="Kahler" class="md-nav__link">
+      Kahler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Surety/" title="Surety" class="md-nav__link">
+      Surety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oneWeigh/" title="oneWeigh" class="md-nav__link">
+      oneWeigh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Field-Reveal/" title="Field Reveal" class="md-nav__link">
+      Field Reveal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IntegratingCustomFields/" title="Integrating Custom Fields" class="md-nav__link">
+      Integrating Custom Fields
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-1-3" type="checkbox" id="nav-2-7-1-3">
+    
+    <label class="md-nav__link" for="nav-2-7-1-3">
+      Deployment
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-1-3">
+        Deployment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Integration-Framework/" title="Deploying the Integration Framework" class="md-nav__link">
+      Deploying the Integration Framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
+      Application Settings Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeployingCustomFieldMappingAssemblies/" title="Deploying Custom Field Mapping Assemblies" class="md-nav__link">
+      Deploying Custom Field Mapping Assemblies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeployingCDS/" title="Deploying CDS" class="md-nav__link">
+      Deploying CDS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print-service/" title="Print Service" class="md-nav__link">
+      Print Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-3" type="checkbox" id="nav-2-7-3">
+    
+    <label class="md-nav__link" for="nav-2-7-3">
+      CE Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-3">
+        CE Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Customization_Best_Practices/" title="CE Customization Best Practices" class="md-nav__link">
+      CE Customization Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
+      CE to AX Integration Implementation Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Implementation_Checklist/" title="CE Implementation Checklist" class="md-nav__link">
+      CE Implementation Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Setup_Records/" title="CE Setup Records" class="md-nav__link">
+      CE Setup Records
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../EnvironmentPlanning/" title="Environment Planning" class="md-nav__link">
+      Environment Planning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Grain_Outbound_Processes.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h2 id="grain-outbound-processes"><a class="toclink" href="#grain-outbound-processes">Grain - Outbound Processes</a></h2>
+<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
+<p>An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. </p>
+<p>Finance &amp; Operations &gt; Modules &gt; Commodity Accounting </p>
+<p>From the commodity accounting menu, the outbound process consists of: </p>
+<ul>
+<li>Sales contracts</li>
+<li>Sales commodity contracts for load requests</li>
+<li>Load requests</li>
+<li>Outbound scale tickets</li>
+<li>Outbound scale ticket application</li>
+<li>Open contracts</li>
+</ul>
+<p>One also has the Invoicing option, which includes:</p>
+<ul>
+<li>Grain shipped not invoiced</li>
+<li>Outbound scale ticket destination weights and grades</li>
+<li>Shipped not invoiced – Bulk</li>
+<li>All sales advances</li>
+</ul>
+<h2 id="sales-contracts"><a class="toclink" href="#sales-contracts">Sales Contracts</a></h2>
+<h3 id="creating-a-new-sales-contract"><a class="toclink" href="#creating-a-new-sales-contract">Creating a New Sales Contract</a></h3>
+<p>There are two sections of Sales Contracts:
+- Line Detail
+- Header</p>
+<p>The following items are viewable in the Line Detail section.</p>
+<p>To enter a new sales contract (grain that is being shipped to another individual or company), click on Sales contracts. The new window will show a listing of all the sales contracts that currently exist. Click New located on the tab bar. The Create sales contract window will appear on the right-hand side and will default in the Branch one is located at.  The Branch location can be changed. Additional items to be entered include: </p>
+<ul>
+<li>Contract Type: user defined </li>
+<li>Customer account: Automatically defaulted; can be changed</li>
+<li>Commodity: user defined</li>
+<li>Contract quantity: Amount of commodity available for the contract</li>
+<li>Load based: This is a toggle field set to yes / no. <ul>
+<li>If set to no, the Number of loads will default to the Contract quantity. </li>
+<li>If set to yes: the contract is only satisfied by the number of loads. One would indicate the number of loads requested, which the system would calculate the load size. The Contract quantity is not significant to satisfy the contract. The Load size is user-defined with the Number of loads being reflective of the Load size. </li>
+</ul>
+</li>
+<li>Discount schedule: you can choose discount schedule you would like in order to calculate the discounts that will be charged to you based off grain you deliver. </li>
+<li>Delivery Terms: user-defined. Majority of commodities are shipped on a Delivered basis. </li>
+<li>Grades to govern: user-defined. Defaults to Destination</li>
+<li>Weights to govern: user-defined. Defaults to Destination</li>
+<li>Delivery Period: Choose specific month and year</li>
+<li>Ticker: Pricing purposes</li>
+<li>Board Price: Becomes grayed out (un-usable) if Basis contract is used.  </li>
+<li>Net Price: Becomes grayed out (un-usable) if Basis contract is used.  <ul>
+<li>Basis: Enter basis price if Basis contract is used. If Cash contract is used, it opens up board price and basis. Would need to enter both of those and the system will calculate Net price. </li>
+</ul>
+</li>
+</ul>
+<p>Click Create</p>
+<p>After the contract is created, the Sales contract is available to view in the Sales contract header. The Delivery Period section shows the commodity scheduled for that delivery period. There can be multiple delivery periods along with the option to enter additional delivery periods and remove delivery periods. </p>
+<h3 id="setting-the-price-on-a-basis-contract"><a class="toclink" href="#setting-the-price-on-a-basis-contract">Setting the Price on a Basis Contract</a></h3>
+<p>Basis contracts are required to have a price set. This is done by clicking on “Set price” under Delivery Periods. The system will open a Contract pricing slider where the user can enter a Price quantity for the contract. The user can price out the whole quantity or a portion of the quantity. The Net price will be generated with the entering of the Price quantity, along with the Board price and previously entered Basis.</p>
+<p>Click Create</p>
+<p>A new delivery period line is created with the set price contract. </p>
+<h3 id="alternate-delivery-pricing"><a class="toclink" href="#alternate-delivery-pricing">Alternate Delivery Pricing</a></h3>
+<p>A function available with Sales Contract is the alternate delivery pricing. This functionality allows one to choose a different shipping address and a different price in (adjustment for shipping). Depending on when the ticket is entered and the chosen shipping address, the system will know what price to pull from. </p>
+<h3 id="contract-entry"><a class="toclink" href="#contract-entry">Contract Entry</a></h3>
+<p>The Header section includes the following fields: </p>
+<ul>
+<li>Sales contract header </li>
+<li>Miscellaneous details<ul>
+<li>The ability to identify the trader, broker, and broker commission rates. The system does not create a payable based off commission rate. This would need to be paid separately. </li>
+</ul>
+</li>
+<li>Reference Numbers<ul>
+<li>An alphanumeric field available as a cross reference to ensure the Sales Contract matches with the broker and/or trader’s purchase contract number. </li>
+</ul>
+</li>
+<li>Notes<ul>
+<li>An option for notes to be included and printed on the contract.</li>
+</ul>
+</li>
+<li>Contract dates and quantities<ul>
+<li>The ability to keep track if the contract has been signed and returned. </li>
+<li>Can include Contract date, Sent date, and Date returned. This allows the ability to generate a report out of the system and preview what contracts have been sent and returned.</li>
+</ul>
+</li>
+<li>Discounts, fees, and freight<ul>
+<li>The Discount schedule previously chosen by generating a new Sales Contract will show in this field. If there are additional discount schedules, one can include on Fee schedule field. Terms of payment will default from customer. </li>
+<li>Delivery terms</li>
+<li>Market to market adjustment</li>
+<li>Market adjustments made through individual site or central site locations. </li>
+<li>If brought to a central site, the freight adjustment could be received from the issuing location back to the pricing location and brough together for one market price. Gains or losses would be calculated based off this market to market adjustment.</li>
+<li>Freight included in basis</li>
+<li>The ability to determine freight costs from the basis. Some merchandisers prefer to see freight separately. This is an option to set freight costs in the system with the commodity dollar amount posting to a freight expense account instead of being part of the margin. </li>
+<li>Freight per unit</li>
+<li>The ability to record what the freight rate was. This is for informational purposes and with the ability to print on the contract if preferred. </li>
+<li>Freight invoiceable</li>
+<li>A toggle switch with the ability to create an invoice based of freight weight (if toggled to yes). </li>
+</ul>
+</li>
+<li>Addresses<ul>
+<li>When a ticket is entered and applied to a contract, the addresses need to match. </li>
+<li>Ship from address: current location</li>
+<li>Ship to name: </li>
+<li>FOB address: destination contract. </li>
+</ul>
+</li>
+<li>Hedge commodity<ul>
+<li>For hedging purposes. The ability to identify if there was a commodity either being bought or sold that was not traded on an exchange. </li>
+</ul>
+</li>
+</ul>
+<p>Within the contract entry, additional functionality includes: </p>
+<ul>
+<li>View: <ul>
+<li>Scale tickets and load requests issued against a contract, along with load orders tied to a contract. </li>
+</ul>
+</li>
+<li>Generate: <ul>
+<li>Pricing confirmation. This can be printed. </li>
+</ul>
+</li>
+<li>Fill:<ul>
+<li>Ability to fill at market price or contract price. </li>
+<li>Market price: <ul>
+<li>Takes quantity against current market. The system calculates gain/loss to create either a payable or receivable </li>
+</ul>
+</li>
+<li>Contract price: <ul>
+<li>Takes quantity against current contract price. There is no gain or losses. </li>
+</ul>
+</li>
+<li>Can cancel or underfill the contract at any time. </li>
+</ul>
+</li>
+</ul>
+<h3 id="sales-commodity-contracts-for-load-requests"><a class="toclink" href="#sales-commodity-contracts-for-load-requests">Sales Commodity Contracts for Load Requests</a></h3>
+<p>Load request contracts can be viewed under Commodity Accounting &gt; Outbound menu tab. </p>
+<p>A load request is a shipping order that states the specific ship date/time for a specific sales contract. </p>
+<ul>
+<li>Load orders: The individual shipments to be done</li>
+<li>Load requests: Shipments to be made</li>
+</ul>
+<p>Once loads have been shipped, the order quantity will show up based off load request, shipped quantity, ticket number and where it was shipped to. Those are used to request shipments. </p>
+<p>To create a new load request: </p>
+<ol>
+<li>Click New</li>
+<li>Choose specific contract number</li>
+<li>Choose delivery period</li>
+<li>Create request</li>
+</ol>
+<p>The newly created load requests automatically inputs the contract information (commodity, customer, customer account, contract number, and requested delivery date). The user will need to input the shipper in the Shipping carrier field. </p>
+<p><img alt="Picture1" src="../assets/images/Grain/Picture1.png" /></p>
+<p>To create a new load order: </p>
+<ol>
+<li>Click Add Load
+The system will assign a number along with the shipping carrier that was previously selected. </li>
+<li>Input the Requested ship date</li>
+<li>Input Ordered Qty</li>
+<li>Choose Ship to address</li>
+<li>The ship to address needs to match what is on the contract. </li>
+<li>Click Save. 
+This sets up a single load. You can remove a load or create multiple loads at one time with the Generate Load function. It depends on the user how many loads they would like to create. The load dates can be changed</li>
+</ol>
+<h3 id="outbound-scale-ticket-entry"><a class="toclink" href="#outbound-scale-ticket-entry">Outbound Scale Ticket Entry</a></h3>
+<p>Commodity accounting &gt; Outbound &gt; Outbound scale tickets</p>
+<p>By clicking on the Outbound scale tickets window, all of the outbound scale tickets within the system are viewable. </p>
+<p>To create a new scale ticket: </p>
+<ol>
+<li>Click on New</li>
+<li>The Create scale ticket window will appear on the righthand side</li>
+<li>Ticket type: Outbound</li>
+<li>Commodity: enter commodity</li>
+<li>Branch: autogenerated</li>
+<li>Warehouse: autogenerated</li>
+<li>Customer account: choose customer</li>
+<li>Ticket date: autogenerated</li>
+<li>Delivery name: Autogenerated</li>
+<li>Address: will auto-populate with specific customer selected above. </li>
+<li>Click Create</li>
+</ol>
+<p>The new scale ticket will now appear in your main window.  </p>
+<p>The user will be able to choose the specific load number previously set up to reflect on the shipped ticket. You do not have to use a load number. After entering in the outlined fields, click Save.  </p>
+<ul>
+<li>Scale ticket split details: will rarely if ever use splits on a scale ticket</li>
+<li>Origin weights: most of the customers will use scale interface. Most of this information will be imported in the scale system.  </li>
+<li>Designation weights: designation weights and grades are based off contract. The user can enter the contract’s gross weight, tare weight and net weight, which will be reflected on the ticket record and with the ability to invoice based off that information. </li>
+<li>Grade Factors: can enter in any grade information. </li>
+<li>Transportation details: information to track truck and driver. This will feed into the TMS system for freight payment and tracking. Requirements state you must state what the previously hauled commodity is. This is a field identified on the Transportation details section. </li>
+<li>Direct Ship: This is a yes/no toggle switch. If flipped to yes, the Partner ticket number and Direct ship ticket number would become active and flagged. Direct ship indicates the grower is going to ship specific commodities stored onsite (ex: farm) to the receiving farm. It is a function to record commodities shipped from the users own inventory. This would set up the inbound scale ticket as well as a direct ship function so it doesn’t update inventory. </li>
+</ul>
+<p><img alt="Picture2" src="../assets/images/Grain/Picture2.png" /></p>
+<p>The ticket is now ready to be applied to a contract. Click Apply. The Outbound scale ticket application is now viewable and shows all of the outbound scale tickets, along with the sales contracts and storage agreements specific to the customer.</p>
+<p><img alt="Picture3" src="../assets/images/Grain/Picture3.png" /></p>
+<ul>
+<li>Show all delivery periods. This is a yes/no toggle switch where you can view contracts. The default is to only show the current delivery period unless you wish to apply it to older contracts. But to apply against an upcoming period, you would need to turn toggle switch on. </li>
+<li>Spot Contract: if there is no contract available for this ticket or portion of it, the user can create a spot contract. The situation would be the purchaser would call the elevator and mention there was an over shipment. The elevator can at that point spot it out. If spotted out, the user would click the Spot Contract button where a new window will appear to create a spot contract.</li>
+</ul>
+<p>Once the selected contract shows the quantity to be allocated, the next steps include choosing the contract to apply it to. </p>
+<ul>
+<li>Click Post</li>
+</ul>
+<p>The contract will be updated in system and applied where it needs to be processed. </p>
+<h2 id="invoicing"><a class="toclink" href="#invoicing">Invoicing</a></h2>
+<p>Commodity Accounting Menu &gt; Invoice &gt; Grain shipped not invoiced</p>
+<h3 id="outbound-scale-ticket-destination-weights-and-grades"><a class="toclink" href="#outbound-scale-ticket-destination-weights-and-grades">Outbound scale ticket destination weights and grades</a></h3>
+<p>Outbound scale ticket destination weights and grades is a menu option where one can enter the destination weights, gross quantity per pound, and destination moisture, test weight, and additional grades for a specific contract. These results are inputted to calculate final payment.  </p>
+<h3 id="grain-shipped-not-invoiced"><a class="toclink" href="#grain-shipped-not-invoiced">Grain shipped not invoiced</a></h3>
+<p>A menu option showing all the loads shipped and yet to receive payment. These are separated by customer and by commodity.  </p>
+<p><img alt="Picture4" src="../assets/images/Grain/Picture4.png" /></p>
+<p>The user can select the number of loads they would like to create an invoice. The invoice process is referred to as a matching process. Majority of the shipments are made for commodity purposes, which means they do not need to send out invoices to request a payment. These invoices are after the fact and are known as a matching process. The goal is to match the payment sent when loads were sent. Under the Customer invoice amount field, they may not pay exact net amount due to weight or grade differences. Because the user will want the customer invoice and net amount to match, there is a future user option to adjust amount to match. For any dollar amounts differed on the commodity load, there will be functionality capturing the difference.</p>
+<ul>
+<li>Click Invoice</li>
+</ul>
+<p>There are two Invoice options: </p>
+<ol>
+<li>Pro forma invoice: this is in the rare situation where the user needs to send the invoice to the customer. This creates a document that looks like an invoice but doesn’t update in the system as an invoice. It creates a document and then goes away. </li>
+<li>
+<p>Invoice: this is the process of creating an invoice. The system generates the processes necessary to get the information back in F&amp;O and creates a receivable on the customer account. After processing, a new Posting invoice window will appear with the invoice information:</p>
+<ul>
+<li>Parameters: printing specifications</li>
+<li>Overview: tickets being invoiced</li>
+<li>Setup: any payment format adjustments</li>
+<li>Line details: packing and delivery information</li>
+</ul>
+</li>
+</ol>
+<p><img alt="Picture5" src="../assets/images/Grain/Picture5.png" /></p>
+<h3 id="shipped-not-invoiced-bulk"><a class="toclink" href="#shipped-not-invoiced-bulk">Shipped not invoiced-Bulk</a></h3>
+<p>A menu option which includes slight variations to be used with items that are not considered commodities (ex: ethanol). </p>
+<h3 id="all-sales-advances"><a class="toclink" href="#all-sales-advances">All Sales advances</a></h3>
+<p>A menu option used on rail shipments for commodities. When railcars are loaded, it could take a couple of weeks to get to their destination. As soon as the railcars are loaded and released for shipment, the user can draft up to 90% of the commodity value for immediate payment. 
+Once the shipments are recorded in system, a new invoice can be created. A Sales advance create window will pop up on right hand side. </p>
+<ul>
+<li>Sales advance description</li>
+<li>Customer account</li>
+<li>Commodity</li>
+<li>Currency</li>
+<li>Contract number: select contract you are going to advance it against. </li>
+<li>Unit number: unit number of the rail car</li>
+<li>Note: will appear on the printed documented</li>
+</ul>
+<p>If the shipment is selected to invoice, the system processes the shipment and calculates the profit. The system automatically inputs 90% for the advance percentage. If there were discounts or any other fees or charges, it would also calculate at 90%.  </p>
+<p><img alt="Picture6" src="../assets/images/Grain/Picture6.png" /></p>
+<ul>
+<li>Click Save. This locks it in system and the user can print a document showing the advance and the calculation took place. The Sales advance is created as a receivable.  </li>
+</ul>
+<p><img alt="Picture7" src="../assets/images/Grain/Picture7.png" /></p>
+<p>This is all the transactional outbound shipments for sales purposes. </p>
+<p>The Grain Inbound Processes can be found under <a href="../Grain_Inbound_Processes/">Grain Inbound Processes</a></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

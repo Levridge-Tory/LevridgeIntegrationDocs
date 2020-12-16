@@ -302,8 +302,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../AgronomyRetail/" title="Agronomy Retail" class="md-nav__link">
-      Agronomy Retail
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
+      Agronomy Sales
     </a>
   </li>
 
@@ -491,6 +491,19 @@
   <a href="#levridge-integration-system-requirements" class="md-nav__link">
     Levridge Integration System Requirements
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-framework-events-other-applications" class="md-nav__link">
+    Event Framework Events - Other Applications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -751,6 +764,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../CE_Customization_Best_Practices/" title="CE Customization Best Practices" class="md-nav__link">
+      CE Customization Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
       CE to AX Integration Implementation Checklist
     </a>
@@ -854,6 +879,19 @@
     Levridge Integration System Requirements
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-framework-events-other-applications" class="md-nav__link">
+    Event Framework Events - Other Applications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -950,6 +988,16 @@ as an IIS application. See <a href="../Deploying-Integration-Framework/">this ar
 <li><a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault overview</a></li>
 </ul>
 <p><img alt="Levridge Integration" src="../assets/images/D365EnvironmentsLevridgeIntegration.jpg" /></p>
+<h3 id="event-framework-events-other-applications"><a class="toclink" href="#event-framework-events-other-applications">Event Framework Events - Other Applications</a></h3>
+<p>Applications from Levridge or other Third-Party vendors may be used in conjunction with the Levridge product. The setups may be completed at System administration &gt; Setup &gt; Event framework &gt; Event Framework Events. </p>
+<ul>
+<li><a href="../Agsync/">Agsync</a>: Dispatching Software Package for shipping application equipment and trucks to deliver fertilizer and chemicals.  There are 2 integrations including master data sharing from F&amp;O to Ag Sync including customer accounts, operations and sites. Ag Sync will create work orders that connect with F&amp;O through the sales order service for creation of work orders. Credit checking sharing is also synced between Ag Sync and F&amp;O.</li>
+<li><a href="../Kahler/">Kahler</a>: 3rd Party platform that acts as a controller for fertilizer blending.  After a sales order/work order is ready for release, the service order is sent to Kahler with product and customer information that controls the blending of the product based on capacity of the trucks.  Kahler then adds a packing slip to the F&amp;O sales order/work order line with released data including delivery details. Thresholds are shared to perform invoicing of the product blending and delivery.</li>
+<li><a href="../Scale-Overview/">Scale</a>: Customers, products, vehicles, and other details in F&amp;O are shared with the scale application. The details are used for the Scale Ticket, weights are captured and driver tickets or BOL are generated for shipping. Once printed the information is shared back to F&amp;O and associated with sales order selected.</li>
+<li>OneWeigh: <a href="../oneWeigh/">OneWeigh Documentation</a></li>
+<li>Bing: mapping details are shared for mileage and directions under <a href="../TMS/">Transportation Management</a></li>
+<li><a href="../Field-Reveal/">Field Reveal</a>: Data is received into CE. Recommendations and Fields are data sourced from Field Reveal and shared with CE.</li>
+</ul>
                 
                   
                 
