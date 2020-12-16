@@ -20,7 +20,7 @@ Prior to creating VFDs perform these initial system setup steps:
    - Click New
    - Select a country, state, list ID and description.
    - In the Restricted list type field select Exclusive and save.
-
+  
 
 3. Create a restricted product which will host the active ingredient listed in the VFD
 
