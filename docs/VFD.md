@@ -24,6 +24,7 @@ Prior to creating VFDs perform these initial system setup steps:
 
 3. Create a restricted product which will host the active ingredient listed in the VFD
 
+
    - Product information management > Products > Released products
    - Select an item
    - In the Manage inventory action pane click Restricted products
