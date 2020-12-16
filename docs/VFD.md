@@ -14,8 +14,7 @@ Prior to creating VFDs perform these initial system setup steps:
 
 2. Create a restricted product regional list
 
-*Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
-
+   - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
    - Product information management > Setup > Product compliance > Restricted products regional lists
    - Click New
    - Select a country, state, list ID and description.
