@@ -20,6 +20,8 @@ Prior to creating VFDs perform these initial system setup steps:
    - Click New
    - Select a country, state, list ID and description.
    - In the Restricted list type field select Exclusive and save.
+
+
 3. Create a restricted product which will host the active ingredient listed in the VFD
 
    - Product information management > Products > Released products
@@ -34,6 +36,8 @@ Prior to creating VFDs perform these initial system setup steps:
    - Close the Restricted VFD groups form
    - In the released products form, go to the Active ingredient fast tab and enter an Active ingredient
    - Enter a rate like 4000 mg per 1 lb
+
+
 4. Indicate what actions should happen when delivering and invoicing sales orders containing host items that have Active ingredients/antibiotics and there is not a valid VFD or if the customer's VFDs have been consumed
 
    - Feed and livestock > Setup > Veterinary feed directive (VFD) compliance
