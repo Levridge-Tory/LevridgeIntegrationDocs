@@ -3,5 +3,5 @@
 ## Feed Documents
 
 
-[Veteran Feed Directives](VFD.md)
+[Veterinary Feed Directives](VFD.md)
 
