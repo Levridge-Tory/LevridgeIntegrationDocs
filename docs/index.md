@@ -49,7 +49,7 @@ Levridge includes a modern and integrated approach to reaching low net pricing b
 ### Feed
 ![Feed](./assets/images/LevridgeHomePage/feed.PNG) 
 
-[Feed Overview](Feed.md) *to be documented*
+[Feed Overview](Feed.md)
 
 ### Commodity Processing
 ![Commodity Processing](./assets/images/LevridgeHomePage/commodity.PNG) 
