@@ -16,7 +16,7 @@
     
     
       
-        <title>Feed - Levridge Documentation</title>
+        <title>Veterinary Feed Initiatives (VFD) - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#feed" class="md-skip">
+        <a href="#veterinary-feed-initiatives-vfd" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Feed
+              Veterinary Feed Initiatives (VFD)
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -256,49 +254,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Feed
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Feed" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Feed/" title="Feed" class="md-nav__link">
       Feed
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#feed-documents" class="md-nav__link">
-    Feed Documents
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -756,21 +716,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#feed-documents" class="md-nav__link">
-    Feed Documents
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -781,7 +726,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Feed.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/VFD.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -789,9 +734,85 @@
                   
                 
                 
-                <h1 id="feed"><a class="toclink" href="#feed">Feed</a></h1>
-<h2 id="feed-documents"><a class="toclink" href="#feed-documents">Feed Documents</a></h2>
-<p><a href="../VFD/">Veterinary Feed Directives</a></p>
+                <h1 id="veterinary-feed-initiatives-vfd"><a class="toclink" href="#veterinary-feed-initiatives-vfd">Veterinary Feed Initiatives (VFD)</a></h1>
+<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
+<p>Veterinary Feed Directives (VFDs) are prescriptions for antibiotics written by veterinarians for livestock.  The antibiotics specified in VFDs are dispensed in certain dosages for a herd and are placed/hosted with the feed given to livestock.  VFDs and the antibiotics with them are governed and restricted differently by the various states and countries. Levridge supports the legal tracking, creation and consumption of Veterinary Feed Directives (VFD) within host feed items.  </p>
+<p>Prior to creating VFDs perform these initial system setup steps:</p>
+<ol>
+<li>
+<p>Create a VFD drug group</p>
+</li>
+<li>
+<p>Feed and livestock &gt; Setup &gt; Veterinary feed directive (VFD) drug groups</p>
+</li>
+<li>Click New </li>
+<li>Enter a VFD group and description</li>
+<li>
+<p>Click Save</p>
+</li>
+<li>
+<p>Create a restricted product regional list</p>
+</li>
+</ol>
+<p><em>Note</em> - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.</p>
+<ul>
+<li>Product information management &gt; Setup &gt; Product compliance &gt; Restricted products regional lists</li>
+<li>Click New</li>
+<li>Select a country, state, list ID and description.</li>
+<li>
+<p>In the Restricted list type field select Exclusive and save.</p>
+</li>
+<li>
+<p>Create a restricted product which will host the active ingredient listed in the VFD</p>
+</li>
+<li>
+<p>Product information management &gt; Products &gt; Released products</p>
+</li>
+<li>Select an item</li>
+<li>In the Manage inventory action pane click Restricted products</li>
+<li>Click New</li>
+<li>Enter data and select the product regional list created earlier.</li>
+<li>Save the new record.</li>
+<li>Click Restricted VFD groups</li>
+<li>Click New</li>
+<li>Select the VFD group created earlier and save</li>
+<li>Close the Restricted VFD groups form</li>
+<li>In the released products form, go to the Active ingredient fast tab and enter an Active ingredient</li>
+<li>
+<p>Enter a rate like 4000 mg per 1 lb</p>
+</li>
+<li>
+<p>Indicate what actions should happen when delivering and invoicing sales orders containing host items that have Active ingredients/antibiotics and there is not a valid VFD or if the customer's VFDs have been consumed</p>
+</li>
+<li>
+<p>Feed and livestock &gt; Setup &gt; Veterinary feed directive (VFD) compliance</p>
+</li>
+<li>In the compliance form, mark the desired settings for enabling warnings and/or preventing postings for deliverying and invoicing orders</li>
+</ul>
+<h3 id="to-begin-entering-and-consuming-vfds"><a class="toclink" href="#to-begin-entering-and-consuming-vfds">To begin entering and consuming VFDs:</a></h3>
+<ul>
+<li>Create a VFD</li>
+<li>Accounts receivable &gt; Customers &gt; All customers &gt; Select the customer with a VFD &gt; Agriculture &gt; Veterinary feed directives</li>
+<li>Click New</li>
+<li>In the VFD drug group field, select the drug group set up earlier</li>
+<li>Enter the customer operation the VFD is written for</li>
+<li>Enter values for the prescription name, issued and expiration dates, dosage quantity and unit, number of head and head quantity.  </li>
+</ul>
+<p>If desired, to determine the rate of consumption of the active ingredient:</p>
+<ul>
+<li>In the Dosage calculator section of the VFD form, enter values for the rate, base weight and herd average weight and click the Calculate dosage button.</li>
+</ul>
+<p>If desired, to quickly create a sales order for this VFD:
+- Click the Create sales order button in this VFD form and in the dialog that opens fields will be defaulted from the VFD.
+- Select the host item for the active ingredient/antibiotic and enter the quantity of the host product to consume.</p>
+<h3 id="to-consume-the-vfd"><a class="toclink" href="#to-consume-the-vfd">To consume the VFD</a></h3>
+<ul>
+<li>Accounts receivable &gt; Orders &gt; All sales orders</li>
+<li>Click New and enter values including the customer operation the VFD is written for</li>
+<li>On the sales order line, create a new line and select the restricted product created earlier that is a host for the active ingredient in the VFD</li>
+<li>Enter a quantity for the selected item.  </li>
+</ul>
+<p>Once the quantity is entered, the VFD created for the current customer operation will be defaulted onto the sales line.  When the sales order is delivered, the VFD will be consumed according to the quantity on the sales line and the rate of active ingredient specified on the item.  If an active, valid VFD does not exist for the customer operation, a warning or error will be presented based on the settings specified earlier.</p>
                 
               
               
@@ -806,41 +827,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../Commodities/" title="Commodity Accounting" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Commodity Accounting
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Patronage/" title="Equity Management" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Equity Management
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
