@@ -12,7 +12,6 @@ Prior to creating VFDs perform these initial system setup steps:
     - Enter a VFD group and description
     - Click Save
 
-2. Create a restricted product regional list
 
     *Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
 
@@ -57,7 +56,9 @@ If desired, to determine the rate of consumption of the active ingredient:
 If desired, to quickly create a sales order for this VFD:
 
    - Click the Create sales order button in this VFD form and in the dialog that opens fields will be defaulted from the VFD.
-   - Select the host item for the active ingredient/antibiotic and enter the quantity of the host product to consume.
+   - In the Items section of the dialog, click the ellipses button (three dots) and click Find items.
+   - The Items grid will be populated with all the possible host products for the active ingredient/antibiotic in the VFD.  In the grid on the line for the desired host product, enter the quantity of the host product to consume.
+   - Click OK and a new sales order will be created.
 
 ### To consume the VFD
 
