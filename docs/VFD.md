@@ -12,28 +12,29 @@ Prior to creating VFDs perform these initial system setup steps:
     - Enter a VFD group and description
     - Click Save
 
+
 2. Create a restricted product regional list
     *Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
 
-   - Product information management > Setup > Product compliance > Restricted products regional lists
-   - Click New
-   - Select a country, state, list ID and description.
-   - In the Restricted list type field select Exclusive and save.
+    - Product information management > Setup > Product compliance > Restricted products regional lists
+    - Click New
+    - Select a country, state, list ID and description.
+    - In the Restricted list type field select Exclusive and save.
   
 3. Create a restricted product which will host the active ingredient listed in the VFD
 
-   - Product information management > Products > Released products
-   - Select an item
-   - In the Manage inventory action pane click Restricted products
-   - Click New
-   - Enter data and select the product regional list created earlier.
-   - Save the new record.
-   - Click Restricted VFD groups
-   - Click New
-   - Select the VFD group created earlier and save
-   - Close the Restricted VFD groups form
-   - In the released products form, go to the Active ingredient fast tab and enter an Active ingredient
-   - Enter a rate like 4000 mg per 1 lb
+    - Product information management > Products > Released products
+    - Select an item
+    - In the Manage inventory action pane click Restricted products
+    - Click New
+    - Enter data and select the product regional list created earlier.
+    - Save the new record.
+    - Click Restricted VFD groups
+    - Click New
+    - Select the VFD group created earlier and save
+    - Close the Restricted VFD groups form
+    - In the released products form, go to the Active ingredient fast tab and enter an Active ingredient
+    - Enter a rate like 4000 mg per 1 lb
 
 4. Indicate what actions should happen when delivering and invoicing sales orders containing host items that have Active ingredients/antibiotics and there is not a valid VFD or if the customer's VFDs have been consumed
 
