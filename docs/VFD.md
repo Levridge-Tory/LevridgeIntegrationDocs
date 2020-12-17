@@ -13,15 +13,13 @@ Prior to creating VFDs perform these initial system setup steps:
     - Click Save
 
 2. Create a restricted product regional list
-
-*Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
+    *Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
 
    - Product information management > Setup > Product compliance > Restricted products regional lists
    - Click New
    - Select a country, state, list ID and description.
    - In the Restricted list type field select Exclusive and save.
   
-
 3. Create a restricted product which will host the active ingredient listed in the VFD
 
    - Product information management > Products > Released products
@@ -36,7 +34,6 @@ Prior to creating VFDs perform these initial system setup steps:
    - Close the Restricted VFD groups form
    - In the released products form, go to the Active ingredient fast tab and enter an Active ingredient
    - Enter a rate like 4000 mg per 1 lb
-
 
 4. Indicate what actions should happen when delivering and invoicing sales orders containing host items that have Active ingredients/antibiotics and there is not a valid VFD or if the customer's VFDs have been consumed
 
@@ -59,7 +56,9 @@ If desired, to determine the rate of consumption of the active ingredient:
 If desired, to quickly create a sales order for this VFD:
 
    - Click the Create sales order button in this VFD form and in the dialog that opens fields will be defaulted from the VFD.
-   - Select the host item for the active ingredient/antibiotic and enter the quantity of the host product to consume.
+   - In the Items section of the dialog, click the ellipses button (three dots) and click Find items.
+   - The Items grid will be populated with all the possible host products for the active ingredient/antibiotic in the VFD.  In the grid on the line for the desired host product, enter the quantity of the host product to consume.
+   - Click OK and a new sales order will be created.
 
 ### To consume the VFD
 
