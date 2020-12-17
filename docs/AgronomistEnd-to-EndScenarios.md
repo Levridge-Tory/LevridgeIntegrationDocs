@@ -1,44 +1,59 @@
-﻿# Agronomist End-to-End Scenarios
+﻿# Agronomy Processes
 
 ## Overview
-1. *Plan to Sales Agreement* - sales tool within CE used to price product and transition growers into contracts.
-2. *Fertilizer Calculator* - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).
-3. *Sales Order Process* - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&O. 
+Their are three distinct end-to-end business processes in which Agronomists will participate.
 
-## Process #1: Plan to Sales Agreement
-There are three separate methods of kicking off a plan to sales agreement with CE: 
+1. *Field Plan to Agronomy Contract* - A set of sales tools within CE used to price product and transition growers into contracts.
+2. *Fertilizer Calculation* - A utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).
+3. *Sales Order Management* - The integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&O. 
 
-1. Batch plans
+## Field Plan to Agronomy Contract
+There are three methods for kicking off a field plan to agronomy contract with Dynamics 365 CE: 
+
+1. <strong>*[Batch plans](#batch-plans)*</strong> [^10]
 2. Regular plans
 3. Proposals
 
 ### Batch Plans
-A way to quickly create a proposal or sale agreement
+Batch plans are a way to quickly create a proposal or sale agreement. 
+<strong>*There are three types of batch plans that can be used:*</strong>   [^1]
 
-- Field type – All product needs across all fields may be added as a batch.  Individual products can then be added after the plan is created.  For example, fertilizer, and chemical may be the same for all fields, with the see added to different areas of the field after the batch process.  Required to know field details, but not customer. 
-- Prospect type – Potential customer information is added to capture pricing for products in a proposal to provide to the prospect.  Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.
+- Field type – <strong>*The field batch plan type is used to ...*</strong> [^2]
+  All product needs across all fields may be added as a batch.  
+  Individual products can then be added after the plan is created.  For example, 
+  fertilizer, and chemical may be the same for all fields, <strong>*with the seed added to 
+  different areas of the field after the batch process.  Required to know field details, but not customer.*</strong> [^3] 
+- Prospect type – Potential customer information is added to capture pricing for products in a proposal to provide to the prospect.  
+  Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.
 - Customer type – Does not require field details.  Creates proposal for seed, fertilizer or crop protection as needed.
 
-There is an ability to generate a proposal or go directly to a sales agreement for the field and customer types.
+YOu can generate a proposal or go directly to a sales agreement for the field and customer types.
+<strong>*The prospect type ...*</strong>[^2]
 
-1. Bath Plans tab
-2. Generate new
+To use the batch plan method to create an agronomy contract:
+1. Select the Bath Plans tab
+2. Select Generate new
 3. Populate required fields
     - Name: this field will auto populate when you click save
-    - Proposal Type: there are three proposal types: Customer, Field, Prospect. The batch plan will autopopulate to the Customer Type.
+    - Proposal Type: there are three proposal types: Customer, Field, Prospect. The default proposal type is Customer.
     - Customer Operation
     - Split Group
     - Sales Period: Needed to accurately price
-    - Save
-4. Programs tab
-    - Farmable acreage field is required
-    - Preconfigured set of products in many cases on agronomist recommends the same products at the same time so instead of calculating these rates each time, you can set up a program, so it automatically calculates product and rate. 
-5. Add products utilizing hte tabs across the top of the batch plan (seed, fertilizer, chemical, etc.)
-6. After adding your products, you can either:
+4. Select Save
+5. Select the Programs tab
+6. Populate fields:
+    - Farmable Acreage: This field is required
+    - Preconfigured set of products: 
+      In many cases on agronomist recommends the same products at the same time so 
+      instead of calculating these rates each time, you can set up a program so it 
+      automatically calculates product and rate.
+6. Add products utilizing the tabs across the top of the batch plan (seed, fertilizer, chemical, etc.)
+7. After adding your products, you can either:
     - Generate a proposal
     - Generate a sales agreement
 
-### Proposal Types
+### <strong>*Proposal Types*</strong> [^4]
+
 Programs, recommendations, plans and batch plans include products. Proposals will now include pricing.  Proposal is way to take all the products for field or group of fields for an operation, puts them on one document and adds pricing for a grower. The proposal rolls all of the same products together. A detailed breakdown is available that includes how much product for each field with breakdown by owner for financial responsibility based on split groups.
 
 The pricing service is an integration with FinOps where product, accounts in split group, individual product quantities for the product are shared. FinOps will look at trade agreements per sale period to capture the appropriate pricing. The customer has the option to include volume pricing, which will review previous contracts for this sales year which can then be applied to pricing.
@@ -49,7 +64,7 @@ Credit checking is also validated for the customers on the proposal through FinO
 
 Once the proposal is approved, the proposal form may be printed for the customer.
  
-There are three different proposal types within a batch plan: Customer, Prospect, and Field.
+<strong>*There are three different proposal types within a batch plan: Customer, Prospect, and Field.*</strong> [^5]
 
 1. Customer: Simplest proposal type and is the most used proposal type for a batch plan
 2. Prospect: Individual the salesperson is pursuing that is not a current client and would like to generate a price for product and contract. 
@@ -68,11 +83,16 @@ There are three different proposal types within a batch plan: Customer, Prospect
     - You can add products once to all applicable fields
 
 ### Creating a Regular Plan 
-Sales agreements are generated from proposals that have been approved by a grower. Agreements are separated by product types of seed, fertilizer and chemicals. This is standard as there may be different fiduciary requirements for these different product types.  For example, 3 agreements could be created, one for seed, one for fertilizer and one for chemicals. The sale agreements include customer, prepayment details, payment terms, with products, quantity and pricing. There is also the ability to capture the company branch for each agreement. 
+Sales agreements are generated from proposals that have been approved by a grower. 
+Agreements are separated by product types of seed, fertilizer and chemicals. 
+This is standard as there may be different fiduciary requirements for these different product types.  
+For example, 3 agreements could be created, one for seed, one for fertilizer and one for chemicals. 
+The sale agreements include customer, prepayment details, payment terms, with products, quantity and pricing. 
+<strong>*Each agreement can be associated with company branch.*</strong> [^6]
 
-These sales agreements are integrated with FinOps.
+<strong>*These sales agreements are integrated with FinOps.*</strong> [^7]
 
-1. Plan to sales agreement
+1. <strong>*Plan to sales agreement*</strong> [^8]
 2. Plans
 3. Generate new plan record
 4. Populate applicable fields
@@ -142,7 +162,9 @@ These sales agreements are integrated with FinOps.
     - Calculate prices
 
 ### Add product lines from proposal lines tab
-In some instances, a customer will decide to add products after you have generated the proposal. Using the add new proposal line within the proposal lines tab will allow you to add last minute products to the proposal and recalculate price. 
+In some instances, a customer will decide to add products after you have generated the proposal. 
+Using the add new proposal line within the proposal lines tab will allow you to add last minute 
+products to the proposal and recalculate prices. 
 
 1. (+) New proposal line
 2. Select product
@@ -152,7 +174,9 @@ In some instances, a customer will decide to add products after you have generat
 6. Line will be added to the proposal lines toab and price will be updated for that product from data from F&O/AX.
 
 ### Submit for Approval
-Once your proposal is priced and complete, it is ready to be submitted for approval. The submit for approval function/button ensures that margin on products are maintained throughout the sales process.
+Once your proposal is priced and complete, it is ready to be submitted for approval. 
+The submit for approval function/button ensures that margin on products are maintained 
+throughout the sales process.
 
 1. Submit for approval
     - Looks for any charge code or line item changes that were made and compares them to the defined thresholds that have been set. 
@@ -169,12 +193,13 @@ Once your proposal is priced and complete, it is ready to be submitted for appro
     - The process is then complete within CE.
     - The final step in the sales process would be to pull up the third-party integration (ex: Hello Sign) to capture a digital signature.
 
-### Setups in CE
-Record information setup in CE is shared with FinOps for processing of data.	
+### Setting up Dynamics 365 CE
+<strong>*Record information setup in CE is shared with FinOps for processing of data.*</strong> [^9]
 
 **Crops**: CE>Agronomy>Configuration>Crops
 
-A prepopulated list is available that includes crops such as alfalfa, canola, or corn.  A user may add/edit/delete records from the crop list.
+A prepopulated list is available that includes crops such as alfalfa, canola, or corn.  
+A user may add/edit/delete records from the crop list.
 
 **Required Crop Units**: CE>Agronomy>Required Crop Units
 
@@ -229,7 +254,10 @@ The Fertilizer Calculator is a tool used to generate blends of fertility product
 9. Generate sales order and release report to blender facilities to begin blending product (this function is not currently available but will be once it is fully developed and tested.)
 
 ## Process #3 Sales Order Process
-The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. 
+The sales order is comprised of two pieces: the sales order and the work order. 
+Both are tightly integrated within FinOps. The purpose of the sales order is to 
+give users that only have access to CE the ability to enter orders for delivery 
+and perform some of the functions that are usually completed in FinOps. 
 
 ### Generating New Sales Order in CE
 1. Sales order tab
@@ -338,3 +366,28 @@ To generate a new work order:
       - Humidity
     - Completion date
     - State/End Times
+
+[^1]: I'm not sure if this is correct information. I am assuming from the context.
+
+[^2]: Should add a sentence for each type explaining the purpose of each type
+
+[^3]: The last part of the sentence about seed doesn't make sense. The next sentence isn't a complete sentence.
+
+[^4]: This doesn't seem like a list of proposal types. Probably has the wrong header name
+Much of this doesn't include full sentences. It should be rewritten using sentences.
+
+[^5]: This is redundant. There is an entire section for this above. Combine this information
+with the information above
+
+[^6]: Explain why this is significant. What is the purpose for specifying a branch for each contract?
+
+[^7]: This sentence doesn't make sense standing alone like this. It obviously isn't 
+explaining the list below it. What is the purpose. There should be a sentence or paragraph
+explaining the list below. What is that list?
+
+[^8]: Every place there is a step instruction, be clear what the step is. For example: Select "Batch Plan"
+or Select the "Batch Plan" menu.
+
+[^9]: What is this sentence? It doesn't look like a user instruction.
+
+[^10]: Add links to the sections for each item. I added the first one.
