@@ -13,14 +13,14 @@ Prior to creating VFDs perform these initial system setup steps:
     - Click Save
 
 
-2. Create a restricted product regional list
-    *Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
+*Note* - An inclusive restricted product regional list needs to be created for each country before an exclusive list is created.
 
-    - Product information management > Setup > Product compliance > Restricted products regional lists
-    - Click New
-    - Select a country, state, list ID and description.
-    - In the Restricted list type field select Exclusive and save.
+   - Product information management > Setup > Product compliance > Restricted products regional lists
+   - Click New
+   - Select a country, state, list ID and description.
+   - In the Restricted list type field select Exclusive and save.
   
+
 3. Create a restricted product which will host the active ingredient listed in the VFD
 
     - Product information management > Products > Released products
@@ -38,8 +38,8 @@ Prior to creating VFDs perform these initial system setup steps:
 
 4. Indicate what actions should happen when delivering and invoicing sales orders containing host items that have Active ingredients/antibiotics and there is not a valid VFD or if the customer's VFDs have been consumed
 
-   - Feed and livestock > Setup > Veterinary feed directive (VFD) compliance
-   - In the compliance form, mark the desired settings for enabling warnings and/or preventing postings for deliverying and invoicing orders
+    - Feed and livestock > Setup > Veterinary feed directive (VFD) compliance
+    - In the compliance form, mark the desired settings for enabling warnings and/or preventing postings for deliverying and invoicing orders
 
 ### To begin entering and consuming VFDs:
 
