@@ -1,7 +1,7 @@
 ﻿# Agronomy Processes
 
 ## Overview
-Their are three distinct end-to-end business processes in which Agronomists will participate.
+There are three distinct end-to-end business processes in which Agronomists will participate.
 
 1. *Field Plan to Agronomy Contract* - A set of sales tools within CE used to price product and transition growers into contracts.
 2. *Fertilizer Calculation* - A utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).
@@ -27,7 +27,7 @@ Batch plans are a way to quickly create a proposal or sale agreement.
   Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.
 - Customer type – Does not require field details.  Creates proposal for seed, fertilizer or crop protection as needed.
 
-YOu can generate a proposal or go directly to a sales agreement for the field and customer types.
+You can generate a proposal or go directly to a sales agreement for the field and customer types.
 <strong>*The prospect type ...*</strong>[^2]
 
 To use the batch plan method to create an agronomy contract:
