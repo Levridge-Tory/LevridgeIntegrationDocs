@@ -55,7 +55,6 @@ Due to the many factors involved and difficulty tracking revolving member equity
 
 In Levridge equity and stock allocations are managed within ONE solution. Equity tracking, from build-up, to current balance to pay-out is handled within the Levridge solution.
 
-[Patronage Overview](Patronage.md)
+[Patronage Overview](Patronage-Overview.md)
 
-[Rolling Stock Management](Rolling_Stock_Management.md)
 
