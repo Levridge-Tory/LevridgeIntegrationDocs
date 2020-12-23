@@ -10,7 +10,6 @@ The LevridgeScaleApp structure is a browser-based Scale application with the fun
 
 The functionality is chosen based on the specific requirements of the clients. If the client’s functionality only includes a Windows desktop station, Levridge Scale App can be run as a service capability as not every scale will have a server.  
 
-
   - [Scale Settings Configuration](scale-settings-configuration.md)
   - [How to Install Levridge Scale](how-to-install-levridge-scale.md) 
   - [How to Update Levridge Scale](HowtoupdateLevridgeScale.md)

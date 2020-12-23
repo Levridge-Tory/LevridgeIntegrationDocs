@@ -3,6 +3,7 @@
 ### Settings
 
 Under Application Configuration>Settings 
+
 - **Site:** Choose a site from the drop down to assign site ID to the scale app
 - **Number Prefix:** Enter in the number ID of the Site in FO
 - **Scale:** Leave as default value of 1

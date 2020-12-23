@@ -16,26 +16,10 @@ Vital features for the agronomist include Outlook integration, email tracking, v
 
 [Agronomy Overview](Agronomy.md)
 
-[Agronomist End-to-End Scenarios](AgronomistEnd-to-EndScenarios.md)
-
-[Agronomy Implementation Activities](AgronomyImplementationActivities.md)
-
 ### Grain
 ![Grain](./assets/images/LevridgeHomePage/grain.PNG) 
 
 [Grain Overview](Grain.md)
-
-Includes an overview of the outbound and inbound grain processes. 
-
-[Outbound Processes](Grain_Outbound_Processes.md)
-
-An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. 
-
-[Inbound Processes](Grain_Inbound_Processes.md)
-
-An overview of the inbound grain process beginning with contracts and working through settlements. The in-bound process will be used for anyone buying in a commodity.  
-
-
 
 ### Accounting and Retail
 ![Accounting and Retail](./assets/images/LevridgeHomePage/accounting.PNG) 
@@ -44,7 +28,7 @@ Split billing is a unique and necessary challenge for the ag industry. Levridge 
 
 Levridge includes a modern and integrated approach to reaching low net pricing by seamlessly handling grower rebates and pricing. By taking advantage of the commissions, rebates and trade agreement set up functions that are native to the Dynamics 365 solution.
 
-[Agronomy Sales](AgronomySales.md)
+[Agronomy Overview](AgronomySales.md)
 
 ### Feed
 ![Feed](./assets/images/LevridgeHomePage/feed.PNG) 
