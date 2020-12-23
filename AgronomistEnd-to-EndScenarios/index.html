@@ -16,7 +16,7 @@
     
     
       
-        <title>Agronomist End-to-End Scenarios - Levridge Documentation</title>
+        <title>Agronomy Processes - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agronomist-end-to-end-scenarios" class="md-skip">
+        <a href="#agronomy-processes" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Agronomist End-to-End Scenarios
+              Agronomy Processes
             
           </span>
         </div>
@@ -730,11 +730,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#process-1-plan-to-sales-agreement" class="md-nav__link">
-    Process #1: Plan to Sales Agreement
+  <a href="#field-plan-to-agronomy-contract" class="md-nav__link">
+    Field Plan to Agronomy Contract
   </a>
   
-    <nav class="md-nav" aria-label="Process #1: Plan to Sales Agreement">
+    <nav class="md-nav" aria-label="Field Plan to Agronomy Contract">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -745,8 +745,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#proposal-types" class="md-nav__link">
-    Proposal Types
+  <a href="#proposal-types-4" class="md-nav__link">
+    Proposal Types [^4]
   </a>
   
 </li>
@@ -780,8 +780,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setups-in-ce" class="md-nav__link">
-    Setups in CE
+  <a href="#setting-up-dynamics-365-ce" class="md-nav__link">
+    Setting up Dynamics 365 CE
   </a>
   
 </li>
@@ -872,60 +872,65 @@
                   
                 
                 
-                <h1 id="agronomist-end-to-end-scenarios"><a class="toclink" href="#agronomist-end-to-end-scenarios">Agronomist End-to-End Scenarios</a></h1>
+                <h1 id="agronomy-processes"><a class="toclink" href="#agronomy-processes">Agronomy Processes</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>Their are three distinct end-to-end business processes in which Agronomists will participate.</p>
 <ol>
-<li><em>Plan to Sales Agreement</em> - sales tool within CE used to price product and transition growers into contracts.</li>
-<li><em>Fertilizer Calculator</em> - utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).</li>
-<li><em>Sales Order Process</em> - integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&amp;O. </li>
+<li><em>Field Plan to Agronomy Contract</em> - A set of sales tools within CE used to price product and transition growers into contracts.</li>
+<li><em>Fertilizer Calculation</em> - A utility that allows a salesperson to determine and calculate fertilizer requirements such as what product best fits the need of the customer and how much of that product is needed to fulfill the order (some work order is still needed and is anticipated to be ready in Fall 2020).</li>
+<li><em>Sales Order Management</em> - The integration of all Levridge pieces, specifically split billing, and its close integration with sales orders in F&amp;O. </li>
 </ol>
-<h2 id="process-1-plan-to-sales-agreement"><a class="toclink" href="#process-1-plan-to-sales-agreement">Process #1: Plan to Sales Agreement</a></h2>
-<p>There are three separate methods of kicking off a plan to sales agreement with CE: </p>
+<h2 id="field-plan-to-agronomy-contract"><a class="toclink" href="#field-plan-to-agronomy-contract">Field Plan to Agronomy Contract</a></h2>
+<p>There are three methods for kicking off a field plan to agronomy contract with Dynamics 365 CE: </p>
 <ol>
-<li>Batch plans</li>
+<li><strong><em><a href="#batch-plans">Batch plans</a></em></strong> [^10]</li>
 <li>Regular plans</li>
 <li>Proposals</li>
 </ol>
 <h3 id="batch-plans"><a class="toclink" href="#batch-plans">Batch Plans</a></h3>
-<p>A way to quickly create a proposal or sale agreement</p>
+<p>Batch plans are a way to quickly create a proposal or sale agreement. 
+<strong><em>There are three types of batch plans that can be used:</em></strong>   [^1]</p>
 <ul>
-<li>Field type – All product needs across all fields may be added as a batch.  Individual products can then be added after the plan is created.  For example, fertilizer, and chemical may be the same for all fields, with the see added to different areas of the field after the batch process.  Required to know field details, but not customer. </li>
-<li>Prospect type – Potential customer information is added to capture pricing for products in a proposal to provide to the prospect.  Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.</li>
+<li>Field type – <strong><em>The field batch plan type is used to ...</em></strong> [^2]
+  All product needs across all fields may be added as a batch.<br />
+  Individual products can then be added after the plan is created.  For example, 
+  fertilizer, and chemical may be the same for all fields, <strong><em>with the seed added to 
+  different areas of the field after the batch process.  Required to know field details, but not customer.</em></strong> [^3] </li>
+<li>Prospect type – Potential customer information is added to capture pricing for products in a proposal to provide to the prospect.<br />
+  Limitations include not able to move proposal to a contract.  This is a draft proposal for beginning negotiation.</li>
 <li>Customer type – Does not require field details.  Creates proposal for seed, fertilizer or crop protection as needed.</li>
 </ul>
-<p>There is an ability to generate a proposal or go directly to a sales agreement for the field and customer types.</p>
-<ol>
-<li>Bath Plans tab</li>
-<li>Generate new</li>
-<li>Populate required fields<ul>
-<li>Name: this field will auto populate when you click save</li>
-<li>Proposal Type: there are three proposal types: Customer, Field, Prospect. The batch plan will autopopulate to the Customer Type.</li>
-<li>Customer Operation</li>
-<li>Split Group</li>
-<li>Sales Period: Needed to accurately price</li>
-<li>Save</li>
-</ul>
-</li>
-<li>Programs tab<ul>
-<li>Farmable acreage field is required</li>
-<li>Preconfigured set of products in many cases on agronomist recommends the same products at the same time so instead of calculating these rates each time, you can set up a program, so it automatically calculates product and rate. </li>
-</ul>
-</li>
-<li>Add products utilizing hte tabs across the top of the batch plan (seed, fertilizer, chemical, etc.)</li>
-<li>After adding your products, you can either:<ul>
-<li>Generate a proposal</li>
-<li>Generate a sales agreement</li>
-</ul>
-</li>
-</ol>
-<h3 id="proposal-types"><a class="toclink" href="#proposal-types">Proposal Types</a></h3>
+<p>YOu can generate a proposal or go directly to a sales agreement for the field and customer types.
+<strong><em>The prospect type ...</em></strong>[^2]</p>
+<p>To use the batch plan method to create an agronomy contract:
+1. Select the Bath Plans tab
+2. Select Generate new
+3. Populate required fields
+    - Name: this field will auto populate when you click save
+    - Proposal Type: there are three proposal types: Customer, Field, Prospect. The default proposal type is Customer.
+    - Customer Operation
+    - Split Group
+    - Sales Period: Needed to accurately price
+4. Select Save
+5. Select the Programs tab
+6. Populate fields:
+    - Farmable Acreage: This field is required
+    - Preconfigured set of products: 
+      In many cases on agronomist recommends the same products at the same time so 
+      instead of calculating these rates each time, you can set up a program so it 
+      automatically calculates product and rate.
+6. Add products utilizing the tabs across the top of the batch plan (seed, fertilizer, chemical, etc.)
+7. After adding your products, you can either:
+    - Generate a proposal
+    - Generate a sales agreement</p>
+<h3 id="proposal-types-4"><a class="toclink" href="#proposal-types-4"><strong><em>Proposal Types</em></strong> [^4]</a></h3>
 <p>Programs, recommendations, plans and batch plans include products. Proposals will now include pricing.  Proposal is way to take all the products for field or group of fields for an operation, puts them on one document and adds pricing for a grower. The proposal rolls all of the same products together. A detailed breakdown is available that includes how much product for each field with breakdown by owner for financial responsibility based on split groups.</p>
 <p>The pricing service is an integration with FinOps where product, accounts in split group, individual product quantities for the product are shared. FinOps will look at trade agreements per sale period to capture the appropriate pricing. The customer has the option to include volume pricing, which will review previous contracts for this sales year which can then be applied to pricing.</p>
 <p>The initial price is returned from FinOps to CE. Charge codes may be added in CE to provide a discount. Thresholds are defined in the charge code and validated for each proposal line. If the threshold is exceeded, management must approve or deny the discount. Example, an LCR (local competitive response) charge code may be added in CE to the proposal at $15. Management has setup a threshold of $10 for that charge code, therefore during the approval process the system would send the proposal to the agronomist manager to approval prior to submission to the grower.</p>
 <p>Credit checking is also validated for the customers on the proposal through FinOps and returns a yes or no. If no, the overage for the credit limit is displayed. This could be in the form of a warning or a stop. Note:  If a customer is on credit hold, a plan would not be allowed.    </p>
 <p>Once the proposal is approved, the proposal form may be printed for the customer.
  
-There are three different proposal types within a batch plan: Customer, Prospect, and Field.</p>
+<strong><em>There are three different proposal types within a batch plan: Customer, Prospect, and Field.</em></strong> [^5]</p>
 <ol>
 <li>Customer: Simplest proposal type and is the most used proposal type for a batch plan</li>
 <li>Prospect: Individual the salesperson is pursuing that is not a current client and would like to generate a price for product and contract. <ul>
@@ -948,10 +953,15 @@ There are three different proposal types within a batch plan: Customer, Prospect
 </li>
 </ol>
 <h3 id="creating-a-regular-plan"><a class="toclink" href="#creating-a-regular-plan">Creating a Regular Plan</a></h3>
-<p>Sales agreements are generated from proposals that have been approved by a grower. Agreements are separated by product types of seed, fertilizer and chemicals. This is standard as there may be different fiduciary requirements for these different product types.  For example, 3 agreements could be created, one for seed, one for fertilizer and one for chemicals. The sale agreements include customer, prepayment details, payment terms, with products, quantity and pricing. There is also the ability to capture the company branch for each agreement. </p>
-<p>These sales agreements are integrated with FinOps.</p>
+<p>Sales agreements are generated from proposals that have been approved by a grower. 
+Agreements are separated by product types of seed, fertilizer and chemicals. 
+This is standard as there may be different fiduciary requirements for these different product types.<br />
+For example, 3 agreements could be created, one for seed, one for fertilizer and one for chemicals. 
+The sale agreements include customer, prepayment details, payment terms, with products, quantity and pricing. 
+<strong><em>Each agreement can be associated with company branch.</em></strong> [^6]</p>
+<p><strong><em>These sales agreements are integrated with FinOps.</em></strong> [^7]</p>
 <ol>
-<li>Plan to sales agreement</li>
+<li><strong><em>Plan to sales agreement</em></strong> [^8]</li>
 <li>Plans</li>
 <li>Generate new plan record</li>
 <li>Populate applicable fields<ul>
@@ -1039,7 +1049,9 @@ There are three different proposal types within a batch plan: Customer, Prospect
 </li>
 </ol>
 <h3 id="add-product-lines-from-proposal-lines-tab"><a class="toclink" href="#add-product-lines-from-proposal-lines-tab">Add product lines from proposal lines tab</a></h3>
-<p>In some instances, a customer will decide to add products after you have generated the proposal. Using the add new proposal line within the proposal lines tab will allow you to add last minute products to the proposal and recalculate price. </p>
+<p>In some instances, a customer will decide to add products after you have generated the proposal. 
+Using the add new proposal line within the proposal lines tab will allow you to add last minute 
+products to the proposal and recalculate prices. </p>
 <ol>
 <li>(+) New proposal line</li>
 <li>Select product</li>
@@ -1049,7 +1061,9 @@ There are three different proposal types within a batch plan: Customer, Prospect
 <li>Line will be added to the proposal lines toab and price will be updated for that product from data from F&amp;O/AX.</li>
 </ol>
 <h3 id="submit-for-approval"><a class="toclink" href="#submit-for-approval">Submit for Approval</a></h3>
-<p>Once your proposal is priced and complete, it is ready to be submitted for approval. The submit for approval function/button ensures that margin on products are maintained throughout the sales process.</p>
+<p>Once your proposal is priced and complete, it is ready to be submitted for approval. 
+The submit for approval function/button ensures that margin on products are maintained 
+throughout the sales process.</p>
 <ol>
 <li>Submit for approval<ul>
 <li>Looks for any charge code or line item changes that were made and compares them to the defined thresholds that have been set. </li>
@@ -1070,10 +1084,11 @@ There are three different proposal types within a batch plan: Customer, Prospect
 </ul>
 </li>
 </ol>
-<h3 id="setups-in-ce"><a class="toclink" href="#setups-in-ce">Setups in CE</a></h3>
-<p>Record information setup in CE is shared with FinOps for processing of data.    </p>
+<h3 id="setting-up-dynamics-365-ce"><a class="toclink" href="#setting-up-dynamics-365-ce">Setting up Dynamics 365 CE</a></h3>
+<p><strong><em>Record information setup in CE is shared with FinOps for processing of data.</em></strong> [^9]</p>
 <p><strong>Crops</strong>: CE&gt;Agronomy&gt;Configuration&gt;Crops</p>
-<p>A prepopulated list is available that includes crops such as alfalfa, canola, or corn.  A user may add/edit/delete records from the crop list.</p>
+<p>A prepopulated list is available that includes crops such as alfalfa, canola, or corn.<br />
+A user may add/edit/delete records from the crop list.</p>
 <p><strong>Required Crop Units</strong>: CE&gt;Agronomy&gt;Required Crop Units</p>
 <p>Defines the crop unit size.  How many seeds are in the bag?  80,000 kernels of corn in a bag.  Other crops by be sold by pound. No link to unit of measure. This is used on the seed calculator which calculates the number of seeds to cover a field and converts to quantity of seed in a bag, and therefore, how many bags are needed.</p>
 <p><strong>Timings under agronomy</strong>: </p>
@@ -1115,7 +1130,10 @@ Examples include Aspergillus Ear Rot (fungal), Bean Leaf Beetle (Insect).   Pest
 <li>Generate sales order and release report to blender facilities to begin blending product (this function is not currently available but will be once it is fully developed and tested.)</li>
 </ol>
 <h2 id="process-3-sales-order-process"><a class="toclink" href="#process-3-sales-order-process">Process #3 Sales Order Process</a></h2>
-<p>The sales order is comprised of two pieces: the sales order and the work order. Both are tightly integrated within FinOps. The purpose of the sales order is to give users that only have access to CE the ability to enter orders for delivery and perform some of the functions that are usually completed in FinOps/AX. </p>
+<p>The sales order is comprised of two pieces: the sales order and the work order. 
+Both are tightly integrated within FinOps. The purpose of the sales order is to 
+give users that only have access to CE the ability to enter orders for delivery 
+and perform some of the functions that are usually completed in FinOps. </p>
 <h3 id="generating-new-sales-order-in-ce"><a class="toclink" href="#generating-new-sales-order-in-ce">Generating New Sales Order in CE</a></h3>
 <ol>
 <li>Sales order tab</li>
@@ -1237,6 +1255,21 @@ After saving the estimated price, which is pulled from CE, will be populated. Th
 </ul>
 </li>
 </ol>
+<p>[^1]: I'm not sure if this is correct information. I am assuming from the context.</p>
+<p>[^2]: Should add a sentence for each type explaining the purpose of each type</p>
+<p>[^3]: The last part of the sentence about seed doesn't make sense. The next sentence isn't a complete sentence.</p>
+<p>[^4]: This doesn't seem like a list of proposal types. Probably has the wrong header name
+Much of this doesn't include full sentences. It should be rewritten using sentences.</p>
+<p>[^5]: This is redundant. There is an entire section for this above. Combine this information
+with the information above</p>
+<p>[^6]: Explain why this is significant. What is the purpose for specifying a branch for each contract?</p>
+<p>[^7]: This sentence doesn't make sense standing alone like this. It obviously isn't 
+explaining the list below it. What is the purpose. There should be a sentence or paragraph
+explaining the list below. What is that list?</p>
+<p>[^8]: Every place there is a step instruction, be clear what the step is. For example: Select "Batch Plan"
+or Select the "Batch Plan" menu.</p>
+<p>[^9]: What is this sentence? It doesn't look like a user instruction.</p>
+<p>[^10]: Add links to the sections for each item. I added the first one.</p>
                 
               
               

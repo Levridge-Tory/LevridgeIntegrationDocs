@@ -16,7 +16,7 @@
     
     
       
-        <title>Introduction - Levridge Documentation</title>
+        <title>Azure Key Vault - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#azure-key-vault" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Introduction
+              Azure Key Vault
             
           </span>
         </div>
@@ -734,8 +734,38 @@
                   
                 
                 
-                <h1 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h1>
-<p><a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault Overview</a></p>
+                <h1 id="azure-key-vault"><a class="toclink" href="#azure-key-vault">Azure Key Vault</a></h1>
+<p>Azure Key Vault is a cloud service for securely storing and accessing secrets. 
+A secret is anything that you want to tightly control access to, such as API keys, 
+passwords, certificates, or cryptographic keys. </p>
+<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
+<p>Key Vault service supports two types of containers: vaults and managed HSM pools. 
+Vaults support storing software and HSM-backed keys, secrets, and certificates. 
+Managed HSM pools only support HSM-backed keys. 
+See <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault Overview</a> for complete details.</p>
+<h2 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h2>
+<p>There are two properties needed in the configuration to use the Azure Key Vault. 
+- Vault URI
+- Vault Key</p>
+<p>Currently these values are part of each integration configuration that uses the Azure Key Vault.
+These values will be provided in the integration configuration in the <a href="../appsettings.json/">appsettings.json</a> file.
+Refer to the integration configuration for specific information required for the use 
+of Azure Key Vault for that integration.</p>
+<h3 id="vault-uri"><a class="toclink" href="#vault-uri">Vault URI</a></h3>
+<p>The Vault URI can be obtained from the Azure Portal. It is in the Overview page of the Key Vault being used.
+<img alt="Key Vault Overview" src="../assets/images/AzureKeyVaultURI.PNG" /> </p>
+<h3 id="vault-key"><a class="toclink" href="#vault-key">Vault Key</a></h3>
+<p>The Vault Key is the name given to the secret being stored in the vault. This value is used
+to store and retrieve the secret needed by the integration. This value is obtained 
+from the Keys page of the Key Vault being used.
+<img alt="Key Vault Overview" src="../assets/images/AzureKeyVaultKey.PNG" /> </p>
+<h2 id="azure-key-vault-setup"><a class="toclink" href="#azure-key-vault-setup">Azure Key Vault Setup</a></h2>
+<blockquote>
+<p>This section should include any instructions necessary to deploy this integration.
+This section may not be needed if the deployment follows a standard deployment process
+that is documented elsewhere. In this case it would be helpful to direct the reader
+to that standard documentation.</p>
+</blockquote>
                 
               
               

@@ -723,6 +723,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#certificate-types" class="md-nav__link">
     Certificate Types
   </a>
@@ -744,8 +751,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#licensing-processes" class="md-nav__link">
-    Licensing Processes
+  <a href="#establishing-licenses-for-employees-customers-and-contacts" class="md-nav__link">
+    Establishing Licenses for Employees, Customers and Contacts
   </a>
   
 </li>
@@ -778,20 +785,19 @@
                 
                 
                 <h1 id="licensing-and-certifications"><a class="toclink" href="#licensing-and-certifications">Licensing and Certifications</a></h1>
-<p>FinOps &gt; Accounts Receivable &gt; Setup &gt; License and certification</p>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>In agronomy, various licenses are required to handle regulated and/or restricted products because those products can be dangerous to humans or the environment.  Countries, states and counties can all have different licensing requirements.  Levridge Agronomy is able to track and maintain these licensing requirements.</p>
 <h2 id="certificate-types"><a class="toclink" href="#certificate-types">Certificate Types</a></h2>
-<p>Setup certificate types with description and option for required renewal. For example, a pesticide may require an applicators license. Certificate types may be setup on product or contact records.</p>
+<p>In Finance and Operations under Accounts receivable &gt; Setup &gt; License and certification setup certificate types with a description and mark the option for required renewal of that certificate where appropriate.  For example, a pesticide may require an applicator license. Certificate types may be setup on products or on contact records.</p>
 <h2 id="certificates-compliance"><a class="toclink" href="#certificates-compliance">Certificates Compliance</a></h2>
-<p>This setup will tell the system how to use the certificate type including the country and state.  There are options to enable warnings for sales order entry or the sales packing slip/invoice. Optionally the user can enable the prevention of postings for packing slip/invoices or agronomy work order dispatches. Validation will be done for products and contacts for a customer activity. If the sales order or proposal is entered in CRM, the contact for compliance is required before it can be sent for approval.</p>
+<p>In Finance and Operations under Accounts receivable &gt; Setup &gt; License and certification &gt; Certificates compliance establish the settings for each certificate type in a given country and state. These parameters tell the system how to react when the certificate type is utilized on a sales order or a proposal in a given country and state. There are options to enable warnings for the sales order entry or sales packing slip/invoicing processes. Optionally, the user can choose to go beyond a warning and choose to prevent postings for packing slip/invoices or agronomy work order dispatches. If the sales order or proposal is entered in CRM, the contact for compliance is required before the order or proposal can be sent for approval.</p>
 <h2 id="regulated-products-regional-lists"><a class="toclink" href="#regulated-products-regional-lists">Regulated products regional lists</a></h2>
 <p>This setup allows a list by certificate which identifies the county, state and a list of products that restricted for use. The product or contact records must include the certificate type for validation.  </p>
-<h2 id="licensing-processes"><a class="toclink" href="#licensing-processes">Licensing Processes</a></h2>
-<p>Tracking chemical applicators licensing.</p>
-<p>Certain chemical products need federal or state certification. </p>
-<p>Track and report the type of license require for a product in a given state or locality.  This is added to the product. This certification can be tied to contact of a customer or Ag retailer. Checking that employees can handle the products and the customers can handle the product.</p>
-<p>Compliance portion – on a sales/work order or proposal – warning given that prior to transfer of inventory ownership, the licensing is required. Stop process until licensing is provided. User defined by retailer.</p>
+<h2 id="establishing-licenses-for-employees-customers-and-contacts"><a class="toclink" href="#establishing-licenses-for-employees-customers-and-contacts">Establishing Licenses for Employees, Customers and Contacts</a></h2>
+<p>Once certificate types and regulated products have been setup, employees, customer and contacts with the required certificates/licenses can be identified.  For employees, in Finance and Operations go to Human resources &gt; Workers &gt; Employees.  On a given employee under the Worker action pane at the top of the page, under Competencies click &gt; Certificates.  In the form that opens, enter the certificate type the employee has, a certification number, start and end date and the country, state and/or county the certificate is utilized in.  To repeat this process for customers (the customer must be a person and not an organization) with certificates, go to Accounts receivable &gt; All customers &gt; select a customer and under the Customer action pane at the top of the page, under Set up &gt; click Certificates and enter the same information.  For contacts of customers with certificates, on the customer choose Contacts &gt; View contacts.  Select the contact and under the Competencies action pane at the top of the page &gt; click Certificates and again enter the same information.</p>
+<p>After the certificate types, products, certificate compliance parameters and certificates are setup, when a sales order, proposal or work order are entered and a regulated product is selected for a line item the system uses what has been set up.  The system retrieves the delivery address on the document to find the country, state and county for the document and compares them to certificates the customer, employee or contact on the document have.  If a non-expired license is not found, a warning or error are thrown based on what has been setup in the certificates compliance form.</p>
 <h2 id="seed-and-technology-agreements-compliance"><a class="toclink" href="#seed-and-technology-agreements-compliance">Seed and Technology Agreements Compliance</a></h2>
-<p>Seed has technology where manufacturers or suppliers own the patent which in turn, earns them royalties.  Must have agreements to utilize or sell the seed. Seed Variety X require a license from Bayer to grow the seed. On the product, can link to a vendor that requires an agreement and agreement title. Customer also has link to required vendor agreement.  When generate proposals or sales orders, can warn or stop to ensure the licensing agreement is in place. Work order dispatches and sales contract are also validated in CE and must ensure the licensing agreements are in place.</p>
+<p>Seed manufacturers or suppliers own the patents to certain kinds of seed and those patents earns them royalties. To utilize or sell the seed, vendors and customers must have agreements with the seed companies. To identify a vendor with the agreement, in Finance and Operations under Product information management &gt; select a released product which requires an agreement to sell and view the details of that product.  Under the Purchase fast tab, in the Vendor field select a vendor for this product that has the required agreement and agreement title with the seed manufacturer. To setup a customer with an agreement go to Accounts receivable &gt; All customers &gt; select a customer and under Seed and technology agreements fast tab, enter the appropriate information regarding the agreement the customer has. Lastly, to establish how the system should react when a product requiring an agreement is utilized on a proposal, work order or sales order in Finance and Operations go to Accounts receivable &gt; Setup &gt; License and certification &gt; Seed and technology agreements compliance.  In this form, identify in a given country and state if warnings or error should be thrown when products requiring agreements are utilized and the vendor or customer does not have an agreement.</p>
                 
               
               
