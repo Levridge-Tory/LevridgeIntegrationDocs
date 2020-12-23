@@ -1,4 +1,6 @@
 ﻿# Commodity Accounting Overview
 
-[Commodity Accounting Implementation Activities](CommodityImplementationActivities.md)
+## Overview
+
+- [Commodity Accounting Implementation Activities](CommodityImplementationActivities.md)
 
