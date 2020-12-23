@@ -16,7 +16,7 @@
     
     
       
-        <title>Scale Overview - Levridge Documentation</title>
+        <title>Scale Functionality - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scale" class="md-skip">
+        <a href="#scale-functionality" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Scale Overview
+              Scale Functionality
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -280,12 +278,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
     
     <label class="md-nav__link" for="nav-2-6">
       Scale
@@ -303,49 +299,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Scale Overview
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Scale Overview" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Scale-Overview/" title="Scale Overview" class="md-nav__link">
       Scale Overview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -765,8 +723,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#iis-server-functionality" class="md-nav__link">
+    IIS Server Functionality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-environment-service-functionality" class="md-nav__link">
+    Desktop Environment Service Functionality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-ticket-types" class="md-nav__link">
+    Scale Ticket Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trucks-in-yard" class="md-nav__link">
+    Trucks in Yard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-ticket-history" class="md-nav__link">
+    Scale Ticket History
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-configuration" class="md-nav__link">
+    Application Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-sheets" class="md-nav__link">
+    Delivery Sheets
   </a>
   
 </li>
@@ -783,7 +783,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Scale-Overview.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Scale-Functionality.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -791,16 +791,74 @@
                   
                 
                 
-                <h1 id="scale"><a class="toclink" href="#scale">Scale</a></h1>
-<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+                <h1 id="scale-functionality"><a class="toclink" href="#scale-functionality">Scale Functionality</a></h1>
+<p>The purpose of Levridge Scale is to receive all the data measured at the scales at ag retailer locations and incorporate it into a scale ticket
+which can be printed out and given to the grower, while also bringing the scale ticket into the Dynamics 365 ERP system. 
+Within the accounting technology solution, the contents of the scale ticket can be accounted for and posted against contracts the grower has with the ag retailer.</p>
+<p>The LevridgeScaleApp structure is a browser-based Scale application with the functionality of being able to operate as a server or as a desktop.
+1. IIS (Internet Information Services) which is a Microsoft web server. 
+2. A Windows desktop, which is a background Windows service. </p>
+<p>The functionality is chosen based on the specific requirements of the clients. If the client’s functionality only includes a Windows desktop station, Levridge Scale App can be run as a service capability as not every scale will have a server.  </p>
 <ul>
-<li><a href="../Scale-Functionality/">Scale Functionality</a></li>
 <li><a href="../scale-settings-configuration/">Scale Settings Configuration</a></li>
 <li><a href="../how-to-install-levridge-scale/">How to Install Levridge Scale</a> </li>
 <li><a href="../HowtoupdateLevridgeScale/">How to Update Levridge Scale</a></li>
 <li><a href="../ScaleHeadHardwareSetup/">ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280</a> </li>
 <li><a href="../scale-appsettings-configuration/">Scale Appsettings Configuration</a></li>
 <li><a href="../ScaleImplementationActivities/">Scale Implementation Activities</a></li>
+</ul>
+<h4 id="iis-server-functionality"><a class="toclink" href="#iis-server-functionality">IIS Server Functionality</a></h4>
+<p>If LevridgeScaleApp is ran as a server, it would operate with a Reverse Proxy. This is very important for implementation purposes. Required server information include the Printer Server and API Server.  </p>
+<p>Clients are always classified as “server” regardless if operating as a service or server. The intent is the client operates to serve content to the client. </p>
+<p>The two servers are: 
+1. LevScaleAPI
+      - This server handles all the back-end calls. This is where the integration framework communications with the scale. O-Data calls which are in turn the integration framework. O-Data is very necessary due to the ability to operate with other ERP systems. 
+2. LevScalePrint
+      - This server renders all the reports for printing. It communicates with the client printer service. This is within the .net framework. </p>
+<h4 id="desktop-environment-service-functionality"><a class="toclink" href="#desktop-environment-service-functionality">Desktop Environment Service Functionality</a></h4>
+<p>The four services within a Windows desktop environment include: </p>
+<ol>
+<li>LevPrinterService<ul>
+<li>Can install the LevPrinterService to any computer within a client’s Intranet. It has the capability of rendering reports at any location if the LevPrint Client is registered at the specific location. This also includes the Zebra printing capability.</li>
+</ul>
+</li>
+<li>LevHardwareService<ul>
+<li>This is the service that handles communication with hardware such as the scale head.</li>
+</ul>
+</li>
+<li>LevridgeAxToScaleService<ul>
+<li>Along with LevridgeScaleToAxService is the integration framework. When using multiple Levridge Scale servers along with one Enterprise system, only one LevridgeAxToScaleService is needed and can be set up as a cloud service. For LevridgeScaleToAxService, one is needed for each desktop or Levridge Scale instance. The integration framework uses the LevScaleAPI server to write into the LevScale database.</li>
+</ul>
+</li>
+<li>LevScaleClient<ul>
+<li>This is operating a straight web server without the reverse proxy capability.</li>
+</ul>
+</li>
+</ol>
+<h4 id="scale-ticket-types"><a class="toclink" href="#scale-ticket-types">Scale Ticket Types</a></h4>
+<ul>
+<li>Inbound Grain</li>
+<li>Outbound Grain</li>
+<li>Agronomy Sales</li>
+<li>Transfer</li>
+<li>Weight Only</li>
+</ul>
+<h4 id="trucks-in-yard"><a class="toclink" href="#trucks-in-yard">Trucks in Yard</a></h4>
+<ul>
+<li>These will be shown "in the yard" since they are uncompleted tickets that have not been printed.</li>
+</ul>
+<h4 id="scale-ticket-history"><a class="toclink" href="#scale-ticket-history">Scale Ticket History</a></h4>
+<ul>
+<li>This is the history of printed tickets from today and the previous day.</li>
+</ul>
+<h4 id="application-configuration"><a class="toclink" href="#application-configuration">Application Configuration</a></h4>
+<ul>
+<li>This is where the settings to change Site, Print, Etc. are located.</li>
+</ul>
+<h4 id="delivery-sheets"><a class="toclink" href="#delivery-sheets">Delivery Sheets</a></h4>
+<ul>
+<li>Here you can view and create delivery sheets for grain tickets.</li>
+<li>The scale tickets and delivery sheets will sync both ways between F&amp;O and the scale app.</li>
 </ul>
                 
               
@@ -816,41 +874,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../Patronage/" title="Equity Management" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Equity Management
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../scale-settings-configuration/" title="Scale Settings Configuration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Scale Settings Configuration
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
