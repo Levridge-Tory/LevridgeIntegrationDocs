@@ -21,9 +21,7 @@ nav:
         - Commodity Accounting: 'Commodities.md'
         - Feed: 'Feed.md'
         - Equity Management: 'Patronage.md'
-        - Scale: 
-            - Scale Overview : 'Scale-Overview.md'
-            - Scale Settings Configuration : 'scale-settings-configuration.md' 
+        - Scale: 'Scale-Overview.md'
         - System Information:
             - Integration Framework:
                 - Overview : 'Integration-Overview.md'
