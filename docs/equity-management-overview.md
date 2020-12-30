@@ -2,5 +2,5 @@
 
 ## Overview
 - [Equity Management Process](equity-management.md)
-- [Implementation Activities for Equity Management](equity-management-implementation-activities.md)
+- [Equity Management Implementation Activities](equity-management-implementation-activities.md)
 
