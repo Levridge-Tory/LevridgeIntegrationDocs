@@ -4,6 +4,8 @@
 
 Veterinary Feed Directives (VFDs) are prescriptions for antibiotics written by veterinarians for livestock.  The antibiotics specified in VFDs are dispensed in certain dosages for a herd and are placed/hosted with the feed given to livestock.  VFDs and the antibiotics with them are governed and restricted differently by the various states and countries. Levridge supports the legal tracking, creation and consumption of Veterinary Feed Directives (VFD) within host feed items.  
 
+### Initial System Setup Steps
+
 Prior to creating VFDs perform these initial system setup steps:
 
 1. Create a VFD drug group
