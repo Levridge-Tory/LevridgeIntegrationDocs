@@ -33,12 +33,16 @@ Levridge includes a modern and integrated approach to reaching low net pricing b
 ### Feed
 ![Feed](./assets/images/LevridgeHomePage/feed.PNG) 
 
+Veterinary Feed Directives (VFDs) are prescriptions for antibiotics written by veterinarians for livestock. The antibiotics specified in VFDs are dispensed in certain dosages for a herd and are placed/hosted with the feed given to livestock. VFDs and the antibiotics with them are governed and restricted differently by the various states and countries. Levridge supports the legal tracking, creation and consumption of Veterinary Feed Directives (VFD) within host feed items.
+
 [Feed Overview](Feed.md)
 
 ### Commodity Processing
 ![Commodity Processing](./assets/images/LevridgeHomePage/commodity.PNG) 
 
 No more dealing with inflexible reporting. A modern cloud-based platform with integration to the Microsoft Office suite and the ability to work with multiple other software applications gives Levridge an enhanced commodity accounting experience. With a built-in connection to the back office and your accounting team, access to information is seamless. 
+
+[Commodity Accounting Overview](commodities.md)
 
 ### Scale
 ![Scale](./assets/images/LevridgeHomePage/scale.PNG) 
