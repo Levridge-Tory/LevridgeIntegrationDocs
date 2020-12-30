@@ -7,24 +7,35 @@ Equity Management is the management of cooperative shares, member equity, and me
 The [Equity Management Implementation Activities](equity-management-implementation-activities.md) provides an overview of the implementation activities necessary for getting started with processing equity management. 
  
 ## Base Type Functionality
+
 The equity management solutions is operated on Dynamics 365 Customer Engagement (CE) functionality, with an integration from F&O. There is certain functionality that is reliant on the integration between F&O and CE Patronage to get the data into the system, one of those being “Products” under the Setup navigation area. All the products listed are integrated over from F&O.
+
 ## D365 CE Setup Functionality
+
 ### Products
 The Product form includes multiple views. This is accomplished by clicking on a certain product line. The two main factors related to Patronage are:  
+
 1. Eligible for Patronage:  This field is set to either yes or no.  
 2. Patronage unit: The goal is to know how Patronage is paid out on a product. Products can be sold in different types of unit, for example: ounce, pound, ton, vs. bushel, bag, individually. The default sales unit can be different than the Patronage itself. For example, a product sold in pounds but paid in tons.
 
 The Item Category, Relationship to the Product, and Products under Site Navigator are reliant on the integration between F&O and CE Patronage. They are areas integrated from F&O.  An important item to note is outlining what item category relates to which Patronage category. The Patronage category is the determining factor of what items will be calculated and what items will be pulled in at different rates based. 
+
 ### Stock Classes 
+
 This section allows a cooperative to set up stock classes. Some cooperatives will have many stock classes, some will have none.  
+
 ### Periods
 Periods include calendar and fiscal periods. These are not integrated from F&O and set up on CE Patronage. 
+
   - Fiscal period: 1099PATR reporting is run on calendar year, requiring the fiscal period to include a year calendar. 
   - Split due date: A Patronage Split is how a grower would like their patronage eligible transactions to be split to another grower. The Split due date is the date the annual member letters must be returned by. This used when cooperatives send their annual letters to their members and the date they request the letter to be returned.  
   - Minimum Spend: This is the minimum spend amount within a period to receive patronage. There is currently no functionality around this field and more for informational purposes. 
   - Minimum Voting Activity: There is currently no functionality around this field and more for informational purposes.
+
 ### Sources
+
 Sources is where the transactional data comes from including previous years. You could have multiple sources if you have had mergers or acquisitions with other cooperatives.  They include rules and regulations from mergers and acquisitions with other cooperatives. With those cooperatives comes different rules and regulations, and this is where cooperatives can identify where those transactions come from, different payout rates, and what rules should apply. If a cooperative has not undergone a merger or acquisition, there will more than likely be only one source information.
+
   - Primary retirement age: This field is used to set up the retirement age that members will get paid out. This annotates what age the member is eligible to receive Patronage.
   - Secondary retirement age: This field is used as a secondary option to pay out Patronage. This is the age where Patronage pay outs are mandatory. There is currently no functionality around this field and more for informational purposes.
   - Default stock class: There is currently no functionality around this field and more for informational purposes. 
@@ -36,11 +47,14 @@ Sources is where the transactional data comes from including previous years. You
       - Address, Phone number, Tax ID number, Name, Contact
 
 ### Imported Transaction
+
 An Imported Transaction includes the Transaction Details, outlining the Invoice Number, Branch, Source, and the ability to mark whether it is an eligible transaction. The “Create Patronage Detail” process needs to be run to create eligible transactions utilizing the patronage splits defined on the account record.
+
 There is the traceability functionality under “Eligible Transactions” where you can view where the transactions came from and how they are being processed and utilized throughout the system. 
 
 ### Customer Information
 #### Account Form
+
 - Account Information: The fields are integrated over from F&O. 
     - Patronage Contact: is who would be receiving the retirement benefits. 
     - Estate Contact: in the case if a member dies and want to identify who we should be working out on behalf of their estate. No functional relevance as what is calculated. Purely who we should talk to if there are questions on payouts. 
@@ -48,28 +62,43 @@ There is the traceability functionality under “Eligible Transactions” where 
     - Patronage Split Lines: Patronage Split Lines are stored in the Patronage CE and used to calculate the eligible transactions which patronage can be calculated from. 
     - Patronage Summary: Displays the equity and payment summary for the account. Summarized by period, payout type, distribution type, and source
     - Stock Summary: Displays the total stock subscriptions by stock class for the account. 
+
 #### Reports
+
 There are several reporting statements available per account, to include: allocation and payment by account. 
+
 #### Stocks
+
 Stock Subscriptions outline how many shares one has in a certain stock along with payment date, amount, and certificate number. Stock transfers and adjustments can be completed within the system. 
+
 There are two stock types: 
+
   1. Account type: A transfer of stock to another account. There is the option for an approval process under this type.   
   2. Stock class type: Changing stocks into another type of stock.
 
 Adjustments: if there was a data entry error or, one can make adjustments. This field is highly auditable with several restrictions
+
 ## D365 Finance and Operations Equity Management
+
 ### Customers
+
 The Customer Account information includes a Membership tab for informational data. It does not drive functionality. It includes the following fields: 
+
   - Membership Type, Patron, Membership Date, Member ID, and Legal Classification
   - Legal classification is utilized with 1099PATR reporting
 
 Released Product Details includes the Patronage unit where fields on the product need to be set up. The unit conversions come from the Patronage unit field and needs to be set up through F&O to be able to calculate the right unit when you switch over to D365 CE. 
+
 ### Payment Details
+
 By clicking on “Process patronage”, one can pull invoices within a specific date range, reading the invoice lines not creating. Converting the invoiced units to patronage units if the patronage unit is different on the released items. It also pulls in charge codes or discounts. Charge codes can be set up to either increase in price or decrease in price depending on how your rules are set up. 
 
 When a sales order is generated, the F&O will break up the sales order into split allocations, creating an invoice to the customers financially responsible for what was delivered. From the information generated, one can export the data into an Excel file or CSV file to import into CE. This is done by "Imported Transactions" under the standard import functionality. You can then filter the list and "Create Patronage Detail". This takes the information you have from your patronage splits and whether this item is chargeable and nonchargeable and creates your eligible transactions. The data needs to be in the right format to be imported into CE and can be imported from any system, not just F&O. 
+
 ### Eligible Transactions
+
 Patronage processing is generated once all eligible transactions have been created. One does not need to bring in imported transactions if they do not use splits or are already split out, they can import right into Eligible Transactions. These are the records that will be used when calculating the equity credit and payments through Patronage Category allocations.
+
 ### Equity Management Categories
 Equity management categories are set up based on what is being paid out and based on sources. If a cooperative has had mergers or acquisitions, or importing categories from previous years, there will likely be a variety of categories Patronage has been processed under.  
 
@@ -86,25 +115,39 @@ If the Patronage Category is calculated by units, Section199A Allocations can be
 Once the allocation is run, one can no longer generate a new transaction. It becomes inactive. 
 
 The other section that is created from this allocation is an equity credit. 
+
 ### Equity 
+
 #### Equity Credits
+
 If an equity is not paid out in the current calendar year, it moves into an equity credit value that would later determine what would be paid out This is created from the Patronage Calculation. These credits are run every year based on the items purchased or sold within that year to see how much would be paid out in the current year along with future years. An equity credit can be adjusted. 
+
 #### Equity Revolvements
-Equity Revolvements are used to determine what to pay out on existing equity credits from prior years. Here is where you annotate what percentage to pay out for a certain source, class, distribution type, or period. Based on that criteria, payment detail records are created. You can set up a Payment Schedule for the credits to be paid out in multiple years.   
+
+Equity Revolvements are used to determine what to pay out on existing equity credits from prior years. Here is where you annotate what percentage to pay out for a certain source, class, distribution type, or period. Based on that criteria, payment detail records are created. You can set up a Payment Schedule for the credits to be paid out in multiple years. 
+  
 #### Retirement Equity
-This can be a manual or run process. The equity summary shows how much equity is available to be paid out and is a tracking mechanism to view whether one qualifies for a payout and if they request one. If a payout is requested, one can create payment details and send over to the system being utilized to for payouts. This process is traceable.  
+
+This can be a manual or run process. The equity summary shows how much equity is available to be paid out and is a tracking mechanism to view whether one qualifies for a payout and if they request one. If a payout is requested, one can create payment details and send over to the system being utilized to for payouts. This process is traceable.
+ 
 #### Annual Allocations
+
 The 1099 information is located under the Annual Allocations navigation. It includes: 
+
 - Deductions
 - Non-Patronage Distribution 
 - 1099 Credits
 - 1099 PATR
+- 
  ##### 1099 PATR
+
 The 1099 PATR is a form a cooperative files for each person whom: 
+
   - The cooperative has paid at least $10 in patronage dividends and other distributions described in IRS tax section 6044(b).
   - The cooperative withheld any federal income tax under the backup withholding rules regardless of the amount of the payment.
  
 When a cooperative collects new information for a 1099 year, they would create a new 1099 PATR form. Under 1099 PATR, click “Build 1099 PATR”
+
   - A dialog box will open asking to select the following: 
       - 1099 Year (a calendar year)
       - Source (where you want the information to be coming from)
@@ -123,7 +166,9 @@ When a cooperative collects new information for a 1099 year, they would create a
         - Related 
  
 The 1099 PATR form is used for electronic filing. The cooperative can print either 1099 PATR-B or 1099 PATR-C versions of the 1099 PATR to provide to their members for tax purposes. The 1099 PATR form is also available online and can be accessed through a portal for members to download. 
+
 ### Equity Management Power BI Dashboards
+
 There are several dashboards available for Patronage through Power BI. These are powerful reporting tools to analyze and view key Patronage data and summaries. They are located: Customer Info navigation tab > Customers > Customer Info > Add Dashboards > Patronage Dashboard
 
 The following dashboards are already pre-loaded: 
@@ -133,8 +178,11 @@ The following dashboards are already pre-loaded:
   - Equity Credit
   - Equity Revolvements
   - Patronage Dashboard
+
 ### Payment Details and Summary
+
 The Equity Management Category Process creates an individual payment detail record for each eligible transaction. There is a summarize payment option that if you use the Advanced Find functionality received with CE, you can put in any sort of query you want to show payment details and from there can "Generate Payment Summary".  This would summarize all the records. Once you have that summary detail, you can export it to an Excel file. This is the data you would bring into your financial system.
+
 Once the data is exported, you can go into F&O under Accounts Payable and import the data. This will create a vendor invoice for each record. Once you have the vendor invoices, you can create a journal specific to equity management. There are designations for specific invoice journals for equity management. 
  
 The equity management journal is different from a standard invoice journal due to bringing in and identifying the customer account. A core function in F&O is when those transactions are processed and imported from CE, F&O can pay out on a different account (a financial split vs payment split). Once in F&O, the customer can decide where they would like the distribution to be sent to and the allocated percentage. 
