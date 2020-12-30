@@ -48,13 +48,13 @@ With the fastest-speed on the market, the Levridge scale is built with real-time
 [Scale Overview](Scale-Overview.md)
 
 
-### Equity and Patronage
-![Equity and Patronage](./assets/images/LevridgeHomePage/equity.PNG) 
+### Equity Management
+![Equity Management](./assets/images/LevridgeHomePage/equity.PNG) 
 
 Due to the many factors involved and difficulty tracking revolving member equity and stock allocations, this has been traditionally handled outside of the central accounting application. It is very likely stored in Excel or some other system that integrates with your accounting or agribusiness solution.
 
 In Levridge equity and stock allocations are managed within ONE solution. Equity tracking, from build-up, to current balance to pay-out is handled within the Levridge solution.
 
-[Patronage Overview](Patronage-Overview.md)
+[Equity Management Overview](equity-management-overview.md)
 
 

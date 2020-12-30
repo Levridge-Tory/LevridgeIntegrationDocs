@@ -1,8 +1,8 @@
-﻿# Patronage Implementation Activities
+﻿# Equity Management Implementation Activities
 
 
 ## Overview
-The following is an overview of the implementation activities necessary for getting started with processing Patronage.  
+The following is an overview of the implementation activities necessary for getting started with processing equity.  
    
 ### Initial Implementation Activities
 1. In FinOps, update released products with a patronage unit

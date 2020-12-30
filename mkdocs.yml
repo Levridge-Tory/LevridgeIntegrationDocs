@@ -20,7 +20,7 @@ nav:
         - Agronomy Sales: 'AgronomySales.md'
         - Commodity Accounting: 'Commodities.md'
         - Feed: 'Feed.md'
-        - Equity Management: 'Patronage-Overview.md'
+        - Equity Management: 'equity-management-overview.md'
         - Scale: 'Scale-Overview.md'
         - System Information:
             - Integration Framework:

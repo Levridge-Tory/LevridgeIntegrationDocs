@@ -1,13 +1,13 @@
-﻿# Patronage
+﻿# Equity Management
 
 ## Overview
-Patronage is a dividend or distribution that a co-operative pays to its members or investors. Patronage dividends are given based on a proportion of profit that the business makes. Once this amount is determined, management calculates the dividend according to how much each member has used the co-op's services. It is typically an annual process of generating dividends and equity balances. Managing this process has been streamlined and simplified within the Levridge solution. In a few simple steps, you can accurately set up splits, distributions, equity, reports, and cut checks. 
+Equity Management is the management of cooperative shares, member equity, and member dividends (the more common type is patronage). These are dividends or distributions that a co-operative pays to its members or investors. Most co-ops call these patronage dividends. Patronage dividends are given based on a proportion of profit that the business makes. Once this amount is determined, management calculates the dividend according to how much each member has used the co-op's services. It is typically an annual process of generating dividends and equity balances. Managing this process has been streamlined and simplified within the Levridge solution. In a few simple steps, you can accurately set up splits, distributions, equity, reports, and cut checks. 
 
 ## Implementation Activities
-The [Implementation Activities for Patronage](PatronageImplementationActivities.md) provides an overview of the implementation activities necessary for getting started with processing Patronage. 
+The [Equity Management Implementation Activities](equity-management-implementation-activities.md) provides an overview of the implementation activities necessary for getting started with processing equity management. 
  
 ## Base Type Functionality
-The Patronage solutions is operated on Dynamics 365 Customer Engagement (CE) functionality, with an integration from F&O. There is certain functionality that is reliant on the integration between F&O and CE Patronage to get the data into the system, one of those being “Products” under the Setup navigation area. All the products listed are integrated over from F&O.
+The equity management solutions is operated on Dynamics 365 Customer Engagement (CE) functionality, with an integration from F&O. There is certain functionality that is reliant on the integration between F&O and CE Patronage to get the data into the system, one of those being “Products” under the Setup navigation area. All the products listed are integrated over from F&O.
 ## D365 CE Setup Functionality
 ### Products
 The Product form includes multiple views. This is accomplished by clicking on a certain product line. The two main factors related to Patronage are:  
@@ -57,7 +57,7 @@ There are two stock types:
   2. Stock class type: Changing stocks into another type of stock.
 
 Adjustments: if there was a data entry error or, one can make adjustments. This field is highly auditable with several restrictions
-## D365 Finance and Operations Patronage
+## D365 Finance and Operations Equity Management
 ### Customers
 The Customer Account information includes a Membership tab for informational data. It does not drive functionality. It includes the following fields: 
   - Membership Type, Patron, Membership Date, Member ID, and Legal Classification
@@ -70,8 +70,8 @@ By clicking on “Process patronage”, one can pull invoices within a specific 
 When a sales order is generated, the F&O will break up the sales order into split allocations, creating an invoice to the customers financially responsible for what was delivered. From the information generated, one can export the data into an Excel file or CSV file to import into CE. This is done by "Imported Transactions" under the standard import functionality. You can then filter the list and "Create Patronage Detail". This takes the information you have from your patronage splits and whether this item is chargeable and nonchargeable and creates your eligible transactions. The data needs to be in the right format to be imported into CE and can be imported from any system, not just F&O. 
 ### Eligible Transactions
 Patronage processing is generated once all eligible transactions have been created. One does not need to bring in imported transactions if they do not use splits or are already split out, they can import right into Eligible Transactions. These are the records that will be used when calculating the equity credit and payments through Patronage Category allocations.
-### Patronage Categories
-Patronage categories are set up based on what is being paid out and based on sources. If a cooperative has had mergers or acquisitions, or importing categories from previous years, there will likely be a variety of categories Patronage has been processed under.  
+### Equity Management Categories
+Equity management categories are set up based on what is being paid out and based on sources. If a cooperative has had mergers or acquisitions, or importing categories from previous years, there will likely be a variety of categories Patronage has been processed under.  
 
 The categories can be calculated by revenue or by units.  Direct products are not associated directly to a patronage category instead they choose the item categories of those products. Based on that relationship between item category and product that is what is determined which eligible transactions to pull in when it runs that calculation. An item category can only belong to one patronage category. 
 
@@ -123,7 +123,7 @@ When a cooperative collects new information for a 1099 year, they would create a
         - Related 
  
 The 1099 PATR form is used for electronic filing. The cooperative can print either 1099 PATR-B or 1099 PATR-C versions of the 1099 PATR to provide to their members for tax purposes. The 1099 PATR form is also available online and can be accessed through a portal for members to download. 
-### Patronage Power BI Dashboards
+### Equity Management Power BI Dashboards
 There are several dashboards available for Patronage through Power BI. These are powerful reporting tools to analyze and view key Patronage data and summaries. They are located: Customer Info navigation tab > Customers > Customer Info > Add Dashboards > Patronage Dashboard
 
 The following dashboards are already pre-loaded: 
@@ -134,9 +134,9 @@ The following dashboards are already pre-loaded:
   - Equity Revolvements
   - Patronage Dashboard
 ### Payment Details and Summary
-The Patronage Category Process creates an individual payment detail record for each eligible transaction. There is a summarize payment option that if you use the Advanced Find functionality received with CE, you can put in any sort of query you want to show payment details and from there can "Generate Payment Summary".  This would summarize all the records. Once you have that summary detail, you can export it to an Excel file. This is the data you would bring into your financial system.
-Once the data is exported, you can go into F&O under Accounts Payable and import the data. This will create a vendor invoice for each record. Once you have the vendor invoices, you can create a journal specific to Patronage. There are designations for specific invoice journals for Patronage. 
+The Equity Management Category Process creates an individual payment detail record for each eligible transaction. There is a summarize payment option that if you use the Advanced Find functionality received with CE, you can put in any sort of query you want to show payment details and from there can "Generate Payment Summary".  This would summarize all the records. Once you have that summary detail, you can export it to an Excel file. This is the data you would bring into your financial system.
+Once the data is exported, you can go into F&O under Accounts Payable and import the data. This will create a vendor invoice for each record. Once you have the vendor invoices, you can create a journal specific to equity management. There are designations for specific invoice journals for equity management. 
  
-The Patronage journal is different from a standard invoice journal due to bringing in and identifying the customer account. A core function in F&O is when those transactions are processed and imported from CE, F&O can pay out on a different account (a financial split vs payment split). Once in F&O, the customer can decide where they would like the distribution to be sent to and the allocated percentage. 
+The equity management journal is different from a standard invoice journal due to bringing in and identifying the customer account. A core function in F&O is when those transactions are processed and imported from CE, F&O can pay out on a different account (a financial split vs payment split). Once in F&O, the customer can decide where they would like the distribution to be sent to and the allocated percentage. 
  
 There are variety of payment journals one can choose from. When journals are set up to pay out, ensure equity payment is specified along with the check and device format. There are up to five options to choose from. There is the ability for multiple check formats and the ability to include additional information on check stubs. This is located under Payment Proposal. 
