@@ -16,7 +16,7 @@
     
     
       
-        <title>Scale settings configuration - Levridge Documentation</title>
+        <title>Scale Application Configuration - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scale-settings-configuration" class="md-skip">
+        <a href="#scale-application-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Scale settings configuration
+              Scale Application Configuration
             
           </span>
         </div>
@@ -675,6 +675,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -683,12 +685,47 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scale-settings-configuration" class="md-nav__link">
-    Scale Settings Configuration
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Scale Settings Configuration">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-server" class="md-nav__link">
+    Windows Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-desktop" class="md-nav__link">
+    Windows Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workstation-management" class="md-nav__link">
+    Workstation Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipment-management" class="md-nav__link">
+    Equipment Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-equipment-grades" class="md-nav__link">
+    Map Equipment Grades
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#settings" class="md-nav__link">
@@ -731,6 +768,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#standalone-configuration" class="md-nav__link">
+    Standalone Configuration
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -748,7 +792,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/scale-settings-configuration.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/scale-application-configuration.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -756,9 +800,27 @@
                   
                 
                 
-                  <h1>Scale settings configuration</h1>
-                
-                <h2 id="scale-settings-configuration"><a class="toclink" href="#scale-settings-configuration">Scale Settings Configuration</a></h2>
+                <h1 id="scale-application-configuration"><a class="toclink" href="#scale-application-configuration">Scale Application Configuration</a></h1>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>The Levridge Scale application is structured as a browser-based application that can be operated as a server or as a desktop depending on the specification requirements of the customer.</p>
+<h3 id="windows-server"><a class="toclink" href="#windows-server">Windows Server</a></h3>
+<p>When using the Scale application on Windows server the following servers will be installed and used.</p>
+<p>LevScale API: This server will handle all integration framework communications to Scale. O-Data is used in the integration framework.</p>
+<p>LevScalePrint: This server communicates with the client printer service and is used to render all Scale reports, such as Scale Tickets.</p>
+<h3 id="windows-desktop"><a class="toclink" href="#windows-desktop">Windows Desktop</a></h3>
+<p>On a Windows Desktop environment, four services will be installed and used with the Scale application.</p>
+<ol>
+<li>LevPrinterService: This can be installed on any computer within the customer’s intranet and allows the scale tickets to be printed. </li>
+<li>LevHardwareService: This service is used when connecting to hardware such as a scale head.</li>
+<li>LevridgeAxToScaleService: This works along with the LevridgeScaleToAxService and contains the integration framework which handles the bidirectional integration with Dynamics 365 F&amp;O.  When using multiple Levridge Scale servers along with one Enterprise system, only one LevridgeAxToScaleService is needed and can be set up as a cloud service. For LevridgeScaleToAxService, one is needed for each desktop or Levridge Scale instance. The integration framework uses the LevScaleAPI server to write into the LevScale.</li>
+<li>LevScaleClient: This is operating a straight web server without the reverse proxy capability.</li>
+</ol>
+<h3 id="workstation-management"><a class="toclink" href="#workstation-management">Workstation Management</a></h3>
+<p>Define the association of the various equipment. In most applications, only one workstation will need to be created. When creating a workstation, assign a Workstation Name and then select the Equipment i.e. a scale head and a grain analyzer. The Equipment is set up in Equipment Management.</p>
+<h3 id="equipment-management"><a class="toclink" href="#equipment-management">Equipment Management</a></h3>
+<p>Define the equipment such as scales and analyzers that will be used with the Scale application.  Equipment can be marked as Inactive if it is not yet fully configured or no longer in use.</p>
+<h3 id="map-equipment-grades"><a class="toclink" href="#map-equipment-grades">Map Equipment Grades</a></h3>
+<p>Map grade factors to a commodity for the given Equipment, such as a grain analyzer. This allows the system to parse the grain analyzer’s output and assign grades to a commodity for use on a scale ticket.</p>
 <h3 id="settings"><a class="toclink" href="#settings">Settings</a></h3>
 <p>Under Application Configuration&gt;Settings </p>
 <ul>
@@ -811,6 +873,8 @@
 5. Click Create. </p>
 <p>To edit a previously created Gross quantity, click Edit next to the GQ that you want to change and when you have finished editing it, click the blue "Edit" button to save it. </p>
 <p>To delete a previously created GQ, click delete next to the GQ. Confirm the delete by clicking the red "Delete" button. </p>
+<h3 id="standalone-configuration"><a class="toclink" href="#standalone-configuration">Standalone Configuration</a></h3>
+<p>If using Levridge Scale as a standalone system (not integrating with D365 Finance and Operations) this screen is used to define data such as customers, commodities, grade factors etc.</p>
                 
               
               

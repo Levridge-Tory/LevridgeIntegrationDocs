@@ -16,7 +16,7 @@
     
     
       
-        <title>Scale Functionality - Levridge Documentation</title>
+        <title>Scale Application FAQ - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scale-functionality" class="md-skip">
+        <a href="#scale-application-faq" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Scale Functionality
+              Scale Application FAQ
             
           </span>
         </div>
@@ -678,90 +678,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scale-ticket-types" class="md-nav__link">
-    Scale Ticket Types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#customer-account" class="md-nav__link">
-    Customer Account
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#driver-on" class="md-nav__link">
-    Driver On
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weight" class="md-nav__link">
-    Weight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gross-quantity" class="md-nav__link">
-    Gross Quantity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trucks-in-yard" class="md-nav__link">
-    Trucks in Yard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grade-factors" class="md-nav__link">
-    Grade Factors
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scale-ticket-history" class="md-nav__link">
-    Scale Ticket History
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#application-configuration" class="md-nav__link">
-    Application Configuration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -772,7 +688,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Scale-Functionality.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/scale-application-faq.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -780,47 +696,43 @@
                   
                 
                 
-                <h1 id="scale-functionality"><a class="toclink" href="#scale-functionality">Scale Functionality</a></h1>
-<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<p>Levridge Scale allows you to improve efficiency and accuracy by automatically capturing weight and quality attributes during scale ticket creation when weighing trucks containing bulk products. Scale tickets and bill of ladings can easily be issued to drivers as well as synchronized real-time to Levridge Commodity accounting built in Microsoft Dynamics 365 Finance and Supply Chain Management.  Scale tickets can also be exported to other ERP systems. Levridge Scale provides a modern and easy to understand interface, allowing users to create scale tickets quickly and accurately.   </p>
+                <h1 id="scale-application-faq"><a class="toclink" href="#scale-application-faq">Scale Application FAQ</a></h1>
+<p><strong>Q: What hardware does Levridge Scale integrate with?</strong></p>
 <ul>
-<li><a href="../scale-application-configuration/">Scale Application Configuration</a></li>
-<li><a href="../how-to-install-levridge-scale/">How to Install Levridge Scale</a> </li>
-<li><a href="../HowtoupdateLevridgeScale/">How to Update Levridge Scale</a></li>
-<li><a href="../ScaleHeadHardwareSetup/">ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280</a> </li>
-<li><a href="../scale-appsettings-configuration/">Scale Appsettings Configuration</a></li>
-<li><a href="../ScaleImplementationActivities/">Scale Implementation Activities</a></li>
+<li>A: Levridge Scale currently supports the Rice Lake 920i and 1280 scales as well as the Cardinal 225D and Fairbanks FB2550 scales. In addition, Levridge Scale interfaces with the GAC 2500 grain analyzer. We are continuing to build out our library of supported hardware to include additional moisture and protein analyzers as well as message boards and RFID readers.</li>
 </ul>
-<h3 id="scale-ticket-types"><a class="toclink" href="#scale-ticket-types">Scale Ticket Types</a></h3>
-<p>Different types of scale tickets can be entered into the Scale app depending upon what type of transaction needs to be recorded. The type of scale tickets that can be entered include:</p>
+<p><strong>Q: Is Levridge Scale NTEP certified?</strong></p>
 <ul>
-<li>Inbound Grain</li>
-<li>Outbound Grain</li>
-<li>Agronomy Sales</li>
-<li>Transfer</li>
-<li>Weight Only</li>
+<li>A: Yes – Levridge Scale is NTEP certified.</li>
 </ul>
-<h3 id="customer-account"><a class="toclink" href="#customer-account">Customer Account</a></h3>
-<p>Select the correct Customer Account from the list.</p>
-<p>Note: Customers appearing in the list are configured by setting them up in Setup &gt; Application Configuration &gt; Customer Short List.  See <strong><em><a href="../scale-application-configuration/###Scale-Customer-Short-List">Scale Customer Short List</a></em></strong> for more details. </p>
-<p>You can also search for any customer using the Search field. </p>
-<h3 id="driver-on"><a class="toclink" href="#driver-on">Driver On</a></h3>
-<p>If the driver is in the truck when it is being weighed the Driver On toggle should be set to Yes.  If the Driver On toggle is not visible, it can be turned on by going to SETUP &gt; Application Configuration &gt; Settings &gt; Is Driver On</p>
-<h3 id="weight"><a class="toclink" href="#weight">Weight</a></h3>
-<p>The weight from the scale can be recorded by selecting the Capture button.  You can also manually enter the Weigh-In and Weight-Out values.</p>
-<h3 id="gross-quantity"><a class="toclink" href="#gross-quantity">Gross Quantity</a></h3>
-<p>The gross quantity is calculated by taking the net weight and dividing it by the Factor entered in SETUP &gt; Application Configuration &gt; Gross Quantity Settings.   For example, when weighing Corn by the bushel, if a Factor of 56 has been entered and 53,300 has been captured as the Net Weight the Gross Quantity would be: 955.36 bushels.   </p>
-<h3 id="trucks-in-yard"><a class="toclink" href="#trucks-in-yard">Trucks in Yard</a></h3>
-<p>This contains the list of scale tickets that have been saved, but not yet complete or printed as either the truck is emptying its contents or is being filled and still needs to have its Weigh-Out amount captured on the scale ticket. </p>
-<h3 id="grade-factors"><a class="toclink" href="#grade-factors">Grade Factors</a></h3>
-<p>Grade factor values used to determine quality discounts and premiums can be manually entered in the Scale Application or brought in with integrations to grain analyzers, such as the GAC 2500. </p>
-<p>If the Scale Application is integrated to one or more grain analyzer, the grade factor information taken from a sample will display in the Open Grade Factor Results and can be matched with the correct corresponding scale ticket. 
-Grade factors can be printed on Grade tickets as well as the Scale ticket.</p>
-<p>If grade factors are entered and maintained in Levridge they can be integrated with the Scale Application.  </p>
-<h3 id="scale-ticket-history"><a class="toclink" href="#scale-ticket-history">Scale Ticket History</a></h3>
-<p>The Scale Ticket History window displays today and yesterday’s printed scale tickets.  If you do not see a scale ticket in the history window that you expect it may be that the truck is still in the yard and that the ticket has not yet been printed. </p>
-<h3 id="application-configuration"><a class="toclink" href="#application-configuration">Application Configuration</a></h3>
-<p>This is where the settings to change Site, Print, Etc. are located.</p>
+<p><strong>Q: Can Levridge Scale support both metric and imperial systems of measurement?</strong></p>
+<ul>
+<li>A: Yes, Levridge Scale supports both kilograms and pounds.  Those weights can be converted to other units of measure such as bushels, tons, tonnes and hundred weight.</li>
+</ul>
+<p><strong>Q: Does Levridge Scale work offline?</strong></p>
+<ul>
+<li>A: Yes, the Levridge Scale can work offline. Once the application is back online, information will transmit to and from Levridge Scale.  </li>
+</ul>
+<p><strong>Q: Do you need to purchase Microsoft Dynamics 365 Finance or Supply Chain Management to use Levridge Scale?</strong></p>
+<ul>
+<li>A: No. Levridge Scale is purchased separately from Dynamics 365. However, Levridge Scale does integrate with Levridge Commodity accounting built in Dynamics 365 Finance and Supply Chain.</li>
+</ul>
+<p><strong>Q: What information from Levridge Scale integrates with Dynamics 365?</strong></p>
+<ul>
+<li>A: Scale ticket information such as weights, quantities, and quality grade factors are integrated with Levridge Commodity Accounting where they can be matched to or generate sales orders or payables. </li>
+</ul>
+<p><strong>Q: Does information from Levridge Commodity Accounting integrate with Levridge Scale?</strong></p>
+<ul>
+<li>A: Yes, master data such as Customers, Split Groups, Items, Quality Grade Factors can all be integrated to Levridge Scale from Levridge Commodity Accounting built in Dynamics 365 Finance and Supply Chain. </li>
+</ul>
+<p><strong>Q: Can Levridge Scale integration with other ERP systems?</strong></p>
+<ul>
+<li>A: Yes. Using AgXML, scale tickets can be exported from the Scale app and brought into an external ERP system. </li>
+</ul>
+<p><strong>Q:  What languages are supported with Levridge Scale?</strong></p>
+<ul>
+<li>A: Levridge Scale currently supports US English only.</li>
+</ul>
                 
               
               
