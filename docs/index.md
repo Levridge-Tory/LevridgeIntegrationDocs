@@ -42,7 +42,7 @@ Veterinary Feed Directives (VFDs) are prescriptions for antibiotics written by v
 
 No more dealing with inflexible reporting. A modern cloud-based platform with integration to the Microsoft Office suite and the ability to work with multiple other software applications gives Levridge an enhanced commodity accounting experience. With a built-in connection to the back office and your accounting team, access to information is seamless. 
 
-[Commodity Accounting Overview](commodities.md)
+[Commodity Accounting Overview](Commodities.md)
 
 ### Scale
 ![Scale](./assets/images/LevridgeHomePage/scale.PNG) 
