@@ -10,6 +10,7 @@ Levridge Scale allows you to improve efficiency and accuracy by automatically ca
   - [ScaleHead Hardware Setup for Rice Lake 920i and Rice Lake 1280](ScaleHeadHardwareSetup.md) 
   - [Scale Appsettings Configuration](scale-appsettings-configuration.md)
   - [Scale Implementation Activities](ScaleImplementationActivities.md)
+  - [Scale Application FAQ](scale-application-faq.md)
  
 ### Scale Ticket Types
 
