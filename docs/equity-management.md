@@ -138,7 +138,7 @@ The 1099 information is located under the Annual Allocations navigation. It incl
 - Non-Patronage Distribution 
 - 1099 Credits
 - 1099 PATR
-- 
+
  ##### 1099 PATR
 
 The 1099 PATR is a form a cooperative files for each person whom: 
@@ -169,9 +169,12 @@ The 1099 PATR form is used for electronic filing. The cooperative can print eith
 
 ### Equity Management Power BI Dashboards
 
-There are several dashboards available for Patronage through Power BI. These are powerful reporting tools to analyze and view key Patronage data and summaries. They are located: Customer Info navigation tab > Customers > Customer Info > Add Dashboards > Patronage Dashboard
+There are several dashboards available for Patronage through Power BI. These are powerful reporting tools to analyze and view key Patronage data and summaries. 
+
+They are located: Customer Info navigation tab > Customers > Customer Info > Add Dashboards > Patronage Dashboard
 
 The following dashboards are already pre-loaded: 
+
   - 1099A Deductions
   - Allocation Summary
   - Eligible Transactions
