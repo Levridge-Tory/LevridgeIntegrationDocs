@@ -16,7 +16,7 @@
     
     
       
-        <title>Equity Management - Levridge Documentation</title>
+        <title>Equity Management Implementation Activities - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#patronage" class="md-skip">
+        <a href="#equity-management-implementation-activities" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Equity Management
+              Equity Management Implementation Activities
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -268,49 +266,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Equity Management
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Equity Management" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../equity-management-overview/" title="Equity Management" class="md-nav__link">
       Equity Management
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -729,6 +689,33 @@
     Overview
   </a>
   
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-implementation-activities" class="md-nav__link">
+    Initial Implementation Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#year-end-activities" class="md-nav__link">
+    Year-End Activities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendar-year-end-activities" class="md-nav__link">
+    Calendar Year-End Activities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -743,7 +730,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Patronage-Overview.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/equity-management-implementation-activities.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -751,12 +738,68 @@
                   
                 
                 
-                <h1 id="patronage"><a class="toclink" href="#patronage">Patronage</a></h1>
+                <h1 id="equity-management-implementation-activities"><a class="toclink" href="#equity-management-implementation-activities">Equity Management Implementation Activities</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../Patronage/">Patronage Process</a></li>
-<li><a href="../PatronageImplementationActivities/">Implementation Activities for Patronage</a></li>
-</ul>
+<p>The following is an overview of the implementation activities necessary for getting started with processing equity.  </p>
+<h3 id="initial-implementation-activities"><a class="toclink" href="#initial-implementation-activities">Initial Implementation Activities</a></h3>
+<ol>
+<li>In FinOps, update released products with a patronage unit</li>
+<li>In FinOps, setup equity vendor journals</li>
+<li>In FinOps, setup equity vendor payments including checks</li>
+<li>In FinOps, setup any patronage payment distributions on customers</li>
+<li>From FinOps, push via the Levridge integration customers, contacts, item categories, units of measure, branches and addresses to CE</li>
+<li>In CE, setup patronage specific information:
+    a. Stock classes<ol>
+<li>Sources</li>
+<li>Periods</li>
+<li>Patronage split lines</li>
+</ol>
+</li>
+<li>Into CE, import stock subscriptions</li>
+<li>Into CE, import stock subscrptions</li>
+<li>Into CE, import any equity credits from other systems (if applicable)</li>
+<li>In CE, create patronage categories
+    a. Setup per unit and revenue allocations<ol>
+<li>Setup 199A allocations</li>
+</ol>
+</li>
+<li>In CE, setup requirements equity</li>
+<li>In CE, setup equity revolvements</li>
+</ol>
+<h3 id="year-end-activities"><a class="toclink" href="#year-end-activities">Year-End Activities</a></h3>
+<ol>
+<li>In FinOps, export out patronage sales</li>
+<li>In CE, import imported transactions (these are what was exported from FinOps or other systems)</li>
+<li>In CE, run patronage detail to create eligible transactions
+    a.  Verify results (this takes most of the time)
+    i.  Eligible transactions were created properly
+    ii. Split look as expected</li>
+<li>In CE, run patronage category allocations
+    a.  Verify results (this takes most of the time)
+    i.  Payments
+    ii. Equity credits</li>
+<li>In CE, run equity revolvements
+    a.  Verify results
+    i.  Payment details
+    ii. Equity credits updated accordingly</li>
+<li>In CE, run retirement equity summaries</li>
+<li>In CE, create payment summaries
+    a.  Verify results</li>
+<li>In CE, export payment summaries</li>
+<li>In FinOps, import payment summaries which become vendor journals</li>
+<li>In FinOps, post vendor journals</li>
+<li>In FinOps, pay equity vendor invoices</li>
+</ol>
+<h3 id="calendar-year-end-activities"><a class="toclink" href="#calendar-year-end-activities">Calendar Year-End Activities</a></h3>
+<ol>
+<li>In CE, create non-patronage distributions for 1099 PATR</li>
+<li>In CE, create 1099 PATR credits</li>
+<li>In CE, create 1099 PATR records
+    a.  Verify results</li>
+<li>In CE, build 1099 PATR electronic file
+    a.  Verify results</li>
+<li>In CE, print copy B and copy C of the 1099 PATR records</li>
+</ol>
                 
               
               
@@ -771,41 +814,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Feed
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Scale-Overview/" title="Scale" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Scale
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
