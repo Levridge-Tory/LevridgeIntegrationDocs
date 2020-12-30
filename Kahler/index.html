@@ -1005,47 +1005,69 @@ that contains the Kahler REST endpoint.</p>
 <p>Once the work is completed by the dispatcher, the work order status updated to the final completion stage (complete/verify). </p>
 <h3 id="picking-list"><a class="toclink" href="#picking-list">Picking List</a></h3>
 <p>Within each order, there is a possibility of multiple picking lists. Picking lists annotate the amount of batches/truck loads left Kahler and the mix in each truck. </p>
-<p>Picking lists allow one to know how many loads are being used. There are two bill options: 
-1. Bill what Kahler said was used
-2. Bill for what the machine stated was used</p>
-<p>Transportation Management System (TMS) has the ability to generate a freight bill after Kahler sends the picking lists to ensure the third party contractor delivering the product is paid. The steps below outline the process:
-1. Data from Kahler creates a picking list
-2. Load creation in TMS
-3. Generate freight bill invoiceable to the third party contractor</p>
+<p>Picking lists allow one to know how many loads are being used. There are two bill options: </p>
+<ol>
+<li>Bill what Kahler said was used</li>
+<li>Bill for what the machine stated was used</li>
+</ol>
+<p>Transportation Management System (TMS) has the ability to generate a freight bill after Kahler sends the picking lists to ensure the third party contractor delivering the product is paid. The steps below outline the process:</p>
+<ol>
+<li>Data from Kahler creates a picking list</li>
+<li>Load creation in TMS</li>
+<li>Generate freight bill invoiceable to the third party contractor</li>
+</ol>
 <h3 id="packing-order"><a class="toclink" href="#packing-order">Packing Order</a></h3>
 <p>A packing slip is generated for the work order in an invoiceable status. Packing orders can take place either in the complete, pending, review status or in the complete, verify status. </p>
 <h3 id="generate-order-manually"><a class="toclink" href="#generate-order-manually">Generate Order Manually</a></h3>
-<p>The below outlines the steps required to generate a manual order. 
-1. Create a sales order. 
-The information collected in the sales order includes: 
-    - Who the grower is
-    - The inventory location the product is being picked up at
-2. Generate product to be shipped to Kahler
-    - Individual products
-    - Custom configuration BOM
-    - Select configuration BOM
-    - Product and supply
-    - Configure line
-    - Configure selected item (product type and amount)
-    - Click OK (BOM is generated)
-    - Select blending site
-    - Save
-    - Explode BOM back out
-3. Warehouse items tab
-    - Release for dispensing
-    - Generates dispensing ID
-    - Order is sent to Kahler
-4. Manually pack, slip, and post</p>
+<p>The below outlines the steps required to generate a manual order. </p>
+<ol>
+<li>
+<p>Create a sales order. 
+The information collected in the sales order includes: </p>
+<ul>
+<li>Who the grower is</li>
+<li>The inventory location the product is being picked up at</li>
+</ul>
+</li>
+<li>
+<p>Generate product to be shipped to Kahler</p>
+<ul>
+<li>Individual products</li>
+<li>Custom configuration BOM</li>
+<li>Select configuration BOM</li>
+<li>Product and supply</li>
+<li>Configure line</li>
+<li>Configure selected item (product type and amount)</li>
+<li>Click OK (BOM is generated)</li>
+<li>Select blending site</li>
+<li>Save</li>
+<li>Explode BOM back out</li>
+</ul>
+</li>
+<li>
+<p>Warehouse items tab</p>
+<ul>
+<li>Release for dispensing</li>
+<li>Generates dispensing ID</li>
+<li>Order is sent to Kahler</li>
+</ul>
+</li>
+<li>
+<p>Manually pack, slip, and post</p>
+</li>
+</ol>
 <h3 id="manual-transfer-order"><a class="toclink" href="#manual-transfer-order">Manual Transfer Order</a></h3>
-<p>Transfer orders allow product to be moved from one site to another. The below outlines the process: 
-1. Inventory management
-2. Transfer order
-3. Populate "From" and "To" warehouses
-4. Add line
-5. Select product and amont of product to be transferred
-6. Save Ship
-7. Release for dispensing
-8. Transfer order is sent to Kahler to act on physical shipping of the product. </p>
+<p>Transfer orders allow product to be moved from one site to another. The below outlines the process: </p>
+<ol>
+<li>Inventory management</li>
+<li>Transfer order</li>
+<li>Populate "From" and "To" warehouses</li>
+<li>Add line</li>
+<li>Select product and amont of product to be transferred</li>
+<li>Save Ship</li>
+<li>Release for dispensing</li>
+<li>Transfer order is sent to Kahler to act on physical shipping of the product. </li>
+</ol>
                 
               
               
