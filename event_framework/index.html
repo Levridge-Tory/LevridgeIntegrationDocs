@@ -16,7 +16,7 @@
     
     
       
-        <title>Introduction - Levridge Documentation</title>
+        <title>Event Framework - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#event-framework" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Introduction
+              Event Framework
             
           </span>
         </div>
@@ -678,6 +678,144 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-event-framework-parameters" class="md-nav__link">
+    Setup Event Framework Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Event Framework Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-environment-name" class="md-nav__link">
+    Set the Environment name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-the-event-framework" class="md-nav__link">
+    Enable the Event framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-framework-endpoint" class="md-nav__link">
+    Create an Event Framework Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-framework-event" class="md-nav__link">
+    Create an Event Framework Event
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an Event Framework Event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-an-entity-to-the-event" class="md-nav__link">
+    Add an Entity to the Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-event-user-properties" class="md-nav__link">
+    Add Event User Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-entity-filter" class="md-nav__link">
+    Adding an Entity Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagating-deleted-entities" class="md-nav__link">
+    Propagating Deleted Entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    Advanced Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refresh-entity-list" class="md-nav__link">
+    Refresh Entity List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuild-entity-list" class="md-nav__link">
+    Rebuild entity list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-now" class="md-nav__link">
+    Run now
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server-change-tracking" class="md-nav__link">
+    SQL Server Change Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-filtering" class="md-nav__link">
+    Entity Filtering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -688,7 +826,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Configuring-Levridge-Entity-Events.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/event_framework.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -696,12 +834,82 @@
                   
                 
                 
-                <h1 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h1>
-<p>Brief introduction of the module, component or feature being documented.</p>
-<p>This document explains ...</p>
-<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
-<h1 id="main-point-1"><a class="toclink" href="#main-point-1">Main Point 1</a></h1>
-<h2 id="sub-point-11"><a class="toclink" href="#sub-point-11">Sub Point 1.1</a></h2>
+                <h1 id="event-framework"><a class="toclink" href="#event-framework">Event Framework</a></h1>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>The Event Framework enables the integration of data entities with other systems by sending entity data to an Azure Service Bus endpoint.</p>
+<p>The first time an Event Framework event is processed, all data is sent to the service bus endpoint. On subsequent runs, only entities that have changed are sent.</p>
+<p>If the same entity is contained in two different events; each event will operate independently, sending all changes to their respective endpoints.</p>
+<p>Event Framework events are intended to run daily as a batch service.</p>
+<h2 id="setup-event-framework-parameters"><a class="toclink" href="#setup-event-framework-parameters">Setup Event Framework Parameters</a></h2>
+<p>System administration &gt; Setup &gt; Event framework &gt; Event framework parameters</p>
+<h3 id="set-the-environment-name"><a class="toclink" href="#set-the-environment-name">Set the Environment name</a></h3>
+<p>The Environment name is attached to Event framework messages sent from this system.  This allows administrators to determine from which system an entity originated in the event of a failure.</p>
+<h3 id="enable-the-event-framework"><a class="toclink" href="#enable-the-event-framework">Enable the Event framework</a></h3>
+<p>Set the Enabled switch to yes. Event framework messages will not be sent from this system when this switch is set to No.</p>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_4.png" /> </p>
+<h2 id="create-an-event-framework-endpoint"><a class="toclink" href="#create-an-event-framework-endpoint">Create an Event Framework Endpoint</a></h2>
+<p>System administration &gt; Setup &gt; Event framework &gt; Event Framework endpoint definitions</p>
+<ul>
+<li>Click New<ul>
+<li>Enter a name and description.</li>
+<li>Enter your Azure service bus endpoint connection string.</li>
+<li>If your endpoint requires sessions, set the switch to Yes.</li>
+<li>Enter the name of your topic or queue.</li>
+<li>Set the endpoint type to Topic or Queue.</li>
+<li>Set the Enabled switch to Yes.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_3.png" /> </p>
+<h2 id="create-an-event-framework-event"><a class="toclink" href="#create-an-event-framework-event">Create an Event Framework Event</a></h2>
+<p>System administration &gt; Setup &gt; Event framework &gt; Event framework events</p>
+<ul>
+<li>Click New.</li>
+<li>Enter a name and description.</li>
+<li>Choose your endpoint.</li>
+<li>If you wish to log a message to the Event Framework event log for successful and failed Event framework messages, set the Log success switch to Yes.</li>
+<li>The Last execution box contains the last execution date time.</li>
+<li>Set the Enabled switch to Yes.  If this switch is No, the event will not be processed.</li>
+</ul>
+<h3 id="add-an-entity-to-the-event"><a class="toclink" href="#add-an-entity-to-the-event">Add an Entity to the Event</a></h3>
+<ul>
+<li>Expand the Event tables Fast Tab.</li>
+<li>Click New.</li>
+<li>Select your entity in the Source table column.</li>
+<li>Change tracking type indicates whether all the entity’s data sources are tracked for changes.</li>
+<li>Check the Propagate delete box to send a message when an instance of this entity is deleted.</li>
+</ul>
+<p>Entities are processed in ascending Line number order.  Two entities with the same line number may be processed in either order.</p>
+<h3 id="add-event-user-properties"><a class="toclink" href="#add-event-user-properties">Add Event User Properties</a></h3>
+<p>For every configured entity, you may add user properties to the Event framework message.  The properties contain the value of the chosen entity field and are informational only.</p>
+<p>This is useful for filters applied to the Azure service bus subscription because the value of the property is added directly to the properties collection on the message rather than contains somewhere within the body.</p>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_1.png" /> </p>
+<h3 id="adding-an-entity-filter"><a class="toclink" href="#adding-an-entity-filter">Adding an Entity Filter</a></h3>
+<p>This filter restricts the Event framework messages that leave the system by applying a range to the query used to select the changed entities.</p>
+<ul>
+<li>Select the entity you wish to filter.</li>
+<li>Click Filter.</li>
+<li>Select range criteria and click OK.</li>
+<li>This will restrict the Event framework so that it only sends customers whose first name is “John”.</li>
+<li>Click Reset to remove all modifications to the query.</li>
+</ul>
+<h3 id="propagating-deleted-entities"><a class="toclink" href="#propagating-deleted-entities">Propagating Deleted Entities</a></h3>
+<p>If you wish to send delete messages when a configured entity is deleted, you must check the Propagate delete box for that entity.  The Event Framework will then store the last Event Framework message for that entity whenever one is processed.  When the entity is deleted it will resend that stored message with an action of Delete.  </p>
+<p>If an entity is created and deleted before the event is processed, an Event Framework message will not be generated for that entity.</p>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_2.png" /> </p>
+<h3 id="advanced-options"><a class="toclink" href="#advanced-options">Advanced Options</a></h3>
+<h4 id="refresh-entity-list"><a class="toclink" href="#refresh-entity-list">Refresh Entity List</a></h4>
+<p>Whenever a data source is added or removed from a data entity it is necessary to refresh the entity list.  This menu item is usually found in the Data management workspace and is provided here for convenience.</p>
+<h4 id="rebuild-entity-list"><a class="toclink" href="#rebuild-entity-list">Rebuild entity list</a></h4>
+<p>Under certain conditions the Refresh entity list does not adequately refresh the entity metadata.  The Rebuild entity list will first delete the entity from the entity table before calling the normal Refresh entity list functionality.</p>
+<p>Use this option with caution.  Because rebuilding the entity list first deletes the entity metadata, change tracking information for that entity will be lost.</p>
+<h4 id="run-now"><a class="toclink" href="#run-now">Run now</a></h4>
+<p>Click Run now to process the event immediately or schedule it to run in batch.</p>
+<p>Set the Simulate initial data load switch to Yes to process the event without sending and Event framework messages to the Azure Service Bus.  This may be used to set the change tracking version to the current version.</p>
+<h3 id="sql-server-change-tracking"><a class="toclink" href="#sql-server-change-tracking">SQL Server Change Tracking</a></h3>
+<p>The Event Framework uses SQL Server change tracking to determine which entities have changed.  For more information see <a href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/entity-change-track">Enable change tracking</a> for entities and <a href="https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/about-change-tracking-sql-server">About Change Tracking (SQL Server)</a>.</p>
+<h3 id="entity-filtering"><a class="toclink" href="#entity-filtering">Entity Filtering</a></h3>
+<p>Filters applied to the entity will prevent the Event Framework message for that entity from being sent.  Filters applied to the Azure Service Bus subscription will prevent the Event Framework message from being received.</p>
                 
               
               
