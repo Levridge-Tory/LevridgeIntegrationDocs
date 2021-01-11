@@ -48,3 +48,4 @@ nav:
                 - CE Setup Records : 'CE_Setup_Records.md'
 
             - Environment Planning : 'EnvironmentPlanning.md'
+            - Event Framework : 'event_framework.md'
