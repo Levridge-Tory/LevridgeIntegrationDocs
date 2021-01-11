@@ -72,7 +72,7 @@ A standard D365 implementation is used when launching a Levridge environment pla
 
 ![Levridge Integration](./assets/images/D365EnvironmentsLevridgeIntegration.jpg)
 
-### Event Framework Events - Other Applications)
+### Event Framework Events - Other Applications
 [Event Framework Overview](./event_framework.md)
 
 Applications from Levridge or other Third-Party vendors may be used in conjunction with the Levridge product. The setups may be completed at System administration > Setup > Event framework > Event Framework Events. 
