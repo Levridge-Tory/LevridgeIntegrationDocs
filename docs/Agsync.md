@@ -174,7 +174,7 @@ You must also include the controller entry to have the controller loaded:
 You must also configure two objects for Agsync integration:
 
  - [AgSyncEndpoint](./AgSyncEndpoint.md)
- - [agsync](./agsyncConfigObject.md)
+ - [Agsync Configuration Object](./agsyncConfigObject.md)
 
 Here is a sample template for the entire appsettings.json file used for the integration
 from FinOps to Agsync:
@@ -292,8 +292,8 @@ Internal setup time for configuration is 24 hours. To integrate from D365 F&O to
 
  - [Create an Azure Service bus topic](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
  - [Create a subscription on the topic above](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
- - [Configure Event Endpoint in F&O](./Configuring-Levridge-Entity-Event-Endpoint.md)
- - [Configure Levridge Entity Events](./Configuring-Levridge-Entity-Events.md)
+ - [Configure Event Endpoint in F&O](./event_framework.md)
+ - [Configure Levridge Entity Events](./event_framework.md)
    - Create Filter on Entity Event to only send agronomy customers 
    <!-- TODO: Document how to create filter -->
  - Get Client ID and CLient password from Agsync

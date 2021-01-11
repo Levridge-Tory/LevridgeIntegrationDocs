@@ -50,8 +50,8 @@ To integrate to and from Kahler and D365 F&O you will need to:
  - [Create a subscription on the Dispensing Work Order topic for each Branch that has a Kahler mixer](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
  - [Create a filter on the subscription for each Branch](https://docs.microsoft.com/en-us/azure/service-bus-messaging/topic-filters)
  - [Create a subscription on the Dispensing Work Record topic for integration back to F&O](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
- - [Configure Event Endpoint in F&O](./Configuring-Levridge-Entity-Event-Endpoint.md)
- - [Configure Levridge Entity Events]("./Configuring-Levridge-Entity-Events.md")
+ - [Configure Event Endpoint in F&O](./event_framework.md)
+ - [Configure Levridge Entity Events](./event_framework.md)
    - You will need to be sure to provide properties on the event to allow filtering by Branch
  - [Create an application ID](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) for the integration framework to authenticate to D365 F&O
  - [Create an Azure Active Directory Application in D365 F&O](https://docs.microsoft.com/en-us/dynamics365/unified-operations/dev-itpro/data-entities/services-home-page#authentication)
