@@ -28,12 +28,12 @@ Set the Enabled switch to yes. Event framework messages will not be sent from th
 System administration > Setup > Event framework > Event Framework endpoint definitions
 
    - Click New
-    - Enter a name and description.
-    - Enter your Azure service bus endpoint connection string.
-    - If your endpoint requires sessions, set the switch to Yes.
-    - Enter the name of your topic or queue.
-    - Set the endpoint type to Topic or Queue.
-    - Set the Enabled switch to Yes.
+   - Enter a name and description.
+   - Enter your Azure service bus endpoint connection string.
+   - If your endpoint requires sessions, set the switch to Yes.
+   - Enter the name of your topic or queue.
+   - Set the endpoint type to Topic or Queue.
+   - Set the Enabled switch to Yes.
 
    ![event_framework](./assets/images/event_framework/create_event_framework_3.png) 
 
