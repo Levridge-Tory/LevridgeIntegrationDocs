@@ -1,7 +1,7 @@
 ﻿# Agriculture Tax Calculation
 Functionality has been added to support the calculation of agricultural taxes.
 
-## Feature Summary:
+## Feature Summary
 
 - **Multi-Taxing:** Made it possible for Customers, Vendors, Addresses and Items to be assigned multiple tax groups. Taxation is determined based on the intersection of assigned tax types and groups between Items and the relevant Customers, Vendors and/or Addresses.
 
