@@ -5,6 +5,10 @@ Functionality has been added to support the calculation of agricultural taxes.
 
 Levridge allows users to assign multiple agriculture tax groups to Customers, Customer addresses, Vendors, Vendor addresses, and Items.
 
+   - Items can be assigned one Item Sales Tax Group from each of the four Agricultural Tax Types.
+   - Customers, Vendors, and the addresses can be assigned as many Sales Tax Groups from each of the Agricultural Tax Types as needed.
+
+
 Agricultural Taxes are categorized into one of three different Agricultural Tax Types:
 
 1. Tonnage Tax
