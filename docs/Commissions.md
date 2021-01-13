@@ -1,6 +1,5 @@
 ﻿# Commissions
 
-
 ![Commissions2](./assets/images/Commissions/Commissions2.png)
 
 ![Commissions3](./assets/images/Commissions/Commissions3.png)
@@ -21,7 +20,7 @@ Sales regions can be setup to organize your commissions. You have the option to 
 
 You can setup a commission sales group for all items/customers, group of items/customers, or a single item/customer.  You can link the sales group to a sales region. You are able to set the date range for that commission sales group. 
 
-![Commissions10](./assets/images/Commissions/Commissions_1.png)
+![Commissions1](./assets/images/Commissions/Commissions_1.png)
 
 #### Sales orders
 
