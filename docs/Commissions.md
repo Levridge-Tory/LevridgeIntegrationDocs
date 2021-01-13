@@ -1,15 +1,5 @@
 ﻿# Commissions
 
-![Commissions2](./assets/images/Commissions/Commissions2.png)
-
-![Commissions3](./assets/images/Commissions/Commissions3.png)
-
-![Commissions4](./assets/images/Commissions/Commissions4.png)
-
-![Commissions5](./assets/images/Commissions/Commissions5.png)
-
-![Commissions10](./assets/images/Commissions/Commissions10.png)
-
 ## Levridge Commission Enhancements provide the following features: 
 
 ### Sales Regions
