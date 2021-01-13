@@ -22,6 +22,4 @@ You can setup a commission sales group for all items/customers, group of items/c
 
 ![Commissions1](./assets/images/Commissions/commissions_1.png)
 
-#### Sales orders
-
-On the sales order split group line details tab, the system will assign the region and sales lead based off the commission sales group definition. You are able to modify those defaults as needed. When the sales order line has been delivered, the region and sales lead from the split group tab will default to the split group allocation lines. These values can also be changed up to the point the allocation line is invoiced at which time the fields are locked. 
+Sales orders: On the sales order split group line details tab, the system will assign the region and sales lead based off the commission sales group definition. You are able to modify those defaults as needed. When the sales order line has been delivered, the region and sales lead from the split group tab will default to the split group allocation lines. These values can also be changed up to the point the allocation line is invoiced at which time the fields are locked. 
