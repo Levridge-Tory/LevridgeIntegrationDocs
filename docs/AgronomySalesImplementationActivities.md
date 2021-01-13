@@ -1,45 +1,51 @@
 ﻿# Agronomy Sales Implementation Activities
 
-
 ## Overview
 The following is an overview of the Agronomy Sales implementation activities.  
    
 1. Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported) 
 
-	a. Customer operation types
-	b. Customer site types
-	c. Growing seasons
-	d. Sales periods
-	e. Lines of business
-	f. Finance programs
-	g. Seed and technology agreement compliance
-	h. Dispatching accounts
- 
+    - Customer operation types
+    - Customer site types
+    - Growing seasons
+    - Sales periods
+    - Lines of business
+    - Finance programs
+    - Seed and technology agreement compliance
+    - Dispatching accounts
+
 2.	Enter setup data under Organization administration > Global address book > Relationship types
 
-	a. Need to define a relationship from customer to customer operation
+	- Need to define a relationship from customer to customer operation
 
 3.	Enter sales agreement classifications under Accounts Receivable > Setup > Sales agreement classifications
+
 4.	Under General Ledger > Journal setup > Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments 
+
 5.	Configure parameters under Accounts Receivable > Setup > Agriculture > Agriculture parameters 
+
 6.	Under Organization administration > Number sequences > Number sequences enter or generate number sequences 
+
 7.	Enter setup data under Accounts payable > Payment:
 
-	a. Terms of payment - set prepayment fields
-	b. Cash discounts - set prepayment fields
-        i. Within cash discounts set up cash discount schedules
+	- Terms of payment - set prepayment fields
+	- Cash discounts - set prepayment fields
+        - Within cash discounts set up cash discount schedules
 
 8.	Configure ag specific settings in Accounts Receivable > Setup > Accounts receivable parameters:
 
-    a. Credit rating
-    b. Credit limits
-    c. Prices
+    - Credit rating
+    - Credit limits
+    - Prices
 
 9.	Enter vendor zones under Procurement and sourcing > Setup > Prices and discounts > Vendor zones
+
 10.	Enter master data - involves a lot of client feedback
 
-    a. Customers
-       i. Ag specific settings are:
+    - Customers
+
+        - Ag specific settings are:
+
           1. Zone address
           2. Dispatching account id if using a 3rd party dispatching system (like AgSync)
           3. Seed and technology agreements
@@ -47,30 +53,36 @@ The following is an overview of the Agronomy Sales implementation activities.
           5. Taxation fast tab
           6. On customer addresses set ag taxes
           7. Billing notes
-    b. Split groups
-    c. Customer operations
-    d. Customer sites
-    e. Customer finance programs
-    f. Vendors (if not the same as customers in the Ag parameters config form)
-       i. On vendor addresses set ag taxes
-    g. Rolling stock
-       i. Cab configuration
-       ii. Drive train
-       iii. Equipment types
-       iv. Status
-       v. Equipment reasons
-       vi. Equipment parameters
-       vii. Equipment
-    h. Contacts
-       i. Setup applicator licenses
+
+    - Split groups
+    - Customer operations
+    - Customer sites
+    - Customer finance programs
+    - Vendors (if not the same as customers in the Ag parameters config form)
+
+        - On vendor addresses set ag taxes
+
+    - Rolling stock
+
+        - Cab configuration
+        - Drive train
+        - Equipment types
+        - Status
+        - Equipment reasons
+        - Equipment parameters
+        - Equipment
+
+    - Contacts
+
+        - Setup applicator licenses
  
 11.	Enter indirect ag taxes under Tax > Indirect taxes > Sales tax:
 
-    a. Sales tax codes
-    b. Sales tax groups
-    c. Item sales tax groups
-    d. Sales tax settlement periods
-    e. Tax reasons
+    - Sales tax codes
+    - Sales tax groups
+    - Item sales tax groups
+    - Sales tax settlement periods
+    - Tax reasons
 
 12.	Under Inventory management > Setup > Inventory breakdown setup sites and warehouse set ag tax values
 13.	Prepare and enter products by setting up ag settings in:
