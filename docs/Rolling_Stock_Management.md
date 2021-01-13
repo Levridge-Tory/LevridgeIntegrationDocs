@@ -7,6 +7,9 @@ Fixed Assets – geared towards managing assets that we find on a balance sheet 
 
 Rolling Stock – geared towards operational management of large volumes of equipment typically managed by the operational staff.
 
+### Rolling Stock Count - *New Feature* 
+Allows to manage your rolling stock inventory count and keep the history for audit purposes. It will take into consideration any loans to other branches and the rolling stock will display where the item is currently. You are able to record the mileage, machine hours, and any notes related to that item count. 
+
 ### Fixed Asset to Rolling Stock Integration
 
 This integration allows an accountant to go ahead and start the setup of a fixed asset and then copy some of those elements of that setup over into a pending status piece of rolling equipment that then the operations team can pickup and add additional details and maintain those records separately from the fixed assets.  
@@ -112,4 +115,5 @@ We can configure our rolling stock so that disposal of the fixed asset would aut
 3. Add comment to the Complete loan form
 4. Input date that equipment was returned
 5. Click OK 
+
 
