@@ -16,7 +16,7 @@
     
     
       
-        <title>Agriculture Tax Calculation - Levridge Documentation</title>
+        <title>Agriculture Tax Groups - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agriculture-tax-calculation" class="md-skip">
+        <a href="#agriculture-tax-groups" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Agriculture Tax Calculation
+              Agriculture Tax Groups
             
           </span>
         </div>
@@ -697,13 +697,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#feature-summary" class="md-nav__link">
-    Feature Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#multi-taxing" class="md-nav__link">
     Multi-Taxing
   </a>
@@ -730,25 +723,22 @@
                   
                 
                 
-                <h1 id="agriculture-tax-calculation"><a class="toclink" href="#agriculture-tax-calculation">Agriculture Tax Calculation</a></h1>
+                <h1 id="agriculture-tax-groups"><a class="toclink" href="#agriculture-tax-groups">Agriculture Tax Groups</a></h1>
 <p>Functionality has been added to support the calculation of agricultural taxes.</p>
-<h2 id="feature-summary"><a class="toclink" href="#feature-summary">Feature Summary</a></h2>
-<ul>
-<li><strong>Multi-Taxing:</strong> Made it possible for Customers, Vendors, Addresses and Items to be assigned multiple tax groups. Taxation is determined based on the intersection of assigned tax types and groups between Items and the relevant Customers, Vendors and/or Addresses.</li>
-</ul>
 <h2 id="multi-taxing"><a class="toclink" href="#multi-taxing">Multi-Taxing</a></h2>
-<p>Levridge allows users to assign a Customers, Vendors and Items to multiple tax groups, to support agricultural tax calculations. Customers can also have different Agricultural Tax Groups assigned at the address level to facilitate taxation for multiple delivery locations.</p>
+<p>Levridge allows users to assign multiple agriculture tax groups to Customers, Customer addresses, Vendors, Vendor addresses, and Items.</p>
 <p>Agricultural Taxes are categorized into one of three different Agricultural Tax Types:</p>
 <ol>
 <li>Tonnage Tax</li>
 <li>Pesticide Tax</li>
-<li>Indemnity Fund</li>
-</ol>
-<p>Agricultural Sales Tax tables have been added to the Customer, Vendor, Address and Item forms to allow for assignment of the applicable Agricultural Tax Groups. </p>
-<ul>
-<li>Items can be assigned one Item Sales Tax Group from each of the four Agricultural Tax Types. </li>
+<li>
+<p>Indemnity Fund</p>
+</li>
+<li>
+<p>Items can be assigned one Item Sales Tax Group from each of the four Agricultural Tax Types. </p>
+</li>
 <li>Customers, Vendors, and Addresses can be assigned as many Sales Tax Groups from each of the Agricultural Tax Types as needed.</li>
-</ul>
+</ol>
 <p>In addition to standard sales tax calculation, each Sales Order or Purchase Order line can be subject to one of each of the above Agricultural Tax Types. The applicable tax groups are assigned by identifying matching tax groups between the Item and the Customer (or Vendor) information on the order. All matching tax groups will be applied.</p>
                 
               

@@ -846,27 +846,47 @@
 </li>
 <li>
 <p>Prepare and enter products by setting up ag settings in:</p>
-<p>a. Product information management &gt; Setup &gt; Categories and attributes &gt; Category hierarchies
-b. Accounts receivable &gt; Setup &gt; License and certification:
-  i. Certificate types
-  ii. Certificates compliance
-  iii. Regulated products
-  iv. Restricted product regional lists
-c. Feed and livestock &gt; Setup &gt; Veterinary feed directive (VFD):
-   i. Veterinary feed directive (VFD) drug groups
-   ii. Veterinary feed directive (VFD) compliance
-d. On released products, set the default order settings for each valid site and warehouse for the product
-   i. If using Kahler with this item, under Manage inventory on Action pane &gt; Warehouse items &gt; Set the dispensing method
-e. On released products:
-    - Assign regional lists
-    - Assign certificates
-    - Assign drug groups
-    - Assign active ingredients
-    - Assign nutrients
-    - If using scale - set flag to recognize the product as one that will be used at scale
-    - If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service
-    - Define ag specific settings on supplementary sales items
-   i. Setup up substitute items</p>
+<ul>
+<li>Product information management &gt; Setup &gt; Categories and attributes &gt; Category hierarchies</li>
+<li>
+<p>Accounts receivable &gt; Setup &gt; License and certification:</p>
+<ul>
+<li>Certificate types</li>
+<li>Certificates compliance</li>
+<li>Regulated products</li>
+<li>Restricted product regional lists</li>
+</ul>
+</li>
+<li>
+<p>Feed and livestock &gt; Setup &gt; Veterinary feed directive (VFD):</p>
+<ul>
+<li>Veterinary feed directive (VFD) drug groups</li>
+<li>Veterinary feed directive (VFD) compliance</li>
+</ul>
+</li>
+<li>
+<p>On released products, set the default order settings for each valid site and warehouse for the product</p>
+<ul>
+<li>If using Kahler with this item, under Manage inventory on Action pane &gt; Warehouse items &gt; Set the dispensing method</li>
+</ul>
+</li>
+<li>
+<p>On released products:</p>
+<ul>
+<li>Assign regional lists</li>
+<li>Assign certificates</li>
+<li>Assign drug groups</li>
+<li>Assign active ingredients</li>
+<li>Assign nutrients</li>
+<li>If using scale - set flag to recognize the product as one that will be used at scale</li>
+<li>If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service</li>
+<li>Define ag specific settings on supplementary sales items</li>
+</ul>
+</li>
+<li>
+<p>Setup up substitute items</p>
+</li>
+</ul>
 </li>
 <li>
 <p>Under Accounts receivable &gt; Setup &gt; Trade agreement journals enter trade agreement journals including ag specific settings</p>
@@ -876,100 +896,173 @@ e. On released products:
 </li>
 <li>
 <p>If using Transportation management:</p>
-<ol>
+<ul>
 <li>
-<p>Configure TMS Parameters under Transportation management &gt; Setup &gt; Transportation management parameters
-   i. General &gt; Vendor invoice</p>
+<p>Configure TMS Parameters under Transportation management &gt; Setup &gt; Transportation management parameters</p>
+<ul>
+<li>
+<p>General &gt; Vendor invoice</p>
 <ul>
 <li>Write vendor invoice journal - set to yes</li>
 <li>Assign vendor journal name</li>
-<li>Freight bill invoice text
-ii. General &gt; Loads<ul>
+<li>Freight bill invoice text</li>
+</ul>
+</li>
+<li>
+<p>General &gt; Loads</p>
+<ul>
 <li>Set flags for when loads get created automatically</li>
-<li>Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
-   iii. General &gt; Dispensing loads</li>
-<li>Set flags for when loads get created (Kahler integration only)
-   iv. General &gt; Freight reconciliation</li>
+<li>Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment</li>
+</ul>
+</li>
+<li>
+<p>General &gt; Dispensing loads</p>
+<ul>
+<li>Set flags for when loads get created (Kahler integration only)</li>
+</ul>
+</li>
+<li>
+<p>General &gt; Freight reconciliation</p>
+<ul>
 <li>Enable freight reconciliation - set to yes</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>Configure data under Transportation management &gt; Setup &gt; Load building
-   i. Load templates
-   ii. Equipment</p>
-</li>
-<li>Configure data under Transportation management &gt; Setup &gt; Carriers:
-   i. Carrier service codes
-   ii. Mode
-   iii. Transportation methods</li>
-<li>
-<p>Shipping carriers
-        - Name - Specific structure required 
-        - Activate Carrier flag set to yes
-        - Assign vendor account
-        - Activate carrier rating - set to yes
-        - Services
-          - Assign services
-        - Rating profiles</p>
+<p>Configure data under Transportation management &gt; Setup &gt; Load building</p>
 </li>
 <li>
-<p>Enter data under Transportation management &gt; Setup &gt; Rating
-    i.  Carrier accessorial charge
-    ii. Break master
-    iii. Rate master
-          - Rate base
-    iv. Rating profile
-    v. Rating metadata
-    vi. Miscellaneous charges</p>
+<p>Load templates</p>
 </li>
-<li>Enter data under Transportation management &gt; Setup&gt; Freight reconciliation
-     i. Reconciliation reasons
-    ii. Freight bill type assignments
-    iii.    Audit master</li>
-<li>Enter data under Transportation management &gt; Setup &gt; Bing map usage key (if using mapping which most clients will be doing)</li>
-<li>Enter data under Transportation management &gt; Setup &gt; Transportation standards
-    i. NMFC codes
-    ii. LTL classes</li>
-<li>Enter data under Transportation management &gt; Setup &gt; Engines
-    i. Mileage engine
-    ii. Rate engine
-    iii. Transit time engine
-    iv. Zone master</li>
-</ol>
+<li>
+<p>Equipment</p>
+</li>
+<li>
+<p>Configure data under Transportation management &gt; Setup &gt; Carriers:</p>
+</li>
+<li>
+<p>Carrier service codes</p>
+</li>
+<li>Mode</li>
+<li>
+<p>Transportation methods</p>
+</li>
+<li>
+<p>Shipping carriers</p>
+<ul>
+<li>Name - Specific structure required </li>
+<li>Activate Carrier flag set to yes</li>
+<li>Assign vendor account</li>
+<li>Activate carrier rating - set to yes</li>
+<li>Services</li>
+<li>Assign services</li>
+<li>Rating profiles</li>
+</ul>
+</li>
+<li>
+<p>Enter data under Transportation management &gt; Setup &gt; Rating</p>
+<ul>
+<li>Carrier accessorial charge</li>
+<li>Break master</li>
+<li>Rate master (Rate base)</li>
+<li>Rating profile</li>
+<li>Rating metadata</li>
+<li>Miscellaneous charges</li>
+</ul>
+</li>
+<li>
+<p>Enter data under Transportation management &gt; Setup&gt; Freight reconciliation</p>
+<ul>
+<li>Reconciliation reasons</li>
+<li>Freight bill type assignments</li>
+<li>Audit master</li>
+</ul>
+</li>
+<li>
+<p>Enter data under Transportation management &gt; Setup &gt; Bing map usage key (if using mapping which most clients will be doing)</p>
+</li>
+<li>
+<p>Enter data under Transportation management &gt; Setup &gt; Transportation standards</p>
+<ul>
+<li>NMFC codes</li>
+<li>LTL classes</li>
+</ul>
+</li>
+<li>
+<p>Enter data under Transportation management &gt; Setup &gt; Engines</p>
+<ul>
+<li>Mileage engine</li>
+<li>Rate engine</li>
+<li>Transit time engine</li>
+<li>Zone master</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p>Warehouse Management Configurations</p>
-<ol>
-<li>Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses
-    i. Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS
-b. Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)
-c. Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats
-    i. Configure one location format
-d. Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types
-    i. Configure two location types; Dock and User
-e. Warehouse Management &gt; Setup &gt; Location profiles
-    i. Configure two profiles; Default and User
-f. Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters
-    i. General &gt; Assign location profile &amp; Location Type
-g. Warehouse Management &gt; Setup &gt; Load &gt; Item load
-   i. By item group indicate the load template id</li>
-</ol>
+<ul>
+<li>
+<p>Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses</p>
+<ul>
+<li>Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS</li>
+</ul>
+</li>
+<li>
+<p>Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)</p>
+</li>
+<li>
+<p>Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats</p>
+</li>
+<li>
+<p>Configure one location format</p>
+</li>
+<li>
+<p>Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types</p>
+<ul>
+<li>Configure two location types; Dock and User</li>
+</ul>
+</li>
+<li>
+<p>Warehouse Management &gt; Setup &gt; Location profiles</p>
+<ul>
+<li>Configure two profiles; Default and User</li>
+</ul>
+</li>
+<li>
+<p>Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters</p>
+<ul>
+<li>General &gt; Assign location profile &amp; Location Type</li>
+</ul>
+</li>
+<li>
+<p>Warehouse Management &gt; Setup &gt; Load &gt; Item load</p>
+<ul>
+<li>By item group indicate the load template id</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p>Under Inventory management &gt; Setup &gt; Agriculture &gt; Agriculture parameters</p>
-<p>a. Dispensing &gt; Load template ID</p>
+<ul>
+<li>Dispensing &gt; Load template ID</li>
+</ul>
 </li>
 <li>
 <p>Under Accounts receivable &gt; Setup &gt; Agriculture &gt; Agriculture parameters</p>
-<p>a. Dispensing &gt; Load template ID</p>
+<ul>
+<li>Dispensing &gt; Load template ID</li>
+</ul>
 </li>
 <li>
 <p>Under Product information management &gt; Products &gt; Released products</p>
-<p>a. Transportation &gt; Use transportation management processes
- b. Transportation &gt; Carrier service 
- c. Manage Inventory &gt; Net Weight</p>
+<ul>
+<li>Transportation &gt; Use transportation management processes</li>
+<li>Transportation &gt; Carrier service </li>
+<li>Manage Inventory &gt; Net Weight</li>
+</ul>
 </li>
 </ol>
                 
