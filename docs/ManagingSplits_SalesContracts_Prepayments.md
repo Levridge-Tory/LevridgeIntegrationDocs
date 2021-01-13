@@ -1,22 +1,22 @@
 ﻿# Managing Splits, Sales Contracts, and Prepayments
 
 ## Overview
-Within Levridge, when a sales order or invoice is created, the system automatically selects the sales contract according to the items and categories identified. It also selects a prepayment against it, eliminating the need to manually go in and figure out the process, creating fewer invoicing issues sent to growers. 
+Within Levridge, when a sales order or invoice is created, the system automatically selects the sales contract (known as sales agreements in F&O) according to the items and categories identified. It also selects a prepayment against it, eliminating the need to manually go in and figure out the process, creating fewer invoicing issues sent to growers. 
 
 Target Audience: This functionality applies to individuals in Ag Retailers who manage splits, contracts, and prepayments on behalf of customers. 
 
 ## Sales Orders
-Levridge syncs sales orders between CE and F&O. As sales orders are entered in CE and generated, the sales order is then created in F&O. The sales order in CE becomes read only once generated.  As sales orders are entered in F&O, it will be shared with CE.  
+Levridge syncs sales orders between CE and F&O. As sales orders are approved in CE, the sales order is then created in F&O. The sales order in CE becomes read only once approved.  As sales orders are entered in F&O, it will be shared with CE.  
 
 ### Sales order header 
-When a sales order is created, the ordering customer is selected along with a customer operation and optionally a customer site.  The customer site if selected, will be used to default the split group, else the split group will default from the customer operation. Note that the split group may be updated within sales order entry as needed. The operation information will default to the sales order lines.
+When a sales order is created, the ordering customer is selected and has the option to select customer operation and a customer site.  The customer site if selected, will be used to default the split group. If no customer operation is selected, then the user must select it manually. Note that the split group may be updated within sales order entry as needed. The operation information will default to the sales order lines.
 
-A branch, line of business, growing season and sales period may also be entered as part of the sales order entry process. The sales period is required. If AR parameters use the sales period for pricing, the pricing on the sales order will be determined based on these dates.
+A branch, line of business, growing season and sales period may also be entered as part of the sales order entry process. The sales period is not required.
 
 Branch and line of business may be used to filter or categorize sales orders for list pages and some reporting. Growing season entry on a sales order will help to determine volume pricing is used, else used as a filter for list pages and some reporting.
 
 ### Sales order line 
-During sales order line entry, the operation will default, but may be updated by the user.
+During sales order line entry, the customer operation, customer site, and split group all default from the header and can be changed by the user. Only split group is required at this point.
 
 Levridge displays only the list pricing during sales order entry as specific customer pricing is determined at time of delivery applying the sales agreements.  
 
@@ -36,9 +36,7 @@ On a released item, a product may contain required or optional supplementary ite
 ### Packing Slip Post
 When the sales order posts a packing slip in F&O, the pricing will be applied to each customer participating in the split group on each line. The system will initially look for intended method for pricing on the participating customer in the split group.  The system then looks at valid sales agreements to apply the sales agreement pricing and any associated prepayments. If there are multiple sales agreements, the oldest will be used first.  
 
-If there is a quantity remaining that is not covered by a sales agreement, any uncontracted prepayments will be applied. The uncontracted price date may be used to determine pricing. For any remaining quantities the pricing will based on the price date of the sales order.
-
-Price dates are determined by the AR Parameter to determine what date should be used to determine pricing.
+If there is a quantity remaining that is not covered by a sales agreement, any uncontracted prepayments will be applied. The uncontracted price date may be used to determine pricing. For any remaining quantities the pricing will be determined by trade agreements.
 
 The split allocation line is defined from procedures above. If the sales order line includes a Bill of Materials (BOM) item, it will validate the ‘Expand on Sales Order Allocation’ parameter on the item. If the parameter is set to yes, each of the components of the BOM will be broken out on the split allocation line for pricing. If this parament is set to no, the pricing will be based on the BOM item. For example, as fertilizer is blended, there may be a sales agreement for component products supplied by the customer.
 
@@ -57,7 +55,7 @@ There are new list pages that displays deliveries that need to be billed that ar
 ## Product Functionality
 
 ### Create Split Groups in F&O 
-The split group setup is located under [Create Split Group in F&O](Create-Split-Group-in-F&O). 
+The split group setup is located under [Create Split Group in F&O](Create-Split-Group.md). 
 
 ### Sales Agreement Entry
 - In Accounts Receivable > Orders > Sales agreements > Create a new Sales agreement under the “Sales Agreement” tab by clicking the New button. 
@@ -78,10 +76,9 @@ The split group setup is located under [Create Split Group in F&O](Create-Split-
 - Enter the customer
   - Once selected, the customer’s account information will auto-populate
 - Choose any split group for that customer on your sales order
-  - The field will default to a split group that is 100% but you can select whichever one you would like  
-- Choose specific period
+- Choose specific sales period (this is optional).
 - Enter the items for the sales order and their quantities. 
-  - Additional order lines can be created. 
+  - Additional order lines can be created.
 - Click Save. 
 - Click the Post packing slip button to indicate the product has been sent out to the customer. 
 - Once delivered, one is now able to view the sales order with a sales agreement and prepayment allocated towards it according to the items that match between the sales order and the sales agreement and/or prepayment.
