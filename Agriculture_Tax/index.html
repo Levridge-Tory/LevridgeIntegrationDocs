@@ -16,7 +16,7 @@
     
     
       
-        <title>Agriculture Tax Calculation and Payments - Levridge Documentation</title>
+        <title>Agriculture Tax Calculation - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agriculture-tax-calculation-and-payments" class="md-skip">
+        <a href="#agriculture-tax-calculation" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Agriculture Tax Calculation and Payments
+              Agriculture Tax Calculation
             
           </span>
         </div>
@@ -710,41 +710,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#customer-use-tax" class="md-nav__link">
-    Customer Use Tax
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tax-basis-product-composition" class="md-nav__link">
-    Tax Basis: Product Composition
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tax-basis-percentage-of-gross-sales" class="md-nav__link">
-    Tax Basis: Percentage of Gross Sales
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#minmax-thresholds-and-license-fees" class="md-nav__link">
-    Min/Max Thresholds and License Fees
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grain-settlements" class="md-nav__link">
-    Grain Settlements
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -765,24 +730,18 @@
                   
                 
                 
-                <h1 id="agriculture-tax-calculation-and-payments"><a class="toclink" href="#agriculture-tax-calculation-and-payments">Agriculture Tax Calculation and Payments</a></h1>
-<p>Functionality has been added to support the calculation ad payment of agricultural taxes in addition to that of standard Sales Tax.</p>
+                <h1 id="agriculture-tax-calculation"><a class="toclink" href="#agriculture-tax-calculation">Agriculture Tax Calculation</a></h1>
+<p>Functionality has been added to support the calculation of agricultural taxes.</p>
 <h2 id="feature-summary"><a class="toclink" href="#feature-summary">Feature Summary:</a></h2>
 <ul>
 <li><strong>Multi-Taxing:</strong> Made it possible for Customers, Vendors, Addresses and Items to be assigned multiple tax groups. Taxation is determined based on the intersection of assigned tax types and groups between Items and the relevant Customers, Vendors and/or Addresses.</li>
-<li><strong>Customer Use Tax:</strong> Implemented the ability to accrue tax amounts on a Sales Invoice based on a specific product, where calculated tax is not part of the amount due from the Customer.</li>
-<li><strong>Tax Basis:</strong> Product Composition: Created tax rules to address taxation based on the percentage of a Product’s chemical composition.</li>
-<li><strong>Tax Basis:</strong> Percentage of Gross Sales: Created tax rules to address taxation based on the percentage of gross sales on a sales order (total price, prior to discount).</li>
-<li><strong>Min/Max Tax Thresholds and License Fees:</strong> Incorporated a minimum or maximum payable amount into the Tax Settlement Period.</li>
-<li><strong>Grain Settlements:</strong> Allow for the reduction of a payable by the amount of assessed tax.</li>
 </ul>
 <h2 id="multi-taxing"><a class="toclink" href="#multi-taxing">Multi-Taxing</a></h2>
 <p>Levridge allows users to assign a Customers, Vendors and Items to multiple tax groups, to support agricultural tax calculations. Customers can also have different Agricultural Tax Groups assigned at the address level to facilitate taxation for multiple delivery locations.</p>
-<p>Agricultural Taxes are categorized into one of four different Agricultural Tax Types:</p>
+<p>Agricultural Taxes are categorized into one of three different Agricultural Tax Types:</p>
 <ol>
 <li>Tonnage Tax</li>
 <li>Pesticide Tax</li>
-<li>Check-Off Fees</li>
 <li>Indemnity Fund</li>
 </ol>
 <p>Agricultural Sales Tax tables have been added to the Customer, Vendor, Address and Item forms to allow for assignment of the applicable Agricultural Tax Groups. </p>
@@ -791,23 +750,6 @@
 <li>Customers, Vendors, and Addresses can be assigned as many Sales Tax Groups from each of the Agricultural Tax Types as needed.</li>
 </ul>
 <p>In addition to standard sales tax calculation, each Sales Order or Purchase Order line can be subject to one of each of the above Agricultural Tax Types. The applicable tax groups are assigned by identifying matching tax groups between the Item and the Customer (or Vendor) information on the order. All matching tax groups will be applied.</p>
-<h2 id="customer-use-tax"><a class="toclink" href="#customer-use-tax">Customer Use Tax</a></h2>
-<p>Certain agricultural taxes do not create a liability on the part of the consumer and cannot be include as charges on the Customer Invoice. To support this requirement, Levridge allows Sales Tax Codes to be designated as “Customer Use Tax”. </p>
-<p>When flagged as “Customer Use Tax,” the Agricultural Tax will calculate on a Sales Order line based on the specifications in the Sales Tax Code, but those tax amounts will not appear as charges on the Sales Invoice.</p>
-<p>Specific General Ledger Accounts can be specified for posting of Customer Use Tax, and payments to tax authorities will be settled using standard Tax Settlement functionality.</p>
-<h2 id="tax-basis-product-composition"><a class="toclink" href="#tax-basis-product-composition">Tax Basis: Product Composition</a></h2>
-<p>Some states require that a fee be remitted based on the percentage content of certain product components (such as nitrogen content in fertilizers and soil conditioners). Levridge has enhanced the Released Product to include a new “Nutrients” fast tab to record the type and percentage of nutrients included in the product.</p>
-<p>Levridge has also enhanced Tax to provide a new tax calculation for “Net amount per unit - % unit attribute.” Tax will then be calculated based on the percentage of the nutrient specified on the tax code.</p>
-<h2 id="tax-basis-percentage-of-gross-sales"><a class="toclink" href="#tax-basis-percentage-of-gross-sales">Tax Basis: Percentage of Gross Sales</a></h2>
-<p>Some agricultural taxes are calculated as a percentage of gross sales. Levridge has added a new tax calculation to support this requirement.</p>
-<p>Sales Tax Codes configured with this basis will calculate tax based on product list price, prior to application of any discounts.</p>
-<h2 id="minmax-thresholds-and-license-fees"><a class="toclink" href="#minmax-thresholds-and-license-fees">Min/Max Thresholds and License Fees</a></h2>
-<p>To support the payment of license fees or flat amounts that are payable for a specific time period, Levridge has enhanced the Sales Tax Settlement Periods to include optional fields for a Minimum Tax amount and a Maximum Tax Amount.</p>
-<p>If the Minimum Tax field is populated, the amount to be settled will always be either the Minimum Tax amount or the actual tax calculated – whichever is greater.</p>
-<p>If the Maximum Tax field is populated, the amount to be settled will always be either the Maximum Tax amount or the actual tax calculated – whichever is less.</p>
-<p>If these fields are left blank, Sales Tax will be calculated and settled according to actual values posted.</p>
-<h2 id="grain-settlements"><a class="toclink" href="#grain-settlements">Grain Settlements</a></h2>
-<p>Levridge has implemented a new “Reduction in Payable” setting on the Sales Tax Code. When enabled, this setting will reduce the amount of a payment issued to a vendor by the tax amount. The tax will be recorded as a liability. The payment will be remitted to the tax authority rather than the vendor collecting and remitting the tax.</p>
                 
               
               
