@@ -31,16 +31,3 @@ Levridge now allows zone pricing based off the home address of a customer, not j
 The sales trade agreements provide options for volume pricing where ranges are designated for different levels of pricing. For example, a quantity of 1-20 has certain pricing, 21-50 another price.
 
 Volume pricing takes one step farther. Volume pricing looks at the quantities on order and quantities within a date range, then through the pricing service, will assign the appropriate price.
-
-## Credit Limits 
-Receivables>Setup> AR Parameters
-
-Standard FinOps customer setup permits a credit limit type of None, Balance, Balance + packing slip or product receipt, or Balance + all.  
-
-Levridge allows you to define what you want to include in the calculation for available credit. Currently FinOps looks at outstanding sales orders and accounts receivable amount due.  Levridge allows this to be expanded to include sales agreements with either hard stops or warnings. This is an overall setting for the company.
-
-   ![Credit Limit](./assets/images/credit_limit.png)
- 
-There are transactions that originate in CRM that are supported by an existing AX process. To provide a consistent user experience, the configuration selection for transactions that should be included in credit limit calculation should reflect these relationships. For example, if CRM Agronomy Contract is set to “Yes” to include, then Sales agreements should be automatically set to “Yes” to include. 
-
-The Customer Balance List with credit limit report has also been modified to reflect a Balance that includes the balance due PLUS any pending transactions considered in calculating available credit.
