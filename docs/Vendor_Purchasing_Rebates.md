@@ -19,6 +19,6 @@ The rebate agreement defines parameters that trigger the cumulation of rebates. 
 Upon creation of a vendor rebate agreement, the default expiry date of never has been changed to one year following the start date. The user has the option to update the expiry date.
 
 ## Rebate Process
-Once the rebate agreements are setup up properly, every time a Purchase order or sales order is invoiced, the rebate will show up in the accrual account as well as in the Rebate claims screen.  
+Once the rebate agreements are setup up properly, every time a Purchase order is invoiced, the rebate will show up in the accrual account as well as in the Rebate claims screen.  
 
 A rebate claims screen will provide details of rebates processed.  Processing from the claims will create a credit on the vendors account that can be left as a credit or settled against an invoice. 
