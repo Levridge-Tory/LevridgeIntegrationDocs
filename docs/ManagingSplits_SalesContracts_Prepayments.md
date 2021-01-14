@@ -9,14 +9,14 @@ Target Audience: This functionality applies to individuals in Ag Retailers who m
 Levridge syncs sales orders between CE and F&O. As sales orders are approved in CE, the sales order is then created in F&O. The sales order in CE becomes read only once approved.  As sales orders are entered in F&O, it will be shared with CE.  
 
 ### Sales order header 
-When a sales order is created, the ordering customer is selected and has the option to select customer operation and a customer site.  The customer site if selected, will be used to default the split group. If no customer operation is selected, then the user must select it manually. Note that the split group may be updated within sales order entry as needed. The operation information will default to the sales order lines.
+When a sales order is created, the ordering customer is selected and has the option to select customer operation and a customer site.  The split group defaults from the customer operation or customer site. If no customer operation is selected, then the user must select the split group manually. Note the split group may be updated within sales order entry as needed. The operation information will default to the sales order lines.
 
-A branch, line of business, growing season and sales period may also be entered as part of the sales order entry process. The sales period is not required.
+A branch, line of business, growing season and sales period may also be entered as part of the sales order entry process.
 
 Branch and line of business may be used to filter or categorize sales orders for list pages and some reporting. Growing season entry on a sales order will help to determine volume pricing is used, else used as a filter for list pages and some reporting.
 
 ### Sales order line 
-During sales order line entry, the customer operation, customer site, and split group all default from the header and can be changed by the user. Only split group is required at this point.
+During sales order line entry, the customer operation, customer site, and split group all default from the header and can be changed by the user.
 
 Levridge displays only the list pricing during sales order entry as specific customer pricing is determined at time of delivery applying the sales agreements.  
 
