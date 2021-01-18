@@ -40,7 +40,7 @@ The following is an overview of the Agronomy Sales implementation activities.
 
     b.	Cash discounts - set prepayment fields
 
-        i.	Within cash discounts set up cash discount schedules
+       i.	Within cash discounts set up cash discount schedules
 
 8.	Configure ag specific settings in Accounts Receivable > Setup > Accounts receivable parameters:
 
@@ -56,21 +56,21 @@ The following is an overview of the Agronomy Sales implementation activities.
 
     a.	Customers
 
-        i.	Ag specific settings are:
+       i.	Ag specific settings are:
 
-        ii.	Zone address
+       ii.	Zone address
 
-        iii.	Dispatching account id if using a 3rd party dispatching system (like AgSync)
+       iii.	Dispatching account id if using a 3rd party dispatching system (like AgSync)
 
-        iv.	Seed and technology agreements
+       iv.	Seed and technology agreements
 
-        v.	Membership fast tab for patronage
+       v.	Membership fast tab for patronage
 
-        vi.	Taxation fast tab
+       vi.	Taxation fast tab
 
-        vii.	On customer addresses set ag taxes
+       vii.	On customer addresses set ag taxes
 
-        viii.	Billing notes
+       viii.	Billing notes
 
     b.	Split groups
 
