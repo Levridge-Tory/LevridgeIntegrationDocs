@@ -13,4 +13,5 @@
 - [Pricing Discounts](Pricing_Discounts.md)
 - [Purchase Agreements](Purchase_Agreements.md)
 - [Vendor Purchasing Rebates](Vendor_Purchasing_Rebates.md)
+- [Levridge Retail POS Enhancements](Retail_POS_Enhancements.md)
 
