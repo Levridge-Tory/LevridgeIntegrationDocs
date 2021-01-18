@@ -5,6 +5,7 @@
 The following is an overview of the Agronomy Sales implementation activities. 
 
 1.	Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported)
+
     a.	Customer operation types
     b.	Customer site types
     c.	Growing seasons
@@ -15,6 +16,7 @@ The following is an overview of the Agronomy Sales implementation activities.
     h.	Dispatching accounts
 
 2.	Enter setup data under Organization administration > Global address book > Relationship types
+
     a.	Need to define a relationship from customer to customer operation
 
 3.	Enter sales agreement classifications under Accounts Receivable > Setup > Sales agreement classifications
@@ -26,11 +28,13 @@ The following is an overview of the Agronomy Sales implementation activities.
 6.	Under Organization administration > Number sequences > Number sequences enter or generate number sequences
 
 7.	Enter setup data under Accounts payable > Payment:
+
     a.	Terms of payment - set prepayment fields
     b.	Cash discounts - set prepayment fields
         i.	Within cash discounts set up cash discount schedules
 
 8.	Configure ag specific settings in Accounts Receivable > Setup > Accounts receivable parameters:
+
     a.	Credit rating
     b.	Credit limits
     c.	Prices
@@ -38,6 +42,7 @@ The following is an overview of the Agronomy Sales implementation activities.
 9.	Enter vendor zones under Procurement and sourcing > Setup > Prices and discounts > Vendor zones
 
 10.	Enter master data - involves a lot of client feedback
+
     a.	Customers
         i.	Ag specific settings are:
         ii.	Zone address
@@ -64,6 +69,7 @@ The following is an overview of the Agronomy Sales implementation activities.
     h.	Contacts
         i.	Setup applicator licenses
 11.	Enter indirect ag taxes under Tax > Indirect taxes > Sales tax:
+
     a.	Sales tax codes
     b.	Sales tax groups
     c.	Item sales tax groups
@@ -73,6 +79,7 @@ The following is an overview of the Agronomy Sales implementation activities.
 12.	Under Inventory management > Setup > Inventory breakdown setup sites and warehouse set ag tax values
 
 13.	Prepare and enter products by setting up ag settings in:
+
     a.	Product information management > Setup > Categories and attributes > Category hierarchies
     b.	Accounts receivable > Setup > License and certification:
         i.	Certificate types
@@ -100,6 +107,7 @@ The following is an overview of the Agronomy Sales implementation activities.
 15.	Define transfer order charges Under Inventory management > Setup > Transfer order charges
 
 16.	If using Transportation management:
+
     a.	Configure TMS Parameters under Transportation management > Setup > Transportation management parameters
         i.	General > Vendor invoice
             - Write vendor invoice journal - set to yes
@@ -149,6 +157,7 @@ The following is an overview of the Agronomy Sales implementation activities.
         iv.	Zone master
 
 17.	Warehouse Management Configurations
+
     a.	Warehouse management > Setup > Warehouse > Warehouses
         i.	Warehouse > Use warehouse management processes – set flag to yes for all warehouses that will use TMS
     b.	Warehouse Management > Setup > Load posting methods > Regenerate methods (button)
@@ -164,12 +173,15 @@ The following is an overview of the Agronomy Sales implementation activities.
         i.	By item group indicate the load template id
 
 18.	Under Inventory management > Setup > Agriculture > Agriculture parameters
+
     a.	Dispensing > Load template ID
 
 19.	Under Accounts receivable > Setup > Agriculture > Agriculture parameters
+
     a.	Dispensing > Load template ID
 
 20.	Under Product information management > Products > Released products
+
     a.	Transportation > Use transportation management processes
     b.	Transportation > Carrier service
     c.	Manage Inventory > Net Weight
