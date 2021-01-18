@@ -729,14 +729,14 @@
 <ol>
 <li>
 <p>Enter setup data under Accounts Receivable &gt; Setup &gt; Agriculture (if not previously imported)</p>
-<p>a.  Customer operation types
-b.  Customer site types
-c.  Growing seasons
-d.  Sales periods
-e.  Lines of business
-f.  Finance programs
-g.  Seed and technology agreement compliance
-h.  Dispatching accounts</p>
+<p>a.  Customer operation types</p>
+<p>b.  Customer site types</p>
+<p>c.  Growing seasons</p>
+<p>d.  Sales periods</p>
+<p>e.  Lines of business</p>
+<p>f.  Finance programs</p>
+<p>g.  Seed and technology agreement compliance</p>
+<p>h.  Dispatching accounts</p>
 </li>
 <li>
 <p>Enter setup data under Organization administration &gt; Global address book &gt; Relationship types</p>
@@ -756,52 +756,72 @@ h.  Dispatching accounts</p>
 </li>
 <li>
 <p>Enter setup data under Accounts payable &gt; Payment:</p>
-<p>a.  Terms of payment - set prepayment fields
-b.  Cash discounts - set prepayment fields
-    i.  Within cash discounts set up cash discount schedules</p>
+<p>a.  Terms of payment - set prepayment fields</p>
+<p>b.  Cash discounts - set prepayment fields</p>
+<pre><code>i.  Within cash discounts set up cash discount schedules
+</code></pre>
 </li>
 <li>
 <p>Configure ag specific settings in Accounts Receivable &gt; Setup &gt; Accounts receivable parameters:</p>
-<p>a.  Credit rating
-b.  Credit limits
-c.  Prices</p>
+<p>a.  Credit rating</p>
+<p>b.  Credit limits</p>
+<p>c.  Prices</p>
 </li>
 <li>
 <p>Enter vendor zones under Procurement and sourcing &gt; Setup &gt; Prices and discounts &gt; Vendor zones</p>
 </li>
 <li>
 <p>Enter master data - involves a lot of client feedback</p>
-<p>a.  Customers
-    i.  Ag specific settings are:
-    ii. Zone address
-    iii.    Dispatching account id if using a 3rd party dispatching system (like AgSync)
-    iv. Seed and technology agreements
-    v.  Membership fast tab for patronage
-    vi. Taxation fast tab
-    vii.    On customer addresses set ag taxes
-    viii.   Billing notes
-b.  Split groups
-c.  Customer operations
-d.  Customer sites
-e.  Customer finance programs
-f.  Vendors (if not the same as customers in the Ag parameters config form)
-i.  On vendor addresses set ag taxes
-g.  Rolling stock
-    i.  Cab configuration
-    ii. Drive train
-    iii.    Equipment types
-    iv. Status
-    v.  Equipment reasons
-    vi. Equipment parameters
-    vii.    Equipment
-h.  Contacts
-    i.  Setup applicator licenses
-11. Enter indirect ag taxes under Tax &gt; Indirect taxes &gt; Sales tax:</p>
-<p>a.  Sales tax codes
-b.  Sales tax groups
-c.  Item sales tax groups
-d.  Sales tax settlement periods
-e.  Tax reasons</p>
+<p>a.  Customers</p>
+<pre><code>i.  Ag specific settings are:
+
+ii. Zone address
+
+iii.    Dispatching account id if using a 3rd party dispatching system (like AgSync)
+
+iv. Seed and technology agreements
+
+v.  Membership fast tab for patronage
+
+vi. Taxation fast tab
+
+vii.    On customer addresses set ag taxes
+
+viii.   Billing notes
+</code></pre>
+<p>b.  Split groups</p>
+<p>c.  Customer operations</p>
+<p>d.  Customer sites</p>
+<p>e.  Customer finance programs</p>
+<p>f.  Vendors (if not the same as customers in the Ag parameters config form)</p>
+<pre><code>i.  On vendor addresses set ag taxes
+</code></pre>
+<p>g.  Rolling stock</p>
+<pre><code>i.  Cab configuration
+
+ii. Drive train
+
+iii.    Equipment types
+
+iv. Status
+
+v.  Equipment reasons
+
+vi. Equipment parameters
+
+vii.    Equipment
+</code></pre>
+<p>h.  Contacts</p>
+<pre><code>i.  Setup applicator licenses
+</code></pre>
+</li>
+<li>
+<p>Enter indirect ag taxes under Tax &gt; Indirect taxes &gt; Sales tax:</p>
+<p>a.  Sales tax codes</p>
+<p>b.  Sales tax groups</p>
+<p>c.  Item sales tax groups</p>
+<p>d.  Sales tax settlement periods</p>
+<p>e.  Tax reasons</p>
 </li>
 <li>
 <p>Under Inventory management &gt; Setup &gt; Inventory breakdown setup sites and warehouse set ag tax values</p>
@@ -888,20 +908,26 @@ n.  Enter data under Transportation management &gt; Setup &gt; Engines
 </li>
 <li>
 <p>Warehouse Management Configurations</p>
-<p>a.  Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses
-    i.  Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS
-b.  Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)
-c.  Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats
-d.  Configure one location format
-e.  Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types
-    i.  Configure two location types; Dock and User
-f.  Warehouse Management &gt; Setup &gt; Location profiles
-    i.  Configure two profiles; Default and User
-g.  Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters
-    i.  General &gt; Assign location profile &amp; Location Type
-h.  Warehouse Management &gt; Setup &gt; Load &gt; Item load
-    i.  By item group indicate the load template id</p>
+<p>a.  Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses</p>
+<pre><code>i.  Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS
+</code></pre>
+<p>b.  Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)</p>
+<p>c.  Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats</p>
+<p>d.  Configure one location format</p>
+<p>e.  Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types</p>
+<p>i.   Configure two location types; Dock and User</p>
+<p>f.  Warehouse Management &gt; Setup &gt; Location profiles</p>
+<p>i.   Configure two profiles; Default and User</p>
 </li>
+</ol>
+<p>g.   Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters</p>
+<pre><code>   i.   General &gt; Assign location profile &amp; Location Type
+
+h.  Warehouse Management &gt; Setup &gt; Load &gt; Item load
+
+  i.    By item group indicate the load template id
+</code></pre>
+<ol>
 <li>
 <p>Under Inventory management &gt; Setup &gt; Agriculture &gt; Agriculture parameters</p>
 <p>a.  Dispensing &gt; Load template ID</p>
@@ -912,9 +938,9 @@ h.  Warehouse Management &gt; Setup &gt; Load &gt; Item load
 </li>
 <li>
 <p>Under Product information management &gt; Products &gt; Released products</p>
-<p>a.  Transportation &gt; Use transportation management processes
-b.  Transportation &gt; Carrier service
-c.  Manage Inventory &gt; Net Weight</p>
+<p>a.  Transportation &gt; Use transportation management processes</p>
+<p>b.  Transportation &gt; Carrier service</p>
+<p>c.  Manage Inventory &gt; Net Weight</p>
 </li>
 </ol>
                 
