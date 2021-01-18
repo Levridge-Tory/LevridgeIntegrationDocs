@@ -7,12 +7,19 @@ The following is an overview of the Agronomy Sales implementation activities.
 1.	Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported)
 
     a.	Customer operation types
+
     b.	Customer site types
+
     c.	Growing seasons
+
     d.	Sales periods
+
     e.	Lines of business
+
     f.	Finance programs
+
     g.	Seed and technology agreement compliance
+
     h.	Dispatching accounts
 
 2.	Enter setup data under Organization administration > Global address book > Relationship types
@@ -30,13 +37,17 @@ The following is an overview of the Agronomy Sales implementation activities.
 7.	Enter setup data under Accounts payable > Payment:
 
     a.	Terms of payment - set prepayment fields
+
     b.	Cash discounts - set prepayment fields
+
         i.	Within cash discounts set up cash discount schedules
 
 8.	Configure ag specific settings in Accounts Receivable > Setup > Accounts receivable parameters:
 
     a.	Credit rating
+
     b.	Credit limits
+
     c.	Prices
 
 9.	Enter vendor zones under Procurement and sourcing > Setup > Prices and discounts > Vendor zones
@@ -44,36 +55,65 @@ The following is an overview of the Agronomy Sales implementation activities.
 10.	Enter master data - involves a lot of client feedback
 
     a.	Customers
+
         i.	Ag specific settings are:
+
         ii.	Zone address
+
         iii.	Dispatching account id if using a 3rd party dispatching system (like AgSync)
+
         iv.	Seed and technology agreements
+
         v.	Membership fast tab for patronage
+
         vi.	Taxation fast tab
+
         vii.	On customer addresses set ag taxes
+
         viii.	Billing notes
+
     b.	Split groups
+
     c.	Customer operations
+
     d.	Customer sites
+
     e.	Customer finance programs
+
     f.	Vendors (if not the same as customers in the Ag parameters config form)
-    i.	On vendor addresses set ag taxes
+
+        i.	On vendor addresses set ag taxes
+
     g.	Rolling stock
+
         i.	Cab configuration
+
         ii.	Drive train
+
         iii.	Equipment types
+
         iv.	Status
+
         v.	Equipment reasons
+
         vi.	Equipment parameters
+
         vii.	Equipment
+
     h.	Contacts
+
         i.	Setup applicator licenses
+
 11.	Enter indirect ag taxes under Tax > Indirect taxes > Sales tax:
 
     a.	Sales tax codes
+
     b.	Sales tax groups
+
     c.	Item sales tax groups
+
     d.	Sales tax settlement periods
+
     e.	Tax reasons
 
 12.	Under Inventory management > Setup > Inventory breakdown setup sites and warehouse set ag tax values
@@ -159,18 +199,30 @@ The following is an overview of the Agronomy Sales implementation activities.
 17.	Warehouse Management Configurations
 
     a.	Warehouse management > Setup > Warehouse > Warehouses
+
         i.	Warehouse > Use warehouse management processes – set flag to yes for all warehouses that will use TMS
+
     b.	Warehouse Management > Setup > Load posting methods > Regenerate methods (button)
+
     c.	Warehouse Management > Setup > Warehouse > Location formats
+
     d.	Configure one location format
+
     e.	Warehouse Management > Setup > Warehouse > Location types
-        i.	Configure two location types; Dock and User
+ 
+       i.	Configure two location types; Dock and User
+
     f.	Warehouse Management > Setup > Location profiles
-        i.	Configure two profiles; Default and User
-    g.	Configure Warehouse management parameters under Warehouse management > Setup > Warehouse management parameters
-        i.	General > Assign location profile & Location Type
+ 
+       i.	Configure two profiles; Default and User
+ 
+   g.	Configure Warehouse management parameters under Warehouse management > Setup > Warehouse management parameters
+ 
+       i.	General > Assign location profile & Location Type
+
     h.	Warehouse Management > Setup > Load > Item load
-        i.	By item group indicate the load template id
+  
+      i.	By item group indicate the load template id
 
 18.	Under Inventory management > Setup > Agriculture > Agriculture parameters
 
@@ -183,6 +235,8 @@ The following is an overview of the Agronomy Sales implementation activities.
 20.	Under Product information management > Products > Released products
 
     a.	Transportation > Use transportation management processes
+
     b.	Transportation > Carrier service
+
     c.	Manage Inventory > Net Weight
 
