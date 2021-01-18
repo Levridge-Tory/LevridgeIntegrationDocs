@@ -758,7 +758,8 @@
 <p>Enter setup data under Accounts payable &gt; Payment:</p>
 <p>a.  Terms of payment - set prepayment fields</p>
 <p>b.  Cash discounts - set prepayment fields</p>
-<p>i.   Within cash discounts set up cash discount schedules</p>
+<pre><code>  i.    Within cash discounts set up cash discount schedules
+</code></pre>
 </li>
 <li>
 <p>Configure ag specific settings in Accounts Receivable &gt; Setup &gt; Accounts receivable parameters:</p>
@@ -772,30 +773,47 @@
 <li>
 <p>Enter master data - involves a lot of client feedback</p>
 <p>a.  Customers</p>
-<p>i.   Ag specific settings are:</p>
-<p>ii.  Zone address</p>
-<p>iii. Dispatching account id if using a 3rd party dispatching system (like AgSync)</p>
-<p>iv.  Seed and technology agreements</p>
-<p>v.   Membership fast tab for patronage</p>
-<p>vi.  Taxation fast tab</p>
-<p>vii. On customer addresses set ag taxes</p>
-<p>viii.    Billing notes</p>
+<pre><code>  i.    Ag specific settings are:
+
+  ii.   Zone address
+
+  iii.  Dispatching account id if using a 3rd party dispatching system (like AgSync)
+
+  iv.   Seed and technology agreements
+
+  v.    Membership fast tab for patronage
+
+  vi.   Taxation fast tab
+
+  vii.  On customer addresses set ag taxes
+
+  viii. Billing notes
+</code></pre>
 <p>b.  Split groups</p>
 <p>c.  Customer operations</p>
 <p>d.  Customer sites</p>
 <p>e.  Customer finance programs</p>
 <p>f.  Vendors (if not the same as customers in the Ag parameters config form)</p>
-<p>i.   On vendor addresses set ag taxes</p>
+<pre><code>  i.    On vendor addresses set ag taxes
+</code></pre>
 <p>g.  Rolling stock</p>
-<p>i.   Cab configuration</p>
-<p>ii.  Drive train</p>
-<p>iii. Equipment types</p>
-<p>iv.  Status</p>
-<p>v.   Equipment reasons</p>
-<p>vi.  Equipment parameters</p>
-<p>vii. Equipment</p>
+<pre><code>  i.    Cab configuration
+
+  ii.   Drive train
+
+  iii.  Equipment types
+
+  iv.   Status
+
+  v.    Equipment reasons
+
+  vi.   Equipment parameters
+
+  vii.  Equipment
+</code></pre>
 <p>h.  Contacts</p>
-<p>i.   Setup applicator licenses</p>
+<pre><code>  i.    Setup applicator licenses
+</code></pre>
 </li>
 <li>
 <p>Enter indirect ag taxes under Tax &gt; Indirect taxes &gt; Sales tax:</p>
@@ -812,24 +830,39 @@
 <p>Prepare and enter products by setting up ag settings in:</p>
 <p>a.  Product information management &gt; Setup &gt; Categories and attributes &gt; Category hierarchies</p>
 <p>b.  Accounts receivable &gt; Setup &gt; License and certification:</p>
-<p>i.   Certificate types</p>
-<p>ii.  Certificates compliance</p>
-<p>iii. Regulated products</p>
-<p>iv.   Restricted product regional lists</p>
+<pre><code>  i.    Certificate types
+
+  ii.   Certificates compliance
+
+  iii.  Regulated products
+
+  iv.   Restricted product regional lists
+</code></pre>
 <p>c.  Feed and livestock &gt; Setup &gt; Veterinary feed directive (VFD):</p>
-<p>i.   Veterinary feed directive (VFD) drug groups</p>
-<p>ii.  Veterinary feed directive (VFD) compliance</p>
+<pre><code>  i.    Veterinary feed directive (VFD) drug groups
+
+  ii.   Veterinary feed directive (VFD) compliance
+</code></pre>
 <p>d.  On released products, set the default order settings for each valid site and warehouse for the product</p>
-<p>i.   If using Kahler with this item, under Manage inventory on Action pane &gt; Warehouse items &gt; Set the dispensing method</p>
+<pre><code>  i.    If using Kahler with this item, under Manage inventory on Action pane &gt; Warehouse items &gt; Set the dispensing method
+</code></pre>
 <p>e.  On released products:</p>
-<p>i.   Assign regional lists</p>
-<p>ii.  Assign certificates</p>
-<p>iii. Assign drug groups</p>
-<p>iv.  Assign active ingredients</p>
-<p>v.   Assign nutrients</p>
-<p>vi.  If using scale - set flag to recognize the product as one that will be used at scale</p>
-<p>vii. If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service</p>
-<p>viii.    Define ag specific settings on supplementary sales items</p>
+<pre><code>  i.    Assign regional lists
+
+  ii.   Assign certificates
+
+  iii.  Assign drug groups
+
+  iv.   Assign active ingredients
+
+  v.    Assign nutrients
+
+  vi.   If using scale - set flag to recognize the product as one that will be used at scale
+
+  vii.  If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service
+
+  viii. Define ag specific settings on supplementary sales items
+</code></pre>
 <p>f.  Setup up substitute items</p>
 </li>
 <li>
@@ -841,23 +874,27 @@
 <li>
 <p>If using Transportation management:</p>
 <p>a.  Configure TMS Parameters under Transportation management &gt; Setup &gt; Transportation management parameters</p>
-<p>i.   General &gt; Vendor invoice</p>
-<pre><code>    - Write vendor invoice journal - set to yes
+<pre><code>  i.    General &gt; Vendor invoice
 
-    - Assign vendor journal name
+       - Write vendor invoice journal - set to yes
 
-    - Freight bill invoice text
-</code></pre>
-<p>ii.  General &gt; Loads</p>
-<pre><code>    - Set flags for when loads get created automatically
+       - Assign vendor journal name
 
-    - Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
-</code></pre>
-<p>iii. General &gt; Dispensing loads</p>
-<pre><code>    - Set flags for when loads get created (Kahler integration only)
-</code></pre>
-<p>iv.  General &gt; Freight reconciliation</p>
-<pre><code>    - Enable freight reconciliation - set to yes
+       - Freight bill invoice text
+
+   ii.  General &gt; Loads
+
+       - Set flags for when loads get created automatically
+
+       - Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
+
+   iii. General &gt; Dispensing loads
+
+      - Set flags for when loads get created (Kahler integration only)
+
+   iv.  General &gt; Freight reconciliation
+
+      - Enable freight reconciliation - set to yes
 </code></pre>
 <p>b.  Configure data under Transportation management &gt; Setup &gt; Load building</p>
 <p>c.  Load templates</p>
@@ -867,55 +904,77 @@
 <p>g.  Mode</p>
 <p>h.  Transportation methods</p>
 <p>i.  Shipping carriers</p>
-<p>i.   Name - Specific structure required</p>
-<p>ii.  Activate Carrier flag set to yes</p>
-<p>iii. Assign vendor account</p>
-<p>iv.  Activate carrier rating - set to yes</p>
-<p>v.   Services</p>
-<p>vi.  Assign services</p>
-<p>vii. Rating profiles</p>
+<pre><code>  i.    Name - Specific structure required
+
+  ii.   Activate Carrier flag set to yes
+
+  iii.  Assign vendor account
+
+  iv.   Activate carrier rating - set to yes
+
+  v.    Services
+
+  vi.   Assign services
+
+  vii.  Rating profiles
+</code></pre>
 <p>j.  Enter data under Transportation management &gt; Setup &gt; Rating</p>
-<p>i.   Carrier accessorial charge</p>
-<p>ii.  Break master</p>
-<p>iii. Rate master (Rate base)</p>
-<p>iv.  Rating profile</p>
-<p>v.   Rating metadata</p>
-<p>vi.  Miscellaneous charges</p>
+<pre><code>  i.    Carrier accessorial charge
+
+  ii.   Break master
+
+  iii.  Rate master (Rate base)
+
+  iv.   Rating profile
+
+        v.  Rating metadata
+
+  vi.   Miscellaneous charges
+</code></pre>
 <p>k.  Enter data under Transportation management &gt; Setup&gt; Freight reconciliation</p>
-<p>i.   Reconciliation reasons</p>
-<p>ii.  Freight bill type assignments</p>
-<p>iii. Audit master</p>
+<pre><code>  i.    Reconciliation reasons
+
+  ii.   Freight bill type assignments
+
+  iii.  Audit master
+</code></pre>
 <p>l.  Enter data under Transportation management &gt; Setup &gt; Bing map usage key (if using mapping which most clients will be doing)</p>
 <p>m.  Enter data under Transportation management &gt; Setup &gt; Transportation standards</p>
-<p>i.   NMFC codes</p>
-<p>ii.  LTL classes</p>
+<pre><code>  i.    NMFC codes
+
+  ii.   LTL classes
+</code></pre>
 <p>n.  Enter data under Transportation management &gt; Setup &gt; Engines</p>
-<p>i.   Mileage engine</p>
-<p>ii.  Rate engine</p>
-<p>iii. Transit time engine</p>
-<p>iv.  Zone master</p>
+<pre><code>  i.    Mileage engine
+
+  ii.   Rate engine
+
+  iii.  Transit time engine
+
+  iv.   Zone master
+</code></pre>
 </li>
 <li>
 <p>Warehouse Management Configurations</p>
 <p>a.  Warehouse management &gt; Setup &gt; Warehouse &gt; Warehouses</p>
-<p>i.   Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS</p>
+<pre><code>  i.    Warehouse &gt; Use warehouse management processes – set flag to yes for all warehouses that will use TMS
+</code></pre>
 <p>b.  Warehouse Management &gt; Setup &gt; Load posting methods &gt; Regenerate methods (button)</p>
 <p>c.  Warehouse Management &gt; Setup &gt; Warehouse &gt; Location formats</p>
 <p>d.  Configure one location format</p>
 <p>e.  Warehouse Management &gt; Setup &gt; Warehouse &gt; Location types</p>
-<p>i.    Configure two location types; Dock and User</p>
-<p>f.  Warehouse Management &gt; Setup &gt; Location profiles</p>
-<p>i.    Configure two profiles; Default and User</p>
-</li>
-</ol>
-<p>g.   Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters</p>
-<pre><code>  i.    General &gt; Assign location profile &amp; Location Type
-
-h.  Warehouse Management &gt; Setup &gt; Load &gt; Item load
-
- i. By item group indicate the load template id
+<pre><code>  i.    Configure two location types; Dock and User
 </code></pre>
-<ol>
+<p>f.  Warehouse Management &gt; Setup &gt; Location profiles</p>
+<pre><code>  i.    Configure two profiles; Default and User
+</code></pre>
+<p>g.  Configure Warehouse management parameters under Warehouse management &gt; Setup &gt; Warehouse management parameters</p>
+<pre><code>  i.    General &gt; Assign location profile &amp; Location Type
+</code></pre>
+<p>h.  Warehouse Management &gt; Setup &gt; Load &gt; Item load</p>
+<pre><code>  i.    By item group indicate the load template id
+</code></pre>
+</li>
 <li>
 <p>Under Inventory management &gt; Setup &gt; Agriculture &gt; Agriculture parameters</p>
 <p>a.  Dispensing &gt; Load template ID</p>
