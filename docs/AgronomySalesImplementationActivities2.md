@@ -82,27 +82,27 @@ The following is an overview of the Agronomy Sales implementation activities.
 
     f.	Vendors (if not the same as customers in the Ag parameters config form)
 
-        i.	On vendor addresses set ag taxes
+       i.	On vendor addresses set ag taxes
 
     g.	Rolling stock
 
-        i.	Cab configuration
+       i.	Cab configuration
 
-        ii.	Drive train
+       ii.	Drive train
 
-        iii.	Equipment types
+       iii.	Equipment types
 
-        iv.	Status
+       iv.	Status
 
-        v.	Equipment reasons
+       v.	Equipment reasons
 
-        vi.	Equipment parameters
+       vi.	Equipment parameters
 
-        vii.	Equipment
+       vii.	Equipment
 
     h.	Contacts
 
-        i.	Setup applicator licenses
+       i.	Setup applicator licenses
 
 11.	Enter indirect ag taxes under Tax > Indirect taxes > Sales tax:
 
@@ -121,25 +121,45 @@ The following is an overview of the Agronomy Sales implementation activities.
 13.	Prepare and enter products by setting up ag settings in:
 
     a.	Product information management > Setup > Categories and attributes > Category hierarchies
+
     b.	Accounts receivable > Setup > License and certification:
-        i.	Certificate types
-        ii.	Certificates compliance
-        iii.	Regulated products
-        iv.	Restricted product regional lists
+
+       i.	Certificate types
+
+       ii.	Certificates compliance
+
+       iii.	Regulated products
+  
+      iv.	Restricted product regional lists
+
     c.	Feed and livestock > Setup > Veterinary feed directive (VFD):
-        i.	Veterinary feed directive (VFD) drug groups
-        ii.	Veterinary feed directive (VFD) compliance
+
+       i.	Veterinary feed directive (VFD) drug groups
+
+       ii.	Veterinary feed directive (VFD) compliance
+
     d.	On released products, set the default order settings for each valid site and warehouse for the product
-        i.	If using Kahler with this item, under Manage inventory on Action pane > Warehouse items > Set the dispensing method
+
+       i.	If using Kahler with this item, under Manage inventory on Action pane > Warehouse items > Set the dispensing method
+
     e.	On released products:
-        i.	Assign regional lists
-        ii.	Assign certificates
-        iii.	Assign drug groups
-        iv.	Assign active ingredients
-        v.	Assign nutrients
-        vi.	If using scale - set flag to recognize the product as one that will be used at scale
-        vii.	If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service
-        viii.	Define ag specific settings on supplementary sales items
+
+       i.	Assign regional lists
+
+       ii.	Assign certificates
+
+       iii.	Assign drug groups
+
+       iv.	Assign active ingredients
+
+       v.	Assign nutrients
+
+       vi.	If using scale - set flag to recognize the product as one that will be used at scale
+
+       vii.	If using TMS - under Transportation fast tab set enable TMS and identify the default carrier service
+
+       viii.	Define ag specific settings on supplementary sales items
+
     f.	Setup up substitute items
 
 14.	Under Accounts receivable > Setup > Trade agreement journals enter trade agreement journals including ag specific settings
@@ -149,58 +169,104 @@ The following is an overview of the Agronomy Sales implementation activities.
 16.	If using Transportation management:
 
     a.	Configure TMS Parameters under Transportation management > Setup > Transportation management parameters
-        i.	General > Vendor invoice
+
+       i.	General > Vendor invoice
+
             - Write vendor invoice journal - set to yes
+
             - Assign vendor journal name
+
             - Freight bill invoice text
-        ii.	General > Loads
+
+       ii.	General > Loads
+
             - Set flags for when loads get created automatically
+
             - Enable split of transfer order ship confirmation - set to yes if they want the ability to reverse shipment
-        iii.	General > Dispensing loads
+
+       iii.	General > Dispensing loads
+
             - Set flags for when loads get created (Kahler integration only)
-        iv.	General > Freight reconciliation
+
+       iv.	General > Freight reconciliation
+
             - Enable freight reconciliation - set to yes
+
     b.	Configure data under Transportation management > Setup > Load building
+
     c.	Load templates
+
     d.	Equipment
+
     e.	Configure data under Transportation management > Setup > Carriers:
+
     f.	Carrier service codes
+
     g.	Mode
+
     h.	Transportation methods
+
     i.	Shipping carriers
-        i.	Name - Specific structure required
-        ii.	Activate Carrier flag set to yes
-        iii.	Assign vendor account
-        iv.	Activate carrier rating - set to yes
-        v.	Services
-        vi.	Assign services
-        vii.	Rating profiles
+
+       i.	Name - Specific structure required
+
+       ii.	Activate Carrier flag set to yes
+
+       iii.	Assign vendor account
+
+       iv.	Activate carrier rating - set to yes
+
+       v.	Services
+
+       vi.	Assign services
+
+       vii.	Rating profiles
+
     j.	Enter data under Transportation management > Setup > Rating
-        i.	Carrier accessorial charge
-        ii.	Break master
-        iii.	Rate master (Rate base)
-        iv.	Rating profile
-        v.	Rating metadata
-        vi.	Miscellaneous charges
+
+       i.	Carrier accessorial charge
+
+       ii.	Break master
+
+       iii.	Rate master (Rate base)
+
+       iv.	Rating profile
+
+       v.	Rating metadata
+
+       vi.	Miscellaneous charges
+
     k.	Enter data under Transportation management > Setup> Freight reconciliation
-        i.	Reconciliation reasons
-        ii.	Freight bill type assignments
-        iii.	Audit master
+
+       i.	Reconciliation reasons
+
+       ii.	Freight bill type assignments
+
+       iii.	Audit master
+
     l.	Enter data under Transportation management > Setup > Bing map usage key (if using mapping which most clients will be doing)
+
     m.	Enter data under Transportation management > Setup > Transportation standards
-        i.	NMFC codes
-        ii.	LTL classes
+
+       i.	NMFC codes
+
+       ii.	LTL classes
+
     n.	Enter data under Transportation management > Setup > Engines
-        i.	Mileage engine
-        ii.	Rate engine
-        iii.	Transit time engine
-        iv.	Zone master
+
+       i.	Mileage engine
+
+       ii.	Rate engine
+
+       iii.	Transit time engine
+
+       iv.	Zone master
 
 17.	Warehouse Management Configurations
 
     a.	Warehouse management > Setup > Warehouse > Warehouses
 
-        i.	Warehouse > Use warehouse management processes – set flag to yes for all warehouses that will use TMS
+       i.	Warehouse > Use warehouse management processes – set flag to yes for all warehouses that will use TMS
 
     b.	Warehouse Management > Setup > Load posting methods > Regenerate methods (button)
 
@@ -210,19 +276,19 @@ The following is an overview of the Agronomy Sales implementation activities.
 
     e.	Warehouse Management > Setup > Warehouse > Location types
  
-       i.	Configure two location types; Dock and User
+      i.	Configure two location types; Dock and User
 
     f.	Warehouse Management > Setup > Location profiles
  
-       i.	Configure two profiles; Default and User
+      i.	Configure two profiles; Default and User
  
    g.	Configure Warehouse management parameters under Warehouse management > Setup > Warehouse management parameters
  
-       i.	General > Assign location profile & Location Type
+      i.	General > Assign location profile & Location Type
 
     h.	Warehouse Management > Setup > Load > Item load
   
-      i.	By item group indicate the load template id
+     i.	By item group indicate the load template id
 
 18.	Under Inventory management > Setup > Agriculture > Agriculture parameters
 
