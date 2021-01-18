@@ -33,7 +33,7 @@ There are a few scenarios where the sales order must be initiated from FinOps:
 
 It is possible to sell a regulated product to a cash customer through counter sales. You can add a certificate to the sales order from the Add certificate option in the sales order action pane or select from the certification number . However, it is not possible to use the cash customer for seed or technology agreements, sales agreements, or prepayments. 
 
-If the customer has a sales agreement for the item, the system will identify the sales agreement and apply the unit price to the order. If there is a prepayment associated to that sales agreement or an uncontracted prepayment for the item, the system will apply that prepayment amount. When the order is opened from the POS, the information will be passed into the order. A prepayment will display as a deposit and the customer will only have to pay for any products added to the order from the POS or are not covered by a prepayment. 
+If the customer has a sales agreement for the item, the system will identify the sales agreement and apply the unit price to the order. If there is a prepayment associated to that sales agreement or an uncontracted prepayment for the item, the system will apply that prepayment amount. When the order is opened from the POS, the information will be passed into the order. A prepayment will display as a deposit and the customer will only have to pay for any products added to the order from the POS or are not covered by a prepayment.
 
 
 
