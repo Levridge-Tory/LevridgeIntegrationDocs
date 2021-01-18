@@ -16,7 +16,7 @@
     
     
       
-        <title>Agronomy Sales - Levridge Documentation</title>
+        <title>Levridge Retail POS Enhancements - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#agronomy-sales" class="md-skip">
+        <a href="#levridge-retail-pos-enhancements" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Agronomy Sales
+              Levridge Retail POS Enhancements
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -232,49 +230,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Agronomy Sales
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Agronomy Sales" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
       Agronomy Sales
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -737,8 +697,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#retail-configuration" class="md-nav__link">
+    Retail Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customer-account" class="md-nav__link">
+    Customer Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#counter-sales" class="md-nav__link">
+    Counter Sales
   </a>
   
 </li>
@@ -755,7 +729,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/AgronomySales.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Levridge_Retail_POS.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -763,22 +737,28 @@
                   
                 
                 
-                <h1 id="agronomy-sales"><a class="toclink" href="#agronomy-sales">Agronomy Sales</a></h1>
-<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../Create-Split-Group/">How to Create a Split Group in F&amp;O</a> </li>
-<li><a href="../ManagingSplits_SalesContracts_Prepayments/">Manage Splits, Sales Contracts and Prepayments</a> </li>
-<li><a href="../AgronomySalesImplementationActivities/">Agronomy Sales Implementation Activities</a></li>
-<li><a href="../CustomerFinancePrograms/">Customer Finance Programs</a></li>
-<li><a href="../Managing_Fertilizer_Contracts_For_Ag_Retailers/">Managing Fertilizer Contracts for Ag Retailers</a></li>
-<li><a href="../Agriculture_Tax/">Agriculture Tax Groups</a></li>
-<li><a href="../Prepayments/">Prepayments</a></li>
-<li><a href="../Commissions/">Commissions</a></li>
-<li><a href="../Pricing_Discounts/">Pricing Discounts</a></li>
-<li><a href="../Purchase_Agreements/">Purchase Agreements</a></li>
-<li><a href="../Vendor_Purchasing_Rebates/">Vendor Purchasing Rebates</a></li>
-<li><a href="../Levridge_Retail_POS/">Levridge Retail POS Enhancements</a></li>
-</ul>
+                <h1 id="levridge-retail-pos-enhancements"><a class="toclink" href="#levridge-retail-pos-enhancements">Levridge Retail POS Enhancements</a></h1>
+<h2 id="retail-configuration"><a class="toclink" href="#retail-configuration">Retail Configuration</a></h2>
+<p>To fully utilize Levridge Agronomy Sales with FinOps Point-of-sale, the call center functionality must be enabled to allow for sales order entry in FinOps and then recalling that order into POS for completion. </p>
+<p>On the call center users form, there is the option to open the sales order form in standard view which will open the sales order detail form in the full order entry view rather than the streamlined counter sales form provided by Levridge. This is the allow call center users who will need to process order deliveries or invoicing full access to all functions. </p>
+<h2 id="customer-account"><a class="toclink" href="#customer-account">Customer Account</a></h2>
+<p>To allow the sales order to process through Levridge when coming from FinOps POS, the customer account has customer operation and split group fields added to the Retail fast tab on the customer account form. These fields are automatically populated when a customer recrod is created and will be used on a sales order coming from point-of-sale. </p>
+<h2 id="counter-sales"><a class="toclink" href="#counter-sales">Counter Sales</a></h2>
+<p>A new sales order form is available when using the Levridge retail functionality to help streamline the entry of sales orders in FinOps. From the sales order action pane in the Sales order tab, click new counter sales. </p>
+<p><img alt="Retail1" src="../assets/images/Retail/Retail1.png" /></p>
+<p>The user can select if this is a cash customer or select an existing customer account. If Cash customer is set to Yes, the system will automatically pull the store's customer account. </p>
+<p>Once the sales order is created, the Counter sales form provides the user the ability to enter items and view detail specific to a retail POS order. If the user requires access to all the sales order functionality, they can click "Change order view" in the sales order action pane. </p>
+<p><img alt="Retail2" src="../assets/images/Retail/Retail2.png" /></p>
+<p><img alt="Retail3" src="../assets/images/Retail/Retail3.png" /></p>
+<p>There are a few scenarios where the sales order must be initiated from FinOps: </p>
+<ol>
+<li>If the product being sold requires a license (certificate). </li>
+<li>If the product being sold requires a seed or technology agreement with the vendor. </li>
+<li>If the product being sold has a sales agreement. </li>
+<li>If the product being sold has a prepayment. </li>
+</ol>
+<p>It is possible to sell a regulated product to a cash customer through counter sales. You can add a certificate to the sales order from the Add certificate option in the sales order action pane or select from the certification number. However, it is not possible to use the cash customer for seed or technology agreements, sales agreements, or prepayments. </p>
+<p>If the customer has a sales agreement for the item, the system will identify the sales agreement and apply the unit price to the order. If there is a prepayment associated to that sales agreement or an uncontracted prepayment for the item, the system will apply that prepayment amount. When the order is opened from the POS, the information will be passed into the order. A prepayment will display as a deposit and the customer will only have to pay for any products added to the order from the POS or are not convered by a prepayment. </p>
                 
               
               
@@ -793,41 +773,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../Agronomy/" title="Agronomy" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Commodities/" title="Commodity Accounting" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Commodity Accounting
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
