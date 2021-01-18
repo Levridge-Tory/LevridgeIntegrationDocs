@@ -3,6 +3,7 @@
 ## Retail Configuration
 
 To fully utilize Levridge Agronomy Sales with FinOps Point-of-sale, the call center functionality must be enabled to allow for sales order entry in FinOps and then recalling that order into POS for completion. 
+
 On the call center users form, there is the option to open the sales order form in standard view which will open the sales order detail form in the full order entry view rather than the streamlined counter sales form provided by Levridge. This is the allow call center users who will need to process order deliveries or invoicing full access to all functions. 
 
 ## Customer Account
