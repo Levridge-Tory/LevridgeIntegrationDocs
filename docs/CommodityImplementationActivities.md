@@ -71,4 +71,4 @@ In Commodity accounting > Setup > Risk
  
 In Commodity accounting > Risk management
 
-- Create market price entry (below Eter the bid sheet configuration)
+- Create market price entry (below Enter the bid sheet configuration)
