@@ -147,7 +147,6 @@ An important item to note: A business process needs to be in place in the situat
 ![Agsync Workorder Integration External UUID](./assets/images/AgsyncOrderChangedCommunicationDiagram.jpg "Agsync Work Order Integration")
 
 #### Batch Job
-
 The incoming work order request will trigger a batch job (Generate sales orders from worker orders) as soon as the record is inserted into the table. If the work order is processed successfully the incoming work order record will be removed. The batch job will continue to process work order requests until there are no more valid work order requests to process. 
 
 By having a batch job run the sales order create/update process the wait is eliminated for the calling service.  All errors that occur during the sales order create/update process will be viewable in the Sales incoming work order form. (note: Errors that occur in the integration framework still need to viewed through a service bus tool or Azure app insights.)
