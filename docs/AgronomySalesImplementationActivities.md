@@ -1,24 +1,19 @@
 ﻿# Agronomy Sales Implementation Activities
 
 ## Overview
-
-The following is an overview of the Agronomy Sales implementation activities. 
-
-1.	Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported)
-
-    1.	Customer operation types
-    2.	Customer site types
-    3.	Growing seasons
-    4.	Sales periods
-    5.	Lines of business
-    6.	Finance programs
-    7.	Seed and technology agreement compliance
-    8.	Dispatching accounts
-
+The following is an overview of the Agronomy Sales implementation activities.  
+   
+1. Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported) 
+	1. Customer operation types
+	2. Customer site types
+	3. Growing seasons
+	4. Sales periods
+	5. Lines of business
+	6. Finance programs
+	7. Seed and technology agreement compliance
+	8. Dispatching accounts
 2.	Enter setup data under Organization administration > Global address book > Relationship types
-
-    a.	Need to define a relationship from customer to customer operation
-
+    1. Need to define a relationship from customer to customer operation
 3.	Enter sales agreement classifications under Accounts Receivable > Setup > Sales agreement classifications
 
 4.	Under General Ledger > Journal setup > Journal names set the Prepayment posting profile flag to identify journals used for customer prepayments
@@ -28,75 +23,41 @@ The following is an overview of the Agronomy Sales implementation activities.
 6.	Under Organization administration > Number sequences > Number sequences enter or generate number sequences
 
 7.	Enter setup data under Accounts payable > Payment:
-
-    a.	Terms of payment - set prepayment fields
-
-    b.	Cash discounts - set prepayment fields
-
-          i.	Within cash discounts set up cash discount schedules
-
+	1. Terms of payment - set prepayment fields
+	2. Cash discounts - set prepayment fields
+        1. Within cash discounts set up cash discount schedules
 8.	Configure ag specific settings in Accounts Receivable > Setup > Accounts receivable parameters:
-
-    a.	Credit rating
-
-    b.	Credit limits
-
-    c.	Prices
-
+    1. Credit rating
+    2. Credit limits
+    3. Prices
 9.	Enter vendor zones under Procurement and sourcing > Setup > Prices and discounts > Vendor zones
 
 10.	Enter master data - involves a lot of client feedback
-
-    a.	Customers
-
-          i.	Ag specific settings are:
-
-          ii.	Zone address
-
-          iii.	Dispatching account id if using a 3rd party dispatching system (like AgSync)
-
-          iv.	Seed and technology agreements
-
-          v.	Membership fast tab for patronage
-
-          vi.	Taxation fast tab
-
-          vii.	On customer addresses set ag taxes
-
-          viii.	Billing notes
-
-    b.	Split groups
-
-    c.	Customer operations
-
-    d.	Customer sites
-
-    e.	Customer finance programs
-
-    f.	Vendors (if not the same as customers in the Ag parameters config form)
-
-          i.	On vendor addresses set ag taxes
-
-    g.	Rolling stock
-
-          i.	Cab configuration
-
-          ii.	Drive train
-
-          iii.	Equipment types
-
-          iv.	Status
-
-          v.	Equipment reasons
-
-          vi.	Equipment parameters
-
-          vii.	Equipment
-
-    h.	Contacts
-
-          i.	Setup applicator licenses
-
+    1. Customers
+       1. Ag specific settings are:
+          1. Zone address
+          2. Dispatching account id if using a 3rd party dispatching system (like AgSync)
+          3. Seed and technology agreements
+          4. Membership fast tab for patronage
+          5. Taxation fast tab
+          6. On customer addresses set ag taxes
+          7. Billing notes
+    2. Split groups
+    3. Customer operations
+    4. Customer sites
+    5. Customer finance programs
+    6. Vendors (if not the same as customers in the Ag parameters config form)
+       1. On vendor addresses set ag taxes
+    7. Rolling stock
+       i. Cab configuration
+       ii. Drive train
+       iii. Equipment types
+       iv. Status
+       v. Equipment reasons
+       vi. Equipment parameters
+       vii. Equipment
+    h. Contacts
+       i. Setup applicator licenses
 11.	Enter indirect ag taxes under Tax > Indirect taxes > Sales tax:
 
     a.	Sales tax codes
