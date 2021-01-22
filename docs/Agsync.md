@@ -137,6 +137,7 @@ Below is the process to generate a work order in AgSync:
 After a work order is saved, AgSync calls the Levridge AgsyncOrderChanged webhook sending over the work order data. The Levridge AgsyncOrderChanged webhook transforms the work order data and sends it to F&O where it creates or updates a corresponding sales order. If F&O accounts receivables are configured to perform a credit check and the credit check fails, F&O will send back a response indicating that the credit check did not pass. Then a rejection request is sent to Agsync to mark the work order as rejected. 
 
 When Fiannce and operation work order service receives an incoming work order request, the service will process it as follows: 
+
 1. Validates that request is a type of work order.
 2. Saves request to a table to be processed by a batch job in F&O.
 3. F&O work order service returns response to caller. 
