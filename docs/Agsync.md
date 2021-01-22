@@ -136,43 +136,6 @@ Below is the process to generate a work order in AgSync:
 
 After a work order is saved, AgSync calls the Levridge AgsyncOrderChanged webhook sending over the work order data. The Levridge AgsyncOrderChanged webhook transforms the work order data and sends it to F&O where it creates or updates a corresponding sales order. If F&O accounts receivables are configured to perform a credit check and the credit check fails, F&O will send back a response indicating that the credit check did not pass. Then a rejection request is sent to Agsync to mark the work order as rejected. 
 
-When Finance and operation work order service receives an incoming work order request the service will process it as followed. 
-
-1.	Validates that request is a type of work order.
-2.	Saves request to a table to be processed by a batch job in Finance and operations.
-3.	Finance and operations work order service returns response to caller. 
-
-An important item to note: A business process needs to be in place in the situation if AgSync creates a scheduled work order which gets scheduled, and then a dispensing work order is created and gets sent to Kahler. F&O will not pick up new changes if AgSync tries to go back to a release status and make changes and try to reschedule it. AgSync needs to cancel the Kahler order and F&O dispensing order and reschedule their AgSync work order. 
-
-![Agsync Workorder Integration External UUID](./assets/images/AgsyncOrderChangedCommunicationDiagram.jpg "Agsync Work Order Integration")
-
-#### Batch Job
-The incoming work order request will trigger a batch job (Generate sales orders from worker orders) as soon as the record is inserted into the table. If the work order is processed successfully the incoming work order record will be removed. The batch job will continue to process work order requests until there are no more valid work order requests to process. 
-
-By having a batch job run the sales order create/update process the wait is eliminated for the calling service.  All errors that occur during the sales order create/update process will be viewable in the Sales incoming work order form. (note: Errors that occur in the integration framework still need to viewed through a service bus tool or Azure app insights.)
-
-If an error is logged against a work order no other updates will occur to that work order or any related work orders until the record that errored is processed successfully. 
-
-#### User Interface
-Finance and operation users will have the ability to see incoming work order requests.
-
-![User Interface](./assets/images/Agsync/Agsync1.png) 
-
-![User Interface2](./assets/images/Agsync/Agsync2.png) 
-
-Accounts receivable >  Inquires and reports >  Orders  > Sales incoming work orders
-
-#### Manually Start Batch Job
- If the batch job is not running and a work order request needs to be processed. A user can click on the ‘Process work order request’ button under the ‘Action’ tab.
-
-![User Interface3](./assets/images/Agsync/Agsync3.png) 
-
-#### Work Order Request Error During Processing
-If an error occurs during the sales order create/update process the user will be able to see the work order and the error in the form. The user can take corrective action and if needed reprocess the work order. 
-
-![User Interface4](./assets/images/Agsync/Agsync4.png) 
-
-
 ### Microsoft Azure App Service
 The [Levridge Integration Framework](./Integration-Overview.md) has been written as a web application that hosts HTTP endpoints as REST APIs and background processes that handle integrations. It is most commonly run in the cloud as an Azure App Serivce. It can also run as a windows service or as an IIS application. The [Integration Overview](./Integration-Overview.md) provides additional information about the deployment options.
 
