@@ -1,23 +1,19 @@
-﻿# Introduction
-The Levridge integration framework provides integration between Dynamics 365 Finance 
-and Dynamics 365 Customer Engagement and 3rd party applications.
+﻿# Integration Introduction
+The Levridge integration framework provides integration between Dynamics 365 Finance and Dynamics 365 Customer Engagement and 3rd party applications.
 
-This document provides and overview of the integration framework and links to the documents
-that exist for the framework.
+This document provides and overview of the integration framework and links to the documents that exist for the framework.
 
 ## Overview
 Levridge has created an integration framework to handle all the integrations between systems.  This framework uses json entities to exchange information. The integration framework uses Microsoft [Azure Service Bus](https://azure.microsoft.com/en-us/services/service-bus/) to provide a [Publish and Subscribe messaging pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). Levridge has created an event framework in D365 Finance that will publish entity data to the service bus based on Creates, Deletes and Updates. Information/messages sent to the service bus can be subscribed to by 3rd party applications or by the Levridge integration framework and sent to 3rd party applications like AgSync. The data entities in D365 Finance and can be filtered so only certain records are sent.
 
-
-
-
 All integrations that use the framework follow the same pattern:
-  1. A data source has an integration event
-  2. The data source responds to the integration event by sending one or more entities to the service bus.
-  3. The service bus publishes the message(s) to each subscription
-  4. An instance of the integration framework receives the message(s) from a subscription
-  5. The integration framework transforms the message if needed
-  6. The integration framework sends the message to the target data source
+
+1. A data source has an integration event
+2. The data source responds to the integration event by sending one or more entities to the service bus.
+3. The service bus publishes the message(s) to each subscription
+4. An instance of the integration framework receives the message(s) from a subscription
+5. The integration framework transforms the message if needed
+6. The integration framework sends the message to the target data source
 
 ![General Entity Integration Pattern.](./assets/images/GeneralSynchronizationIntegrations.jpg "General Entity Integartion Pattern")
 
@@ -77,6 +73,8 @@ A standard D365 implementation is used when launching a Levridge environment pla
 ![Levridge Integration](./assets/images/D365EnvironmentsLevridgeIntegration.jpg)
 
 ### Event Framework Events - Other Applications
+[Event Framework Overview](./event_framework.md)
+
 Applications from Levridge or other Third-Party vendors may be used in conjunction with the Levridge product. The setups may be completed at System administration > Setup > Event framework > Event Framework Events. 
 
 - [Agsync](./Agsync.md): Dispatching Software Package for shipping application equipment and trucks to deliver fertilizer and chemicals.  There are 2 integrations including master data sharing from F&O to Ag Sync including customer accounts, operations and sites. Ag Sync will create work orders that connect with F&O through the sales order service for creation of work orders. Credit checking sharing is also synced between Ag Sync and F&O.

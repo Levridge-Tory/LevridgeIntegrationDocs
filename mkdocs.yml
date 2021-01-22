@@ -20,10 +20,8 @@ nav:
         - Agronomy Sales: 'AgronomySales.md'
         - Commodity Accounting: 'Commodities.md'
         - Feed: 'Feed.md'
-        - Equity Management: 'Patronage.md'
-        - Scale: 
-            - Scale Overview : 'Scale-Overview.md'
-            - Scale Settings Configuration : 'scale-settings-configuration.md' 
+        - Equity Management: 'equity-management-overview.md'
+        - Scale: 'Scale-Overview.md'
         - System Information:
             - Integration Framework:
                 - Overview : 'Integration-Overview.md'
@@ -50,3 +48,4 @@ nav:
                 - CE Setup Records : 'CE_Setup_Records.md'
 
             - Environment Planning : 'EnvironmentPlanning.md'
+            - Event Framework : 'event_framework.md'

@@ -1,6 +1,5 @@
-﻿# agsync Settings
-agsync is an object in the appsettings.json file used by the Levridge Integration Framework
-to define the configuration for the integration of Agsync Workorders to FinOps.
+﻿# Agsync Settings
+Agsync is an object in the appsettings.json file used by the Levridge Integration Framework. To define the configuration for the integration of Agsync Workorders to FinOps.
 
 
 # Example

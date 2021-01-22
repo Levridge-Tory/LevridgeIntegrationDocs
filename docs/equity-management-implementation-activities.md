@@ -1,10 +1,11 @@
-﻿# Patronage Implementation Activities
-
+﻿# Equity Management Implementation Activities
 
 ## Overview
-The following is an overview of the implementation activities necessary for getting started with processing Patronage.  
+
+The following is an overview of the implementation activities necessary for getting started with processing equity.  
    
 ### Initial Implementation Activities
+
 1. In FinOps, update released products with a patronage unit
 2. In FinOps, setup equity vendor journals
 3. In FinOps, setup equity vendor payments including checks
@@ -23,7 +24,6 @@ The following is an overview of the implementation activities necessary for gett
     2. Setup 199A allocations
 11. In CE, setup requirements equity
 12. In CE, setup equity revolvements
-
 
 ### Year-End Activities
 
@@ -50,6 +50,7 @@ The following is an overview of the implementation activities necessary for gett
 11.	In FinOps, pay equity vendor invoices
 
 ### Calendar Year-End Activities
+
 1.	In CE, create non-patronage distributions for 1099 PATR
 2.	In CE, create 1099 PATR credits
 3.	In CE, create 1099 PATR records

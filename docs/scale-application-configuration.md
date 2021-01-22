@@ -1,8 +1,39 @@
-﻿## Scale Settings Configuration
+﻿# Scale Application Configuration
+
+## Overview
+
+The Levridge Scale application is structured as a browser-based application that can be operated as a server or as a desktop depending on the specification requirements of the customer.
+
+### Windows Server
+
+When using the Scale application on Windows server the following servers will be installed and used.
+
+LevScale API: This server will handle all integration framework communications to Scale. O-Data is used in the integration framework.
+
+LevScalePrint: This server communicates with the client printer service and is used to render all Scale reports, such as Scale Tickets.
+
+### Windows Desktop
+
+On a Windows Desktop environment, four services will be installed and used with the Scale application.
+
+1. LevPrinterService: This can be installed on any computer within the customer’s intranet and allows the scale tickets to be printed. 
+2. LevHardwareService: This service is used when connecting to hardware such as a scale head.
+3. LevridgeAxToScaleService: This works along with the LevridgeScaleToAxService and contains the integration framework which handles the bidirectional integration with Dynamics 365 F&O.  When using multiple Levridge Scale servers along with one Enterprise system, only one LevridgeAxToScaleService is needed and can be set up as a cloud service. For LevridgeScaleToAxService, one is needed for each desktop or Levridge Scale instance. The integration framework uses the LevScaleAPI server to write into the LevScale.
+4. LevScaleClient: This is operating a straight web server without the reverse proxy capability.
+
+### Workstation Management
+Define the association of the various equipment. In most applications, only one workstation will need to be created. When creating a workstation, assign a Workstation Name and then select the Equipment i.e. a scale head and a grain analyzer. The Equipment is set up in Equipment Management.
+
+### Equipment Management
+Define the equipment such as scales and analyzers that will be used with the Scale application.  Equipment can be marked as Inactive if it is not yet fully configured or no longer in use.
+
+### Map Equipment Grades
+Map grade factors to a commodity for the given Equipment, such as a grain analyzer. This allows the system to parse the grain analyzer’s output and assign grades to a commodity for use on a scale ticket.
 
 ### Settings
 
 Under Application Configuration>Settings 
+
 - **Site:** Choose a site from the drop down to assign site ID to the scale app
 - **Number Prefix:** Enter in the number ID of the Site in FO
 - **Scale:** Leave as default value of 1
@@ -62,3 +93,6 @@ To create a new gross quantity for a product:
 To edit a previously created Gross quantity, click Edit next to the GQ that you want to change and when you have finished editing it, click the blue "Edit" button to save it. 
 
 To delete a previously created GQ, click delete next to the GQ. Confirm the delete by clicking the red "Delete" button. 
+
+### Standalone Configuration
+If using Levridge Scale as a standalone system (not integrating with D365 Finance and Operations) this screen is used to define data such as customers, commodities, grade factors etc.

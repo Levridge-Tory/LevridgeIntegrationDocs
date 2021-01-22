@@ -16,26 +16,10 @@ Vital features for the agronomist include Outlook integration, email tracking, v
 
 [Agronomy Overview](Agronomy.md)
 
-[Agronomist End-to-End Scenarios](AgronomistEnd-to-EndScenarios.md)
-
-[Agronomy Implementation Activities](AgronomyImplementationActivities.md)
-
 ### Grain
 ![Grain](./assets/images/LevridgeHomePage/grain.PNG) 
 
 [Grain Overview](Grain.md)
-
-Includes an overview of the outbound and inbound grain processes. 
-
-[Outbound Processes](Grain_Outbound_Processes.md)
-
-An overview of the outbound grain process beginning with contracts and working through shipments and invoicing. 
-
-[Inbound Processes](Grain_Inbound_Processes.md)
-
-An overview of the inbound grain process beginning with contracts and working through settlements. The in-bound process will be used for anyone buying in a commodity.  
-
-
 
 ### Accounting and Retail
 ![Accounting and Retail](./assets/images/LevridgeHomePage/accounting.PNG) 
@@ -44,10 +28,12 @@ Split billing is a unique and necessary challenge for the ag industry. Levridge 
 
 Levridge includes a modern and integrated approach to reaching low net pricing by seamlessly handling grower rebates and pricing. By taking advantage of the commissions, rebates and trade agreement set up functions that are native to the Dynamics 365 solution.
 
-[Agronomy Sales](AgronomySales.md)
+[Account and Retail Overview](AgronomySales.md)
 
 ### Feed
 ![Feed](./assets/images/LevridgeHomePage/feed.PNG) 
+
+Veterinary Feed Directives (VFDs) are prescriptions for antibiotics written by veterinarians for livestock. The antibiotics specified in VFDs are dispensed in certain dosages for a herd and are placed/hosted with the feed given to livestock. VFDs and the antibiotics with them are governed and restricted differently by the various states and countries. Levridge supports the legal tracking, creation and consumption of Veterinary Feed Directives (VFD) within host feed items.
 
 [Feed Overview](Feed.md)
 
@@ -55,6 +41,8 @@ Levridge includes a modern and integrated approach to reaching low net pricing b
 ![Commodity Processing](./assets/images/LevridgeHomePage/commodity.PNG) 
 
 No more dealing with inflexible reporting. A modern cloud-based platform with integration to the Microsoft Office suite and the ability to work with multiple other software applications gives Levridge an enhanced commodity accounting experience. With a built-in connection to the back office and your accounting team, access to information is seamless. 
+
+[Commodity Accounting Overview](Commodities.md)
 
 ### Scale
 ![Scale](./assets/images/LevridgeHomePage/scale.PNG) 
@@ -64,14 +52,13 @@ With the fastest-speed on the market, the Levridge scale is built with real-time
 [Scale Overview](Scale-Overview.md)
 
 
-### Equity and Patronage
-![Equity and Patronage](./assets/images/LevridgeHomePage/equity.PNG) 
+### Equity Management
+![Equity Management](./assets/images/LevridgeHomePage/equity.PNG) 
 
 Due to the many factors involved and difficulty tracking revolving member equity and stock allocations, this has been traditionally handled outside of the central accounting application. It is very likely stored in Excel or some other system that integrates with your accounting or agribusiness solution.
 
 In Levridge equity and stock allocations are managed within ONE solution. Equity tracking, from build-up, to current balance to pay-out is handled within the Levridge solution.
 
-[Patronage Overview](Patronage.md)
+[Equity Management Overview](equity-management-overview.md)
 
-[Rolling Stock Management](Rolling_Stock_Management.md)
 

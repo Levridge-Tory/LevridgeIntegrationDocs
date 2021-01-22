@@ -46,19 +46,15 @@ To utilize the Daily position report (DPR) set up Power BI
  
  In Commodity accounting > Setup
 
-- Configure Commodity accounting parameters
-- Setup Inbound ticket auto apply schedule
+- Configure/setup Pits (needs to be just under Configure Commodity accounting parameters)
  
 In Commodity accounting > Setup > Discounts and fees
 
-- Create discount tables and schedules
-- Create fee schedules and tables
+- Create fee and charge accruals
  
 In Commodity accounting > Setup > Contracts
 
-- Enter contract types
-- Enter weights to govern
-- Enter grades to govern
+- Create Notification (needs to be under Enter contract types)
  
 In Commodity accounting > Setup > Quality and grade factors
 
@@ -75,8 +71,4 @@ In Commodity accounting > Setup > Risk
  
 In Commodity accounting > Risk management
 
-- Enter commodity tickers
-- Create delivery periods
-- Enter the bid sheet configuration
-- Enter discount schedule defaults
-- Enter grade average defaults
+- Create market price entry (below Enter the bid sheet configuration)

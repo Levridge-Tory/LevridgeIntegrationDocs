@@ -7,10 +7,11 @@
 - [Agronomy Sales Implementation Activities](./AgronomySalesImplementationActivities.md)
 - [Customer Finance Programs](./CustomerFinancePrograms.md)
 - [Managing Fertilizer Contracts for Ag Retailers](Managing_Fertilizer_Contracts_For_Ag_Retailers.md)
-- [Agriculture Tax Calculation and Payments](Agriculture_Tax.md)
+- [Agriculture Tax Groups](Agriculture_Tax.md)
 - [Prepayments](Prepayments.md)
 - [Commissions](Commissions.md)
 - [Pricing Discounts](Pricing_Discounts.md)
 - [Purchase Agreements](Purchase_Agreements.md)
 - [Vendor Purchasing Rebates](Vendor_Purchasing_Rebates.md)
+- [Levridge Retail POS Enhancements](Levridge_Retail_POS.md)
 

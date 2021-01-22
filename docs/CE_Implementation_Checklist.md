@@ -3,7 +3,7 @@ Listed are the steps one would want to take to implement CE.
 
 CE Setup
 
-  - Secure and Unsecure config populated in CE
+  - [Secure and Unsecure Configuration Record Setup in CE](Secure_Unsecure_Config.md)
   - [Address Data Mapping Configured](Address_Data_Mapping.md)
   - Set up flexgrids
   - [Remote printing setup](https://levridgesoftware.github.io/Levridge-CRM-Remote-Printing-Service/)

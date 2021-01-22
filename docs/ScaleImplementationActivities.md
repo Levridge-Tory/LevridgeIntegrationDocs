@@ -5,6 +5,7 @@ The following is an overview of the implementation activities necessary for gett
 
 ### Full Implementation - Includes Integration to FinOps
 At the scale:
+
 1.	Install the [scale application](how-to-install-levridge-scale.md)
 2.	Setup Azure service bus 
 3.	Configure the Azure service bus to connect to FinOps
@@ -17,7 +18,9 @@ At the scale:
     - Printer settings
     - Equipment mgmt
     - Main settings page
+
 ### In FinOps
+
 1.	Set up the event framework events for integrating to the scale
 2.	Configure data that will be sent back-and-forth to the scale (requires input from client on how they want to use the scale)
     - Products
