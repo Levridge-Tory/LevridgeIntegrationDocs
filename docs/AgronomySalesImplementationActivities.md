@@ -6,21 +6,14 @@ The following is an overview of the Agronomy Sales implementation activities.
 
 1.	Enter setup data under Accounts Receivable > Setup > Agriculture (if not previously imported)
 
-    a.	Customer operation types
-
-    b.	Customer site types
-
-    c.	Growing seasons
-
-    d.	Sales periods
-
-    e.	Lines of business
-
-    f.	Finance programs
-
-    g.	Seed and technology agreement compliance
-
-    h.	Dispatching accounts
+    1.	Customer operation types
+    2.	Customer site types
+    3.	Growing seasons
+    4.	Sales periods
+    5.	Lines of business
+    6.	Finance programs
+    7.	Seed and technology agreement compliance
+    8.	Dispatching accounts
 
 2.	Enter setup data under Organization administration > Global address book > Relationship types
 
