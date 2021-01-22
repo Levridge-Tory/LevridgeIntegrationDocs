@@ -484,6 +484,40 @@
     Work Order Integration
   </a>
   
+    <nav class="md-nav" aria-label="Work Order Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-job" class="md-nav__link">
+    Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    User Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-start-batch-job" class="md-nav__link">
+    Manually Start Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-request-error-during-processing" class="md-nav__link">
+    Work Order Request Error During Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -946,6 +980,40 @@
     Work Order Integration
   </a>
   
+    <nav class="md-nav" aria-label="Work Order Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-job" class="md-nav__link">
+    Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    User Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-start-batch-job" class="md-nav__link">
+    Manually Start Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-request-error-during-processing" class="md-nav__link">
+    Work Order Request Error During Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1225,6 +1293,26 @@ Once a record is created in Agsync the UUID for it cannot be modified.</p>
 <li>Save Order</li>
 </ul>
 <p>After a work order is saved, AgSync calls the Levridge AgsyncOrderChanged webhook sending over the work order data. The Levridge AgsyncOrderChanged webhook transforms the work order data and sends it to F&amp;O where it creates or updates a corresponding sales order. If F&amp;O accounts receivables are configured to perform a credit check and the credit check fails, F&amp;O will send back a response indicating that the credit check did not pass. Then a rejection request is sent to Agsync to mark the work order as rejected. </p>
+<p>When Fiannce and operation work order service receives an incoming work order request, the service will process it as follows: 
+1. Validates that request is a type of work order.
+2. Saves request to a table to be processed by a batch job in F&amp;O.
+3. F&amp;O work order service returns response to caller. </p>
+<p>An important item to note: A business process needs to be in place in the situation if AgSync creates a scheduled work order which gets scheduled, and then a dispensing work order is created and gets sent to Kahler. F&amp;O will not pick up new changes if AgSync tries to go back to a release status and make changes and try to reschedule it. AgSync needs to cancel the Kahler order and F&amp;O dispensing order and reschedule their AgSync work order. </p>
+<h4 id="batch-job"><a class="toclink" href="#batch-job">Batch Job</a></h4>
+<p>The incoming work order request will trigger a batch job (Generate sales orders from worker orders) as soon as the record is inserted into the table. If the work order is processed successfully the incoming work order record will be removed. The batch job will continue to process work order requests until there are no more vlid work order reuqests to process.</p>
+<p>By having a batch job run the sales order create/update process, the wait is eliminated for the calling service. All errors that occur during the sales order create/update process will be viewable in teh Sales incoming work order form. (note: Errors that occur in the integration framework still need to be viewed through a service bus tool or Asure app insights.)</p>
+<p>If an error is logged against a work order no other updates will occur to that work order or any related work orders until the record that errored is processed. </p>
+<h4 id="user-interface"><a class="toclink" href="#user-interface">User Interface</a></h4>
+<p>F&amp;O users will have the ability to see incoming work order requests. </p>
+<p><img alt="User Interface" src="../assets/images/Agsync/Agsync1.png" /></p>
+<p><img alt="User Interface2" src="../assets/images/Agsync/Agsync2.png" /></p>
+<p>Accounts receivable &gt; Inquires and reports &gt; Orders &gt; Sales incoming work orders</p>
+<h4 id="manually-start-batch-job"><a class="toclink" href="#manually-start-batch-job">Manually Start Batch Job</a></h4>
+<p>If the batch job is not running and a work order request needs to be processed. A user can click on the 'Process work order request' button under the 'Action' tab. </p>
+<p><img alt="User Interface3" src="../assets/images/Agsync/Agsync3.png" /></p>
+<h4 id="work-order-request-error-during-processing"><a class="toclink" href="#work-order-request-error-during-processing">Work Order Request Error During Processing</a></h4>
+<p>If an error occurs during the sales order create/update process the user will be able to see the work order and the error in the form. The user can take corrective action and if needed reprocess the work order. </p>
+<p><img alt="User Interface4" src="../assets/images/Agsync/Agsync4.png" /></p>
 <h3 id="microsoft-azure-app-service"><a class="toclink" href="#microsoft-azure-app-service">Microsoft Azure App Service</a></h3>
 <p>The <a href="../Integration-Overview/">Levridge Integration Framework</a> has been written as a web application that hosts HTTP endpoints as REST APIs and background processes that handle integrations. It is most commonly run in the cloud as an Azure App Serivce. It can also run as a windows service or as an IIS application. The <a href="../Integration-Overview/">Integration Overview</a> provides additional information about the deployment options.</p>
 <p>Most of the setup will occur in Azure App Service. This is a requirement for AgSync in which AgSync pulls from Levridge's Azure Service Bus and an HTTP-based service for hosting web applications. Azure hosts our web app integration. The steps needed to create an App Service can be found under the <a href="../Integration-Overview/">Integration Overview</a>.  </p>
