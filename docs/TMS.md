@@ -93,31 +93,23 @@ After the product receipt is processed, the user can view their Freight bill det
 There are two different outbound processes that can use transportation management, the sales order to a customer, or a transfer order to another branch.  
 
 #### Transfer Order
-*Note:* The steps you take to create a transfer order would be very similar to creating a sales order, but some steps may occur in slightly different tabs for each one. 
+The steps you take to create a transfer order would be very similar to creating a sales order, but some steps may occur in slightly different tabs for each one. 
 
 1.	Create New transfer order (+New) 
 2.	Input From warehouse 
 3.	Input To warehouse  
-
-*Note:* It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip & To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. 
-
+    - It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip & To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. 
 4.	Add Transfer order line (+Add) 
-
-*Note:* the unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  
-
+    - The unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  
 5.	Input Item number 
 6.	Input Transfer quantity 
 7.	Navigate to Transfer order header 
-
-*Note:* There are some critical steps in the header of the transfer order that must be completed for a rate to be generated on a transfer order. 
-
+    - There are some critical steps in the header of the transfer order that must be completed for a rate to be generated on a transfer order. 
 8.	Input Delivery terms – these are defined by the client  
 Note: The add transportation charges to order flag needs to be set to yes for the particular delivery term you are going to use for those transportation type orders that need to have that freight on there.  
 9.	Add Shipping carrier – you define what services are applicable to the specific Shipping carrier. 
 10.	Add Carrier service – each service has a different rate structure behind it and that is what pulls in the different rates that we need to apply to that rate bill.  
-
-*Note:* The only time this will be different is if you are integrating to the Kahler integration. If we are doing an Ag project that is integrated to Kahler, the minimum that needs to be defined in the transfer order is the delivery terms. When the product comes back in the integration from Kahler, the Shipping carrier and the Carrier service will be populated.  
-
+    - The only time this will be different is if you are integrating to the Kahler integration. If we are doing an Ag project that is integrated to Kahler, the minimum that needs to be defined in the transfer order is the delivery terms. When the product comes back in the integration from Kahler, the Shipping carrier and the Carrier service will be populated.  
 11.	Generate picking list  
 12.	Change Update value to All 
 13.	Click OK 
