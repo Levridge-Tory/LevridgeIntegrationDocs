@@ -704,127 +704,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contracts" class="md-nav__link">
-    Contracts
+  <a href="#processes" class="md-nav__link">
+    Processes
   </a>
   
-    <nav class="md-nav" aria-label="Contracts">
+    <nav class="md-nav" aria-label="Processes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#offers" class="md-nav__link">
-    Offers
+  <a href="#inbound-tms-loads" class="md-nav__link">
+    Inbound TMS Loads
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#purchase-contracts" class="md-nav__link">
-    Purchase Contracts
+  <a href="#rate-bases" class="md-nav__link">
+    Rate Bases
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pricing-of-a-contract" class="md-nav__link">
-    Pricing of a Contract
+  <a href="#delivery-terms" class="md-nav__link">
+    Delivery Terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shipping-carriers" class="md-nav__link">
+    Shipping Carriers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outbound-process-and-freight-reconciliation" class="md-nav__link">
+    Outbound Process and Freight Reconciliation
+  </a>
+  
+    <nav class="md-nav" aria-label="Outbound Process and Freight Reconciliation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transfer-order" class="md-nav__link">
+    Transfer Order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-rate-load" class="md-nav__link">
+    Manually Rate Load
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delivery-process-on-in-bound-grain" class="md-nav__link">
-    Delivery Process on In-bound Grain
-  </a>
-  
-    <nav class="md-nav" aria-label="Delivery Process on In-bound Grain">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inbound-scale-tickets" class="md-nav__link">
-    Inbound Scale Tickets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inbound-scale-ticket-application-process" class="md-nav__link">
-    Inbound scale ticket application process
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-sheets" class="md-nav__link">
-    Delivery Sheets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unit-trains" class="md-nav__link">
-    Unit Trains
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#settlement" class="md-nav__link">
-    Settlement
-  </a>
-  
-    <nav class="md-nav" aria-label="Settlement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#settlement-requests" class="md-nav__link">
-    Settlement Requests
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settlement-and-payment-process" class="md-nav__link">
-    Settlement and Payment Process
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#discount-fees-and-charges-invoicing" class="md-nav__link">
-    Discount, fees, and charges invoicing.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse-receipt" class="md-nav__link">
-    Warehouse receipt
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settle-options-with-grower" class="md-nav__link">
-    Settle options with grower
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#settle-sheet-reprint" class="md-nav__link">
-    Settle sheet reprint
-  </a>
   
 </li>
         
@@ -855,267 +793,197 @@
                 
                 <h1 id="transportation-management-system"><a class="toclink" href="#transportation-management-system">Transportation Management System</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<p>An overview of the inbound grain process beginning with contracts and working through settlements. The in-bound process will be used for anyone buying in a commodity.  </p>
-<p>Finance &amp; Operations &gt; Modules &gt; Commodity Accounting </p>
-<p>From the commodity accounting menu, the outbound process consists of: </p>
-<ul>
-<li>Contracts<ul>
-<li>Offers</li>
-<li>Purchase contracts</li>
-<li>Storage agreements</li>
-<li>Contract expiration</li>
-<li>Open contracts</li>
-</ul>
+<p>Overview: An overview of the transportation management system to include inbound processes, outbound processes, and freight reconciliation.</p>
+<p>Finance &amp; Operations &gt; Product information management &gt; Products &gt; Release products</p>
+<h2 id="processes"><a class="toclink" href="#processes">Processes</a></h2>
+<p>There are inbound and outbound load transformation management loads capability in the system. Inbound would be anything on a purchase order. Outbound would be anything on a sales order or a transfer order in the system. </p>
+<p>In order for the product to be used in transportation management, it has to be configured. This is done under the product information management module under the release product section. Any item that is enabled for TMS must be flagged under the Transportation tab. By checking yes, this states the item can be used in TMS functionality. If an item is not flag it will not be picked up by the system to be used.  </p>
+<p><img alt="Picture1" src="../assets/images/TMS/Picture1.png" /></p>
+<p>The user will also find a Carrier service field under the Transportation section. This has been added to help default the carrier service. In a typical out-of-the-box D365 service, a user must select the carrier service. If you think of a regular carrier service (such as: UPS Ground or FedEx) those are different carrier services which each would generate a different rate structure. </p>
+<p>For a user to be able to select different rating profiles to get the right rate to calculate in the system, the rate is driven from the carrier service. The Levridge solution added the Carrier service field because in most situations the same type of item will ship together on one load. (e.g. fertilizer items would ship together, chemicals items would ship together). Therefore, having a default would be applicable and automatically pulls in a particular item on to a purchase order, transfer order, or sales order. </p>
+<h3 id="inbound-tms-loads"><a class="toclink" href="#inbound-tms-loads">Inbound TMS Loads</a></h3>
+<p>Accounts Payable &gt; Purchase Order &gt; All purchase orders
+To create a new purchase order, click on New. A Create purchase order window will appear on the right-hand side of the screen. </p>
+<p><img alt="Picture2" src="../assets/images/TMS/Picture2.png" /></p>
+<h3 id="rate-bases"><a class="toclink" href="#rate-bases">Rate Bases</a></h3>
+<p>Under the Rate master tab is where a user can create, edit, and delete rate bases. </p>
+<p>Transportation Management &gt; Setup &gt; Rating &gt; Rate master</p>
+<p>When a user initiates a rating structure for a product, they must configure it in the rate master. The rate master holds all the different rates which can be set up either on a mileage basis, weight basis, or through a Bing engine. There are a variety of configurations that can be done. Each rate master has an attached rate base, which annotates from zip codes, city, or state. It can be set up as granular or high level as the user prefers. Some of the settings are also dictated by the transportation management rating metadata and under the metadata view, the user can indicate which field is mandatory. The metadata dictates the structure what is required when setting up your rating structure. </p>
+<p><img alt="Picture3" src="../assets/images/TMS/Picture3.png" /></p>
+<p>By opening an individual rate base, the user can view and search multiple Drop-off locations. You can have multiple different rate bases attached to each rate base assignment and located under the Details section under each rate base. The rate base can configure as many different systems as the user wants to and under the Details section is where the user configures their rate. (weight, mileage, per load type basis). </p>
+<p>Break master field: This field dictates the different levels of freight that one could get. This indicates your break points from the different rates that you have in the system. The system can then pick that rate up based on the weight of your entire transportation load. The user must make sure all products need to have some sort of weight on it, especially weighing it by weight. That value is required to calculate the different break master rates to pick up. The rate base dictates your “to” zip codes (where the item(s) are going to). For ag, mostly going to see mileage and P2P (Point to Point) used the most.</p>
+<h3 id="delivery-terms"><a class="toclink" href="#delivery-terms">Delivery Terms</a></h3>
+<p>With a newly created purchase, a user can pull the specific product item. Delivery terms are required in order for transportation management to calculate on an order. The carrier service automatically populates from the item record.  The user needs to be mindful of the “Add transportation charges to order” field which is required to be set to calculate transportation management charges to an order. This toggle field is located under Transportation.  This is a configuration at the beginning of the project and required for an item to calculate transportation management. </p>
+<p><img alt="Picture4" src="../assets/images/TMS/Picture4.png" /></p>
+<h3 id="shipping-carriers"><a class="toclink" href="#shipping-carriers">Shipping Carriers</a></h3>
+<p>When reviewing shipping carriers, there are three important setup items to be mindful of: </p>
+<ol>
+<li>Activate carrier rating field: This flag field needs to be toggled to yes in order for a load to be rated. If it is not activated, the order will not rate a load. </li>
+</ol>
+<p><img alt="Picture5" src="../assets/images/TMS/Picture5.png" /></p>
+<ol>
+<li>Activate shipping carrier. This flag field needs to be toggled to yes in order to show the drop-down shipping carrier list. If it isn’t activated, the user will be unable to view shipping carriers from the drop-down shipping carrier. </li>
+</ol>
+<p><img alt="Picture6" src="../assets/images/TMS/Picture6.png" /></p>
+<ol>
+<li>Vendor Account: A vendor account is required to be attached to the order to generate a bill. 
+Under the Services section, it is important to set up carrier services applicable to what they are licensed to haul. Under the Rating profile, here is where the Rate engine gets assigned (e.g. P2PContract). There are three types of rating engines most likely to be used: contract, weight, and mileage. </li>
+</ol>
+<p>Without these setups, nothing would generate for that carrier on the purchase order.</p>
+<p>On the purchase order, once the shipping carrier is added, the system automatically formats the Mode of delivery field. It is system generated. </p>
+<p>The basic items required on a purchase order is the delivery terms, shipping carrier, and the carrier service. These three are required for inbound or outbound loads. All three of these are needed in order to create a load. </p>
+<p>The next step in creating a load is to add it to a purchase order. Under Warehouse, click on Load planning workbench. A new screen will appear with the Purchase order lines showing the item is enabled for transportation management. If the flag had bene turned off, the user would see no record. A user can create as many loads as needed. </p>
+<p><img alt="Picture7" src="../assets/images/TMS/Picture7.png" /></p>
+<p>Under Supply and demand, the user can save the entire order to a new load by Adding the Entire order to new load. 
+  <img alt="Picture8" src="../assets/images/TMS/Picture8.png" /></p>
+<p>A Load template assignment will open in a new window on the right-hand side. </p>
+<p><img alt="Picture9" src="../assets/images/TMS/Picture9.png" /></p>
+<p>Load template IDs can be set up based on the size of the track that’s hauling the items. Users may want to specify different loads for different sizes of trucks. In the setup of the load template, the user would indicate the weight capacity. </p>
+<p>After creating load, the system creates a new inbound load with an open status. The next action will happen through the receiving process so when the user is completing outbound load shipments, there are several different steps to process. For inbound, all of that happens automatically with receiving of the product. The only step the user needs to do is create the load. Click OK.</p>
+<p>The next step is to confirm the Purchase Order. Under Purchase, click Confirm. </p>
+<p><img alt="Picture10" src="../assets/images/TMS/Picture10.png" /></p>
+<p>The last step would be to generate product receipt. This is located under Receive on the header. </p>
+<p><img alt="Picture11" src="../assets/images/TMS/Picture11.png" /></p>
+<p>A new window will appear with an overview of the Posting product receipt. Click OK. 
+After the product receipt is processed, the user can view their Freight bill details under the Transportation tab on the header. The user will be able to view the freight bill that was generated and attached to a vendor. </p>
+<h3 id="outbound-process-and-freight-reconciliation"><a class="toclink" href="#outbound-process-and-freight-reconciliation">Outbound Process and Freight Reconciliation</a></h3>
+<p>There are two different outbound processes that can use transportation management, the sales order to a customer, or a transfer order to another branch.  </p>
+<h4 id="transfer-order"><a class="toclink" href="#transfer-order">Transfer Order</a></h4>
+<p><em>Note:</em> The steps you take to create a transfer order would be very similar to creating a sales order, but some steps may occur in slightly different tabs for each one. </p>
+<ol>
+<li>Create New transfer order (+New) </li>
+<li>Input From warehouse </li>
+<li>Input To warehouse  </li>
+</ol>
+<p><em>Note:</em> It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip &amp; To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. 
+4.  Add Transfer order line (+Add) </p>
+<p><em>Note:</em> the unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  </p>
+<ol>
+<li>Input Item number </li>
+<li>Input Transfer quantity </li>
+<li>Navigate to Transfer order header </li>
+</ol>
+<p><em>Note:</em> There are some critical steps in the header of the transfer order that must be completed for a rate to be generated on a transfer order. </p>
+<ol>
+<li>Input Delivery terms – these are defined by the client<br />
+Note: The add transportation charges to order flag needs to be set to yes for the particular delivery term you are going to use for those transportation type orders that need to have that freight on there.  </li>
+<li>Add Shipping carrier – you define what services are applicable to the specific Shipping carrier. </li>
+<li>Add Carrier service – each service has a different rate structure behind it and that is what pulls in the different rates that we need to apply to that rate bill.  </li>
+</ol>
+<p><em>Note:</em> The only time this will be different is if you are integrating to the Kahler integration. If we are doing an Ag project that is integrated to Kahler, the minimum that needs to be defined in the transfer order is the delivery terms. When the product comes back in the integration from Kahler, the Shipping carrier and the Carrier service will be populated.  </p>
+<ol>
+<li>Generate picking list  </li>
+<li>Change Update value to All </li>
+<li>Click OK </li>
+<li>Create Transportation Management load, Ship Tab &gt; Transportation Load Planning Workbench </li>
+<li>You should be able to view the transfer order line </li>
+<li>Go to Transfer lines tab </li>
+<li>Add entire order to new load </li>
+</ol>
+<p><em>Note:</em> The Load template ID will come in blank by default if you miss some settings in the transfer order. </p>
+<ol>
+<li>Click OK  </li>
+</ol>
+<p><em>Note:</em> Once you have created the new load, the Load ID and status of the load will be auto assigned. The status of a brand-new load will be “open.”  </p>
+<ol>
+<li>
+<p>Create shipment  </p>
+<ol>
+<li>Release </li>
+<li>Release to warehouse </li>
+<li>Right side bar will launch – no changes need to be made in this screen </li>
+<li>Click OK </li>
+<li>Shipment will be updated to “1” in the load </li>
+<li>You have now created a transportation management shipment that goes with this load </li>
+<li>If you miss this step and the shipment field stays at zero, no freight bill will be created, and the load will not be shipped </li>
+</ol>
 </li>
-<li>Delivery </li>
-<li>Settlement</li>
-</ul>
-<h2 id="contracts"><a class="toclink" href="#contracts">Contracts</a></h2>
-<h3 id="offers"><a class="toclink" href="#offers">Offers</a></h3>
-<p>Commodity Accounting &gt; Inbound &gt; Contract &gt; Offers
-The Offers My view shows a list of open offers. Open offers can be filtered by Branch, Commodity and Executed offers. Executed Offers is a yes/no toggle button if flipped to “Yes” will show the contracts that have been filled with a purchase contract issued to the contract. </p>
-<p><img alt="Picture1" src="../assets/images/Grain_Inbound/Picture1.png" /></p>
-<p>To create a new offer, click New. </p>
-<p><img alt="Picture2" src="../assets/images/Grain_Inbound/Picture2.png" /></p>
-<p>A Create offer window will appear on the right-hand side. The Create offer fields include: </p>
-<ul>
-<li>Branch</li>
-<li>Offer date</li>
-<li>Offer type<ul>
-<li>Notification - Before offer can be executed, the user needs to contact whoever created the offer and ask if they want the contract to be executed. </li>
-<li>Market offer - If the current market or bid at this location reaches offer level, the contract is executed automatically.</li>
-</ul>
+<li>
+<p>Statues will be updated to Posted </p>
 </li>
-<li>Customer</li>
-<li>Commodity</li>
-<li>Contract type</li>
-<li>Delivery period</li>
-<li>Offer quantity</li>
-<li>Ticket default: Automatically defaults. The input is reflective of selected Delivery period. </li>
-<li>Board price</li>
-<li>Basis</li>
-<li>Net price</li>
-<li>Expiration date</li>
-<li>FOB location</li>
-<li>Notes</li>
-</ul>
-<p>Click Create. A review of the contract is then generated. Click Save. Created offers can be removed. </p>
-<h3 id="purchase-contracts"><a class="toclink" href="#purchase-contracts">Purchase Contracts</a></h3>
-<p>The Create purchase contract is generated by clicking New and opening an offer. A Create offer window will appear on the right-hand side. This is the same Create purchase contract window shown in the Create Contracts section. </p>
-<p>Click Create. The system will show the created Purchase contract. </p>
-<p>The Line view includes General and Delivery and pricing information. The General view outlines the line detail part of the contract capturing the contract information currently in the system. The Customer operation field is a farm field type development. The Delivery and pricing information view show the delivery information. </p>
-<p><img alt="Picture4" src="../assets/images/Grain_Inbound/Picture4.png" /></p>
-<p>The Header view shows additional detail:</p>
-<ul>
-<li>General contract information<ul>
-<li>Includes Direct Ship information</li>
-</ul>
+<li>Close out of this load </li>
+<li>Update picking list <ol>
+<li>Operations </li>
+<li>Picking list registration </li>
+<li>Update Pick quantity<br />
+<em>Note:</em> when you update the picking list quantity, your load quantity will remain the same. It does not automatically go back and update the load quantity. The load quantity and pick quantity need to stay in sync so that the freight bill is created for the correct quantity. There is not a direct connection between the transfer order and the load. </li>
+<li>Updates &gt; Update all  </li>
+</ol>
 </li>
-<li>Contract dates and quantities<ul>
-<li>Once tickets are applied to the contract, the system begins tracking what has been delivered. </li>
-<li>Part of a commodity can also be canceled. </li>
-<li>Sent date: The ability to track whether the contract has been signed </li>
-<li>Date returned: The date when the contract was returned</li>
-<li>Contract expires: The date when the contract expires. There is a contract expiration program track and get rid of contracts that have expired. </li>
-</ul>
+<li>Status of picking list will be updated to Complete </li>
+<li>Now your picking is complete and is ready to be closed  </li>
+<li>Navigate back to your transportation load </li>
+<li>Ship load <ol>
+<li>Ship &gt; View &gt; Load details </li>
+<li>Ship and receive &gt; Confirm &gt; Outbound shipment  </li>
+<li>If done correctly, a blue bar stating, “The shipment for the load has been confirmed” will populate on the load screen.  </li>
+<li>Ship and receive &gt; Generate &gt; Post ship transfer<br />
+<em>Note:</em> The only time you are going to see there are some parameters that need to be enabled to be able to post ship transfer. There is a transportation parameter that allows you to unconfirm the outbound shipment and when that flag is set to “yes” you will have the post ship transfer button available. If that flag is set to “no” and you do not allow someone to unconfirm that outbound shipment, the Confirm outbound shipment would be the only step required and it would automatically ship.  </li>
+<li>The post ship transfer button ships the product </li>
+</ol>
 </li>
-<li>Discounts, fees and freight<ul>
-<li>The “Use discount schedule in place at time of delivery” is a yes/no toggle button with the option to have commodity and branch set up with a default discount schedule. In the setup page, there is a setup flag to use a discount schedule which would default to every contract or scale ticket. </li>
-<li>Fee schedule: Storage charges or assessments. </li>
-<li>Market to market adjustment: if the user is bringing contracts to market and you want to bring them back to market at one location, you can use a basis or freight adjustment to add/subtract to price to get the right calculation of bringing contracts to market. </li>
-<li>Freight included in basis: information of basis level of how much was freight. </li>
-</ul>
+<li>Navigate back to the transfer order  </li>
+<li>Refresh the screen  </li>
+<li>Status of transfer order will be updated to Shipped  </li>
+<li>
+<p>Check to ensure freight bill was created  </p>
+<ol>
+<li>Ship &gt; View &gt; Load details </li>
+<li>Transportation tab &gt; Related information &gt; Freight bill details  </li>
+<li>If done correctly, a freight bill will populate  </li>
+</ol>
 </li>
-<li>Addresses<ul>
-<li>Multiple addresses to use on contract. These addresses can be overwritten <ul>
-<li>Ship from name</li>
-<li>Ship to name: Defaults to branch previously entered in</li>
-<li>FOB name: Where ownership changes</li>
-</ul>
+<li>
+<p>Navigate back to transfer order </p>
+<ol>
+<li>Receive tab </li>
+<li>Transfer order lines </li>
+<li>Charges  </li>
+<li>There should be a charge on the transfer order line – this is based on a charge code that is setup in the configuration steps. </li>
+<li>Click OK </li>
+</ol>
 </li>
-</ul>
+<li>
+<p>Click Receive  </p>
+<ol>
+<li>Input Shipment voucher  </li>
+<li>Click OK 
+<em>Note:</em> The receiving process is where the voucher transaction happens and hits the ledger and sub-ledger, and you can view that navigating to Transfer Order Tab &gt; View &gt; Transfer order history. In the history, you can view the voucher transaction details.  </li>
+</ol>
 </li>
-<li>Miscellaneous details<ul>
-<li>Can identify who in your company created contract. If a Broker was used, this can be identified along with the Broker commission rate. The commission rate is not processed and is just for informational purposes. It does not create a payable. </li>
-</ul>
+<li>
+<p>View Charges 
+<em>Note:</em> One other area that has been added to the Levridge ISV is the ability to see those charges. Once you have shipped that product and receive it in, if you go back to the transfer order line the freight costs are not shown because that freight is not charged on every order. You can review those charges in the Transfer order history. </p>
+<ol>
+<li>Transfer order history </li>
+<li>Select received transaction in the transfer order history   </li>
+<li>Charges </li>
+<li>You will now be able to see for that load, you can see all the charges that were applied to it.  </li>
+</ol>
 </li>
-<li>Hedge commodity  <ul>
-<li>The commodity will default in. </li>
-<li>Additional hedge commodities can be entered. Can get long/short to run by hedge commodity. </li>
-</ul>
-</li>
-</ul>
-<p><img alt="Picture5" src="../assets/images/Grain_Inbound/Picture5.png" /></p>
-<h3 id="pricing-of-a-contract"><a class="toclink" href="#pricing-of-a-contract">Pricing of a Contract</a></h3>
-<p>Commodity &gt; Inbound &gt; Contract &gt; Purchase contracts</p>
-<p>The Delivery and Pricing view is available under the “Line” My view. </p>
-<ul>
-<li>To set a price, highlight the delivery period. Click on Set price. The Contract pricing window will appear on the right-hand side. </li>
-<li>The user can change the Price quantity, Board price, and Basis to match what should be on the contract. The Net price is calculated from Board Price, subtracted Basis, and gave Net price.</li>
-<li>Click Create. </li>
-<li>A new delivery period line is created. Throughout system, you will see same contract number, but it will have two delivery period lines showing up. </li>
-</ul>
-<p>Within the contract entry, additional functionality includes: </p>
-<ul>
-<li>View: <ul>
-<li>Scale tickets and load requests issued against a contract, along with load orders tied to a contract. </li>
-</ul>
-</li>
-<li>Generate: <ul>
-<li>Pricing confirmation. This can be printed. </li>
-</ul>
-</li>
-<li>Fill:<ul>
-<li>Ability to fill at market price or contract price. <ul>
-<li>Market price: <ul>
-<li>Takes quantity against current market. The system calculates gain/loss to create either a payable or receivable </li>
-</ul>
-</li>
-<li>Contract price: <ul>
-<li>Takes quantity against current contract price. There is no gain or losses. </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="delivery-process-on-in-bound-grain"><a class="toclink" href="#delivery-process-on-in-bound-grain">Delivery Process on In-bound Grain</a></h2>
-<p>Commodity accounting &gt; Inbound &gt; Delivery</p>
-<p>Delivery Process on in-bound grain includes:</p>
-<ul>
-<li>Inbound scale tickets</li>
-<li>Delivery sheets</li>
-<li>Inbound scale ticket application</li>
-<li>Unit trains</li>
-</ul>
-<h3 id="inbound-scale-tickets"><a class="toclink" href="#inbound-scale-tickets">Inbound Scale Tickets</a></h3>
-<p>Commodity accounting &gt; Inbound &gt; Delivery &gt; Inbound scale tickets</p>
-<p>Most of the inbound scale tickets will be imported in from scale a scale interface. But you do have the ability to add new scale tickets or edit existing scale tickets that have been imported. </p>
-<p>To create a new scale ticket, click on New. </p>
-<p>A Create scale ticket window will appear on the right-hand side.  </p>
-<ul>
-<li>Ticket type</li>
-<li>Commodity</li>
-<li>Branch</li>
-<li>Warehouse</li>
-<li>Customer account</li>
-<li>Name</li>
-<li>Ticket date: this is a user field and can be overridden </li>
-<li>Customer operation: There can be multiple operations for a customer. Must choose one.  A customer operation is required. </li>
-<li>Customer site: This field is not required but can choose for tracking purposes.  </li>
-<li>Split Group: Will default in with the customer operation. This can be overridden. </li>
-</ul>
-<p>Click Create. </p>
-<p>The below image shows a newly created inbound scale ticket. </p>
-<p><img alt="Picture6" src="../assets/images/Grain_Inbound/Picture6.png" /></p>
-<p>Additional information and categories one can enter attached to a scale ticket. </p>
-<ul>
-<li>Scale ticket split details: If there were multiple splits, the system would preview the split they would be receiving. </li>
-<li>Weights: The system calculates net weight. This is a toggle on/off button (defaults Driver to on). The user can select scale operation and grader if they want the information recorded on the ticket. </li>
-<li>Date/Time: Can be viewed on the printed ticket. </li>
-<li>Notes: There are two types of notes: External and Internal. External will print on scale ticket. </li>
-<li>Grade factors: Grade factors are set up in the system and assigned to the commodity. The sequence they show up in the table is user defined. There is the ability for the moisture and test weight depending on equipment person has but can import moisture and test weight (TW). </li>
-<li>User can enter other discount factors as well. Those are used to defer back to the discount schedules that are attached to any contract or storage agreement user has and calculate any premium or charges that are due based off those discounts. </li>
-<li>Transportation Details: This is not a required entry but can be provided. It is a way to identify the driver delivering the commodity for informational purposes and when the truck comes back empty. </li>
-<li>The Unit number is primary used in rail shipments can add and group this ticket with others. Sometimes previously hauled commodity is a required field so that there wasn’t hazardous material hauled prior to commodity. </li>
-</ul>
-<p>The next step is to Post to Inventory so all commodity received will show up in inventory to track and update DPR for inventory amounts. </p>
-<p>DPR: daily position report.</p>
-<p>After the ticket is posted, it is locked in and ready to be used in other parts of the system. This concludes the inbound scale ticket option. </p>
-<h3 id="inbound-scale-ticket-application-process"><a class="toclink" href="#inbound-scale-ticket-application-process">Inbound scale ticket application process</a></h3>
-<p>The Inbound scale ticket application process takes scale tickets received and provides the user the option to determine how the scale tickets will be used. </p>
-<p><img alt="Picture7" src="../assets/images/Grain_Inbound/Picture7.png" /></p>
-<ul>
-<li>The contract number can be changed. </li>
-<li>Inbound scale ticket auto-apply:<ul>
-<li>The user can set up a sequence in the system to auto apply on each contract. e.g. If you have it set up to sequence if you want your first application contract, second agreement storage agreement. The system will automatically apply your scale ticket or a portion of it to an existing purchase contract or to an existing storage agreement based on the sequences set up on your auto-apply functionality. </li>
-<li>Inbound scale ticket un-apply<ul>
-<li>Ability to unassign scale tickets from contracts</li>
-<li>Can select a scale ticket not previously assigned to a contract (if let’s say it was un-applied as mentioned above) the user can click on the scale ticket and allocate it to a purchase contract or a storage agreement. Or you can do the full amount or part of a contract. </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>This is what the inbound scale ticket application program will do to get commodities moved to the specific obligations a customer may have.  </p>
-<h3 id="delivery-sheets"><a class="toclink" href="#delivery-sheets">Delivery Sheets</a></h3>
-<p>Delivery Sheets is a way to group multiple tickets together for same commodity and same customer. You can also use delivery sheet to calculate average grades. It is a delivery sheet to group tickets together and process them as a group instead of individually. </p>
-<p><img alt="Picture8" src="../assets/images/Grain_Inbound/Picture8.png" /></p>
-<p>The system automatically assigns Delivery Sheet number. 
-If you want to see completed sheets, you can click on the Show Completed toggle button (Yes/No). You can also show the Voided delivery sheets as well (toggle button).</p>
-<p>To create a new delivery sheet, click New. </p>
-<p>The Create delivery sheet window will appear on the right-hand side of the window. </p>
-<p><img alt="Picture9" src="../assets/images/Grain_Inbound/Picture9.png" /></p>
-<ul>
-<li>Branch: Defaults to last branch used</li>
-<li>Date: Defaults to current date</li>
-<li>Customer account: Enter account name or number</li>
-<li>Commodity: Choose commodity</li>
-<li>Customer operation: Choose the customer operation</li>
-<li>Customer Site: Choose customer site</li>
-<li>Split group: The system assigns a split group, but this can be overridden</li>
-<li>Estimated start date: not required fields. Some customers use a planning process. </li>
-<li>Estimated delivery quantity: “above” helps with planning purposes. </li>
-</ul>
-<p>Click Create. A new delivery sheet will be created and open in the main window. </p>
-<p><img alt="Picture10" src="../assets/images/Grain_Inbound/Picture10.png" /></p>
-<p>Under the Delivery sheet ownership splits section: </p>
-<ul>
-<li>All tickets applied to the delivery sheet will be assigned to the one account. You can have multiple accounts with different percentages applied and as the ability to complete splits. </li>
-<li>Can choose default disposition. Each time the user applies a ticket to the delivery sheet, it will be applied to that specific contract. The user can choose what they intend to do with the storage agreement. </li>
-<li>There is the option of the tickets to be applied when added to the delivery sheet. </li>
-</ul>
-<p>Delivery sheet completion details: </p>
-<ul>
-<li>Details the splits and dispositions of the delivery sheet</li>
-</ul>
-<p>After these sections are reviewed and filled out, the user can complete the delivery sheet. This finishes the process and lock down the calculations. The user cannot settle any of the tickets delivered until it is completed. The tickets will not show up as available to settle until the complete function has been done. </p>
-<h3 id="unit-trains"><a class="toclink" href="#unit-trains">Unit Trains</a></h3>
-<p>If unit trains are received within a facility, this is a simple program to create a Unit train number, which is an alphanumeric field. After creating a number, click save. These numbers are now available within the system to be used and attached to a scale ticket.</p>
-<p><img alt="Picture11" src="../assets/images/Grain_Inbound/Picture11.png" /></p>
-<h2 id="settlement"><a class="toclink" href="#settlement">Settlement</a></h2>
-<p>Commodity accounting &gt; Inbound &gt; Settlement</p>
-<ul>
-<li>Settlement requests</li>
-<li>Settlement payments</li>
-<li>Discounts, fees and charging invoicing</li>
-<li>Settle options with grower</li>
-<li>Warehouse receipts</li>
-<li>Settlement sheet reprint</li>
-</ul>
-<h3 id="settlement-requests"><a class="toclink" href="#settlement-requests">Settlement Requests</a></h3>
-<p>Commodity accounting &gt; Inbound &gt; Settlement &gt; Settlement requests</p>
-<p>Settlement request window shows all settlement requests with a status of either opened, invoiced, or paid. </p>
-<p>To create new settlement request, click New.</p>
-<p><img alt="Picture12" src="../assets/images/Grain_Inbound/Picture12.png" /></p>
-<p>Select a customer, commodity, and branch. The disposition is a drop-down field asking the location of the contracts (Stored, Price later, Priced contract). After choosing, click Next. </p>
-<p>If chosen Priced Contract, the system shows all the scale tickets that have been applied to a priced contract that have not been settled yet. These are available to be settled. After choosing the contracts to be settled, click Next. The system provides a Preliminary summary with the contract number, delivery period, end price, settled quantity, and settled amount (gross dollar amount). Discounts, fees and charges would be summarized as well in the bottom quadrant. Click Next. </p>
-<p>The system will take the user to the Remittance screen. This screen summarizes the remittance portion. </p>
-<p><img alt="Picture13" src="../assets/images/Grain_Inbound/Picture13.png" /></p>
-<p>The Deferred payment function is utilized frequently. This is the option to lock in a commodity price and selling the commodity in a future date. The Requested payment date can change to reflect the future date. The Deferred charge code and Deferred Terms code are utilized along with the deferred payment option. The user can choose to have a premium on the deferred payment. </p>
-<p>Add/Split Payments is another function with the ability to issue additional checks.  </p>
-<p>Click Next. The system is now ready to issue the check(s). The Settlement request summary provides a summary of the Settlement Request. Click Finish. From there, the user can go to Settlement Payment. </p>
-<h3 id="settlement-and-payment-process"><a class="toclink" href="#settlement-and-payment-process">Settlement and Payment Process</a></h3>
-<p>Settlement and Payment Process is a two-step process:</p>
-<ul>
-<li>Confirm</li>
-<li>Confirm and Pay</li>
-</ul>
-<p>After the user selects one of the above options (self-explanatory), the system will validate the settlement and post in journal. </p>
-<h3 id="discount-fees-and-charges-invoicing"><a class="toclink" href="#discount-fees-and-charges-invoicing">Discount, fees, and charges invoicing.</a></h3>
-<p>Functionality not completed as of October 2020. </p>
-<h3 id="warehouse-receipt"><a class="toclink" href="#warehouse-receipt">Warehouse receipt</a></h3>
-<p>This is a legal tender document. If the document is listed as a negotiable warehouse receipt, it is a legal tender. A non-negotiable document does not have the same legal tender but has same protection level. </p>
-<p>To issue a new warehouse receipt, Click New. </p>
-<p>The Create warehouse receipt will appear on the right-hand side in a new window. </p>
-<p><img alt="Picture14" src="../assets/images/Grain_Inbound/Picture14.png" /></p>
-<p>After completing the warehouse receipt, the user would choose a Storage agreement. Click Save. A warehouse receipt will then be issued. This is another form of storage for the grower. </p>
-<h3 id="settle-options-with-grower"><a class="toclink" href="#settle-options-with-grower">Settle options with grower</a></h3>
-<p>Functionality not completed as of October 2020. </p>
-<h3 id="settle-sheet-reprint"><a class="toclink" href="#settle-sheet-reprint">Settle sheet reprint</a></h3>
-<p>This is the option to be able to reprint a settlement sheet. </p>
-<p>The Grain Outbound Processes can be found under <a href="../Grain_Outbound_Processes/">Grain Outbound Processes</a></p>
+</ol>
+<h4 id="manually-rate-load"><a class="toclink" href="#manually-rate-load">Manually Rate Load</a></h4>
+<p>There is the ability to rate a load. For example, let’s say the client has a particular product they want to charge freight to but they do not have a rate structure set up and did not want to use the carrier service with a rate profile behind it.  </p>
+<ol>
+<li>Add product to transfer order  </li>
+<li>Save </li>
+<li>Supply and demand tab &gt; Add &gt; Entire order to new load </li>
+<li>Click OK </li>
+<li>Load &gt; Release &gt; Release to warehouse </li>
+<li>Click OK </li>
+<li>Rating and routing tab </li>
+<li>Click Manual Rating </li>
+<li>Close out of Route rate details screen that populates </li>
+<li>It creates a Route for it automatically </li>
+<li>Route rate details </li>
+<li>Add new record </li>
+<li>Input Route as the Accessorial level  </li>
+<li>Input Rate </li>
+<li>Input Shipment as the Accessorial assignment level </li>
+<li>Save </li>
+<li>Refresh  </li>
+</ol>
+<p><em>Note:</em> Now when you do all the rest of the processes, pick, register, and confirm the outbound shipment, it will use the manual rate load instead of using the one used based on the rating structures that the carrier services would typically pick up.  </p>
                 
               
               
