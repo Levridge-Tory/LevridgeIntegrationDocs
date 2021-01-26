@@ -100,6 +100,7 @@ There are two different outbound processes that can use transportation managemen
 3.	Input To warehouse  
 
 *Note:* It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip & To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. 
+
 4.	Add Transfer order line (+Add) 
 
 *Note:* the unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  
@@ -124,13 +125,9 @@ Note: The add transportation charges to order flag needs to be set to yes for th
 15.	You should be able to view the transfer order line 
 16.	Go to Transfer lines tab 
 17.	Add entire order to new load 
-
-*Note:* The Load template ID will come in blank by default if you miss some settings in the transfer order. 
-
+    - The Load template ID will come in blank by default if you miss some settings in the transfer order. 
 18.	Click OK  
-
-*Note:* Once you have created the new load, the Load ID and status of the load will be auto assigned. The status of a brand-new load will be “open.”  
-
+    -Once you have created the new load, the Load ID and status of the load will be auto assigned. The status of a brand-new load will be “open.”  
 19.	Create shipment  
     1. Release 
     2. Release to warehouse 
@@ -139,14 +136,13 @@ Note: The add transportation charges to order flag needs to be set to yes for th
     5. Shipment will be updated to “1” in the load 
     6. You have now created a transportation management shipment that goes with this load 
     7. If you miss this step and the shipment field stays at zero, no freight bill will be created, and the load will not be shipped 
-
 20.	Statues will be updated to Posted 
 21.	Close out of this load 
 22.	Update picking list 
     1. Operations 
     2. Picking list registration 
     3. Update Pick quantity  
-*Note:* when you update the picking list quantity, your load quantity will remain the same. It does not automatically go back and update the load quantity. The load quantity and pick quantity need to stay in sync so that the freight bill is created for the correct quantity. There is not a direct connection between the transfer order and the load. 
+        - When you update the picking list quantity, your load quantity will remain the same. It does not automatically go back and update the load quantity. The load quantity and pick quantity need to stay in sync so that the freight bill is created for the correct quantity. There is not a direct connection between the transfer order and the load. 
     4. Updates > Update all  
 23.	Status of picking list will be updated to Complete 
 24.	Now your picking is complete and is ready to be closed  
@@ -156,36 +152,32 @@ Note: The add transportation charges to order flag needs to be set to yes for th
     2.	Ship and receive > Confirm > Outbound shipment  
     3.	If done correctly, a blue bar stating, “The shipment for the load has been confirmed” will populate on the load screen.  
     4.	Ship and receive > Generate > Post ship transfer  
-*Note:* The only time you are going to see there are some parameters that need to be enabled to be able to post ship transfer. There is a transportation parameter that allows you to unconfirm the outbound shipment and when that flag is set to “yes” you will have the post ship transfer button available. If that flag is set to “no” and you do not allow someone to unconfirm that outbound shipment, the Confirm outbound shipment would be the only step required and it would automatically ship.  
+        - The only time you are going to see there are some parameters that need to be enabled to be able to post ship transfer. There is a transportation parameter that allows you to unconfirm the outbound shipment and when that flag is set to “yes” you will have the post ship transfer button available. If that flag is set to “no” and you do not allow someone to unconfirm that outbound shipment, the Confirm outbound shipment would be the only step required and it would automatically ship.  
     5.	The post ship transfer button ships the product 
 27.	Navigate back to the transfer order  
 28.	Refresh the screen  
 29.	Status of transfer order will be updated to Shipped  
 30.	Check to ensure freight bill was created  
-
     1. Ship > View > Load details 
     2. Transportation tab > Related information > Freight bill details  
     3. If done correctly, a freight bill will populate  
-
 31.	Navigate back to transfer order 
-
     1. Receive tab 
     2. Transfer order lines 
     3. Charges  
     4. There should be a charge on the transfer order line – this is based on a charge code that is setup in the configuration steps. 
     5. Click OK 
-
 32.	Click Receive  
     1. Input Shipment voucher  
     2. Click OK 
-*Note:* The receiving process is where the voucher transaction happens and hits the ledger and sub-ledger, and you can view that navigating to Transfer Order Tab > View > Transfer order history. In the history, you can view the voucher transaction details.  
-
+        - The receiving process is where the voucher transaction happens and hits the ledger and sub-ledger, and you can view that navigating to Transfer Order Tab > View > Transfer order history. In the history, you can view the voucher transaction details.  
 33.	View Charges 
-*Note:* One other area that has been added to the Levridge ISV is the ability to see those charges. Once you have shipped that product and receive it in, if you go back to the transfer order line the freight costs are not shown because that freight is not charged on every order. You can review those charges in the Transfer order history. 
     1. Transfer order history 
     2. Select received transaction in the transfer order history   
     3. Charges 
     4. You will now be able to see for that load, you can see all the charges that were applied to it.  
+
+One other area that has been added to the Levridge ISV is the ability to see those charges. Once you have shipped that product and receive it in, if you go back to the transfer order line the freight costs are not shown because that freight is not charged on every order. You can review those charges in the Transfer order history. 
 
 #### Manually Rate Load
 There is the ability to rate a load. For example, let’s say the client has a particular product they want to charge freight to but they do not have a rate structure set up and did not want to use the carrier service with a rate profile behind it.  
