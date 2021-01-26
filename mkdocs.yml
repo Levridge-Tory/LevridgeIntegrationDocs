@@ -46,6 +46,6 @@ nav:
                 - CE to AX Integration Implementation Checklist : 'CE_to_AX_Integration_Implementation_Checklist.md'
                 - CE Implementation Checklist : 'CE_Implementation_Checklist.md'
                 - CE Setup Records : 'CE_Setup_Records.md'
-
+            
             - Environment Planning : 'EnvironmentPlanning.md'
             - Event Framework : 'event_framework.md'

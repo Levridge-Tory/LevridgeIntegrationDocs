@@ -48,11 +48,11 @@ When reviewing shipping carriers, there are three important setup items to be mi
 
 1. Activate carrier rating field: This flag field needs to be toggled to yes in order for a load to be rated. If it is not activated, the order will not rate a load. 
 
-  ![Picture5](.\assets\images\TMS\Picture5.png)
+![Picture5](.\assets\images\TMS\Picture5.png)
 
 2. Activate shipping carrier. This flag field needs to be toggled to yes in order to show the drop-down shipping carrier list. If it isn’t activated, the user will be unable to view shipping carriers from the drop-down shipping carrier. 
 
-  ![Picture6](.\assets\images\TMS\Picture6.png)
+![Picture6](.\assets\images\TMS\Picture6.png)
 
 3. Vendor Account: A vendor account is required to be attached to the order to generate a bill. 
 Under the Services section, it is important to set up carrier services applicable to what they are licensed to haul. Under the Rating profile, here is where the Rate engine gets assigned (e.g. P2PContract). There are three types of rating engines most likely to be used: contract, weight, and mileage. 
@@ -68,6 +68,7 @@ The next step in creating a load is to add it to a purchase order. Under Warehou
   ![Picture7](.\assets\images\TMS\Picture7.png)
 
 Under Supply and demand, the user can save the entire order to a new load by Adding the Entire order to new load. 
+
   ![Picture8](.\assets\images\TMS\Picture8.png)
 
 A Load template assignment will open in a new window on the right-hand side. 
