@@ -855,8 +855,10 @@ After the product receipt is processed, the user can view their Freight bill det
 <li>Input From warehouse </li>
 <li>Input To warehouse  </li>
 </ol>
-<p><em>Note:</em> It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip &amp; To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. 
-4.  Add Transfer order line (+Add) </p>
+<p><em>Note:</em> It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip &amp; To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. </p>
+<ol>
+<li>Add Transfer order line (+Add) </li>
+</ol>
 <p><em>Note:</em> the unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  </p>
 <ol>
 <li>Input Item number </li>
@@ -878,17 +880,13 @@ Note: The add transportation charges to order flag needs to be set to yes for th
 <li>Create Transportation Management load, Ship Tab &gt; Transportation Load Planning Workbench </li>
 <li>You should be able to view the transfer order line </li>
 <li>Go to Transfer lines tab </li>
-<li>Add entire order to new load </li>
-</ol>
-<p><em>Note:</em> The Load template ID will come in blank by default if you miss some settings in the transfer order. </p>
-<ol>
-<li>Click OK  </li>
-</ol>
-<p><em>Note:</em> Once you have created the new load, the Load ID and status of the load will be auto assigned. The status of a brand-new load will be “open.”  </p>
-<ol>
-<li>
-<p>Create shipment  </p>
-<ol>
+<li>Add entire order to new load <ul>
+<li>The Load template ID will come in blank by default if you miss some settings in the transfer order. </li>
+</ul>
+</li>
+<li>Click OK<br />
+    -Once you have created the new load, the Load ID and status of the load will be auto assigned. The status of a brand-new load will be “open.”  </li>
+<li>Create shipment  <ol>
 <li>Release </li>
 <li>Release to warehouse </li>
 <li>Right side bar will launch – no changes need to be made in this screen </li>
@@ -898,15 +896,15 @@ Note: The add transportation charges to order flag needs to be set to yes for th
 <li>If you miss this step and the shipment field stays at zero, no freight bill will be created, and the load will not be shipped </li>
 </ol>
 </li>
-<li>
-<p>Statues will be updated to Posted </p>
-</li>
+<li>Statues will be updated to Posted </li>
 <li>Close out of this load </li>
 <li>Update picking list <ol>
 <li>Operations </li>
 <li>Picking list registration </li>
-<li>Update Pick quantity<br />
-<em>Note:</em> when you update the picking list quantity, your load quantity will remain the same. It does not automatically go back and update the load quantity. The load quantity and pick quantity need to stay in sync so that the freight bill is created for the correct quantity. There is not a direct connection between the transfer order and the load. </li>
+<li>Update Pick quantity  <ul>
+<li>When you update the picking list quantity, your load quantity will remain the same. It does not automatically go back and update the load quantity. The load quantity and pick quantity need to stay in sync so that the freight bill is created for the correct quantity. There is not a direct connection between the transfer order and the load. </li>
+</ul>
+</li>
 <li>Updates &gt; Update all  </li>
 </ol>
 </li>
@@ -917,25 +915,23 @@ Note: The add transportation charges to order flag needs to be set to yes for th
 <li>Ship &gt; View &gt; Load details </li>
 <li>Ship and receive &gt; Confirm &gt; Outbound shipment  </li>
 <li>If done correctly, a blue bar stating, “The shipment for the load has been confirmed” will populate on the load screen.  </li>
-<li>Ship and receive &gt; Generate &gt; Post ship transfer<br />
-<em>Note:</em> The only time you are going to see there are some parameters that need to be enabled to be able to post ship transfer. There is a transportation parameter that allows you to unconfirm the outbound shipment and when that flag is set to “yes” you will have the post ship transfer button available. If that flag is set to “no” and you do not allow someone to unconfirm that outbound shipment, the Confirm outbound shipment would be the only step required and it would automatically ship.  </li>
+<li>Ship and receive &gt; Generate &gt; Post ship transfer  <ul>
+<li>The only time you are going to see there are some parameters that need to be enabled to be able to post ship transfer. There is a transportation parameter that allows you to unconfirm the outbound shipment and when that flag is set to “yes” you will have the post ship transfer button available. If that flag is set to “no” and you do not allow someone to unconfirm that outbound shipment, the Confirm outbound shipment would be the only step required and it would automatically ship.  </li>
+</ul>
+</li>
 <li>The post ship transfer button ships the product </li>
 </ol>
 </li>
 <li>Navigate back to the transfer order  </li>
 <li>Refresh the screen  </li>
 <li>Status of transfer order will be updated to Shipped  </li>
-<li>
-<p>Check to ensure freight bill was created  </p>
-<ol>
+<li>Check to ensure freight bill was created  <ol>
 <li>Ship &gt; View &gt; Load details </li>
 <li>Transportation tab &gt; Related information &gt; Freight bill details  </li>
 <li>If done correctly, a freight bill will populate  </li>
 </ol>
 </li>
-<li>
-<p>Navigate back to transfer order </p>
-<ol>
+<li>Navigate back to transfer order <ol>
 <li>Receive tab </li>
 <li>Transfer order lines </li>
 <li>Charges  </li>
@@ -943,18 +939,15 @@ Note: The add transportation charges to order flag needs to be set to yes for th
 <li>Click OK </li>
 </ol>
 </li>
-<li>
-<p>Click Receive  </p>
-<ol>
+<li>Click Receive  <ol>
 <li>Input Shipment voucher  </li>
-<li>Click OK 
-<em>Note:</em> The receiving process is where the voucher transaction happens and hits the ledger and sub-ledger, and you can view that navigating to Transfer Order Tab &gt; View &gt; Transfer order history. In the history, you can view the voucher transaction details.  </li>
+<li>Click OK <ul>
+<li>The receiving process is where the voucher transaction happens and hits the ledger and sub-ledger, and you can view that navigating to Transfer Order Tab &gt; View &gt; Transfer order history. In the history, you can view the voucher transaction details.  </li>
+</ul>
+</li>
 </ol>
 </li>
-<li>
-<p>View Charges 
-<em>Note:</em> One other area that has been added to the Levridge ISV is the ability to see those charges. Once you have shipped that product and receive it in, if you go back to the transfer order line the freight costs are not shown because that freight is not charged on every order. You can review those charges in the Transfer order history. </p>
-<ol>
+<li>View Charges <ol>
 <li>Transfer order history </li>
 <li>Select received transaction in the transfer order history   </li>
 <li>Charges </li>
@@ -962,6 +955,7 @@ Note: The add transportation charges to order flag needs to be set to yes for th
 </ol>
 </li>
 </ol>
+<p>One other area that has been added to the Levridge ISV is the ability to see those charges. Once you have shipped that product and receive it in, if you go back to the transfer order line the freight costs are not shown because that freight is not charged on every order. You can review those charges in the Transfer order history. </p>
 <h4 id="manually-rate-load"><a class="toclink" href="#manually-rate-load">Manually Rate Load</a></h4>
 <p>There is the ability to rate a load. For example, let’s say the client has a particular product they want to charge freight to but they do not have a rate structure set up and did not want to use the carrier service with a rate profile behind it.  </p>
 <ol>
