@@ -849,31 +849,31 @@ After the product receipt is processed, the user can view their Freight bill det
 <h3 id="outbound-process-and-freight-reconciliation"><a class="toclink" href="#outbound-process-and-freight-reconciliation">Outbound Process and Freight Reconciliation</a></h3>
 <p>There are two different outbound processes that can use transportation management, the sales order to a customer, or a transfer order to another branch.  </p>
 <h4 id="transfer-order"><a class="toclink" href="#transfer-order">Transfer Order</a></h4>
-<p><em>Note:</em> The steps you take to create a transfer order would be very similar to creating a sales order, but some steps may occur in slightly different tabs for each one. </p>
+<p>The steps you take to create a transfer order would be very similar to creating a sales order, but some steps may occur in slightly different tabs for each one. </p>
 <ol>
 <li>Create New transfer order (+New) </li>
 <li>Input From warehouse </li>
-<li>Input To warehouse  </li>
-</ol>
-<p><em>Note:</em> It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip &amp; To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. </p>
-<ol>
-<li>Add Transfer order line (+Add) </li>
-</ol>
-<p><em>Note:</em> the unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  </p>
-<ol>
+<li>Input To warehouse  <ul>
+<li>It is crucially important that both warehouses need to be part of your rating master that you are creating that load for (From city, state, zip &amp; To city, state zip). The system will look for those two values when querying the rate. It will apply that rate to the transfer order freight bill when it goes and rates this load. </li>
+</ul>
+</li>
+<li>Add Transfer order line (+Add) <ul>
+<li>The unit of measure will dictate what net weight value we need to have. This net weight should always be in pounds.  </li>
+</ul>
+</li>
 <li>Input Item number </li>
 <li>Input Transfer quantity </li>
-<li>Navigate to Transfer order header </li>
-</ol>
-<p><em>Note:</em> There are some critical steps in the header of the transfer order that must be completed for a rate to be generated on a transfer order. </p>
-<ol>
+<li>Navigate to Transfer order header <ul>
+<li>There are some critical steps in the header of the transfer order that must be completed for a rate to be generated on a transfer order. </li>
+</ul>
+</li>
 <li>Input Delivery terms – these are defined by the client<br />
 Note: The add transportation charges to order flag needs to be set to yes for the particular delivery term you are going to use for those transportation type orders that need to have that freight on there.  </li>
 <li>Add Shipping carrier – you define what services are applicable to the specific Shipping carrier. </li>
-<li>Add Carrier service – each service has a different rate structure behind it and that is what pulls in the different rates that we need to apply to that rate bill.  </li>
-</ol>
-<p><em>Note:</em> The only time this will be different is if you are integrating to the Kahler integration. If we are doing an Ag project that is integrated to Kahler, the minimum that needs to be defined in the transfer order is the delivery terms. When the product comes back in the integration from Kahler, the Shipping carrier and the Carrier service will be populated.  </p>
-<ol>
+<li>Add Carrier service – each service has a different rate structure behind it and that is what pulls in the different rates that we need to apply to that rate bill.  <ul>
+<li>The only time this will be different is if you are integrating to the Kahler integration. If we are doing an Ag project that is integrated to Kahler, the minimum that needs to be defined in the transfer order is the delivery terms. When the product comes back in the integration from Kahler, the Shipping carrier and the Carrier service will be populated.  </li>
+</ul>
+</li>
 <li>Generate picking list  </li>
 <li>Change Update value to All </li>
 <li>Click OK </li>
