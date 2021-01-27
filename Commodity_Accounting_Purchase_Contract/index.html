@@ -16,7 +16,7 @@
     
     
       
-        <title>Commodity Accounting - Levridge Documentation</title>
+        <title>Commodity Accounting Inbound - Purchase Contract Offer - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commodity-accounting" class="md-skip">
+        <a href="#commodity-accounting-inbound-purchase-contract-offer" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Commodity Accounting
+              Commodity Accounting Inbound - Purchase Contract Offer
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -244,49 +242,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Commodity Accounting
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Commodity Accounting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
       Commodity Accounting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -743,6 +703,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    Goal
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-purchase-contract-offers" class="md-nav__link">
+    Setup Purchase Contract Offers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-purchase-contract" class="md-nav__link">
+    Create Purchase Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -755,7 +742,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodities.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodity_Accounting_Purchase_Contract.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -763,14 +750,70 @@
                   
                 
                 
-                <h1 id="commodity-accounting"><a class="toclink" href="#commodity-accounting">Commodity Accounting</a></h1>
+                <h1 id="commodity-accounting-inbound-purchase-contract-offer"><a class="toclink" href="#commodity-accounting-inbound-purchase-contract-offer">Commodity Accounting Inbound - Purchase Contract Offer</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../CommodityImplementationActivities/">Commodity Accounting Implementation Activities</a></li>
-<li><a href="../Rolling_Stock_Management/">Rolling Stock Management</a></li>
-<li><a href="../Commodity_Accounting_Setup/">Commodity Accounting Setup</a></li>
-<li><a href="../Commodity_Accounting_Inbound/">Commodity Accounting Inbound</a></li>
+<p>Step by step process of setup purchase contract offers within the Commodity Accounting module of the Levridge Environment. </p>
+<h2 id="goal"><a class="toclink" href="#goal">Goal</a></h2>
+<p>By the end of this document, you will be able to setup purchase contract offers within the Levridge Environment.</p>
+<h3 id="setup-purchase-contract-offers"><a class="toclink" href="#setup-purchase-contract-offers">Setup Purchase Contract Offers</a></h3>
+<ol>
+<li>Main menu &gt; Modules &gt; Commodity accounting &gt; Inbound &gt; Contract &gt; Offers
+Note: Once the Purchase Contract Offer window opens, you are able to see any existing offers that are currently in the system.</li>
+<li>Add new Purchase contract (New)</li>
+<li>Select Branch</li>
+<li>Select Offer date <ol>
+<li>Date defaults to the current date</li>
+</ol>
+</li>
+<li>Select Offer type<ol>
+<li>Notification – means that the grower wants to be notified before the offer is filled</li>
+<li>Market offer - means that as soon as the price reaches the market offer, the contract will be filled </li>
+</ol>
+</li>
+<li>Select Customer</li>
+<li>Select Commodity</li>
+<li>Select Contract type<ol>
+<li>Contract types are user defined so you can select any of the contract types that you have setup in the system.</li>
+</ol>
+</li>
+<li>Select Delivery period </li>
+<li>Input Offer qty<ol>
+<li>What quantity</li>
+</ol>
+</li>
+<li>Select Unit</li>
+<li>Select Ticker</li>
+<li>Input Board price (if applicable for contract type)</li>
+<li>Input Basis (if applicable for contract type)</li>
+<li>Input Net price (if applicable for contract type)</li>
+<li>Select Expiration date </li>
+<li>Select FOB location</li>
+<li>You may add notes if you would like them printed on the offer as well</li>
+<li>Click Create<ul>
+<li>Once you click create, you will then see all offer information is setup in the software.</li>
 </ul>
+</li>
+<li>Save </li>
+</ol>
+<h3 id="create-purchase-contract"><a class="toclink" href="#create-purchase-contract">Create Purchase Contract</a></h3>
+<ol>
+<li>Select offer line you want to create Purchase Contract from<ul>
+<li>Offers will stay in the system until they either expire or until they are removed.</li>
+</ul>
+</li>
+<li>Create purchase contract<ul>
+<li>All information from the offer will be transferred over to the create purchase contract form.</li>
+</ul>
+</li>
+<li>Input Board price</li>
+<li>Input Basis price </li>
+<li>Create offer<ol>
+<li>Create – contract will be created immediately without opening first </li>
+<li>Create and open – contract will open and allow you to make any other edits or additions </li>
+</ol>
+</li>
+</ol>
+<p>Note: If you turn on the Executed offers toggle, you will be able to see all of the offers that have been filled.</p>
                 
               
               
@@ -785,41 +828,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../AgronomySales/" title="Agronomy Sales" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy Sales
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Feed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -16,7 +16,7 @@
     
     
       
-        <title>Commodity Accounting - Levridge Documentation</title>
+        <title>Commodity Accounting Inbound - Delivery Sheet Completion - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commodity-accounting" class="md-skip">
+        <a href="#commodity-accounting-inbound-delivery-sheet-completion" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Commodity Accounting
+              Commodity Accounting Inbound - Delivery Sheet Completion
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -244,49 +242,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Commodity Accounting
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Commodity Accounting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
       Commodity Accounting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -743,6 +703,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    Goal
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delivery-sheet-completion" class="md-nav__link">
+    Delivery Sheet Completion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -755,7 +735,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodities.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodity_Delivery_Sheet.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -763,14 +743,43 @@
                   
                 
                 
-                <h1 id="commodity-accounting"><a class="toclink" href="#commodity-accounting">Commodity Accounting</a></h1>
+                <h1 id="commodity-accounting-inbound-delivery-sheet-completion"><a class="toclink" href="#commodity-accounting-inbound-delivery-sheet-completion">Commodity Accounting Inbound - Delivery Sheet Completion</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../CommodityImplementationActivities/">Commodity Accounting Implementation Activities</a></li>
-<li><a href="../Rolling_Stock_Management/">Rolling Stock Management</a></li>
-<li><a href="../Commodity_Accounting_Setup/">Commodity Accounting Setup</a></li>
-<li><a href="../Commodity_Accounting_Inbound/">Commodity Accounting Inbound</a></li>
+<p>Step by step process of delivery sheet completion within the Commodity Accounting module of the Levridge Environment. </p>
+<h2 id="goal"><a class="toclink" href="#goal">Goal</a></h2>
+<p>By the end of this document, you will know the process of delivery sheet completion within the Levridge Environment.</p>
+<h3 id="delivery-sheet-completion"><a class="toclink" href="#delivery-sheet-completion">Delivery Sheet Completion</a></h3>
+<ol>
+<li>Main menu &gt; Modules &gt; Inbound &gt; Delivery &gt; Delivery sheets</li>
+<li>Select Delivery sheet that needs to be completed by checking the box next to the Delivery sheet ID number <ol>
+<li>When the sheet window opens, the Delivery sheet will look the same as when you created it except for in the Delivery sheet ownership splits section, there will be Gross quantity delivered against the Delivery sheet. </li>
+</ol>
+</li>
+<li>Select Default contract number<ol>
+<li>Ensure Default contract number is the correct contract you want this Delivery sheet applied to.</li>
+</ol>
+</li>
+<li>Scroll to Delivery sheet completion details fast tab</li>
+<li>Ensure Grower Name is correct <ol>
+<li>If there were multiple splits on the Delivery sheet completion details fast tab, we would do this process for each spilt on the Delivery sheet.</li>
+</ol>
+</li>
+<li>Owner disposition allocation tab</li>
+<li>Add New (+New)<ol>
+<li>When you add a new line, it will default in the Default value of units from the Delivery sheet. You can edit the net quantity. You can decrease the applied net quantity, but you are not able to increase the applied net quantity in the Delivery sheet. You MUST distribute all the units that are on the Delivery sheet whether you use one or multiple lines within the Delivery sheet completion details.</li>
+</ol>
+</li>
+<li>Check to make sure all fields are correct</li>
+<li>Complete Delivery sheet<ol>
+<li>Scroll up to the Delivery sheet ownership splits fast tab and select Complete line.</li>
+<li>Navigate to Delivery sheets in the header and select Complete delivery sheet.<ul>
+<li>You can do one customer’s part of the settlement sheet but not everyone if you need to. </li>
 </ul>
+</li>
+</ol>
+</li>
+<li>Now that the line is complete, the Line status will be updated to Completed. At this point, this Delivery sheet is complete, and it will be flagged as closed and you can go ahead and finish the process in settlements later. As a reminder, you must complete the Delivery sheet before you are able to settle the grain that is on it.</li>
+</ol>
                 
               
               
@@ -785,41 +794,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../AgronomySales/" title="Agronomy Sales" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy Sales
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Feed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

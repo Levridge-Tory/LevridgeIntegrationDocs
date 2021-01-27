@@ -16,7 +16,7 @@
     
     
       
-        <title>Commodity Accounting - Levridge Documentation</title>
+        <title>Commodity Accounting Setup - Discount Schedules - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commodity-accounting" class="md-skip">
+        <a href="#commodity-accounting-setup-discount-schedules" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Commodity Accounting
+              Commodity Accounting Setup - Discount Schedules
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -244,49 +242,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Commodity Accounting
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Commodity Accounting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
       Commodity Accounting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -743,6 +703,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    Goal
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discount-schedules-setup" class="md-nav__link">
+    Discount Schedules Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-prompted" class="md-nav__link">
+    New (Prompted)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -755,7 +742,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodities.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodity_Accounting_Discount_Schedules.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -763,14 +750,83 @@
                   
                 
                 
-                <h1 id="commodity-accounting"><a class="toclink" href="#commodity-accounting">Commodity Accounting</a></h1>
+                <h1 id="commodity-accounting-setup-discount-schedules"><a class="toclink" href="#commodity-accounting-setup-discount-schedules">Commodity Accounting Setup - Discount Schedules</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../CommodityImplementationActivities/">Commodity Accounting Implementation Activities</a></li>
-<li><a href="../Rolling_Stock_Management/">Rolling Stock Management</a></li>
-<li><a href="../Commodity_Accounting_Setup/">Commodity Accounting Setup</a></li>
-<li><a href="../Commodity_Accounting_Inbound/">Commodity Accounting Inbound</a></li>
-</ul>
+<p>Step by step process of how-to setup discount schedules within the Commodity Accounting module of the Levridge Environment. </p>
+<h2 id="goal"><a class="toclink" href="#goal">Goal</a></h2>
+<p>By the end of this document, you will be able to setup discount schedules within the Levridge Environment.</p>
+<h3 id="discount-schedules-setup"><a class="toclink" href="#discount-schedules-setup">Discount Schedules Setup</a></h3>
+<ol>
+<li>Main menu &gt; Modules &gt; Commodity accounting &gt; Setup &gt; Discounts &amp; fees &gt; Discount schedules<ol>
+<li>When the discount schedules window opens, you are able to see all existing discount schedules out there already. You can view those at any time.</li>
+</ol>
+</li>
+<li>Add (+ New)</li>
+<li>Input Discount schedule name</li>
+<li>Select Commodity<ol>
+<li>Discount schedule is for one commodity only.</li>
+</ol>
+</li>
+<li>Input Description</li>
+<li>Input Notes<ol>
+<li>Strictly an internal item.</li>
+</ol>
+</li>
+<li>Add Discount tables<ol>
+<li>You can enter a click new and enter each line as you choose to.<ol>
+<li>Select Discount table</li>
+<li>Select Discount gross or net</li>
+<li>Select Discount net type</li>
+<li>Input Discount net line </li>
+<li>Select Shrink<ol>
+<li>If you select no shrink, all following columns (shrink or discount first, shrink gross or net, shrink net type, shrink net line, shrink sequence) are irrelevant and do not need to be filled in.</li>
+</ol>
+</li>
+<li>Select Shrink or discount first</li>
+<li>Select Shrink gross or net</li>
+<li>Select Shrink net type</li>
+<li>Input Shrink net line</li>
+<li>Input Shrink sequence <ol>
+<li>The Shrink sequence column is significant if you have more than one table in your schedule that will be shrinking. The system must know it can’t shrink them both at the same time, both on gross, so it has to know which one to do first. If you only have one shrink item in your table, then shrink sequence at number one will be the only one you need.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Repeat the above process until you have added all applicable discount tables or deleted any unnecessary discount tables </li>
+</ol>
+<h3 id="new-prompted"><a class="toclink" href="#new-prompted">New (Prompted)</a></h3>
+<p>New (Promoted) is a wizard that guides you through the process of creating a discount schedule line. </p>
+<ol>
+<li>Click on New (Prompted)</li>
+<li>Input Line number</li>
+<li>Click Next</li>
+<li>Select Discount table </li>
+<li>Select Gross/Net</li>
+<li>Select Calculation type</li>
+<li>Select Discount net line</li>
+<li>Next</li>
+<li>Select Shrink<ol>
+<li>Yes
+    1.Select Shrink or discount first<ol>
+<li>Select Gross/Net</li>
+<li>Select Net calculation type</li>
+<li>Input Line</li>
+<li>Input Shrink sequence</li>
+</ol>
+</li>
+<li>No<ol>
+<li>All other fields will not be active, so you do not need to complete them</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Click Next</li>
+<li>Check to ensure line information is correct</li>
+<li>Click Finish</li>
+<li>Click Save to complete discount table setup </li>
+</ol>
                 
               
               
@@ -785,41 +841,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../AgronomySales/" title="Agronomy Sales" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy Sales
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Feed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

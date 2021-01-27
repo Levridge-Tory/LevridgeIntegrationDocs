@@ -16,7 +16,7 @@
     
     
       
-        <title>Commodity Accounting - Levridge Documentation</title>
+        <title>Commodity Accounting Setup - Discount Tables - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commodity-accounting" class="md-skip">
+        <a href="#commodity-accounting-setup-discount-tables" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Commodity Accounting
+              Commodity Accounting Setup - Discount Tables
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -244,49 +242,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Commodity Accounting
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Commodity Accounting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
       Commodity Accounting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -743,6 +703,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    Goal
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discount-tables-setup" class="md-nav__link">
+    Discount Tables Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-discount-table-line" class="md-nav__link">
+    Add Discount Table Line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-build-lines" class="md-nav__link">
+    Auto build Lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -755,7 +749,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodities.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodity_Accounting_Discount_Tables.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -763,14 +757,92 @@
                   
                 
                 
-                <h1 id="commodity-accounting"><a class="toclink" href="#commodity-accounting">Commodity Accounting</a></h1>
+                <h1 id="commodity-accounting-setup-discount-tables"><a class="toclink" href="#commodity-accounting-setup-discount-tables">Commodity Accounting Setup - Discount Tables</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../CommodityImplementationActivities/">Commodity Accounting Implementation Activities</a></li>
-<li><a href="../Rolling_Stock_Management/">Rolling Stock Management</a></li>
-<li><a href="../Commodity_Accounting_Setup/">Commodity Accounting Setup</a></li>
-<li><a href="../Commodity_Accounting_Inbound/">Commodity Accounting Inbound</a></li>
-</ul>
+<p>Step by step process of how-to setup discount tables within the Commodity Accounting module of the Levridge Environment. </p>
+<h2 id="goal"><a class="toclink" href="#goal">Goal</a></h2>
+<p>By the end of this document, you will be able to setup discount tables within the Levridge Environment.</p>
+<h3 id="discount-tables-setup"><a class="toclink" href="#discount-tables-setup">Discount Tables Setup</a></h3>
+<ol>
+<li>Main menu &gt; Commodity accounting &gt; Setup &gt; Discounts &amp; fees &gt; Discount tables</li>
+<li>Add new Discount table (+New)</li>
+<li>Input Discount table ID</li>
+<li>Input Description </li>
+<li>Select Commodity <ol>
+<li>You can only have one commodity with a discount table.</li>
+</ol>
+</li>
+<li>Select Discount lines type <ol>
+<li>Range – Need a definition for this </li>
+<li>Quality grades – this will use the quality grade factors you have setup in the system so if the discount falls with that quality grade factor range then it will assign that discount value to it.</li>
+<li>Value – is just a string entry. In other words, you just put in whatever item you want, whatever value you want numeric, and if it finds it in the discount table, then it will charge that discount factor. </li>
+<li>Grade factor exists - could also be called a yes or no. In other words, something like odor if it has it. It is a yes, but doesn't it to know? And if it is a Yes, then we assign whatever value that is in there. </li>
+</ol>
+</li>
+<li>Select Calculation method<ol>
+<li>Per unit - cost per unit in the schedule.</li>
+<li>Percent of price - percentages of price in the schedule.</li>
+</ol>
+</li>
+<li>Select Unit of measure<ol>
+<li>Bushel is set as the Unit default.</li>
+</ol>
+</li>
+<li>Select Currency<ol>
+<li>Currency defaults to your primary currency. </li>
+</ol>
+</li>
+<li>Select Grade factor</li>
+<li>Direction of range<ol>
+<li>Determined by Grade factor selected.</li>
+</ol>
+</li>
+<li>Select Gross/Net</li>
+<li>Select Charges Code<ol>
+<li>Charges code is a setup for the accounting side of it. So it's just a matter of which way you want to go with it.- could use a better definition for charges code here</li>
+</ol>
+</li>
+<li>Input Notes <ol>
+<li>Strictly an internal item.</li>
+</ol>
+</li>
+<li>Invoice Toggle<ol>
+<li>The purpose of this toggle switch is if you want to be able to invoice this item. Prior to it being settled, so any tickets that are delivered and the moisture charge is calculated. If I turn this to yes, I can choose the invoice item that I want to use and I will be able to create an invoice. Prior to settlement, so we can charge this out ahead of time if we choose to do that. </li>
+</ol>
+</li>
+<li>Select Main account<ol>
+<li>The main account is the General Ledger account that you want to charge. Or recognize the revenue which we've chosen drying income here for our account. So then all of the discounts that are calculated here updates the drying revenue in the General Ledger account. </li>
+</ol>
+</li>
+<li>Setup is now complete </li>
+</ol>
+<h3 id="add-discount-table-line"><a class="toclink" href="#add-discount-table-line">Add Discount Table Line</a></h3>
+<p>The next option is to establish the lines and how we are going to calculate.</p>
+<ol>
+<li>Click (+ Add line)<ol>
+<li>In most cases, when adding discount table lines, you do not want to leave any ranges uncovered. </li>
+<li>When you click to add another line, it's going to start at the next available range.</li>
+</ol>
+</li>
+</ol>
+<h3 id="auto-build-lines"><a class="toclink" href="#auto-build-lines">Auto build Lines</a></h3>
+<ol>
+<li>Click on Auto build lines</li>
+<li>Input Starting range value</li>
+<li>Input Ending range value</li>
+<li>Input Increment change amount </li>
+<li>Input Starting discount value </li>
+<li>Select Direction of range</li>
+<li>Input Discount change amount</li>
+<li>Input Shrink % starting value </li>
+<li>Select Direction of range</li>
+<li>Input Shrink increment change amount </li>
+<li>Premium toggle<ol>
+<li>If this is a premium calculated, you could throw the toggle and it would then consider to premium and add back to the customer’s settlement if need be.</li>
+</ol>
+</li>
+<li>Once information is correct, click Generate lines </li>
+</ol>
                 
               
               
@@ -785,41 +857,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../AgronomySales/" title="Agronomy Sales" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy Sales
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Feed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

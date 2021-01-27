@@ -16,7 +16,7 @@
     
     
       
-        <title>Commodity Accounting - Levridge Documentation</title>
+        <title>Commodity Accounting Setup - Grade Factors - Levridge Documentation</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commodity-accounting" class="md-skip">
+        <a href="#commodity-accounting-setup-grade-factors" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Commodity Accounting
+              Commodity Accounting Setup - Grade Factors
             
           </span>
         </div>
@@ -197,12 +197,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Products
@@ -244,49 +242,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Commodity Accounting
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Commodity Accounting" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
       Commodity Accounting
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -743,6 +703,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    Goal
+  </a>
+  
+    <nav class="md-nav" aria-label="Goal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quality-grade-factor-setup" class="md-nav__link">
+    Quality Grade Factor Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-grade-factor-sequences" class="md-nav__link">
+    Quality Grade Factor Sequences
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -755,7 +742,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodities.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Commodity_Accounting_Grade_Factors.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -763,14 +750,57 @@
                   
                 
                 
-                <h1 id="commodity-accounting"><a class="toclink" href="#commodity-accounting">Commodity Accounting</a></h1>
+                <h1 id="commodity-accounting-setup-grade-factors"><a class="toclink" href="#commodity-accounting-setup-grade-factors">Commodity Accounting Setup - Grade Factors</a></h1>
 <h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
-<ul>
-<li><a href="../CommodityImplementationActivities/">Commodity Accounting Implementation Activities</a></li>
-<li><a href="../Rolling_Stock_Management/">Rolling Stock Management</a></li>
-<li><a href="../Commodity_Accounting_Setup/">Commodity Accounting Setup</a></li>
-<li><a href="../Commodity_Accounting_Inbound/">Commodity Accounting Inbound</a></li>
+<p>Step by step process of how-to setup quality grade factors within the Commodity Accounting module of the Levridge Environment. </p>
+<h2 id="goal"><a class="toclink" href="#goal">Goal</a></h2>
+<p>By the end of this document, you will be able to setup quality grade factors within the Levridge Environment.</p>
+<h3 id="quality-grade-factor-setup"><a class="toclink" href="#quality-grade-factor-setup">Quality Grade Factor Setup</a></h3>
+<ol>
+<li>Main Menu &gt; Modules &gt; Commodity accounting &gt; Setup &gt; Quality and grade factors &gt; Grade factors</li>
+<li>Add new grade factor (+New)</li>
+<li>Input Grade factor </li>
+<li>Input Name</li>
+<li>Input Description</li>
+<li>Input Grade value type<ol>
+<li>Numeric – this is field what most of the grade factors will go by</li>
+<li>Yes / No</li>
+<li>Text </li>
+</ol>
+</li>
+<li>Input Direction of range<ol>
+<li>Increase – the number ranges get greater as they go</li>
+<li>Decrease – the number ranges get smaller as they go (i.e. Test Weight)<ul>
+<li>The summary toggle switch is used if you are going to combine two other grade factors together to create one. An example of that would be damage and heat damage would combine to create total damage and then total damage would be the summary grade factor that is setup.</li>
 </ul>
+</li>
+</ol>
+</li>
+<li>Add Applicable product categories (+New) – this establishes which commodity it will be used for</li>
+<li>Input Commodity</li>
+<li>Select Use required and default values for all sites<ol>
+<li>If box is checked, this grade factor can be used in any of the locations that are in the system</li>
+<li>If box is unchecked, you can select an individual branch, so it only applies to a specific branch</li>
+</ol>
+</li>
+<li>Input Branch <ol>
+<li>If use required and default values for all sites box is checked, select “ALL” for Branch field. </li>
+<li>If use required and default values for all sites box is unchecked, select the applicable Branch.</li>
+</ol>
+</li>
+<li>Select Required box <ol>
+<li>If box is checked, for every scale ticket that is entered for this commodity, it will require that grade factor to be entered before the scale ticket can be saved and posted.</li>
+</ol>
+</li>
+<li>Input Default value </li>
+<li>Summary grade factors – this is where you would add changes if the summary toggle option is used so you can add what other factors make up the summary. </li>
+<li>Once you have all information entered the grade factor form, click Save and now your grade factor is setup within the system.</li>
+</ol>
+<h3 id="quality-grade-factor-sequences"><a class="toclink" href="#quality-grade-factor-sequences">Quality Grade Factor Sequences</a></h3>
+<ol>
+<li>Main menu &gt; Modules &gt; Commodity accounting &gt; Setup &gt; Quality and grade factors &gt; Grade factors sequencing</li>
+</ol>
+<p>Note: Quality grade factor sequences allows you to establish the sequence that the grade factors used will show up for ticket entry by commodity. Each commodity can have its own sequence if applicable.</p>
                 
               
               
@@ -785,41 +815,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../AgronomySales/" title="Agronomy Sales" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agronomy Sales
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../Feed/" title="Feed" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Feed
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
