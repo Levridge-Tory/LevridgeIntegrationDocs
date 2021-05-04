@@ -1,0 +1,87 @@
+{
+    "Controllers": {
+        "HostController": "Levridge.Integration.Host.DefaultController",
+        "WktProcessorController": "Levridge.Integration.Host.WktProcessorController",
+        "SuretyController": "Levridge.Integration.Host.SuretyController"
+    },
+    "Logging": {
+        "ApplicationInsights": {
+            "LogLevel": {
+                "Default": "Trace"
+            }
+        },
+        "Debug": {
+            "LogLevel": {
+                "Default": "Trace"
+            }
+        },
+        "Console": {
+            "IncludeScopes": true,
+            "LogLevel": {
+                "Default": "Trace"
+            }
+        },
+        "LogLevel": {
+            "Default": "Warning"
+        }
+    },
+    "AllowedHosts": "*",
+    "InstanceConfig": {
+        "AzureTableConfiguration": "AzureTableConfiguration",
+        "LogRequestsAndResponses": true,
+        "EnableAppInsightsAdaptiveSampling": false
+     },
+     "SourceConfig": {
+        "ServiceBusConfigName": "SuretyServiceBus",
+         "ODataConfigName": "DynamicsAX",
+         "SystemName": "Surety",
+         "Direction": "Source"
+  },
+    "TargetConfig": {
+         "ODataConfigName": "DynamicsCRM",
+         "SystemName": "DynamicsCRM",
+         "CDSConfigName": "CDS",
+         "Direction": "Target"
+  },
+  "DynamicsCRM": {
+    "UriString": "https://localhost",
+    "ActiveDirectoryResource": "https://Bajor.crm.dynamics.com",
+    "ActiveDirectoryTenant": "https://login.microsoftonline.com/2e14a5b1-fbf8-415b-bc7d-93e20829e510",
+    "ActiveDirectoryClientAppId": "825b2fb7-48ea-4458-8d80-6e48560448f5",
+    "ActiveDirectoryClientAppSecret": "bEZIcYkcNLcm48rb4IqEEGcFtFrbPRUPGDXbwZu9obA=",
+    "ODataEntityPath": "https://Bajor.crm.dynamics.com/api/data/v9.0/",
+    "AssemblyName": "Levridge.ODataDataSources.DynamicsCRM",
+    "AssemblyFile": "Levridge.ODataDataSources.DynamicsCRM.dll",
+    "ClientClassesNameSpace": "Levridge.ODataDataSources.DynamicsCRM",
+    "MetadataResource": "CRMMetadata.xml"
+  },
+    "Levridge.Integration.Host.WktProcessorController": {
+        "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=levsurety;AccountKey=YNpBEF0xpAllRpMW2NDhRNnZWyjypY7fvSVtlGJ+YRr2LOJyAHBUD1POP1RD+GKNn9KY0T8sM2LV9HyIGmV0/A==;EndpointSuffix=core.windows.net",
+        "ContainerName": "surety",
+        "MappingServiceBaseUrl": "https://test.suretymaps.com/api/v1/mapservices/MapServicedirect",
+        "MappingServiceAccessId": "D07320FB7AE4CA98FF7C40127CA50597",
+        "MappingServiceClientId": "test@agridatainc.com",
+        "MappingServiceClientName": "test@agridatainc.com",
+        "MappingServiceLinkText": "Preview Map",
+        "MappingServiceMapSizeX": "500",
+        "MappingServiceMapSizeY": "500"
+    },
+    "Levridge.Integration.Host.SuretyController": {
+        "ConnectionString": "Endpoint=sb://levridgetory.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=kvg3+0ziPMk3Qk5Jld6Ab75AwweVBX5mb0QhIYZBTj0=",
+        "TopicName": "torytestdonotuse",
+        "RequiresSession": true,
+        "StorageConfig": "AzureStorageConfig"
+    },
+    "AzureStorageConfig": {
+        "storageKey": "YNpBEF0xpAllRpMW2NDhRNnZWyjypY7fvSVtlGJ+YRr2LOJyAHBUD1POP1RD+GKNn9KY0T8sM2LV9HyIGmV0/A==",
+        "storageAccount": "levsurety",
+        "containerName": "surety"
+    },
+    "SuretyServiceBus": {
+        "ConnectionString": "Endpoint=sb://levridgetory.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=kvg3+0ziPMk3Qk5Jld6Ab75AwweVBX5mb0QhIYZBTj0=",
+        "TopicName": "torytestdonotuse",
+        "SubscriptionName": "ToryTestSubscription",
+        "RequiresSession": true
+    }
+
+}
