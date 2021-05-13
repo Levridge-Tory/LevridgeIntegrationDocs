@@ -1,0 +1,982 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Scale Application Configuration - Levridge Documentation Test3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#scale-application-configuration" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Levridge Documentation Test3" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Levridge Documentation Test3
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Scale Application Configuration
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Agronomy/" class="md-tabs__link">
+          Products
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Levridge Documentation Test3" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Levridge Documentation Test3
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Products
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Products
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agronomy/" title="Agronomy" class="md-nav__link">
+      Agronomy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AgronomySales/" title="Agronomy Sales" class="md-nav__link">
+      Agronomy Sales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Commodities/" title="Commodity Accounting" class="md-nav__link">
+      Commodity Accounting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Feed/" title="Feed" class="md-nav__link">
+      Feed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../equity-management-overview/" title="Equity Management" class="md-nav__link">
+      Equity Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Scale-Overview/" title="Scale" class="md-nav__link">
+      Scale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      System Information
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        System Information
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-1" type="checkbox" id="nav-2-7-1">
+    
+    <label class="md-nav__link" for="nav-2-7-1">
+      Integration Framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-1">
+        Integration Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Integration-Overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-1-2" type="checkbox" id="nav-2-7-1-2">
+    
+    <label class="md-nav__link" for="nav-2-7-1-2">
+      Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-1-2">
+        Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D365-CE-to-D365-F&O/" title="D365 CE to D365 F&O" class="md-nav__link">
+      D365 CE to D365 F&O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../D365-F&O-to-D365-CE/" title="D365 F&O to D365 CE" class="md-nav__link">
+      D365 F&O to D365 CE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scale-integration/" title="Scale" class="md-nav__link">
+      Scale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agsync/" title="Agsync" class="md-nav__link">
+      Agsync
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Kahler/" title="Kahler" class="md-nav__link">
+      Kahler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Surety/" title="Surety" class="md-nav__link">
+      Surety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oneWeigh/" title="oneWeigh" class="md-nav__link">
+      oneWeigh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Field-Reveal/" title="Field Reveal" class="md-nav__link">
+      Field Reveal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IntegratingCustomFields/" title="Integrating Custom Fields" class="md-nav__link">
+      Integrating Custom Fields
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-1-3" type="checkbox" id="nav-2-7-1-3">
+    
+    <label class="md-nav__link" for="nav-2-7-1-3">
+      Deployment
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-7-1-3">
+        Deployment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploying-Integration-Framework/" title="Deploying the Integration Framework" class="md-nav__link">
+      Deploying the Integration Framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ApplicationConfiguration/" title="Application Settings Configuration" class="md-nav__link">
+      Application Settings Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeployingCustomFieldMappingAssemblies/" title="Deploying Custom Field Mapping Assemblies" class="md-nav__link">
+      Deploying Custom Field Mapping Assemblies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeployingCDS/" title="Deploying CDS" class="md-nav__link">
+      Deploying CDS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print-service/" title="Print Service" class="md-nav__link">
+      Print Service
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7-3" type="checkbox" id="nav-2-7-3">
+    
+    <label class="md-nav__link" for="nav-2-7-3">
+      CE Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-7-3">
+        CE Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Customization_Best_Practices/" title="CE Customization Best Practices" class="md-nav__link">
+      CE Customization Best Practices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_to_AX_Integration_Implementation_Checklist/" title="CE to AX Integration Implementation Checklist" class="md-nav__link">
+      CE to AX Integration Implementation Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Implementation_Checklist/" title="CE Implementation Checklist" class="md-nav__link">
+      CE Implementation Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CE_Setup_Records/" title="CE Setup Records" class="md-nav__link">
+      CE Setup Records
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../EnvironmentPlanning/" title="Environment Planning" class="md-nav__link">
+      Environment Planning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../event_framework/" title="Event Framework" class="md-nav__link">
+      Event Framework
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-server" class="md-nav__link">
+    Windows Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-desktop" class="md-nav__link">
+    Windows Desktop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workstation-management" class="md-nav__link">
+    Workstation Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipment-management" class="md-nav__link">
+    Equipment Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map-equipment-grades" class="md-nav__link">
+    Map Equipment Grades
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-settings" class="md-nav__link">
+    Printer Settings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-set-up-the-printer-settings-for-a-scale" class="md-nav__link">
+    To Set up the Printer Settings for a Scale:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-short-list" class="md-nav__link">
+    Customer Short List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gross-quantity-settings" class="md-nav__link">
+    Gross Quantity Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standalone-configuration" class="md-nav__link">
+    Standalone Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/scale-application-configuration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="scale-application-configuration"><a class="toclink" href="#scale-application-configuration">Scale Application Configuration</a></h1>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>The Levridge Scale application is structured as a browser-based application that can be operated as a server or as a desktop depending on the specification requirements of the customer.</p>
+<h3 id="windows-server"><a class="toclink" href="#windows-server">Windows Server</a></h3>
+<p>When using the Scale application on Windows server the following servers will be installed and used.</p>
+<p>LevScale API: This server will handle all integration framework communications to Scale. O-Data is used in the integration framework.</p>
+<p>LevScalePrint: This server communicates with the client printer service and is used to render all Scale reports, such as Scale Tickets.</p>
+<h3 id="windows-desktop"><a class="toclink" href="#windows-desktop">Windows Desktop</a></h3>
+<p>On a Windows Desktop environment, four services will be installed and used with the Scale application.</p>
+<ol>
+<li>LevPrinterService: This can be installed on any computer within the customer’s intranet and allows the scale tickets to be printed. </li>
+<li>LevHardwareService: This service is used when connecting to hardware such as a scale head.</li>
+<li>LevridgeAxToScaleService: This works along with the LevridgeScaleToAxService and contains the integration framework which handles the bidirectional integration with Dynamics 365 F&amp;O.  When using multiple Levridge Scale servers along with one Enterprise system, only one LevridgeAxToScaleService is needed and can be set up as a cloud service. For LevridgeScaleToAxService, one is needed for each desktop or Levridge Scale instance. The integration framework uses the LevScaleAPI server to write into the LevScale.</li>
+<li>LevScaleClient: This is operating a straight web server without the reverse proxy capability.</li>
+</ol>
+<h3 id="workstation-management"><a class="toclink" href="#workstation-management">Workstation Management</a></h3>
+<p>Define the association of the various equipment. In most applications, only one workstation will need to be created. When creating a workstation, assign a Workstation Name and then select the Equipment i.e. a scale head and a grain analyzer. The Equipment is set up in Equipment Management.</p>
+<h3 id="equipment-management"><a class="toclink" href="#equipment-management">Equipment Management</a></h3>
+<p>Define the equipment such as scales and analyzers that will be used with the Scale application.  Equipment can be marked as Inactive if it is not yet fully configured or no longer in use.</p>
+<h3 id="map-equipment-grades"><a class="toclink" href="#map-equipment-grades">Map Equipment Grades</a></h3>
+<p>Map grade factors to a commodity for the given Equipment, such as a grain analyzer. This allows the system to parse the grain analyzer’s output and assign grades to a commodity for use on a scale ticket.</p>
+<h3 id="settings"><a class="toclink" href="#settings">Settings</a></h3>
+<p>Under Application Configuration&gt;Settings </p>
+<ul>
+<li><strong>Site:</strong> Choose a site from the drop down to assign site ID to the scale app</li>
+<li><strong>Number Prefix:</strong> Enter in the number ID of the Site in FO</li>
+<li><strong>Scale:</strong> Leave as default value of 1</li>
+<li><strong>Company Name:</strong> Enter company name</li>
+<li><strong>Company Location/Address:</strong> Enter in correct company address</li>
+<li><strong>Company Carrier:</strong> Use this to Select the transport that is set up in F&amp;O to trasnport Transfer Tickets: Company Name</li>
+<li><strong>Logo:</strong> Click on this to choose a picture file: <strong>Sizing IS being updated for logo</strong></li>
+<li><strong>Printer Server:</strong> Address of the Printer Server, Default value is <a href="http://localhost:8081">http://localhost:8081</a></li>
+<li><strong>Printer Service:</strong> Address of the Printer Service, Default value is: <a href="http://localhost:4343/printerservice">http://localhost:4343/printerservice</a></li>
+<li><strong>Report File Location:</strong> Location of where PDF versions of tickets are stored. Default value is <strong>C:\Temp\Reports</strong>. Will have to create this file folder on your local machine. </li>
+<li><strong>Organization:</strong> DataAreaID of F&amp;O, enter in 100</li>
+<li><strong>IsDriverOn:</strong> If this is toggled on, all ticket types will default to having the flag on unless manually changed by the scale operator. If set to no, "Driver-on" flag will not be displayed on the ticket window. </li>
+<li><strong>Enable Spot Pricing:</strong> Further Development of Grain Functionality required. Field does not need to be filled in for agronomy. </li>
+<li><strong>Enable Disposition:</strong> Further Development of Grain Functionality required. Field does not need to be filled in for agronomy.</li>
+<li><strong>Scale Unit:</strong> Use drop down list to select LB</li>
+<li><strong>Max Weight:</strong> Enter in the max weight of the scale head. </li>
+<li><strong>Incr. Wt:</strong> This is what increments the scale head will display weights, i.e. 20 lbs. </li>
+</ul>
+<h3 id="printer-settings"><a class="toclink" href="#printer-settings">Printer Settings</a></h3>
+<p>Under Application Configuration&gt;Printer Settings.</p>
+<p>This window is used to choose the correct printers for each of your scale heads at a location, and to choose a corresponding menu color to know which scale head you are working with in your window. The printer settings you choose in this window will then default in when you choose that scale on the Application start page. </p>
+<p><strong>Note:</strong> This setup is required. The printer selection can be changed to any printer on the Start page, but default printer setup is required to be able to print scale tickets. </p>
+<h4 id="to-set-up-the-printer-settings-for-a-scale"><a class="toclink" href="#to-set-up-the-printer-settings-for-a-scale">To Set up the Printer Settings for a Scale:</a></h4>
+<ol>
+<li>Choose the scale you want to set up from the drop down on the top of the page. </li>
+<li>Choose your printers for both your Tickets and BOL.</li>
+<li>Using the printer Type can change between a full page printout vs. a receipt printout. </li>
+<li>Choose the number of copies that you want to print with each completed ticket.</li>
+<li>Choose a background Color for that specific scale-head to make sure the correct scale is being used to complete and print tickets. </li>
+<li>Click save to complete these changes. </li>
+</ol>
+<h3 id="customer-short-list"><a class="toclink" href="#customer-short-list">Customer Short List</a></h3>
+<p>Under Application Configuration&gt;Customer Short list</p>
+<p>Shows a list of all customers in the scale database in alphabetical order. Checking the Box next to a customer will put that customer into the drop-down list on all the scale ticket types in order to reduce load times because not all customers will be loading in the customer account drop-down. </p>
+<ol>
+<li>To add a customer to the short list manually, check the box next to their name, and click submit on the bottom left corner of the page. </li>
+</ol>
+<p><img alt="Scale Customer Short List." src="../assets/images/ScaleApp/CustomerShortList.png" title="Scale Customer Short List" /></p>
+<h3 id="gross-quantity-settings"><a class="toclink" href="#gross-quantity-settings">Gross Quantity Settings</a></h3>
+<p>Under Application Configuration&gt;Gross Quantity Settings</p>
+<p>Manually set up in scale to show the gross quantity conversions of certain products, i.e. lbs to gallons. </p>
+<p>To create a new gross quantity for a product:
+1. Click create new on the top left of the page under INDEX
+2. Choose the item ID for the correct item you want to add a quantity to
+3. In Factor, enter the correct number. If you were to say a gallon of product is equal to 8 pounds, you would enter 8. The conversion is lbs/Unit of measure. The units of measure come from your FO system. 
+4. Choose your Commodity Unit of Measure.
+5. Click Create. </p>
+<p>To edit a previously created Gross quantity, click Edit next to the GQ that you want to change and when you have finished editing it, click the blue "Edit" button to save it. </p>
+<p>To delete a previously created GQ, click delete next to the GQ. Confirm the delete by clicking the red "Delete" button. </p>
+<h3 id="standalone-configuration"><a class="toclink" href="#standalone-configuration">Standalone Configuration</a></h3>
+<p>If using Levridge Scale as a standalone system (not integrating with D365 Finance and Operations) this screen is used to define data such as customers, commodities, grade factors etc.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
