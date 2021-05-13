@@ -1,0 +1,952 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Managing Splits, Sales Contracts, and Prepayments - Levridge Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#managing-splits-sales-contracts-and-prepayments" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Levridge Documentation" class="md-header__button md-logo" aria-label="Levridge Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Levridge Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Managing Splits, Sales Contracts, and Prepayments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Levridge Documentation" class="md-nav__button md-logo" aria-label="Levridge Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Levridge Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Products
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Products" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agronomy/" class="md-nav__link">
+        Agronomy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AgronomySales/" class="md-nav__link">
+        Agronomy Sales
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commodities/" class="md-nav__link">
+        Commodity Accounting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feed/" class="md-nav__link">
+        Feed
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equity-management-overview/" class="md-nav__link">
+        Equity Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scale-Overview/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
+        System Information
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Information" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          System Information
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1" type="checkbox" id="__nav_2_7_1" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1">
+        Integration Framework
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integration Framework" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Integration Framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Integration-Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1_2" type="checkbox" id="__nav_2_7_1_2" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1_2">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_7_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D365-CE-to-D365-F%26O/" class="md-nav__link">
+        D365 CE to D365 F&O
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D365-F%26O-to-D365-CE/" class="md-nav__link">
+        D365 F&O to D365 CE
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale-integration/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agsync/" class="md-nav__link">
+        Agsync
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kahler/" class="md-nav__link">
+        Kahler
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Surety/" class="md-nav__link">
+        Surety
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oneWeigh/" class="md-nav__link">
+        oneWeigh
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Field-Reveal/" class="md-nav__link">
+        Field Reveal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegratingCustomFields/" class="md-nav__link">
+        Integrating Custom Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1_3" type="checkbox" id="__nav_2_7_1_3" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1_3">
+        Deployment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deployment" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_7_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deploying-Integration-Framework/" class="md-nav__link">
+        Deploying the Integration Framework
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ApplicationConfiguration/" class="md-nav__link">
+        Application Settings Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeployingCustomFieldMappingAssemblies/" class="md-nav__link">
+        Deploying Custom Field Mapping Assemblies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeployingCDS/" class="md-nav__link">
+        Deploying CDS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print-service/" class="md-nav__link">
+        Print Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_3" type="checkbox" id="__nav_2_7_3" >
+      
+      <label class="md-nav__link" for="__nav_2_7_3">
+        CE Platform
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CE Platform" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          CE Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Customization_Best_Practices/" class="md-nav__link">
+        CE Customization Best Practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_to_AX_Integration_Implementation_Checklist/" class="md-nav__link">
+        CE to AX Integration Implementation Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Implementation_Checklist/" class="md-nav__link">
+        CE Implementation Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Setup_Records/" class="md-nav__link">
+        CE Setup Records
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnvironmentPlanning/" class="md-nav__link">
+        Environment Planning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event_framework/" class="md-nav__link">
+        Event Framework
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sales-orders" class="md-nav__link">
+    Sales Orders
+  </a>
+  
+    <nav class="md-nav" aria-label="Sales Orders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sales-order-header" class="md-nav__link">
+    Sales order header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-order-line" class="md-nav__link">
+    Sales order line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supplementary-items-on-the-sales-order-line" class="md-nav__link">
+    Supplementary items on the sales order line
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packing-slip-post" class="md-nav__link">
+    Packing Slip Post
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-sales-order-split-group-allocations" class="md-nav__link">
+    All Sales Order Split Group Allocations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivered-not-billed" class="md-nav__link">
+    Delivered Not Billed
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-functionality" class="md-nav__link">
+    Product Functionality
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-split-groups-in-fo" class="md-nav__link">
+    Create Split Groups in F&amp;O
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-agreement-entry" class="md-nav__link">
+    Sales Agreement Entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prepayment-entry" class="md-nav__link">
+    Prepayment Entry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-order-entry" class="md-nav__link">
+    Sales Order Entry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/ManagingSplits_SalesContracts_Prepayments.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="managing-splits-sales-contracts-and-prepayments"><a class="toclink" href="#managing-splits-sales-contracts-and-prepayments">Managing Splits, Sales Contracts, and Prepayments</a></h1>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>Within Levridge, when a sales order or invoice is created, the system automatically selects the sales contract (known as sales agreements in F&amp;O) according to the items and categories identified. It also selects a prepayment against it, eliminating the need to manually go in and figure out the process, creating fewer invoicing issues sent to growers. </p>
+<p>Target Audience: This functionality applies to individuals in Ag Retailers who manage splits, contracts, and prepayments on behalf of customers. </p>
+<h2 id="sales-orders"><a class="toclink" href="#sales-orders">Sales Orders</a></h2>
+<p>Levridge syncs sales orders between CE and F&amp;O. As sales orders are approved in CE, the sales order is then created in F&amp;O. The sales order in CE becomes read only once approved.  As sales orders are entered in F&amp;O, it will be shared with CE.  </p>
+<h3 id="sales-order-header"><a class="toclink" href="#sales-order-header">Sales order header</a></h3>
+<p>When a sales order is created, the ordering customer is selected and has the option to select customer operation and a customer site.  The split group defaults from the customer operation or customer site. If no customer operation is selected, then the user must select the split group manually. Note the split group may be updated within sales order entry as needed. The operation information will default to the sales order lines.</p>
+<p>A branch, line of business, growing season and sales period may also be entered as part of the sales order entry process.</p>
+<p>Branch and line of business may be used to filter or categorize sales orders for list pages and some reporting. Growing season entry on a sales order will help to determine volume pricing is used, else used as a filter for list pages and some reporting.</p>
+<h3 id="sales-order-line"><a class="toclink" href="#sales-order-line">Sales order line</a></h3>
+<p>During sales order line entry, the customer operation, customer site, and split group all default from the header and can be changed by the user.</p>
+<p>Levridge displays only the list pricing during sales order entry as specific customer pricing is determined at time of delivery applying the sales agreements.  </p>
+<p>On each line, the split group intended method for pricing may be entered. For example, a counter sale where the seed bag is damaged, could reference a flat price. Another example, during sales order entry, a specific sales agreement for pricing could be requested.  </p>
+<p>Validation of license and certification may require a contact for certain products before it can be sent for approval. The contact information is entered in the header area.</p>
+<h3 id="supplementary-items-on-the-sales-order-line"><a class="toclink" href="#supplementary-items-on-the-sales-order-line">Supplementary items on the sales order line</a></h3>
+<p>On a released item, a product may contain required or optional supplementary items.  Levridge has added functionality to automatically address the use of required supplementary items including:</p>
+<ul>
+<li>A new field linking the supplementary item to the master item is created.</li>
+<li>Automatically adding the supplementary line to an order with the appropriate quantity based on the associated item.  </li>
+<li>If the associated item is deleted or the quantity is changed, the supplementary item is also deleted, or the quantity is automatically changed on the existing supplementary line. The supplementary item’s splits and taxes will also be recalculated.  </li>
+<li>Added a supplementary item flag of ‘Multiple Percentage’ to calculate a percentage of the multiple as needed.  </li>
+<li>New fields for the supplementary item that recognize if a minimum quantity is required and the value of the minimum quantity.</li>
+</ul>
+<h3 id="packing-slip-post"><a class="toclink" href="#packing-slip-post">Packing Slip Post</a></h3>
+<p>When the sales order posts a packing slip in F&amp;O, the pricing will be applied to each customer participating in the split group on each line. The system will initially look for intended method for pricing on the participating customer in the split group.  The system then looks at valid sales agreements to apply the sales agreement pricing and any associated prepayments. If there are multiple sales agreements, the oldest will be used first.  </p>
+<p>If there is a quantity remaining that is not covered by a sales agreement, any uncontracted prepayments will be applied. The uncontracted price date may be used to determine pricing. For any remaining quantities the pricing will be determined by trade agreements.</p>
+<p>The split allocation line is defined from procedures above. If the sales order line includes a Bill of Materials (BOM) item, it will validate the ‘Expand on Sales Order Allocation’ parameter on the item. If the parameter is set to yes, each of the components of the BOM will be broken out on the split allocation line for pricing. If this parament is set to no, the pricing will be based on the BOM item. For example, as fertilizer is blended, there may be a sales agreement for component products supplied by the customer.</p>
+<p>Modifications to pricing may be made upon review for billing.</p>
+<h3 id="all-sales-order-split-group-allocations"><a class="toclink" href="#all-sales-order-split-group-allocations">All Sales Order Split Group Allocations</a></h3>
+<p>This view has been created in AR&gt;Order to review all the allocation lines from all sales orders.</p>
+<h3 id="delivered-not-billed"><a class="toclink" href="#delivered-not-billed">Delivered Not Billed</a></h3>
+<p>AR&gt;orders&gt;shipped not invoiced split group allocations</p>
+<p>Standard FinOps allows delivery of products that will be ready for invoicing. The invoicing can be today or future billed. This is standard.</p>
+<p>There are new list pages that displays deliveries that need to be billed that are broken down per customer (based on splits) by allocation line. The item must be invoiced, so all parties will be billed. Unable to partially bill a product to one customer in a split.</p>
+<h2 id="product-functionality"><a class="toclink" href="#product-functionality">Product Functionality</a></h2>
+<h3 id="create-split-groups-in-fo"><a class="toclink" href="#create-split-groups-in-fo">Create Split Groups in F&amp;O</a></h3>
+<p>The split group setup is located under <a href="../Create-Split-Group/">Create Split Group in F&amp;O</a>. </p>
+<h3 id="sales-agreement-entry"><a class="toclink" href="#sales-agreement-entry">Sales Agreement Entry</a></h3>
+<ul>
+<li>In Accounts Receivable &gt; Orders &gt; Sales agreements &gt; Create a new Sales agreement under the “Sales Agreement” tab by clicking the New button. </li>
+<li>On the new sales agreement, select the customer the agreement is for and the item(s) or a sales category(s) the agreement is for. </li>
+<li>The sales agreement can include any number of items or sales categories for that particular contract.</li>
+</ul>
+<h3 id="prepayment-entry"><a class="toclink" href="#prepayment-entry">Prepayment Entry</a></h3>
+<ul>
+<li>In Accounts Receivable &gt; Payments &gt; Customer payment journal &gt; Click the New button to create a new prepayment then click the “Enter customer prepayments” button. </li>
+<li>Enter the customer the prepayment is for. </li>
+<li>Enter in the amount of the prepayment.</li>
+<li>If the prepayment is being used on a sales agreement, the Sales agreement will show up in the “Sales agreement” table.   Mark the sales agreement the prepayment should be applied against.</li>
+<li>If there is no sales agreement/contract, you can still take a prepayment and enter it as an Uncontracted amount to ensure the funds are accounted for.  A prepayment can have some portion of it applied against an agreement and some set aside as Uncontracted.</li>
+<li>Once the amounts and agreements have been selected, click “Save in Journal”, annotating the prepayment has been accepted. </li>
+<li>Click “Post” to process and post the prepayment. </li>
+</ul>
+<h3 id="sales-order-entry"><a class="toclink" href="#sales-order-entry">Sales Order Entry</a></h3>
+<ul>
+<li>In Accounts Receivable &gt; Orders &gt; All sales orders &gt; Click the New button to create a new sales order.</li>
+<li>Enter the customer</li>
+<li>Once selected, the customer’s account information will auto-populate</li>
+<li>Choose any split group for that customer on your sales order</li>
+<li>Choose specific sales period (this is optional).</li>
+<li>Enter the items for the sales order and their quantities. </li>
+<li>Additional order lines can be created.</li>
+<li>Click Save. </li>
+<li>Click the Post packing slip button to indicate the product has been sent out to the customer. </li>
+<li>Once delivered, one is now able to view the sales order with a sales agreement and prepayment allocated towards it according to the items that match between the sales order and the sales agreement and/or prepayment.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1172 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Event Framework - Levridge Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#event-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Levridge Documentation" class="md-header__button md-logo" aria-label="Levridge Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Levridge Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Event Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Levridge Documentation" class="md-nav__button md-logo" aria-label="Levridge Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Levridge Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Products
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Products" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agronomy/" class="md-nav__link">
+        Agronomy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AgronomySales/" class="md-nav__link">
+        Agronomy Sales
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commodities/" class="md-nav__link">
+        Commodity Accounting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feed/" class="md-nav__link">
+        Feed
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equity-management-overview/" class="md-nav__link">
+        Equity Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scale-Overview/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7">
+        System Information
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Information" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          System Information
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1" type="checkbox" id="__nav_2_7_1" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1">
+        Integration Framework
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integration Framework" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Integration Framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Integration-Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1_2" type="checkbox" id="__nav_2_7_1_2" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1_2">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_7_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D365-CE-to-D365-F%26O/" class="md-nav__link">
+        D365 CE to D365 F&O
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D365-F%26O-to-D365-CE/" class="md-nav__link">
+        D365 F&O to D365 CE
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale-integration/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agsync/" class="md-nav__link">
+        Agsync
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kahler/" class="md-nav__link">
+        Kahler
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Surety/" class="md-nav__link">
+        Surety
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oneWeigh/" class="md-nav__link">
+        oneWeigh
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Field-Reveal/" class="md-nav__link">
+        Field Reveal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegratingCustomFields/" class="md-nav__link">
+        Integrating Custom Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1_3" type="checkbox" id="__nav_2_7_1_3" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1_3">
+        Deployment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deployment" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_7_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deploying-Integration-Framework/" class="md-nav__link">
+        Deploying the Integration Framework
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ApplicationConfiguration/" class="md-nav__link">
+        Application Settings Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeployingCustomFieldMappingAssemblies/" class="md-nav__link">
+        Deploying Custom Field Mapping Assemblies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeployingCDS/" class="md-nav__link">
+        Deploying CDS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print-service/" class="md-nav__link">
+        Print Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_3" type="checkbox" id="__nav_2_7_3" >
+      
+      <label class="md-nav__link" for="__nav_2_7_3">
+        CE Platform
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CE Platform" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          CE Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Customization_Best_Practices/" class="md-nav__link">
+        CE Customization Best Practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_to_AX_Integration_Implementation_Checklist/" class="md-nav__link">
+        CE to AX Integration Implementation Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Implementation_Checklist/" class="md-nav__link">
+        CE Implementation Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Setup_Records/" class="md-nav__link">
+        CE Setup Records
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnvironmentPlanning/" class="md-nav__link">
+        Environment Planning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Event Framework
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Event Framework
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-event-framework-parameters" class="md-nav__link">
+    Setup Event Framework Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Event Framework Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-environment-name" class="md-nav__link">
+    Set the Environment name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-the-event-framework" class="md-nav__link">
+    Enable the Event framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-framework-endpoint" class="md-nav__link">
+    Create an Event Framework Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-framework-event" class="md-nav__link">
+    Create an Event Framework Event
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an Event Framework Event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-an-entity-to-the-event" class="md-nav__link">
+    Add an Entity to the Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-event-user-properties" class="md-nav__link">
+    Add Event User Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-entity-filter" class="md-nav__link">
+    Adding an Entity Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagating-deleted-entities" class="md-nav__link">
+    Propagating Deleted Entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    Advanced Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refresh-entity-list" class="md-nav__link">
+    Refresh Entity List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuild-entity-list" class="md-nav__link">
+    Rebuild entity list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-now" class="md-nav__link">
+    Run now
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server-change-tracking" class="md-nav__link">
+    SQL Server Change Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-filtering" class="md-nav__link">
+    Entity Filtering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-event-framework-parameters" class="md-nav__link">
+    Setup Event Framework Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Event Framework Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-environment-name" class="md-nav__link">
+    Set the Environment name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-the-event-framework" class="md-nav__link">
+    Enable the Event framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-framework-endpoint" class="md-nav__link">
+    Create an Event Framework Endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-event-framework-event" class="md-nav__link">
+    Create an Event Framework Event
+  </a>
+  
+    <nav class="md-nav" aria-label="Create an Event Framework Event">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-an-entity-to-the-event" class="md-nav__link">
+    Add an Entity to the Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-event-user-properties" class="md-nav__link">
+    Add Event User Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-an-entity-filter" class="md-nav__link">
+    Adding an Entity Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagating-deleted-entities" class="md-nav__link">
+    Propagating Deleted Entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-options" class="md-nav__link">
+    Advanced Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refresh-entity-list" class="md-nav__link">
+    Refresh Entity List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuild-entity-list" class="md-nav__link">
+    Rebuild entity list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-now" class="md-nav__link">
+    Run now
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-server-change-tracking" class="md-nav__link">
+    SQL Server Change Tracking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-filtering" class="md-nav__link">
+    Entity Filtering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/event_framework.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="event-framework"><a class="toclink" href="#event-framework">Event Framework</a></h1>
+<h2 id="overview"><a class="toclink" href="#overview">Overview</a></h2>
+<p>The Event Framework enables the integration of data entities with other systems by sending entity data to an Azure Service Bus endpoint.</p>
+<p>The first time an Event Framework event is processed, all data is sent to the service bus endpoint. On subsequent runs, only entities that have changed are sent.</p>
+<p>If the same entity is contained in two different events; each event will operate independently, sending all changes to their respective endpoints.</p>
+<p>Event Framework events are intended to run daily as a batch service.</p>
+<h2 id="setup-event-framework-parameters"><a class="toclink" href="#setup-event-framework-parameters">Setup Event Framework Parameters</a></h2>
+<p>System administration &gt; Setup &gt; Event framework &gt; Event framework parameters</p>
+<h3 id="set-the-environment-name"><a class="toclink" href="#set-the-environment-name">Set the Environment name</a></h3>
+<p>The Environment name is attached to Event framework messages sent from this system.  This allows administrators to determine from which system an entity originated in the event of a failure.</p>
+<h3 id="enable-the-event-framework"><a class="toclink" href="#enable-the-event-framework">Enable the Event framework</a></h3>
+<p>Set the Enabled switch to yes. Event framework messages will not be sent from this system when this switch is set to No.</p>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_4.png" /> </p>
+<h2 id="create-an-event-framework-endpoint"><a class="toclink" href="#create-an-event-framework-endpoint">Create an Event Framework Endpoint</a></h2>
+<p>System administration &gt; Setup &gt; Event framework &gt; Event Framework endpoint definitions</p>
+<ul>
+<li>Click New</li>
+<li>Enter a name and description.</li>
+<li>Enter your Azure service bus endpoint connection string.</li>
+<li>If your endpoint requires sessions, set the switch to Yes.</li>
+<li>Enter the name of your topic or queue.</li>
+<li>Set the endpoint type to Topic or Queue.</li>
+<li>Set the Enabled switch to Yes.</li>
+</ul>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_3.png" /> </p>
+<h2 id="create-an-event-framework-event"><a class="toclink" href="#create-an-event-framework-event">Create an Event Framework Event</a></h2>
+<p>System administration &gt; Setup &gt; Event framework &gt; Event framework events</p>
+<ul>
+<li>Click New.</li>
+<li>Enter a name and description.</li>
+<li>Choose your endpoint.</li>
+<li>If you wish to log a message to the Event Framework event log for successful and failed Event framework messages, set the Log success switch to Yes.</li>
+<li>The Last execution box contains the last execution date time.</li>
+<li>Set the Enabled switch to Yes.  If this switch is No, the event will not be processed.</li>
+</ul>
+<h3 id="add-an-entity-to-the-event"><a class="toclink" href="#add-an-entity-to-the-event">Add an Entity to the Event</a></h3>
+<ul>
+<li>Expand the Event tables Fast Tab.</li>
+<li>Click New.</li>
+<li>Select your entity in the Source table column.</li>
+<li>Change tracking type indicates whether all the entity’s data sources are tracked for changes.</li>
+<li>Check the Propagate delete box to send a message when an instance of this entity is deleted.</li>
+</ul>
+<p>Entities are processed in ascending Line number order.  Two entities with the same line number may be processed in either order.</p>
+<h3 id="add-event-user-properties"><a class="toclink" href="#add-event-user-properties">Add Event User Properties</a></h3>
+<p>For every configured entity, you may add user properties to the Event framework message.  The properties contain the value of the chosen entity field and are informational only.</p>
+<p>This is useful for filters applied to the Azure service bus subscription because the value of the property is added directly to the properties collection on the message rather than contains somewhere within the body.</p>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_1.png" /> </p>
+<h3 id="adding-an-entity-filter"><a class="toclink" href="#adding-an-entity-filter">Adding an Entity Filter</a></h3>
+<p>This filter restricts the Event framework messages that leave the system by applying a range to the query used to select the changed entities.</p>
+<ul>
+<li>Select the entity you wish to filter.</li>
+<li>Click Filter.</li>
+<li>Select range criteria and click OK.</li>
+<li>This will restrict the Event framework so that it only sends customers whose first name is “John”.</li>
+<li>Click Reset to remove all modifications to the query.</li>
+</ul>
+<h3 id="propagating-deleted-entities"><a class="toclink" href="#propagating-deleted-entities">Propagating Deleted Entities</a></h3>
+<p>If you wish to send delete messages when a configured entity is deleted, you must check the Propagate delete box for that entity.  The Event Framework will then store the last Event Framework message for that entity whenever one is processed.  When the entity is deleted it will resend that stored message with an action of Delete.  </p>
+<p>If an entity is created and deleted before the event is processed, an Event Framework message will not be generated for that entity.</p>
+<p><img alt="event_framework" src="../assets/images/event_framework/create_event_framework_2.png" /> </p>
+<h3 id="advanced-options"><a class="toclink" href="#advanced-options">Advanced Options</a></h3>
+<h4 id="refresh-entity-list"><a class="toclink" href="#refresh-entity-list">Refresh Entity List</a></h4>
+<p>Whenever a data source is added or removed from a data entity it is necessary to refresh the entity list.  This menu item is usually found in the Data management workspace and is provided here for convenience.</p>
+<h4 id="rebuild-entity-list"><a class="toclink" href="#rebuild-entity-list">Rebuild entity list</a></h4>
+<p>Under certain conditions the Refresh entity list does not adequately refresh the entity metadata.  The Rebuild entity list will first delete the entity from the entity table before calling the normal Refresh entity list functionality.</p>
+<p>Use this option with caution.  Because rebuilding the entity list first deletes the entity metadata, change tracking information for that entity will be lost.</p>
+<h4 id="run-now"><a class="toclink" href="#run-now">Run now</a></h4>
+<p>Click Run now to process the event immediately or schedule it to run in batch.</p>
+<p>Set the Simulate initial data load switch to Yes to process the event without sending and Event framework messages to the Azure Service Bus.  This may be used to set the change tracking version to the current version.</p>
+<h3 id="sql-server-change-tracking"><a class="toclink" href="#sql-server-change-tracking">SQL Server Change Tracking</a></h3>
+<p>The Event Framework uses SQL Server change tracking to determine which entities have changed.  For more information see <a href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/entity-change-track">Enable change tracking</a> for entities and <a href="https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/about-change-tracking-sql-server">About Change Tracking (SQL Server)</a>.</p>
+<h3 id="entity-filtering"><a class="toclink" href="#entity-filtering">Entity Filtering</a></h3>
+<p>Filters applied to the entity will prevent the Event Framework message for that entity from being sent.  Filters applied to the Azure Service Bus subscription will prevent the Event Framework message from being received.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../EnvironmentPlanning/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Environment Planning
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

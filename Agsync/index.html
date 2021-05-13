@@ -1,0 +1,1652 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Agsync - Levridge Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agsync" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Levridge Documentation" class="md-header__button md-logo" aria-label="Levridge Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Levridge Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agsync
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Levridge Documentation" class="md-nav__button md-logo" aria-label="Levridge Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Levridge Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    levridge-tory.github.io/LevridgeIntegrationDocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Products
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Products" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agronomy/" class="md-nav__link">
+        Agronomy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AgronomySales/" class="md-nav__link">
+        Agronomy Sales
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Commodities/" class="md-nav__link">
+        Commodity Accounting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feed/" class="md-nav__link">
+        Feed
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equity-management-overview/" class="md-nav__link">
+        Equity Management
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scale-Overview/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7">
+        System Information
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="System Information" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          System Information
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1" type="checkbox" id="__nav_2_7_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7_1">
+        Integration Framework
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integration Framework" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Integration Framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Integration-Overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1_2" type="checkbox" id="__nav_2_7_1_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7_1_2">
+        Integrations
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Integrations" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_7_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D365-CE-to-D365-F%26O/" class="md-nav__link">
+        D365 CE to D365 F&O
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../D365-F%26O-to-D365-CE/" class="md-nav__link">
+        D365 F&O to D365 CE
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale-integration/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Agsync
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Agsync
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agsync" class="md-nav__link">
+    Agsync
+  </a>
+  
+    <nav class="md-nav" aria-label="Agsync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-description" class="md-nav__link">
+    Integration Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-master-data-integration" class="md-nav__link">
+    Standard Master Data Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-uuid-master-data-integration" class="md-nav__link">
+    External UUID Master Data Integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-data-service-cds" class="md-nav__link">
+    Common Data Service (CDS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-integration" class="md-nav__link">
+    Work Order Integration
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Order Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-job" class="md-nav__link">
+    Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    User Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-start-batch-job" class="md-nav__link">
+    Manually Start Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-request-error-during-processing" class="md-nav__link">
+    Work Order Request Error During Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-azure-app-service" class="md-nav__link">
+    Microsoft Azure App Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-azure-service-bus" class="md-nav__link">
+    Microsoft Azure Service Bus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-setup-timelines" class="md-nav__link">
+    General setup timelines:
+  </a>
+  
+    <nav class="md-nav" aria-label="General setup timelines:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-moving-within-the-integration" class="md-nav__link">
+    Data Moving Within the Integration:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-framework-setup-for-sending-customers" class="md-nav__link">
+    Integration Framework Setup for Sending Customers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-status-process" class="md-nav__link">
+    Release Status Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    Controllers
+  </a>
+  
+    <nav class="md-nav" aria-label="Controllers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agsync-auth-controller" class="md-nav__link">
+    Agsync Auth Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-auth-test-controller" class="md-nav__link">
+    Agsync Auth Test Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-order-changed-controller" class="md-nav__link">
+    Agsync Order Changed Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-sync-accounts-controller" class="md-nav__link">
+    Agsync Sync Accounts Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-uuid-controller" class="md-nav__link">
+    Agsync UUID Controller
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kahler/" class="md-nav__link">
+        Kahler
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Surety/" class="md-nav__link">
+        Surety
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oneWeigh/" class="md-nav__link">
+        oneWeigh
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Field-Reveal/" class="md-nav__link">
+        Field Reveal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntegratingCustomFields/" class="md-nav__link">
+        Integrating Custom Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_1_3" type="checkbox" id="__nav_2_7_1_3" >
+      
+      <label class="md-nav__link" for="__nav_2_7_1_3">
+        Deployment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Deployment" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_7_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deploying-Integration-Framework/" class="md-nav__link">
+        Deploying the Integration Framework
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ApplicationConfiguration/" class="md-nav__link">
+        Application Settings Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeployingCustomFieldMappingAssemblies/" class="md-nav__link">
+        Deploying Custom Field Mapping Assemblies
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeployingCDS/" class="md-nav__link">
+        Deploying CDS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print-service/" class="md-nav__link">
+        Print Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7_3" type="checkbox" id="__nav_2_7_3" >
+      
+      <label class="md-nav__link" for="__nav_2_7_3">
+        CE Platform
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CE Platform" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          CE Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Customization_Best_Practices/" class="md-nav__link">
+        CE Customization Best Practices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_to_AX_Integration_Implementation_Checklist/" class="md-nav__link">
+        CE to AX Integration Implementation Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Implementation_Checklist/" class="md-nav__link">
+        CE Implementation Checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CE_Setup_Records/" class="md-nav__link">
+        CE Setup Records
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EnvironmentPlanning/" class="md-nav__link">
+        Environment Planning
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event_framework/" class="md-nav__link">
+        Event Framework
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agsync" class="md-nav__link">
+    Agsync
+  </a>
+  
+    <nav class="md-nav" aria-label="Agsync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-description" class="md-nav__link">
+    Integration Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-master-data-integration" class="md-nav__link">
+    Standard Master Data Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-uuid-master-data-integration" class="md-nav__link">
+    External UUID Master Data Integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-data-service-cds" class="md-nav__link">
+    Common Data Service (CDS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-integration" class="md-nav__link">
+    Work Order Integration
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Order Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch-job" class="md-nav__link">
+    Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface" class="md-nav__link">
+    User Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-start-batch-job" class="md-nav__link">
+    Manually Start Batch Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-order-request-error-during-processing" class="md-nav__link">
+    Work Order Request Error During Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-azure-app-service" class="md-nav__link">
+    Microsoft Azure App Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-azure-service-bus" class="md-nav__link">
+    Microsoft Azure Service Bus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-setup-timelines" class="md-nav__link">
+    General setup timelines:
+  </a>
+  
+    <nav class="md-nav" aria-label="General setup timelines:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-moving-within-the-integration" class="md-nav__link">
+    Data Moving Within the Integration:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-framework-setup-for-sending-customers" class="md-nav__link">
+    Integration Framework Setup for Sending Customers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#release-status-process" class="md-nav__link">
+    Release Status Process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controllers" class="md-nav__link">
+    Controllers
+  </a>
+  
+    <nav class="md-nav" aria-label="Controllers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agsync-auth-controller" class="md-nav__link">
+    Agsync Auth Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-auth-test-controller" class="md-nav__link">
+    Agsync Auth Test Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-order-changed-controller" class="md-nav__link">
+    Agsync Order Changed Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-sync-accounts-controller" class="md-nav__link">
+    Agsync Sync Accounts Controller
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agsync-uuid-controller" class="md-nav__link">
+    Agsync UUID Controller
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/Levridge-Tory/LevridgeIntegrationDocs/edit/master/docs/Agsync.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Agsync</h1>
+                
+                <!-- 
+Add instance config reference
+Add service bus setup reference (move from bottom)
+Specify Hostfile with info for background task
+Specific documentation for what Entities to setup in F&O. Include information on filtering customers, operations & sites
+  -- Caveat on dependent entities will not necessarily be changed so they won't trigger change control
+Add reference to azure key vault setup
+Change CRM instructions to Create & Deploy CDS solution
+Document Agsync JSON object
+Document BOM setup in F&O
+-->
+
+<h2 id="agsync"><a class="toclink" href="#agsync">Agsync</a></h2>
+<p>AgSync is a dispatching application owned by Raven Industries. AgSync is used by ag retailers to dispatch applicators and their equipment to different fields. More specifically, within AgSync agronomists can schedule out the days for applicators and their equipment pointing them to field A, then B, then C based on the location of the fields and the machinery and products the applicator takes with them.  </p>
+<p>Levridge has built an integration between D365 finance and AgSync to connect the systems together. Within the integration, there are multiple types of data moving both ways. Master data moves from D365 to AgSync telling AgSync what customers, fields and products the ag retailer has. AgSync uses work orders to schedule the work on specific fields. Once created, work orders are sent from AgSync to D365 as sales orders. </p>
+<p>It is a bidirectional integration that consists of a Topic for Master Data that goes from D365 F&amp;O to AgSync and Work Orders that go from AgSync to D365 F&amp;O. The Work Order integration utilize a background service running in the same application as the Webhook controller so there is no need for two integration application instances.</p>
+<p>There are a few unique aspects to the AgSync integration that is different from other integrations:
+- The Workorder integration service runs in the same app service as the controller and the Master Data integration service.
+- The Workorder integration service does all the transformation directly rather than using an EntityMapper.
+- The Workorder integration service makes a direct service call to D365 F&amp;O rather than using a data source. 
+- We are using CDS to provide lookup services for mapping entity identifiers between systems.
+- We utilize a filter on the event in F&amp;O to send only the customers that need to to be sent from F&amp;O to AgSync.</p>
+<p>This document will provide an overview of the integration framework used to move the data and then it will describe the data moving within the integration. Let's start with the technology behind the integration.</p>
+<h3 id="integration-description"><a class="toclink" href="#integration-description">Integration Description</a></h3>
+<p>Levridge's Integration Framework can be viewed in <a href="../Integration-Overview/">Integration Overview</a>. </p>
+<h4 id="standard-master-data-integration"><a class="toclink" href="#standard-master-data-integration">Standard Master Data Integration</a></h4>
+<p>The standard master data integration configuration is shown below.</p>
+<p><img alt="Agsync Master Data Integration" src="../assets/images/AgsyncMasterDataCommunicationAgsyncUUIDDiagram.jpg" title="Agsync Master Data Integration" /></p>
+<h4 id="external-uuid-master-data-integration"><a class="toclink" href="#external-uuid-master-data-integration">External UUID Master Data Integration</a></h4>
+<p>There is an alternate configuration that may be required when integrating with 
+Field Reveal when Field Reveal is the master source for customer fields.</p>
+<p>In this scenario Field Reveal will provide the UUIDs it generates so we can provide
+those values to Agsync when we create the corresponding records in Agsync.</p>
+<p>This scenario is complicated and should be avoided if possible. The reason it is
+necessary is because when Field Reveal creates a work order in Agsync directly
+it uses an old Agsync API that uses a UUID as the Sync ID. Field Reveal generates 
+the UUID and needs to provide those to Levridge so they can be used when creating
+the master record in Agsync.</p>
+<p>In this scenario, it is imperative that the Customer and Customer Operation is not sent
+from F&amp;O until they have been updated in Field Reveal and a Field created in Field Reveal.
+Once a record is created in Agsync the UUID for it cannot be modified.</p>
+<p>The order of creation is as follows:</p>
+<ol>
+<li>Customer and Customer Operation are created in FinOps.</li>
+<li>Grower and Farm are created in Field Reveal and SyncIds are added in Field Reveal.</li>
+<li>
+<p>Field is created in Field Reveal. </p>
+</li>
+<li>
+<p>This will cause a Field record to be sent from Field Reveal to the Levridge <a href="../Field-Integration/">Field controller</a>.</p>
+</li>
+<li>
+<p>The Field data will be placed on a service bus topic that has two subscriptions:</p>
+<ul>
+<li>
+<p>One subscription will be serviced by the FieldToCDS integration service.</p>
+<ul>
+<li>This will use the UUID information to create a lookup record in CDS.</li>
+</ul>
+</li>
+<li>
+<p>The other subscription will be serviced by the FieldToAX integration service</p>
+<ul>
+<li>This will create the Customer Site in FinOps.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>When the record is created in FinOps it will trigger the event that sends the data to Agsync.</p>
+<ul>
+<li>The creation of the Customer Site entity causes the event to be evaluated.</li>
+<li>The filter that checks to make sure a Customer has an operation that has a site that corresponds to a field passes.</li>
+</ul>
+</li>
+<li>
+<p>The Customer, Operation and Site are all sent to the FinOpsToAgsync service bus topic.</p>
+</li>
+<li>The AxToAgsync integration service receives the message and looks up the UUIDs from CDS then sends the records to Agsync for creation.</li>
+<li>Agsync creates the records and sends back a GUID.</li>
+<li>The AxToAgsync integration updates CDS with the GUID values.</li>
+</ol>
+<p>This communication diagram depicts this interaction:
+<img alt="Agsync Master Data Integration External UUID" src="../assets/images/AgsyncMasterDataCommunicationExternalUUIDDiagram.jpg" title="Agsync Master Data External UUID Integration" /></p>
+<h3 id="common-data-service-cds"><a class="toclink" href="#common-data-service-cds">Common Data Service (CDS)</a></h3>
+<p>The <a href="https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro">Common Data Service (CDS)</a> is a solution from Microsoft built on top of the Power Platform. CDS tables are used in the integrations between D365 and AgSync to translate values that are different between the 2 systems. For example, in AgSync, customers have unique identifiers called GUIDs.  These values are different from the unique identifiers D365 has for the same customer accounts. Levridge has implemented new tables in CDS to translate the D365 Customer account to the AgSync GUID.   </p>
+<p>For the CDS environment there are two purchasing options:  </p>
+<ol>
+<li>If the ag retailer has an existing CE instance, use it. A portion of the CE instance can be firewalled off for security purposes and then it can be used to host the CDS solution.</li>
+<li>Buy a specific CDS environment for only the CDS solution. This is more expensive.</li>
+</ol>
+<p>There are 7 types of data stored in CDS:</p>
+<ol>
+<li>Dispatch Accounts</li>
+<li>Customers</li>
+<li>Customer Operations</li>
+<li>Customer Sites</li>
+<li>Customer Site Locations</li>
+<li>Master Items</li>
+<li>Workers</li>
+</ol>
+<p>All these types are stored differently in AgSync than they are in D365 so they must be translated using the data in CDS. Products and Employees must be manually entered into the CDS database while Dispatch Accounts, Customers, Customer Operations Customer Sites and Customer Site Locations can be populated using a script that queries the data in AgSync and populates the data in CDS. All this data must exist in CDS prior to using the work order integrations. </p>
+<p>The Master Item entity translates AgSync operations to D365 Product and Service Items. This states which task you are performing and included in every work order. </p>
+<ul>
+<li>Product ID Numbers (this relates to the Master item in D365). AgSync has the ability to generate blends (ex: blending multiple ingredients to produce the fertilizer to be used on a field). There is a Master Item Table in CDS configured specifically for the operation. If there is a blend flag on an order change, it will pull from the Master Item Table. </li>
+</ul>
+<p>The Worker Table is a translation table required to map the applicator (worker) set up in AgSync to D365. This provides the information of who applied the product to the field and their applicator license number. An applicator license number is required on the sales order. </p>
+<p>Three entities need to be manually entered in CDS. </p>
+<p>The CDS setup includes:</p>
+<ul>
+<li>CE Levridge</li>
+<li>AgSync Solution</li>
+<li>Choose appropriate UI Form</li>
+</ul>
+<p>Once the CDS solution is deployed to an environment, an <a href="https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro">Application User</a> will need to be created. </p>
+<h3 id="work-order-integration"><a class="toclink" href="#work-order-integration">Work Order Integration</a></h3>
+<p>Below is the process to generate a work order in AgSync: </p>
+<ul>
+<li>Select Customer</li>
+<li>State where the application or service location will be completed out of</li>
+<li>Include what work is being done</li>
+<li>State the work order status (planned or released)<ul>
+<li>Planned: These are premade orders ready for a certain time. The action is not ready to be performed. Not all users can view planned status due to security measures in place (ex: dispatcher unable to see planned work status). </li>
+<li>Released: The work orders are released and assigned to complete field work. </li>
+</ul>
+</li>
+<li>The work order comes to F&amp;O regardless of status. </li>
+<li>State the performed operation </li>
+<li>State the products being utilized</li>
+<li>Indicate the impacted crop(s)</li>
+<li>Add in any additional notes</li>
+<li>Save Order</li>
+</ul>
+<p>After a work order is saved, AgSync calls the Levridge AgsyncOrderChanged webhook sending over the work order data. The Levridge AgsyncOrderChanged webhook transforms the work order data and sends it to F&amp;O where it creates or updates a corresponding sales order. If F&amp;O accounts receivables are configured to perform a credit check and the credit check fails, F&amp;O will send back a response indicating that the credit check did not pass. Then a rejection request is sent to Agsync to mark the work order as rejected. </p>
+<p>When Fiannce and operation work order service receives an incoming work order request, the service will process it as follows: </p>
+<ol>
+<li>Validates that request is a type of work order.</li>
+<li>Saves request to a table to be processed by a batch job in F&amp;O.</li>
+<li>F&amp;O work order service returns response to caller. </li>
+</ol>
+<p>An important item to note: A business process needs to be in place in the situation if AgSync creates a scheduled work order which gets scheduled, and then a dispensing work order is created and gets sent to Kahler. F&amp;O will not pick up new changes if AgSync tries to go back to a release status and make changes and try to reschedule it. AgSync needs to cancel the Kahler order and F&amp;O dispensing order and reschedule their AgSync work order. </p>
+<h4 id="batch-job"><a class="toclink" href="#batch-job">Batch Job</a></h4>
+<p>The incoming work order request will trigger a batch job (Generate sales orders from worker orders) as soon as the record is inserted into the table. If the work order is processed successfully the incoming work order record will be removed. The batch job will continue to process work order requests until there are no more vlid work order reuqests to process.</p>
+<p>By having a batch job run the sales order create/update process, the wait is eliminated for the calling service. All errors that occur during the sales order create/update process will be viewable in teh Sales incoming work order form. (note: Errors that occur in the integration framework still need to be viewed through a service bus tool or Asure app insights.)</p>
+<p>If an error is logged against a work order no other updates will occur to that work order or any related work orders until the record that errored is processed. </p>
+<h4 id="user-interface"><a class="toclink" href="#user-interface">User Interface</a></h4>
+<p>F&amp;O users will have the ability to see incoming work order requests. </p>
+<p><img alt="User Interface" src="../assets/images/Agsync/Agsync1.png" /></p>
+<p><img alt="User Interface2" src="../assets/images/Agsync/Agsync2.png" /></p>
+<p>Accounts receivable &gt; Inquires and reports &gt; Orders &gt; Sales incoming work orders</p>
+<h4 id="manually-start-batch-job"><a class="toclink" href="#manually-start-batch-job">Manually Start Batch Job</a></h4>
+<p>If the batch job is not running and a work order request needs to be processed. A user can click on the 'Process work order request' button under the 'Action' tab. </p>
+<p><img alt="User Interface3" src="../assets/images/Agsync/Agsync3.png" /></p>
+<h4 id="work-order-request-error-during-processing"><a class="toclink" href="#work-order-request-error-during-processing">Work Order Request Error During Processing</a></h4>
+<p>If an error occurs during the sales order create/update process the user will be able to see the work order and the error in the form. The user can take corrective action and if needed reprocess the work order. </p>
+<p><img alt="User Interface4" src="../assets/images/Agsync/Agsync4.png" /></p>
+<h3 id="microsoft-azure-app-service"><a class="toclink" href="#microsoft-azure-app-service">Microsoft Azure App Service</a></h3>
+<p>The <a href="../Integration-Overview/">Levridge Integration Framework</a> has been written as a web application that hosts HTTP endpoints as REST APIs and background processes that handle integrations. It is most commonly run in the cloud as an Azure App Serivce. It can also run as a windows service or as an IIS application. The <a href="../Integration-Overview/">Integration Overview</a> provides additional information about the deployment options.</p>
+<p>Most of the setup will occur in Azure App Service. This is a requirement for AgSync in which AgSync pulls from Levridge's Azure Service Bus and an HTTP-based service for hosting web applications. Azure hosts our web app integration. The steps needed to create an App Service can be found under the <a href="../Integration-Overview/">Integration Overview</a>.  </p>
+<p>After the App ID has been generated along with the <a href="../Deploying-Integration-Framework/">deployed integration code to App Service</a>, there is an application configuration file named <a href="../appsettings.json/">appsettings.json</a>. This file is located within the generated Azure Service. In the App Services portion of the Azure Portal there is a Kudos button on the left-hand side, with a <a href="../Deploy-Integration-Framework-as-Zip-File/">function to ZipDeploy code</a>. This is where one would deploy the integration code. After deployed, back in Azure Service and right below Kudos button, there is an App Service Editor where one would deploy the App Settings json file to, which will give a list of all the files part of the integration. One of those is called <a href="../appsettings.json/">AppSettings.json</a> where the configuration is made for the Azure Service.</p>
+<h3 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h3>
+<ul>
+<li>Set up the <a href="../Logging/">logging level</a>. </li>
+<li>The next section to be configured would outline what direction information is flowing within the service itself. There is a <a href="./TargetConfig">target configuration</a> and <a href="./SourceConfig">source configuration</a> which is needed to specify:<ul>
+<li>Which system is the source system and which system is the target system. </li>
+<li>Which configuration section contains data connection information.</li>
+<li>Which section contains the service bus configuration to use.</li>
+</ul>
+</li>
+</ul>
+<p>In the appsettings.json you will need to define the <a href="../InstanceConfig/">InstanceConfig</a>  <a href="../SourceConfig/">SourceConfig</a> and <a href="../TargetConfig/">TargetConfig</a> nodes as follows:</p>
+<pre><code>  "InstanceConfig": {
+    "AzureTableConfiguration": "[section name to Azure Table Configuration",
+    "LogRequestsAndResponses": [true or false]
+    "EnableAppInsightsAdaptiveSampling": [true or false]
+  },
+  "SourceConfig": {
+    "ServiceBusConfigName": "[section name with service bus topic and subscription for Agsync Master Data]",
+    "ODataConfigName": "[section name with F&amp;O data configuration]",
+    "SystemName": "DynamicsAx",
+    "Direction": "Source"
+  },
+  "TargetConfig": {
+    "ODataConfigName": "[section name with Agsync endpoint configuration]",
+    "CDSConfigName": "[section name with CDS data configuration]",
+    "SystemName": "AgSync",
+    "Direction": "Target",
+  }
+</code></pre>
+<p>You must also include the controller entry to have the controller loaded:</p>
+<pre><code>"Controllers": {
+    "HostController": "Levridge.Integration.Host.DefaultController",
+    "AgSyncConroller": "Levridge.Integration.Host.AgSyncController"
+}
+</code></pre>
+<p>You must also configure two objects for Agsync integration:</p>
+<ul>
+<li><a href="../AgSyncEndpoint/">AgSyncEndpoint</a></li>
+<li><a href="../agsyncConfigObject/">Agsync Configuration Object</a></li>
+</ul>
+<p>Here is a sample template for the entire appsettings.json file used for the integration
+from FinOps to Agsync:</p>
+<pre><code>{
+    "Controllers": {
+        "HostController": "Levridge.Integration.Host.DefaultController",
+        "AgSyncConroller": "Levridge.Integration.Host.AgSyncController"
+    },
+    "Logging": {
+        "Debug": {
+            "LogLevel": {
+                "Default": "Information"
+            }
+        },
+        "Console": {
+            "IncludeScopes": true,
+            "LogLevel": {
+                "Default": "Information"
+            }
+        },
+        "LogLevel": {
+            "Default": "Information"
+        }
+    },
+    "AllowedHosts": "*",
+    "SourceConfig": {
+        "ServiceBusConfigName": "AgsyncMasterDataServiceBus",
+        "ODataConfigName": "DynamicsAX",
+        "SystemName": "DynamicsAx",
+        "Direction": "Source"
+    },
+    "TargetConfig": {
+        "ODataConfigName": "AgSyncEndpoint",
+        "SystemName": "AgSync",
+        "Direction": "Target",
+        "CDSConfigName": "CDS"
+    },
+    "DynamicsAX": {
+        "UriString": "[URL to D365 F&amp;O]",
+        "ActiveDirectoryResource": "[URL to D365 F&amp;O]",
+        "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+        "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+        "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+        "ODataEntityPath": "[URL to D365 F&amp;O]/data/"
+    },
+    "CDS": {
+        "UriString": "[URL to CDS or Localhost]",
+        "ActiveDirectoryResource": "[URL to CDS]",
+        "ActiveDirectoryTenant": "https://login.microsoftonline.com/[Customer_Tenant_ID]",
+        "ActiveDirectoryClientAppId": "[Application ID used to register the application in AD]",
+        "ActiveDirectoryClientAppSecret": "[Client Secret generated for the Application ID in AD]",
+        "ODataEntityPath": "[URL to CDS]/api/data/v9.0/",
+        "AssemblyName": "Levridge.ODataDataSources.CDS",
+        "ClientClassesNameSpace": "Levridge.ODataDataSources.CDS",
+        "MetadataResource": "CDSMetadata.xml"
+    },
+    "AgSyncEndpoint": {
+       "MustUseWktProcessor": true,
+        "baseUri": "https://fields.agsync.com/api/",
+        "tokenUrl": "https://auth.agsync.com/core/connect/token",
+        "ClientId": "[client ID assigned by Agsync]", // customer specific
+        "ClientPass": "[Client Secret assigned by Agsync]", // customer specific
+        "ValutURL": "[URL to customer Azure Key Vault]",
+        "AgSyncTokenKey": "AgsyncAccessToken",
+        "RedirectUri": "[URL to AgsyncAuth controller]", // customer specific
+        "IntegrationId": "CustomerIntegrationID" // customer specific
+    },
+    "agsync": { // used by Webhook
+        "MustUseWktProcessor": true,
+        "ConnectionString": "[connection string to Agsync master data topic]",
+        "TopicName": "[Agsync master data topic]",
+        "RequiresSession": true,
+        "RedirectUri": "[URL to AgsyncAuth controller]",
+        "TokenUrl": "https://auth.agsync.com/core/connect/token",
+        "AuthorizeUrl": "https://auth.agsync.com/core/connect/authorize",
+        "baseUri": "https://fields.agsync.com/api/",
+        "ClientId": "[client ID assigned by Agsync]",
+        "ClientPass": "[Client Secret assigned by Agsync]",
+        "ValutURL": "[URL to customer Azure Key Vault]",
+        "AgSyncTokenKey": "AgsyncAccessToken"
+    },
+    "AgsyncMasterDataServiceBus": {
+        "ConnectionString": "[connection string to Agsync master data topic]",
+        "TopicName": "[Agsync master data topic]",
+        "SubscriptionName": "[Agsync master data subscription name]",
+        "RequiresSession": true
+    }
+}
+</code></pre>
+<h3 id="microsoft-azure-service-bus"><a class="toclink" href="#microsoft-azure-service-bus">Microsoft Azure Service Bus</a></h3>
+<p>Microsoft Azure Service Bus is a message bus for businesses to exchange documents and messages in the Cloud. There are two main tiers: </p>
+<ol>
+<li>Standard Service Bus: Supports 250 Kilobytes of data</li>
+<li>Premium Service Bus: Supports 1 Megabyte of data</li>
+</ol>
+<p>Most Levridge clients will be able to utilize the Standard Service Bus tier, however, if a client is integrating well-known-text (WKT) files with their work orders it may push the workorder size over the 250K data limit and they should look at upgrading to Premium Service Bus. Microsoft outlines how to <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal">create an Azure Service bus</a>.   </p>
+<p>The Azure Key Vault is a tool for securely storing and accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. The vault enables us to securely store passwords, certificates, etc. with secure access. The key vault stores the authorization credentials for AgSync and by providing the secret to AgSync it lets AgSync know it is Levridge talking to them. This is required for all AgSync integrations. One can read how to setup the <a href="../AzureKeyVault/">Azure Key Vault</a>.</p>
+<p>When customer entities are sent from D365 to the Azure service bus, the agsync integration queries CDS to find the stored Customer ID. If there is no matching customer record the record is sent as a Create to AgSync. The customer is created in AgSync and the response from Agsync contains the Agsync specific ID for that customer. The newly generated AgSync ID is saved in combination with the D365 customer account in CDS. If CDS did have an existing record for the D365 customer, the message is updated to include the Agsync ID for that customer and the messages is sent to Agsync as an Update.</p>
+<p>Once a sales order is created in F&amp;O, we will message back to AgSync and update them with the sales order number and the dispensing work order number (if available at the time of creation). This requires an entity setup in the event framework.</p>
+<p>Integration purchase requirements include:</p>
+<ol>
+<li>
+<p>CDS Instance </p>
+<ul>
+<li>CE License</li>
+</ul>
+</li>
+<li>
+<p>Azure Subscription </p>
+<ul>
+<li>Service Bus</li>
+<li>App Service</li>
+<li>Key Vault</li>
+</ul>
+</li>
+<li>
+<p>AgSync Subscription</p>
+</li>
+</ol>
+<h3 id="setup"><a class="toclink" href="#setup">Setup</a></h3>
+<p>Internal setup time for configuration is 24 hours. To integrate from D365 F&amp;O to Agsync you will need to:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal">Create an Azure Service bus topic</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal">Create a subscription on the topic above</a></li>
+<li><a href="../event_framework/">Configure Event Endpoint in F&amp;O</a></li>
+<li><a href="../event_framework/">Configure Levridge Entity Events</a></li>
+<li>Create <a href="../event_framework/">Filter on Entity Event</a> to only send agronomy customers</li>
+<li>Get Client ID and CLient password from Agsync</li>
+<li>Get Customer Specific Integration ID from Agsync</li>
+<li>Client Redirect URL is [Azure Webapp base URL]/api/AgsyncAuth</li>
+<li><a href="../AzureKeyVault/">Setup Azure Keyvault</a> </li>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Create an application ID</a> for the integration framework to authenticate to D365 CE</li>
+<li><a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-multi-tenant-server-server-authentication#create-an-application-user--associated-with-the-registered-application--in-">Create an application user in D365 CRM</a> and assign the proper role(s)</li>
+</ul>
+<p>A webhook is an API provided by the Levridge Integration Framework that gives AgSync the ability to send workorders to Levridge. AgSync sends workorders to the Levridge API  which places the order on the service bus. </p>
+<p>The customer's specific URL needs to be whitelisted by AgSync. To whitelist a URL, one would log into AgSync and create a helpdesk ticket requesting AgSync to add the AgsyncOrderChanged URL into their setup file. The expected service time is between 24-48 hours. Escalate after 48 hours.</p>
+<h4 id="general-setup-timelines"><a class="toclink" href="#general-setup-timelines">General setup timelines:</a></h4>
+<ul>
+<li>Deploying code to App Service takes the longest. 400 table lines for all three. </li>
+<li>The worker table is refreshed once a quarter </li>
+<li>Service item data is refreshed once a year</li>
+<li>Master item data is refreshed once every three year</li>
+</ul>
+<h5 id="data-moving-within-the-integration"><a class="toclink" href="#data-moving-within-the-integration">Data Moving Within the Integration:</a></h5>
+<p>There are 4 types of master records sent from D365 to AgSync:</p>
+<ol>
+<li>Customers</li>
+<li>Customer Operations</li>
+<li>Customer Sites</li>
+<li>LevAgSyncSalesDetailEntity<ul>
+<li>The LevAgSyncSalesDetailEntity stores sales, order number, dispensing work order numbers, and a unique work order ID that identifies the AgSync work order that needs to update. </li>
+</ul>
+</li>
+</ol>
+<p>A Dispensing Account ID field has been added in F&amp;O on the customer account under the sales order tab. Its purpose is to indicate which dispensing branch the customer receives services from. The dispensing branch within AgSync can be set up as either: </p>
+<ul>
+<li>An inventory site indicating where the product is physically located</li>
+<li>Commission/Sales groups indicating the agronomist that sold the service to the customer (Confirm and clarify this statement) </li>
+</ul>
+<h4 id="integration-framework-setup-for-sending-customers"><a class="toclink" href="#integration-framework-setup-for-sending-customers">Integration Framework Setup for Sending Customers</a></h4>
+<p>"Out of the Box Customer V3" is being utilized and the code in the integration is choosing the data fields the entities pass through. The Dispatching Account ID is included on the customer form to only send accounts that have a dispatching account tied to it to AgSync. This is filtered by the Event Framework V3 Entity. An example is a client might have 100K in their database but for work order purposes there are only 30K that will ever work with AgSync. Filtering is again used in the Event Framework V3 Entity in the Customer Operation. This is a more sophisticated filter due to multiple types of operations an individual customer could have. </p>
+<p>Customer Operation is setup by four different filters: </p>
+<ol>
+<li>Customer Operation Type</li>
+<li>A filter is added so customer information which do not have a site is not sent. <ul>
+<li>Example: Customer operations will not be sent to AgSync if they do not have sites tied to them. </li>
+</ul>
+</li>
+<li>Customer Site Types</li>
+<li>Dispensing Site ID </li>
+</ol>
+<h4 id="release-status-process"><a class="toclink" href="#release-status-process">Release Status Process</a></h4>
+<ul>
+<li>A work order is created at release status. </li>
+<li>Take release in AgSync and schedule work order. (Scheduling is assigning it out to an applicator to be applied).</li>
+<li>Dispatcher is going to see all released orders. </li>
+<li>Dispatcher takes orders, creates task packet, assigns to worker, annotates which piece of application equipment is going to be running, and saves as scheduled packet.</li>
+<li>The message is once again generated to webhook in F&amp;O. </li>
+<li>Status is updated to "scheduled" if a blend. <ul>
+<li>This creates an automatically explode bomb at scheduled date. (ex: if a client is using automatic fertilizer, dispensing ticket is released at the scheduled state which kicks off another integration to Kahler, so they can blend and send product out to field that is going to be applied.)</li>
+</ul>
+</li>
+</ul>
+<h3 id="controllers"><a class="toclink" href="#controllers">Controllers</a></h3>
+<h4 id="agsync-auth-controller"><a class="toclink" href="#agsync-auth-controller">Agsync Auth Controller</a></h4>
+<p>The AgsyncAuth controller is used to generate a token needed to integrate with Agsync.</p>
+<h4 id="agsync-auth-test-controller"><a class="toclink" href="#agsync-auth-test-controller">Agsync Auth Test Controller</a></h4>
+<h4 id="agsync-order-changed-controller"><a class="toclink" href="#agsync-order-changed-controller">Agsync Order Changed Controller</a></h4>
+<p>The AgsyncOrderChanged controller is used by Agsync to send work orders as they are created or updated. This controller will bundle the work order into a message and place it in the message topic.</p>
+<h4 id="agsync-sync-accounts-controller"><a class="toclink" href="#agsync-sync-accounts-controller">Agsync Sync Accounts Controller</a></h4>
+<p>The AgsyncSyncAccounts controller is used to query Agsync for master data and write the information into CDS. This is done during go-live to populate the lookup data in CDS.</p>
+<h4 id="agsync-uuid-controller"><a class="toclink" href="#agsync-uuid-controller">Agsync UUID Controller</a></h4>
+<p>The AgsyncUUID controller provides UUIDs based on Sync Ids passed to the controller. This is used by Field Reveal to obtain the UUID from the Sync ID entered into Field Reveal.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../scale-integration/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Scale
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Kahler/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Kahler
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
