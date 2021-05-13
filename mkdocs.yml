@@ -10,7 +10,7 @@ markdown_extensions:
   - toc:
         anchorlink: True
 
-site_name: Levridge Documentation Test 4
+site_name: Levridge Documentation
 repo_name: 'levridge-tory.github.io/LevridgeIntegrationDocs'
 repo_url: 'https://github.com/Levridge-Tory/LevridgeIntegrationDocs'
 nav:
